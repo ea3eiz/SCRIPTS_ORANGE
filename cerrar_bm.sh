@@ -1,11 +1,11 @@
 #!/bin/bash
-cd /home/pi/Desktop/
-sudo mv BM_ON /home/pi/
+cd /home/orangepi/Desktop/
+sudo mv BM-ON.desktop /home/pi/botones_on
 
-cd /home/pi/
-sudo mv BM_OFF /home/pi/Desktop/
+cd /homeorange/pi/botones_off
+sudo mv BM-OFF.desktop /home/orangepi/Desktop/
 
 sudo killall MMDVMBM
-sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
+sed -i "7c MMDVMBM=OFF" /home/orangepi/status.ini
 
 
