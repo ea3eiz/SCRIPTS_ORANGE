@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-                        cd /home/pi/SCRIPTS
+                        cd /home/orangepi/SCRIPTS_ORANGE
                         sudo git pull 
                         clear
 
