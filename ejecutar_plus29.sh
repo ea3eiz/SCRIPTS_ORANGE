@@ -29,10 +29,10 @@ else
 
 cd /home/orangepi/Desktop/
 sudo mv BM-ON.desktop/home/orangepi/botones_on
-sudo mv PLUS-OFF.desktop /home/orangepi/botones_off
+sudo mv DMR+_OFF.desktop /home/orangepi/botones_off
 
 cd /home/orangepi/botones_on
-sudo mv PLUS-ON.desktop/home/orangepi/Desktop/
+sudo mv DMR+_ON.desktop/home/orangepi/Desktop/
 
 cd /home/orangepi/botones_off
 sudo mv BM-OFF.desktop /home/orangepi/Desktop/
