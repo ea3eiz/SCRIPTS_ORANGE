@@ -2,7 +2,7 @@
 cd /home/orangepi/Desktop/
 sudo mv D-STAR-ON.desktop /home/orangepi/botones_on
 
-cd /home/oangepi/botones_off
+cd /home/orangepi/botones_off
 sudo mv D-STAR-OFF.desktop /home/orangepi/Desktop/
 
 sudo killall ircddbgateway
