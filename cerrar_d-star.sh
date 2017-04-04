@@ -1,12 +1,12 @@
 #!/bin/bash
-cd /home/pi/Desktop/
-sudo mv D-STAR_ON /home/pi/
+cd /home/orangepi/Desktop/
+sudo mv D-STAR-ON.desktop /home/orangepi/botones_on
 
-cd /home/pi/
-sudo mv D-STAR_OFF /home/pi/Desktop/
+cd /home/pi/botones_off
+sudo mv D-STAR-OFF.desktop /home/orangepi/Desktop/
 
 sudo killall ircddbgateway
 sudo killall dstarrepeater
 sudo killall remotecontrol
-sed -i "9c dstarrepeater=OFF" /home/pi/status.ini
+sed -i "9c dstarrepeater=OFF" /home/orangepi/status.ini
 
