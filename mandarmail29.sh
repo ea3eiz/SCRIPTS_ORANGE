@@ -2,7 +2,7 @@
 
 SUBJECT=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 RECEIVER=ea3eiz@ea3eiz.com
-TEXT="Utilizando la imagen 04-04-2017_ADER_V.01.29_03"
+TEXT="Utilizando la imagen ORANGE PI  04-04-2017_ADER_V.01.29"
 
 SERVER_PORT="smtp.gmail.com:587"
 SENDER="maneldiazj@gmail.com"
