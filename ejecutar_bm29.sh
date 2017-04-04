@@ -22,14 +22,14 @@ sudo  sh aviso_cerrar_bluedv_dstarrepeater29.sh
 else
 #=============================
 cd /home/orangepi/Desktop/
-sudo mv PLUS-ON.desktop /home/orangepi/botones_on
+sudo mv DMR+_ON.desktop /home/orangepi/botones_on
 sudo mv BM-OFF.desktop /home/orangepi/botones_off
 
 cd /home/orangepi/botones_on
 sudo mv BM-ON.desktop /home/orangepi/Desktop/
 
 cd /home/orangepi/botones_off
-sudo mv PLUS-OFF.desktop /home/orangepi/Desktop/
+sudo mv DMR+_OFF.desktop /home/orangepi/Desktop/
 
 sudo killall MMDVMPLUS
 sudo killall MMDVMBM
