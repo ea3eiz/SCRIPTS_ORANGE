@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 # script para instalar md380tools
 while true
 do
@@ -47,30 +47,29 @@ echo -n "\33[1;36m   14)\33[0m Cambiar a VOX        - \33[1;33m"
 var1= sed -n '160p'  /usr/local/etc/svxlink/svxlink.conf
 echo -n "\33[1;36m   15)\33[0m Modificar VOX_THRESH - \33[1;33m"
 var1= sed -n '168p'  /usr/local/etc/svxlink/svxlink.conf
-echo "\33[1;36m   16)\33[1;32m Modem Soundcard o similar (está este por defecto)\33[1;33m"
-echo "\33[1;36m   17)\33[1;32m Modem Gpio con transistor y resistencia\33[1;33m"
-#var1= sed -n '90p'  /usr/local/etc/svxlink/svxlink.conf
-#var1= sed -n '92p'  /usr/local/etc/svxlink/svxlink.conf
-#var1= sed -n '93p'  /usr/local/etc/svxlink/svxlink.conf
-echo "\33[1;36m   18)\33[1;33m Abrir fichero svxlink.conf para hacer cualquiergpio otro cambio\33[1;33m"
+echo "\33[1;36m   16)\33[1;32m Utilizar para conectarse a la conferencia *ADER*\33[1;33m"
+echo "\33[1;36m   17)\33[1;32m Utilizar para conectarse a la conferencia *SPAIN-ES*\33[1;33m"
+echo "\33[1;36m   18)\33[1;32m Utilizar para conectarse a la conferencia *REM-ESP*\33[1;33m"
+echo "\33[1;36m   19)\33[1;32m Utilizar si el modem es sound card o similar (este está por defecto)\33[1;33m"
+echo "\33[1;36m   20)\33[1;32m Utilizar si el modem lo haces con transistor y resistencia\33[1;33m"
+echo "\33[1;36m   21)\33[1;32m Poner Roger Beep\33[1;33m"
+echo "\33[1;36m   22)\33[1;32m Quitar Roger Beep\33[1;33m"
+echo "\33[1;36m   23)\33[1;32m Quitar mensaje de Bienvenida\33[1;33m"
+echo "\33[1;36m   24)\33[1;32m Quitar Beep que sale en el echolink\33[1;33m"
+echo""
+
+echo "\33[1;36m   25)\33[1;33m Abrir fichero svxlink.conf para hacer cualquier cambio\33[1;33m"
 echo ""
 echo "   ========================================================================"
 echo ""
-echo "\33[1;36m   19)\33[1;33m Abrir control de audio. [Esc] para cerrarlo \33[1;33m"
+echo "\33[1;36m   26)\33[1;33m Abrir control de audio. [Esc] para cerrarlo \33[1;33m"
 echo ""
 echo "\33[1;36m    0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo "\33[1;36m   Escoge una opción.. 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,0 \33[1;33m " 
+echo "\33[1;36m   Escoge una opción.. del 0 al 26 \33[1;33m " 
 read escoger_menu
-
-
-
 echo ""
-
-
 case $escoger_menu in
-
-
 1) echo ""
 while true
 do
@@ -305,53 +304,172 @@ sed -i "168c VOX_THRESH=$tono" /usr/local/etc/svxlink/svxlink.conf
 			break;;
 esac
 done;;
-16) echo ""
-while true
-do
-
-
-           	        read -p 'Pulsa enter para Usar Modem Soundcard o similar: ' var2
-                        actualizar=S 
-                        case $actualizar in
-			[sS]* ) echo ""
-sed -i "227c PTT_PORT=/dev/ttyUSB0" /usr/local/etc/svxlink/svxlink.conf
-sed -i "226c PTT_TYPE=SerialPin" /usr/local/etc/svxlink/svxlink.conf
-sed -i "228c PTT_PIN=DTRRTS" /usr/local/etc/svxlink/svxlink.conf
-sed -i "10c #" /etc/rc.local
-sed -i "11c #" /etc/rc.local
-sed -i "12c #" /etc/rc.local
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
 17) echo ""
 while true
 do
 
-
-           	        read -p 'Pulsa enter para Usar Gpio con transistor y resistencia: ' var2
-                        actualizar=S 
-                        case $actualizar in
+           	        #read -p 'Pulsa enter para Usar Modem Soundcard o similar: ' var2
+            actualizar=S 
+            case $actualizar in
 			[sS]* ) echo ""
-sed -i "227c PTT_PORT=/dev/ttyAMA0" /usr/local/etc/svxlink/svxlink.conf
-sed -i "226c PTT_TYPE=GPIO" /usr/local/etc/svxlink/svxlink.conf
-sed -i "228c PTT_PIN=gpio17" /usr/local/etc/svxlink/svxlink.conf
-sed -i "10c echo "17" > /sys/class/gpio/export" /etc/rc.local
-sed -i "11c chmod 777 -R /sys/class/gpio/gpio17" /etc/rc.local
-sed -i "12c echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
-sed -i "14c exit 0" /etc/rc.local
+sed -i "17c LOCATION=Connect to *SPAIN-ES*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "25c AUTOCON_ECHOLINK_ID=704387" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+#sed -i "227c PTT_PORT=/dev/ttyUSB0" /usr/local/etc/svxlink/svxlink.conf
+#sed -i "226c PTT_TYPE=SerialPin" /usr/local/etc/svxlink/svxlink.conf
+#sed -i "228c PTT_PIN=DTRRTS" /usr/local/etc/svxlink/svxlink.conf
+#sed -i "10c #" /etc/rc.local
+#sed -i "11c #" /etc/rc.local
+#sed -i "12c #" /etc/rc.local
 			break;;
 			[nN]* ) echo ""
 			break;;
 esac
 done;;
+16) echo ""
+while true
+do
+            actualizar=S 
+            case $actualizar in
+			[sS]* ) echo ""
+sed -i "17c LOCATION=Connect to *ADER*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "25c AUTOCON_ECHOLINK_ID=840690" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+
+
 18) echo ""
 while true
 do
+            actualizar=S 
+            case $actualizar in
+			[sS]* ) echo ""
+sed -i "17c LOCATION=Connect to *REM-ESP*" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+sed -i "25c AUTOCON_ECHOLINK_ID=3386" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+19) echo ""
+while true
+do
+            actualizar=S 
+            case $actualizar in
+			[sS]* ) echo ""
+sed -i "227c PTT_PORT=/dev/ttyUSB0" /usr/local/etc/svxlink/svxlink.conf
+sed -i "226c PTT_TYPE=SerialPin" /usr/local/etc/svxlink/svxlink.conf
+sed -i "228c PTT_PIN=DTRRTS" /usr/local/etc/svxlink/svxlink.conf
+sed -i "19c #echo 17 > /sys/class/gpio/export" /etc/rc.local
+sed -i "20c #chmod 777 -R /sys/class/gpio/gpio17" /etc/rc.local
+sed -i "21c #echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+20) echo ""
+while true
+do
+            actualizar=S 
+            case $actualizar in
+			[sS]* ) echo ""
 
+sed -i "227c PTT_PORT=/dev/ttyAMA0" /usr/local/etc/svxlink/svxlink.conf
+sed -i "226c PTT_TYPE=GPIO" /usr/local/etc/svxlink/svxlink.conf
+sed -i "228c PTT_PIN=gpio17" /usr/local/etc/svxlink/svxlink.conf
+sed -i "19c echo 17 > /sys/class/gpio/export" /etc/rc.local
+sed -i "20c chmod 777 -R /sys/class/gpio/gpio17" /etc/rc.local
+sed -i "21c echo "out" > /sys/class/gpio/gpio17/direction" /etc/rc.local
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+21) echo ""
+while true
+do
+clear
+		    ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo "Poniendo roger beep >>>>>"
+			sleep 3
+			sudo cp -f roger_beep.wav /usr/local/share/svxlink/sounds/en_US/Core/
+			sed -i '185c playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
+			echo ""
+			echo "Ok, se ha ejecutado correctamente"
+			echo ""
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+22) echo ""
+while true
+do
+clear
+		    ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo "Quitando roger beep >>>>>"
+			sleep 3
+			sed -i '185c #playMsg "Core" "roger_beep";' /usr/local/share/svxlink/events.d/Logic.tcl
+			echo ""
+			echo "Ok, se ha ejecutado correctamente"
+			echo ""
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+23) echo ""
+while true
+do
+clear
+		    ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo "ok quitando mensaje de bienvenida  >>>>>"
+			sleep 3
+			cd /usr/local/share/svxlink/sounds/en_US/EchoLink
+			sudo mv greeting.wav greeting.wav_old
+			echo ""
+			echo "Ok, se ha ejecutado correctamente"
+			echo ""
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
 
-           	          read -p 'Pulsa enter para abrir el fichero svxlink.conf: ' var2
+24) echo ""
+while true
+do
+clear
+		    ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo "ok quitando beep del echolink>>>>>"
+			sleep 3
+			sed -i '515c #if {!$is_open} {' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '516c #playSilence 200' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '517c #playTone 1000 100 100' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			sed -i '518c #}' /usr/local/share/svxlink/events.d/EchoLink.tcl
+			echo ""
+			echo "Ok, se ha ejecutado correctamente"
+			echo ""
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+25) echo ""
+while true
+do
+           	          #read -p 'Pulsa enter para abrir el fichero svxlink.conf: ' var2
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
@@ -361,13 +479,10 @@ do
 			break;;
 esac
 done;;
-19) echo ""
-
+26) echo ""
 while true
 do
-
-
-           	          read -p 'Pulsa enter para abrir el control de audio: ' var2
+           	          #read -p 'Pulsa enter para abrir el control de audio: ' var2
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
@@ -377,8 +492,6 @@ do
 			break;;
 esac
 done;;
-
-
 0) echo ""
 clear
 echo "   **************************************************"

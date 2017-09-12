@@ -20,7 +20,7 @@ echo "\33[1;36m   6)\33[1;37m  Introducir la base de datos de indicativos solo E
 echo ""
 echo "\33[1;32m   ********************************************************************"
 echo "   *  Cuando creamos que puede haber una nueva versión de md380tools  *"
-echo "   *  procederemos a su la actualización utilizando el apartado 6)    *"
+echo "   *  procederemos a su la actualización utilizando el apartado 7)    *"
 echo "   *                                                                  *"
 echo "   ********************************************************************"
 echo ""
@@ -43,17 +43,16 @@ echo ""
 
 case $escoger_menu in
 1) echo ""
-
 while true
 do
 clear
 
-	        read -p 'Quieres Actualizar? Si/No: ' actualizar
-		    case $actualizar in
+	                        read -p 'Quieres Actualizar? Si/No: ' actualizar
+		            case $actualizar in
 			[sS]* ) echo ""
 			echo "Estado: Actualizando >>>>>"
 			sudo apt-get update -y
-                        sudo apt-get upgrade -y
+                                    sudo apt-get upgrade -y
 			echo ""
 			echo "Ok, se ha actualizado correctamente"
 			echo ""
@@ -63,30 +62,31 @@ clear
 esac
 done;;
 2) 	echo ""
-
 while true
 do
 clear
 			echo ""
 			echo ""
 			echo ""
-		    read -p 'Descargar e instalar md380tools? Si/No ' installvar
+		            read -p 'Descargar e instalar md380tools? Si/No ' installvar
 			case $installvar in
 			[sS]* ) echo ""
 			echo "Descargando md380tools"
-sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0 libnewlib-arm-none-eabi python-usb
-sleep 3
-sudo apt-get install python-pip
-sleep 3
-sudo pip install pyusb -U
-sleep 3
-sudo apt-get install git
-sleep 3
-git clone https://github.com/travisgoodspeed/md380tools.git
-sleep 3
-cd md380tools
-sleep 3
-sudo make
+                                    sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0 libnewlib-arm-none-eabi python-usb
+                                    sleep 1
+                                    sudo apt-get install python-pip
+                                    sleep 1
+                                    sudo pip install pyusb -U
+                                    sleep 1
+                                    sudo apt-get install git
+                                    sleep 1
+                                    cd /home/pi/
+                                    sudo rm -r md380tools
+                                    git clone https://github.com/travisgoodspeed/md380tools.git
+                                    sleep 1
+                                    cd md380tools
+                                    sleep 1
+                                    sudo make
 			break;;
 			[nN]* ) echo ""
 			echo ""
@@ -98,27 +98,25 @@ sudo make
 			break;;			
 esac
 done;;
-
 3) 	echo ""
-
 while true
 do
 clear
-        echo "*****************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en el Walki  *"
-	echo "*  Ponemos el walki en modo DFU de la siguiente manera:                     *"
-	echo "*  Apagamos y encendemos el Walki apretando la tecla PTT+la tecla de arriba *"
-        echo "*****************************************************************************"
-        echo""
+        echo "\33[1;31m***************************************************************************"
+        echo "* Conectamos el cable de programación en el USB de la Raspi y en Walki    *"
+        echo "* Ponemos el walki en modo DFU de la siguiente manera:                    *"
+        echo "* Apagamos y encendemos el Walki pulsando la tecla PTT+la tecla de arriba *"
+        echo "***************************************************************************"
+        echo "\33[1;32m "
         read -p 'Quieres Introducir el firmware experimental bajo tu propio riesgo? Si/No ' installvar1
 			case $installvar1 in
 			[sS]* ) echo ""
-clear
+                                    clear
 			echo "Introduciendo firmware experimental"
-      cd md380tools
-      sudo make clean
-      sudo make flash
-			break;;
+                                    cd /home/pi/md380tools
+                                    sudo make clean
+                                    sudo make flash
+      			break;;
 			[nN]* ) echo ""
 			echo ""
 			echo ""
@@ -128,28 +126,25 @@ clear
 			echo ""
 			break;;			
 esac
-
 done;;
-
 4)      echo ""
 while true
 do
 clear
- 
-        echo "*****************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki     *"
-        echo "*  Ponemos el walki en modo DFU de la siguiente manera:                     *"
-        echo "*  Apagamos y encendemos el Walki apretando la tecla PTT+la tecla de arriba *"
-        echo "*****************************************************************************"
-        echo ""
+        echo "\33[1;31m***************************************************************************"
+        echo "* Conectamos el cable de programación en el USB de la Raspi y en Walki    *"
+        echo "* Ponemos el walki en modo DFU de la siguiente manera:                    *"
+        echo "* Apagamos y encendemos el Walki pulsando la tecla PTT+la tecla de arriba *"
+        echo "***************************************************************************"
+        echo "\33[1;32m "
         read -p 'Quieres Introducir el firmware experimental bajo tu propio riesgo? Si/No ' installvar4
                         case $installvar4 in
                         [sS]* ) echo ""
-clear
+                        clear
                         echo "Introduciendo firmware experimental"
-      cd md380tools
-      sudo make clean
-      sudo make flash_S13
+                        cd /home/pi/md380tools
+                        sudo make clean
+                        sudo make flash_S13
                         break;;
                         [nN]* ) echo ""
                         echo ""
@@ -166,19 +161,19 @@ while true
 do
 clear
 
-        echo "*****************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki     *"
-        echo "*  Encendemos el Walki en modo normal                                       *"
-        echo "*****************************************************************************"
-        echo ""
-        read -p 'Quieres Introducir la base de datos Mundial users.csv bajo tu propio riesgo? Si/No ' installvar5
+        echo "\33[1;31m*************************************************************************"
+        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki *"
+        echo "*  Encendemos el Walki en modo normal                                   *"
+        echo "*************************************************************************"
+        echo "\33[1;32m "
+        read -p 'Introducir la base de datos Mundial users.csv bajo tu propio riesgo? Si/No ' installvar5
                         case $installvar5 in
                         [sS]* ) echo ""
-clear
+                        clear
                         echo "Introduciendo USER.CSV"
-      cd /home/pi/md380tools
-      sudo make clean
-      sudo make updatedb flashdb
+                        cd /home/pi/md380tools
+                        sudo make clean
+                        sudo make updatedb flashdb
                         break;;
                         [nN]* ) echo ""
                         echo ""
@@ -189,27 +184,24 @@ clear
                         echo ""
                         break;;
 esac
-
 done;;
-
 6)      echo ""
 while true
 do
 clear
-
-        echo "*****************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki     *"
-        echo "*  Encendemos el Walki en modo normal                                       *"
-        echo "*****************************************************************************"
-        echo ""
-        read -p 'Quieres Introducir la base de datos Europa users.csv bajo tu propio riesgo? Si/No ' installvar5
+        echo "\33[1;31m*************************************************************************"
+        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki *"
+        echo "*  Encendemos el Walki en modo normal                                   *"
+        echo "*************************************************************************"
+        echo "\33[1;32m "
+                        read -p 'Introducir la base de datos Europa users.csv bajo tu propio riesgo? Si/No ' installvar5
                         case $installvar5 in
                         [sS]* ) echo ""
-clear
+                        clear
                         echo "Introduciendo USER.CSV"
-      cd /home/pi/md380tools
-      sudo make clean
-      sudo make updatedb_eur flashdb
+                        cd /home/pi/md380tools
+                        sudo make clean
+                        sudo make updatedb_eur flashdb
                         break;;
                         [nN]* ) echo ""
                         echo ""
@@ -220,9 +212,7 @@ clear
                         echo ""
                         break;;
 esac
-
 done;;
-
 7)    echo ""
 while true
 do
@@ -230,19 +220,18 @@ clear
 			echo ""
 			echo ""
 			echo ""
-		    read -p 'Quieres actualizar por si hay una nueva versión del md380tools? Si/No ' installvar6
+		            read -p 'Quieres actualizar por si hay una nueva versión del md380tools? Si/No ' installvar6
 			case $installvar6 in
 			[sS]* ) echo ""
-clear
+                                    clear
 			echo "Actualizando una nueva versión del md380tools"
-sudo rm -r md380tools
-
-git clone https://github.com/travisgoodspeed/md380tools.git
-sleep 3
-cd md380tools
-sleep 3
-sudo make clean
-sudo make
+                                    cd /home/pi/
+                                    sudo rm -r md380tools
+                                    git clone https://github.com/travisgoodspeed/md380tools.git
+                                    sleep 1
+                                    cd md380tools
+                                    sleep 1
+                                    sudo make
 			break;;
 			[nN]* ) echo ""
 			echo ""
@@ -254,26 +243,24 @@ sudo make
 			break;;			
 esac
 done;;
-
 8)      echo ""
 while true
 do
 clear
-
-        echo "*****************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki     *"
-        echo "*  Ponemos el walki en modo DFU de la siguiente manera:                     *"
-        echo "*  Apagamos y encendemos el Walki apretando la tecla PTT+la tecla de arriba *"
-        echo "*****************************************************************************"
-        echo ""
-        read -p 'Quieres Introducir el firmware original D03.020 ? Si/No ' installvar7
+        echo "\33[1;31m***************************************************************************"
+        echo "* Conectamos el cable de programación en el USB de la Raspi y en Walki    *"
+        echo "* Ponemos el walki en modo DFU de la siguiente manera:                    *"
+        echo "* Apagamos y encendemos el Walki pulsando la tecla PTT+la tecla de arriba *"
+        echo "***************************************************************************"
+        echo "\33[1;32m "
+                        read -p 'Quieres Introducir el firmware original D03.020 ? Si/No ' installvar7
                         case $installvar7 in
                         [sS]* ) echo ""
-clear
+                        clear
                         echo "Introduciendo firmware original D03.020"
-      cd md380tools
-      sudo make clean
-      sudo make flash_original_D03
+                        cd md380tools
+                        sudo make clean
+                        sudo make flash_original_D03
                         break;;
                         [nN]* ) echo ""
                         echo ""
@@ -284,28 +271,25 @@ clear
                         echo ""
                         break;;
 esac
-
 done;;
-
 9)      echo ""
 while true
 do
 clear
-
-        echo "*****************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki     *"
-        echo "*  Ponemos el walki en modo DFU de la siguiente manera:                     *"
-        echo "*  Apagamos y encendemos el Walki apretando la tecla PTT+la tecla de arriba *"
-        echo "*****************************************************************************"
-        echo ""
-        read -p 'Quieres Introducir el firmware original D13.020 ? Si/No ' installvar8
+        echo "\33[1;31m***************************************************************************"
+        echo "* Conectamos el cable de programación en el USB de la Raspi y en Walki    *"
+        echo "* Ponemos el walki en modo DFU de la siguiente manera:                    *"
+        echo "* Apagamos y encendemos el Walki pulsando la tecla PTT+la tecla de arriba *"
+        echo "***************************************************************************"
+        echo "\33[1;32m "
+                        read -p 'Quieres Introducir el firmware original D13.020 ? Si/No ' installvar8
                         case $installvar8 in
                         [sS]* ) echo ""
-clear
+                        clear
                         echo "Introduciendo firmware original D13.020"
-      cd md380tools
-      sudo make clean
-      sudo make flash_original_D13
+                        cd md380tools
+                        sudo make clean
+                        sudo make flash_original_D13
                         break;;
                         [nN]* ) echo ""
                         echo ""
@@ -316,10 +300,7 @@ clear
                         echo ""
                         break;;
 esac
-
 done;;
-
-
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"

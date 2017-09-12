@@ -68,7 +68,7 @@ echo "\33[1;33m"
                               case $actualizar in
 			[sS]* ) echo ""
 echo "Cambiar texto Sociedad"
-echo "\33[1;31m Ojo!!! Solo se permiten caracteres de la A-Z"
+#echo "\33[1;31m Ojo!!! Solo se permiten caracteres de la A-Z"
 read sociedad
 echo "Cambiar texto by EA3EIZ"
 echo "\33[1;31m Ojo!!! Solo se permiten caracteres de la A-Z y el espacio"
