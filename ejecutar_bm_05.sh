@@ -23,7 +23,7 @@
 #else
 
 
-sed -i "6cExec=mate-terminal -x sh cerrar_bm_30.sh" ~/Desktop/BM.desktop
+sed -i "6cExec=mate-terminal -x sh cerrar_bm_05.sh" ~/Desktop/BM.desktop
 sed -i "7c Icon=~/SCRIPTS_ORANGE/BRANDMEISTER_ON.png" ~/Desktop/BM.desktop
 sed -i "10c Name[es_ES]=Cerrar BM" ~/Desktop/BM.desktop
 
