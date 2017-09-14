@@ -1,5 +1,5 @@
 #!/bin/bash
-sleep 10
+#sleep 10
  #status=`grep "BlueDV" ~/status.ini`
                         #status1=`expr substr $status 8 2`
                         #if [ $status1 = "ON" ]
