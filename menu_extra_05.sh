@@ -25,7 +25,7 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        cd /home/pi/V30
+                        cd /home/orangepi/SCRIPTS_ORANGE
                         sudo git pull 
                         sleep 5
                         clear
