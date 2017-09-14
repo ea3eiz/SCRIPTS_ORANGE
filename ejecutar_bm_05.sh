@@ -23,9 +23,10 @@
 #else
 
 
-sed -i "4c Exec=sh -c 'cd ~/V30; lxterminal --geometry=72x15 -e sudo sh cerrar_bm_30.sh'" ~/Desktop/Abrir_MMDVMBM
-sed -i "5c Icon=~/V30/BRANDMEISTER_ON.png" ~/Desktop/Abrir_MMDVMBM
+sed -i "6cExec=mate-terminal -x sh cerrar_bm_30.sh" ~/Desktop/Abrir_MMDVMBM
+sed -i "7c Icon=~/SCRIPTS_ORANGE/BRANDMEISTER_ON.png" ~/Desktop/Abrir_MMDVMBM
 sed -i "10c Name[es_ES]=Cerrar BM" ~/Desktop/Abrir_MMDVMBM
+
 
 sed -i "7c MMDVMBM=ON" ~/status.ini
 
