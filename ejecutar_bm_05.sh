@@ -23,9 +23,9 @@
 #else
 
 
-sed -i "6cExec=mate-terminal -x sh cerrar_bm_30.sh" ~/Desktop/Abrir_MMDVMBM
-sed -i "7c Icon=~/SCRIPTS_ORANGE/BRANDMEISTER_ON.png" ~/Desktop/Abrir_MMDVMBM
-sed -i "10c Name[es_ES]=Cerrar BM" ~/Desktop/Abrir_MMDVMBM
+sed -i "6cExec=mate-terminal -x sh cerrar_bm_30.sh" ~/Desktop/BM.desktop
+sed -i "7c Icon=~/SCRIPTS_ORANGE/BRANDMEISTER_ON.png" ~/Desktop/BM.desktop
+sed -i "10c Name[es_ES]=Cerrar BM" ~/Desktop/BM.desktop
 
 
 sed -i "7c MMDVMBM=ON" ~/status.ini
