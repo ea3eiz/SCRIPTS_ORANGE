@@ -5,31 +5,31 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *           Script para Modificar brandmeister.inixx             \33[1;31m by EA3EIZ\33[1;32m     *"
+echo "   *           Script para Modificar MMDVMBM.ini             \33[1;31m by EA3EIZ\33[1;32m     *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
-ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/brandmeister.ini`
+ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMBM.ini`
 ind1=`expr substr $ind 3 30`
 echo "$ind1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - \33[1;33m"
-rxf=`grep -n "RXFrequency" ~/MMDVMHost/brandmeister.ini`
+rxf=`grep -n "RXFrequency" ~/MMDVMHost/MMDVMBM.ini`
 rxf1=`expr substr $rxf 4 30`
 echo "$rxf1"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - \33[1;33m"
-txf=`grep -n "TXFrequency" ~/MMDVMHost/brandmeister.ini`
+txf=`grep -n "TXFrequency" ~/MMDVMHost/MMDVMBM.ini`
 txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
 echo -n "\33[1;36m   4)\33[0m Modificar Location    - \33[1;33m"
-loca=`grep -n "Locatio" ~/MMDVMHost/brandmeister.ini`
+loca=`grep -n "Locatio" ~/MMDVMHost/MMDVMBM.ini`
 loca1=`expr substr $loca 4 30`
 echo "$loca1"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
-url=`grep -n "URL" ~/MMDVMHost/brandmeister.ini`
+url=`grep -n "URL" ~/MMDVMHost/MMDVMBM.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
@@ -39,22 +39,22 @@ echo "\33[1;36m   8)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (t
 echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/brandmeister.ini`
+mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVMBM.ini`
 mode1=`expr substr $mode 4 30`
 linea=`expr substr $mode 1 2`
 linea=`expr $linea + 2`
 linea33=$linea
 letra=p
 linea2=$linea$letra
-var99= sed -n $linea2  ~/MMDVMHost/brandmeister.ini;
+var99= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
-idd=`grep -n "Id=" ~/MMDVMHost/brandmeister.ini`
+idd=`grep -n "Id=" ~/MMDVMHost/MMDVMBM.ini`
 idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Modificar Address     - \33[1;33m"
-master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/brandmeister.ini`
+master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMBM.ini`
 buscar=":"
 largo=`expr index $master $buscar`
 largo=`expr $largo + 1`
@@ -71,60 +71,60 @@ lineaport=`expr $lineaport + 1`
 linea3port=$lineaport
 letra=p
 linea2port=$lineaport$letra
-var100port= sed -n $linea2port  ~/MMDVMHost/brandmeister.ini;
+var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMBM.ini;
 
 echo -n "\33[1;36m  13)\33[0m Modificar Password    - \33[1;33m"
-pas=`grep -n '\<Password\>' ~/MMDVMHost/brandmeister.ini`
+pas=`grep -n '\<Password\>' ~/MMDVMHost/MMDVMBM.ini`
 pas1=`expr substr $pas 5 30`
 echo "$pas1"
 
 echo -n "\33[1;36m  14)\33[0m Modificar TXInvert    - \33[1;33m"
-txinv=`grep -n '\<TXInvert\>' ~/MMDVMHost/brandmeister.ini`
+txinv=`grep -n '\<TXInvert\>' ~/MMDVMHost/MMDVMBM.ini`
 txinv1=`expr substr $txinv 4 30`
 echo "$txinv1"
 
 echo -n "\33[1;36m  15)\33[0m Modificar RXLevel     - \33[1;33m"
-rx=`grep -n '\<RXLevel\>' ~/MMDVMHost/brandmeister.ini`
+rx=`grep -n '\<RXLevel\>' ~/MMDVMHost/MMDVMBM.ini`
 rx1=`expr substr $rx 4 30`
 echo "$rx1"
 
 echo -n "\33[1;36m  16)\33[0m Modificar TXLevel     - \33[1;33m"
-tx=`grep -n -m 1 '\<TXLevel\>' ~/MMDVMHost/brandmeister.ini`
+tx=`grep -n -m 1 '\<TXLevel\>' ~/MMDVMHost/MMDVMBM.ini`
 tx1=`expr substr $tx 4 30`
 echo "$tx1"
 
 echo -n "\33[1;36m  17)\33[0m Modificar Duplex      - \33[1;33m"
-dup=`grep -n -m 1 '\<Duplex\>' ~/MMDVMHost/brandmeister.ini`
+dup=`grep -n -m 1 '\<Duplex\>' ~/MMDVMHost/MMDVMBM.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
 echo -n "\33[1;36m  18)\33[0m Modificar TXHang      - \33[1;33m"
-txh=`grep -n -m 1 '\<TXHang\>' ~/MMDVMHost/brandmeister.ini`
+txh=`grep -n -m 1 '\<TXHang\>' ~/MMDVMHost/MMDVMBM.ini`
 txh1=`expr substr $txh 4 30`
 echo "$txh1"
 
 echo -n "\33[1;36m  19)\33[0m Modificar Tramas      - \33[1;33m"
-lg=`grep -n -m 1 '\<DisplayLevel\>' ~/MMDVMHost/brandmeister.ini`
+lg=`grep -n -m 1 '\<DisplayLevel\>' ~/MMDVMHost/MMDVMBM.ini`
 lg1=`expr substr $lg 4 30`
 echo "$lg1"
 
 echo -n "\33[1;36m  20)\33[0m Modificar Slot1       - \33[1;33m"
-sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/brandmeister.ini`
+sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
 echo -n "\33[1;36m  21)\33[0m Modificar OscOffset   - \33[1;33m"
-salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/brandmeister.ini`
+salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
 if [ $salto = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/brandmeister.ini`
+salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
 salto1=`expr substr $salto 4 30`
 echo "$salto1"
 fi
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/brandmeister.ini`
+modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
@@ -134,15 +134,15 @@ linea=`expr $linea + 72`
 linea3=$linea
 letra=p
 linea2=$linea$letra
-var200= sed -n $linea2  ~/MMDVMHost/brandmeister.ini;
+var200= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
-lat=`grep -n "Latitude" ~/MMDVMHost/brandmeister.ini`
+lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMBM.ini`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
-long=`grep -n "Longitude" ~/MMDVMHost/brandmeister.ini`
+long=`grep -n "Longitude" ~/MMDVMHost/MMDVMBM.ini`
 long1=`expr substr $long 4 30`
 echo "$long1"
 
@@ -152,36 +152,36 @@ echo "$long1"
 #linea33port=$OPCION
 #letra=p
 #linea22port=$OPCION$letra
-#var300port= sed -n $linea22port  ~/MMDVMHost/brandmeister.ini;
+#var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMBM.ini;
 
 echo -n "\33[1;36m  27)\33[0m Modificar RXInvert    - \33[1;33m"
-rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/brandmeister.ini`
+rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/MMDVMBM.ini`
 rxinv1=`expr substr $rxinv 4 30`
 echo "$rxinv1"
 
 echo ""
-echo "\33[1;36m  28)\33[1;33m Abrir fichero brandmeister.ini para hacer cualquier cambio\33[1;33m"
+echo "\33[1;36m  28)\33[1;33m Abrir fichero MMDVMBM.ini para hacer cualquier cambio\33[1;33m"
 
 echo "\33[1;36m  29)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
 echo -n "\33[1;36m  30)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/brandmeister.ini_copia`
+reflector=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMBM.ini_copia`
 reflector=`expr substr $reflector 13 40`
 echo "$reflector"
 
 echo "\33[1;36m  31)\33[1;37m Guardar  fichero de Configuración en M2: \33[1;36m"
 echo -n "\33[1;36m  32)\33[1;32m Utilizar fichero de Configuración en M2: \33[1;36m"
-reflector2=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/brandmeister.ini_copia2`
+reflector2=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMBM.ini_copia2`
 reflector2=`expr substr $reflector2 13 40`
 echo "$reflector2"
 
 echo "\33[1;36m  33)\33[1;37m Guardar  fichero de Configuración en M3: \33[1;36m"
 echo -n "\33[1;36m  34)\33[1;32m Utilizar fichero de Configuración en M3: \33[1;36m"
-reflector3=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/brandmeister.ini_copia3`
+reflector3=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMBM.ini_copia3`
 reflector3=`expr substr $reflector3 13 40`
 echo "$reflector3"
 
 echo ""
-echo "\33[1;36m  35)\33[1;31m Recuperar el fichero original brandmeister.ini\33[1;33m"
+echo "\33[1;36m  35)\33[1;31m Recuperar el fichero original MMDVMBM.ini\33[1;33m"
 
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -209,7 +209,7 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           case $actualizar in
 			              [sS]* ) echo ""
 			              indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                          sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -234,7 +234,7 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                              sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/brandmeister.ini
+                              sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -259,7 +259,7 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXFrequency=$var2" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea TXFrequency=$var2" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -284,7 +284,7 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  loc1=`echo "$loc1" | tr -d '[[:space:]]'`
-              sed -i "$linea Location=$loc1" ~/MMDVMHost/brandmeister.ini
+              sed -i "$linea Location=$loc1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -309,7 +309,7 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  ur1=`echo "$ur1" | tr -d '[[:space:]]'`
-                          sed -i "$linea URL=$ur1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea URL=$ur1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -323,7 +323,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyAMA0" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Port=/dev/ttyAMA0" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -337,7 +337,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -351,7 +351,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -366,7 +366,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -391,7 +391,7 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Id=$miid" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Id=$miid" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -409,7 +409,7 @@ echo "   Brandmeister=84.232.5.113 / DMR+=217.61.0.154:"
                     master1=`echo "$master1" | tr -d '[[:space:]]'`
                     letra=c            
 linea=$largo$letra
-                          sed -i "$linea Address=$master1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMBM.ini
                           
                          
                           
@@ -422,14 +422,14 @@ done;;
 while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
-                          var100port= sed -n $linea2port  ~/MMDVMHost/brandmeister.ini;
+                          var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMBM.ini;
                       read -p 'Puerto para Brandmeister=62031 puerto para DMR+=55555 : ' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
                           letra1=c
                           linea4=$linea3port$letra1
-                          sed -i "$linea4 Port=$miid" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Port=$miid" ~/MMDVMHost/MMDVMBM.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -454,7 +454,7 @@ read -p '   Introduce el password que corresponda: ' pas1
                           case $actualizar in
 			              [sS]* ) echo ""
 			              pas1=`echo "$pas1" | tr -d '[[:space:]]'`
-                          sed -i "$linea Password=$pas1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Password=$pas1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -478,7 +478,7 @@ echo "Valor  actual del  TXInvert: \33[1;33m${txinv#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXInvert=$txinv1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea TXInvert=$txinv1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -502,7 +502,7 @@ echo "Valor  actual  del  RXLevel : \33[1;33m${rx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea RXLevel=$var2" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea RXLevel=$var2" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -526,7 +526,7 @@ echo "Valor  actual  del  TXLevel : \33[1;33m${tx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXLevel=$var2" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea TXLevel=$var2" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -550,7 +550,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$dup1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Duplex=$dup1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -574,7 +574,7 @@ echo "Valor actual del TXHang: \33[1;33m${txh#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXHang=$txh1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea TXHang=$txh1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -598,7 +598,7 @@ echo "Valor actual del DisplayLevel: \33[1;33m${lg#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea DisplayLevel=$lg1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea DisplayLevel=$lg1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -608,11 +608,11 @@ done;;
 while true
 do
 
-sl=`grep -n -m 1 -c '\<Slot1\>' ~/MMDVMHost/brandmeister.ini`
+sl=`grep -n -m 1 -c '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 if [ $sl = 0 ]; then
 echo "no existe este comando"
 else
-sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/brandmeister.ini`
+sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 fi
@@ -635,7 +635,7 @@ echo "Valor actual del Slot1=: \33[1;33m${sl#*=}\33[1;37m"
                           case $actualizar in                                            
 			              [sS]* ) echo ""
 			              V=`echo "$V" | tr -d '[[:space:]]'`			  
-                          sed -i "$linea Slot1=$V" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Slot1=$V" ~/MMDVMHost/MMDVMBM.ini
               
 			  break;;
 			  [nN]* ) echo ""
@@ -660,7 +660,7 @@ echo "Valor  actual  del  scOffset : \33[1;33m${salto#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -684,7 +684,7 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -694,14 +694,14 @@ done;;
 while true
 do
 echo -n "Valor  actual  del \33[1;33m${var200#*=}\33[1;37m"
-                          var100= sed -n $linea2  ~/MMDVMHost/brandmeister.ini;
+                          var100= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
            	              read -p 'Desactivado=0 Activado=1: '   dmrac1
                           actualizar=S 
                           case $actualizar in
 			              [sS]* ) echo ""
                           letra1=c
                           linea4=$linea3$letra1
-                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/MMDVMBM.ini
 			              break;;
 			              [nN]* ) echo ""
 			              break;;
@@ -727,7 +727,7 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Latitude=$lat1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Latitude=$lat1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -752,7 +752,7 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Longitude=$long1" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea Longitude=$long1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -769,12 +769,12 @@ do
 			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  letra1=c
                           linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/brandmeister.ini
+			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 esac
 done;;
@@ -796,7 +796,7 @@ echo "Valor  actual del  RXInvert: \33[1;33m${rxinv#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea RXInvert=$rxinv11" ~/MMDVMHost/brandmeister.ini
+                          sed -i "$linea RXInvert=$rxinv11" ~/MMDVMHost/MMDVMBM.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -808,7 +808,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany ~/MMDVMHost/brandmeister.ini
+                              geany ~/MMDVMHost/MMDVMBM.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
@@ -823,7 +823,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/brandmeister.ini ~/MMDVMHost/brandmeister.ini_copia
+                        sudo cp -f ~/MMDVMHost/MMDVMBM.ini ~/MMDVMHost/MMDVMBM.ini_copia
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -840,7 +840,7 @@ do
                         clear
                         echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/brandmeister.ini_copia ~/MMDVMHost/brandmeister.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMBM.ini_copia ~/MMDVMHost/MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -857,8 +857,8 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M2  >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/brandmeister.ini ~/MMDVMHost/brandmeister.ini_copia2
-                        #sed -i "2c $master1" ~/V30/info_brandmeister.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMBM.ini ~/MMDVMHost/MMDVMBM.ini_copia2
+                        #sed -i "2c $master1" ~/V30/info_MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -875,7 +875,7 @@ do
                         clear
                         echo "<<<<<< Restaurando copia de seguridad de la M2>>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/brandmeister.ini_copia2 ~/MMDVMHost/brandmeister.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMBM.ini_copia2 ~/MMDVMHost/MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -892,8 +892,8 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M3>>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/brandmeister.ini ~/MMDVMHost/brandmeister.ini_copia3
-                        #sed -i "3c $master1" ~/V30/info_brandmeister.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMBM.ini ~/MMDVMHost/MMDVMBM.ini_copia3
+                        #sed -i "3c $master1" ~/V30/info_MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -910,7 +910,7 @@ do
                         clear
                         echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/brandmeister.ini_copia3 ~/MMDVMHost/brandmeister.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMBM.ini_copia3 ~/MMDVMHost/MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -924,9 +924,9 @@ do
                         case $restaurar1 in
 			                  [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Restaurando el fichero original brandmeister.ini >>>>>"
+                        echo "<<<<<< Restaurando el fichero original MMDVMBM.ini >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVM.ini_original ~/MMDVMHost/brandmeister.ini
+                        sudo cp -f ~/MMDVMHost/MMDVM.ini_original ~/MMDVMHost/MMDVMBM.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
