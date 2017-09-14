@@ -19,7 +19,7 @@ read escoger_menu
 case $escoger_menu in
 
 #de momento actualización deshabilitada la posicion del ID a pasao a la numero 2
-11111) echo ""
+1000) echo ""
 while true
 do
 	clear
@@ -32,12 +32,12 @@ echo "\33[1;33m"
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-	           cd /home/pi
+	           cd ~
                        sudo rm -r MMDVMHost
-                       cd /home/pi
+                       cd ~
                        git clone https://github.com/g4klx/MMDVMHost
                        git clone https://github.com/g4klx/MMDVMCal
-                       cd /home/pi/MMDVMHost
+                       cd ~/MMDVMHost
                        make
                        sudo cp MMDVM.ini MMDVMBM.ini
                        sudo cp MMDVM.ini MMDVMPLUS.ini
@@ -45,11 +45,11 @@ echo "\33[1;33m"
                        sudo cp MMDVMHost MMDVMPLUS
                        sudo cp MMDVM.ini MMDVM.ini_original
 
-		cd /home/pi/V30
-		sudo cp MMDVMHostLIBRE /home/pi/MMDVMHost
-		sudo cp MMDVMLIBRE.ini /home/pi/MMDVMHost
+		cd ~/SCRIPTS_ORANGE
+		sudo cp MMDVMHostLIBRE ~/MMDVMHost
+		sudo cp MMDVMLIBRE.ini ~/MMDVMHost
 
-		 cd /home/pi/MMDVMHost
+		 cd ~/MMDVMHost
 		 sudo chmod +x MMDVMHostLIBRE
 
 
