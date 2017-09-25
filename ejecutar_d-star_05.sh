@@ -5,7 +5,7 @@
 sed -i "6c Exec=/home/orangepi/SCRIPTS_ORANGE/cerrar_d-star_05.sh" ~/Desktop/D-Star.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/DSTAR_ON.png"
 #sed -i "10c Name[es_ES]=Cerrar ircDDB" ~/Desktop/ircDDBGateway
-sudo ircddbgateway -gui
+ircddbgateway -gui
 #sleep 3
 #sudo ircddbgateway -gui
 
