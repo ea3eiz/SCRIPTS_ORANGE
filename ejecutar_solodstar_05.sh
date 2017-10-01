@@ -14,3 +14,4 @@ sudo ircddbgateway -gui  & dstarrepeater & ircddbgateway -gui
 #9-StartupNotify=false
 #10-Name[es_ES]=Abrir solo D-STAR
 #11-Path=/home/orangepi/SCRIPTS_ORANGE
+#
