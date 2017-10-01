@@ -1,6 +1,6 @@
 #!/bin/bash
-sed -i "6c Exec=/home/orangepi/SCRIPTS_ORANGE/cerrar_solodstar_05.sh" ~/Desktop/Dstar solo.desktop
-sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_DSTAR_ON.png" ~/Desktop/Dstar solo.desktop
+sed -i "6c Exec=/home/orangepi/SCRIPTS_ORANGE/cerrar_solodstar_05.sh" ~/Desktop/Dstar_solo.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_DSTAR_ON.png" ~/Desktop/Dstar_solo.desktop
 sudo ircddbgateway -gui  & dstarrepeater & ircddbgateway -gui
 
 #1-[Desktop Entry]
