@@ -11,4 +11,4 @@ sudo killall ircddbgateway
 sudo killall remotecontrol
 #cierra D-STARRepeater
 sudo killall dstarrepeater
-#
+##
