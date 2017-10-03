@@ -1,14 +1,10 @@
 #!/bin/bash
+#sed -i "4c Exec=sh -c 'cd ~/V30;lxterminal --geometry=72x15 -e sudo sh cerrar_mmdvm_30.sh'" ~/Desktop/Abrir_Radio
+#sed -i "5c Icon=~/V30/MMDVM_ON.png" ~/Desktop/Abrir_Radio
+#sed -i "10c Name[es_ES]=Cerrar Radio" ~/Desktop/Abrir_Radio
 
-sleep 10
-
-
-sed -i "4c Exec=sh -c 'cd /home/pi/V30;lxterminal --geometry=72x15 -e sudo sh cerrar_mmdvm_30.sh'" /home/pi/Desktop/Abrir_Radio
-sed -i "5c Icon=/home/pi/V30/MMDVM_ON.png" /home/pi/Desktop/Abrir_Radio
-sed -i "10c Name[es_ES]=Cerrar Radio" /home/pi/Desktop/Abrir_Radio
-
-sed -i "5c MMDVM=ON" /home/pi/status.ini
-cd /home/pi/MMDVMHost
+#sed -i "5c MMDVM=ON" ~/status.ini
+cd ~/MMDVMHost
 
 echo "\33[1;32m"
 clear
