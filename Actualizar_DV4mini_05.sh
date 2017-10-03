@@ -28,21 +28,21 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        cd /home/pi/Downloads
+                        cd ~/Downloads
 wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/dv_serial
-sudo cp -v /home/pi/Downloads/dv_serial /home/pi/dv4mini 
-cd /home/pi/dv4mini/
+sudo cp -v ~/Downloads/dv_serial ~/dv4mini 
+cd ~/dv4mini/
 sudo chmod 777 dv_serial
-cd /home/pi/Downloads
-sudo rm -v /home/pi/Downloads/dv_serial
+cd ~/Downloads
+sudo rm -v ~/Downloads/dv_serial
 
-sudo cp -v /home/pi/dv4mini/dv4mini.exe /home/pi/dv4mini/dv4mini.exe.old
+sudo cp -v ~/dv4mini/dv4mini.exe ~/dv4mini/dv4mini.exe.old
 wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/dv4mini.exe
-sudo cp -v /home/pi/Downloads/dv4mini.exe /home/pi/dv4mini/dv4mini.exe
-cd /home/pi/dv4mini/
+sudo cp -v ~/Downloads/dv4mini.exe ~/dv4mini/dv4mini.exe
+cd ~/dv4mini/
 sudo chmod 777 dv4mini.exe
-cd /home/pi/Downloads
-sudo rm -v /home/pi/Downloads/dv4mini.exe
+cd ~/Downloads
+sudo rm -v ~/Downloads/dv4mini.exe
 clear
 		break;;
 		[nN]* ) echo ""
@@ -60,23 +60,23 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        cd /home/pi/Downloads
+                        cd ~/Downloads
 wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/old/dv_serial
-sudo cp -v /home/pi/Downloads/dv_serial /home/pi/dv4mini 
-cd /home/pi/dv4mini/
+sudo cp -v ~/Downloads/dv_serial ~/dv4mini 
+cd ~/dv4mini/
 sudo chmod 777 dv_serial
-cd /home/pi/Downloads
-sudo rm -v /home/pi/Downloads/dv_serial 
+cd ~/Downloads
+sudo rm -v ~/Downloads/dv_serial 
 
 
-cd /home/pi/Downloads
-sudo cp -v /home/pi/dv4mini/dv4mini.exe /home/pi/dv4mini/dv4mini.exe.old
+cd ~/Downloads
+sudo cp -v ~/dv4mini/dv4mini.exe ~/dv4mini/dv4mini.exe.old
 wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/old/dv4mini.exe
-sudo cp -v /home/pi/Downloads/dv4mini.exe /home/pi/dv4mini/dv4mini.exe
-cd /home/pi/dv4mini/
+sudo cp -v ~/Downloads/dv4mini.exe ~/dv4mini/dv4mini.exe
+cd ~/dv4mini/
 sudo chmod 777 dv4mini.exe
-cd /home/pi/Downloads
-sudo rm -v /home/pi/Downloads/dv4mini.exe
+cd ~/Downloads
+sudo rm -v ~/Downloads/dv4mini.exe
 
 clear
 		break;;
