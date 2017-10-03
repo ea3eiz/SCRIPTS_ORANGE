@@ -14,5 +14,5 @@ sudo sh cerrar_solodstar_05.sh
 #sed -i "5c Icon=~/V30/BLUEDV_ON.png" ~/Desktop/Abrir_BlueDV
 #sed -i "10c Name[es_ES]=Cerrar BlueDV" ~/Desktop/Abrir_BlueDV
 
-cd ~/OpenDV
+cd ~/bluedv
 mono BlueDV.exe
