@@ -12,6 +12,6 @@
 #sudo sh cerrar_solodstar_05.sh
 
 
-
+sudo su | ps aux | grep BlueDV.exe | grep -v grep | awk '{print $2}' | xargs kill
 cd ~/bluedv
 mono BlueDV.exe
