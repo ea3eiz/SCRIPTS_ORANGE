@@ -4,11 +4,11 @@ do
 clear
 echo "\33[1;32m   *********************************************************************"
 echo "   *                                                                   *"
-echo "   *           Script para Actualizar MMDVMHost         \33[1;31m by EA3EIZ\33[1;32m     *"
+echo "   *           Script para Actualizar MMDVMHost**         \33[1;31m by EA3EIZ\33[1;32m     *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
 echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
-echo  "\33[1;31m      Esta opción está deshabilitada \33[1;32m(Firmware actualizado 20170719)   \33[1;33m"
+#echo  "\33[1;31m      Esta opción está deshabilitada \33[1;32m(Firmware actualizado 20170719)   \33[1;33m"
 
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -19,22 +19,42 @@ read escoger_menu
 case $escoger_menu in
 
 #de momento actualización deshabilitada la posicion del ID a pasao a la numero 2
-1000) echo ""
+1) echo ""
 while true
 do
 	clear
-	echo " ****************************************************************"
-echo " \33[1;31m* Si actualizas MMDVMhost, perderás todas las configuraciones  *"
-echo " * Anotate las configuraciones para poder volver a ponerlas     *"
-echo " \33[1;32m****************************************************************"
-echo "\33[1;33m"
+#echo " ****************************************************************"
+#echo " \33[1;31m* Si actualizas MMDVMhost, perderás todas las configuraciones  *"
+#echo " * Anotate las configuraciones para poder volver a ponerlas     *"
+#echo " \33[1;32m****************************************************************"
+#echo "\33[1;33m"
 	        read -p '  Quieres actualizar MMDVMHost  Si/No: ' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-	           cd ~
+
+			sudo chmod -R 777 ~/Downloads
+            cd ~/MMDVMHost
+            sudo cp -f MMDVM.ini ~/Downloads
+            sudo cp -f MMDVM.ini_copia ~/Downloads
+            sudo cp -f MMDVM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVM.ini_original ~/Downloads
+            sudo cp -f MMDVMBM.ini ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_uno ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_dos ~/Downloads       
+            sudo cp -f MMDVMPLUS.ini ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
+	        
+	                   cd /home/pi
                        sudo rm -r MMDVMHost
-                       cd ~
+                       cd /home/pi
                        git clone https://github.com/g4klx/MMDVMHost
                        git clone https://github.com/g4klx/MMDVMCal
                        cd ~/MMDVMHost
@@ -45,13 +65,30 @@ echo "\33[1;33m"
                        sudo cp MMDVMHost MMDVMPLUS
                        sudo cp MMDVM.ini MMDVM.ini_original
 
-		cd ~/SCRIPTS_ORANGE
-		sudo cp MMDVMHostLIBRE ~/MMDVMHost
-		sudo cp MMDVMLIBRE.ini ~/MMDVMHost
+		               cd ~/V30
+		               sudo cp MMDVMHostLIBRE ~/MMDVMHost
+		               sudo cp MMDVMLIBRE.ini ~/MMDVMHost
 
-		 cd ~/MMDVMHost
-		 sudo chmod +x MMDVMHostLIBRE
+		               cd ~/MMDVMHost
+		               sudo chmod +x MMDVMHostLIBRE
 
+		    cd ~/Downloads
+            sudo cp -f MMDVM.ini ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_original ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_dos ~/DoMMDVMHost     
+            sudo cp -f MMDVMPLUS.ini ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
 
                        echo""
 clear
