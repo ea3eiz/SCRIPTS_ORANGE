@@ -52,9 +52,9 @@ do
             sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
 	        
-	                   cd /home/pi
+	                   cd ~/
                        sudo rm -r MMDVMHost
-                       cd /home/pi
+                       cd ~/
                        git clone https://github.com/g4klx/MMDVMHost
                        git clone https://github.com/g4klx/MMDVMCal
                        cd ~/MMDVMHost
@@ -65,7 +65,7 @@ do
                        sudo cp MMDVMHost MMDVMPLUS
                        sudo cp MMDVM.ini MMDVM.ini_original
 
-		               cd ~/V30
+		               cd ~/SCRIPTS_ORANGE
 		               sudo cp MMDVMHostLIBRE ~/MMDVMHost
 		               sudo cp MMDVMLIBRE.ini ~/MMDVMHost
 
