@@ -1,12 +1,7 @@
 #!/bin/bash
-
-
-
-#sed -i "4c Exec=sh -c 'cd /home/pi/V30;lxterminal --geometry=72x15 -e sudo sh cerrar_plus_30.sh'" ~/Desktop/Abrir_MMDVMPLUS
-#sed -i "5c Icon=/home/pi/V30/DMRPLUS_ON.png" ~/Desktop/Abrir_MMDVMPLUS
-#sed -i "10c Name[es_ES]=Cerrar DMR+" ~/Desktop/Abrir_MMDVMPLUS
-
-#sed -i "6c MMDVMPLUS=ON" ~/status.ini
+sed -i "6c Exec=mate-terminal -x sh cerrar_plus_05.sh" ~/Desktop/DMRPLUS.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_DMRPLUS_ON.png" ~/Desktop/DMRPLUS.desktop
+sed -i "10c Name[es_ES]=Cerrar DMR+" ~/Desktop/DMRPLUS.desktop
 
 
 echo "\33[1;37m"
