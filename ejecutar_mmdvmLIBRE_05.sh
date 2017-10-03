@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -i "6c Exec=mate-terminal -x sh cerrar_mmdvLIBRE_05.sh" ~/Desktop/Libre.desktop
+sed -i "6c Exec=mate-terminal -x sh cerrar_mmdvmLIBRE_05.sh" ~/Desktop/Libre.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/LIBRE_ON.png" ~/Desktop/Libre.desktop
 sed -i "10c Name[es_ES]=Cerrar LIBRE" ~/Desktop/Libre.desktop
 
