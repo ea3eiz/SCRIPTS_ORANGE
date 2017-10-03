@@ -1,9 +1,8 @@
 #!/bin/bash
 
-#sed -i "4c DV4mini=ON" /home/pi/status.ini
-#sed -i "4c Exec=sh -c 'cd /home/pi/V30; sudo sh cerrar_dv4_30.sh'" /home/pi/Desktop/Abrir_dv4mini
-#sed -i "5c Icon=/home/pi/V30/DV4_ON.png" /home/pi/Desktop/Abrir_dv4mini
-#sed -i "10c Name[es_ES]=Cerrar DV4mini" /home/pi/Desktop/Abrir_dv4mini
+sed -i "6c Exec=mate-terminal -x sh cerrar_dv4_05.sh" ~/Desktop/DV4mini.desktop
+sed -i "7c Icon=/home/orangepi/dv4mini/dv4k.png" ~/Desktop/DV4mini.desktop
+sed -i "11c Name[es_ES]=Abrir DV4mini" ~/Desktop/DV4mini.desktop
 
 cd ~/dv4mini
 mono dv4mini.exe
