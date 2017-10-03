@@ -54,6 +54,7 @@ do
 	        
 	                   cd ~/
                        sudo rm -r MMDVMHost
+                       sudo rm -r MMDVMCal
                        cd ~/
                        git clone https://github.com/g4klx/MMDVMHost
                        git clone https://github.com/g4klx/MMDVMCal
