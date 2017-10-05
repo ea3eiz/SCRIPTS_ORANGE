@@ -29,7 +29,7 @@
 #sed -i "5c Icon=~/SCRIPTS_ORANGE/BLUEDV.png" /home/pi/Desktop/Abrir_BlueDV
 #sed -i "10c Name[es_ES]=Abrir BlueDV" /home/pi/Desktop/Abrir_BlueDV
 
-sed -i "6 cExec=mate-terminal -x sh ejecutar_bm_05.sh" ~/Desktop/BM.desktop
+sed -i "6c Exec=mate-terminal -x sh ejecutar_bm_05.sh" ~/Desktop/BM.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/DMR.png" ~/Desktop/BM.desktop
 sed -i "10c Name[es_ES]=Abrir BM" ~/Desktop/BM.desktop
 
