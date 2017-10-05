@@ -33,6 +33,11 @@ sed -i "6cExec=mate-terminal -x sh ejecutar_bm_05.sh" ~/Desktop/BM.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/DMR.png" ~/Desktop/BM.desktop
 sed -i "10c Name[es_ES]=Abrir BM" ~/Desktop/BM.desktop
 
+# quita el botón verde del DMR+ al iniciar si se hubiera quedado encendido
+sed -i "6c Exec=mate-terminal -x sh ejecutar_plus_05.sh" ~/Desktop/DMRPLUS.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_DMRPLUS.png" ~/Desktop/DMRPLUS.desktop
+sed -i "10c Name[es_ES]=Abrir DMR+" ~/Desktop/DMRPLUS.desktop
+
 #sed -i "1c D-STAR=OFF" /home/pi/status.ini
 #sed -i "4cExec=sh -c 'cd /home/pi/V30; sudo sh ejecutar_d-star_30.sh'" /home/pi/Desktop/ircDDBGateway
 #sed -i "5c Icon=~/SCRIPTS_ORANGE/DSTAR.png" /home/pi/Desktop/ircDDBGateway
@@ -50,9 +55,6 @@ sed -i "10c Name[es_ES]=Abrir BM" ~/Desktop/BM.desktop
 #sed -i "5c Icon=~/SCRIPTS_ORANGE/LIBRE.png" /home/pi/Desktop/Abrir_LIBRE
 #sed -i "10c Name[es_ES]=Abrir LIBRE" /home/pi/Desktop/Abrir_LIBRE
 
-#sed -i "4c Exec=sh -c 'cd /home/pi/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_plus_30.sh'" /home/pi/Desktop/Abrir_MMDVMPLUS
-#sed -i "5c Icon=~/SCRIPTS_ORANGE/ICONO_DMRPLUS.png" /home/pi/Desktop/Abrir_MMDVMPLUS
-#sed -i "10c Name[es_ES]=Abrir DMR+" /home/pi/Desktop/Abrir_MMDVMPLUS
 
 #sed -i "4c Exec=sh -c 'cd /home/pi/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_svxlink_30.sh'" /home/pi/Desktop/svxlink
 #sed -i "5c Icon=~/SCRIPTS_ORANGE/ECHOLINK.png" /home/pi/Desktop/svxlink
