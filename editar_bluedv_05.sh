@@ -15,7 +15,7 @@ echo "\33[1;36m   2)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (t
 echo "\33[1;36m   3)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM1)\33[1;33m"
 echo "\33[1;36m   4)\33[0m Puerto para DVMEGA + Bluestack Raspberry Pi(ttyUSB0)\33[1;33m"
 echo -n "                                            - "
-var1= sed -n '4p'  /home/pi/bluedv/BlueDVconfig.ini
+var1= sed -n '4p'  ~/bluedv/BlueDVconfig.ini
 echo ""
 echo "\33[1;36m   5)\33[1;33m Abrir fichero .ini para hacer cualquier cambio\33[1;33m"
 echo ""
@@ -32,7 +32,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyAMA0" /home/pi/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyAMA0" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -45,7 +45,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyACM0" /home/pi/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyACM0" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -57,7 +57,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyACM1" /home/pi/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyACM1" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -69,7 +69,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyUSB0" /home/pi/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyUSB0" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -81,7 +81,7 @@ do
                               actualizar=S 
                               case $actualizar in
                                     [sS]* ) echo ""
-                              pluma /home/pi/bluedv/BlueDVconfig.ini
+                              pluma ~/bluedv/BlueDVconfig.ini
                                     break;;
                                     [nN]* ) echo ""
                                     break;;
