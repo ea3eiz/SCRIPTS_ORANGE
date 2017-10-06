@@ -1,9 +1,7 @@
 #!/bin/bash
-sed -i "4cExec=sh -c 'cd /home/pi/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_svxlink_30.sh'" /home/pi/Desktop/svxlink
-sed -i "5c Icon=/home/pi/V30/ECHOLINK.png" /home/pi/Desktop/svxlink
-sed -i "10c Name[es_ES]=Abrir SVXLINK" /home/pi/Desktop/svxlink
-#sed -i "11c Hidden=true" /home/pi/Desktop/svxlink
-sed -i "8c SVXLINK=OFF" /home/pi/status.ini
+sed -i "6c Exec=mate-terminal -x sh ejecutar_svxlink_05.sh" ~/Desktop/SVXLink.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SVXLINK.png" ~/Desktop/SVXLink.desktop
+sed -i "11c Name[es_ES]=Abrir SVXLINK" ~/Desktop/SVXLink.desktop
 
 
 

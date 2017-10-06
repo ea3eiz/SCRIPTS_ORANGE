@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sed -i "6c Exec=mate-terminal -x sh cerrar_svxlink_05.sh" ~/Desktop/SVXLink.desktop
-sed -i "7c Icon=~/V30/SVXLINK_ON.png" ~/Desktop/SVXLink.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SVXLINK_ON.png" ~/Desktop/SVXLink.desktop
 sed -i "11c Name[es_ES]=Cerrar SVXLINK" ~/Desktop/SVXLink.desktop
 
     #[Desktop Entry]
