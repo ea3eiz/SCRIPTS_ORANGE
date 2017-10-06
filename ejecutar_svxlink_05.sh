@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sed -i "6c Exec=mate-terminal -x sh cerrar_svxlink_05.sh" /home/pi/Desktop/SVXLink.desktop
-sed -i "7c Icon=/home/pi/V30/SVXLINK_ON.png" /home/pi/Desktop/SVXLink.desktop
-sed -i "11c Name[es_ES]=Cerrar SVXLINK" /home/pi/Desktop/SVXLink.desktop
+sed -i "6c Exec=mate-terminal -x sh cerrar_svxlink_05.sh" ~/Desktop/SVXLink.desktop
+sed -i "7c Icon=~/V30/SVXLINK_ON.png" ~/Desktop/SVXLink.desktop
+sed -i "11c Name[es_ES]=Cerrar SVXLINK" ~/Desktop/SVXLink.desktop
 
     #[Desktop Entry]
     #Version=1.0
