@@ -739,7 +739,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany ~/MMDVMHost/MMDVMLIBRE.ini
+                              pluma ~/MMDVMHost/MMDVMLIBRE.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;

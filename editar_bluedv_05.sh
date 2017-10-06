@@ -81,7 +81,7 @@ do
                               actualizar=S 
                               case $actualizar in
                                     [sS]* ) echo ""
-                              geany /home/pi/bluedv/BlueDVconfig.ini
+                              pluma /home/pi/bluedv/BlueDVconfig.ini
                                     break;;
                                     [nN]* ) echo ""
                                     break;;

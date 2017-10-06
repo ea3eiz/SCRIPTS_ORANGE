@@ -115,7 +115,7 @@ do
                               actualizar=S 
                               case $actualizar in
                                        [sS]* ) echo ""
-                              geany /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                              pluma /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                                        break;;
                                        [nN]* ) echo ""
                                        break;;

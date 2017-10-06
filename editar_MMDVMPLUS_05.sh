@@ -804,7 +804,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany ~/MMDVMHost/MMDVMPLUS.ini
+                              pluma ~/MMDVMHost/MMDVMPLUS.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
