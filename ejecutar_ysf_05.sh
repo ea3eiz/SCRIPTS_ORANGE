@@ -17,7 +17,7 @@
 
 
 sed -i "6c Exec=mate-terminal -x sh cerrar_ysf_05.sh" ~/Desktop/YSFGateway.desktop
-sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/C4FM_ON.png" ~/Desktop/YSFGateway.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/YSF_ON.png" ~/Desktop/YSFGateway.desktop
 sed -i "11c Name[es_ES]=Cerrar YSF" ~/Desktop/YSFGateway.desktop
 
 
