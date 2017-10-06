@@ -473,7 +473,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
-                              pluma /usr/local/etc/svxlink/svxlink.conf
+                              sudo pluma /usr/local/etc/svxlink/svxlink.conf
 			break;;
 			[nN]* ) echo ""
 			break;;

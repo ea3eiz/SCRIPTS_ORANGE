@@ -45,7 +45,7 @@ clear
             sudo cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
-
+sleep 10
             cd  /home/pi/YSFClients/YSFGateway/
             sudo cp -f YSFGateway.ini /home/pi/Downloads
             
