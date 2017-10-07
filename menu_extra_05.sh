@@ -27,7 +27,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
-                        sudo git pull 
+                        git pull 
                         sleep 5
                         clear
                         exit;
@@ -49,7 +49,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
 			            cd ~/SCRIPTS_ORANGE
-                        sudo git pull
+                        git pull
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         chmod +x ~/Desktop
                         clear
