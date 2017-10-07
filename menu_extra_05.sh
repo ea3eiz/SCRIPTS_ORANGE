@@ -48,7 +48,7 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
-                        sudo cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         clear
                         exit;
 		break;;
