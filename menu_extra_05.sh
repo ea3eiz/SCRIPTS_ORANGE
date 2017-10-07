@@ -49,6 +49,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        chmod +x ~/Desktop
                         clear
                         exit;
 		break;;
