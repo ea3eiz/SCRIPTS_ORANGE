@@ -14,5 +14,5 @@ echo "***********************************************"
 #sleep 2
 echo "\33[1;37m"
 sudo killall MMDVMDSTAR
-sudo mate-terminal -x ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
-#
+sudo ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
+
