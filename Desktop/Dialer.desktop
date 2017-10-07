@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Dialer
+Comment=
+Exec=sudo python bmxtg.py
+Icon=/home/orangepi/SCRIPTS_ORANGE/DIALER.png
+Path=/home/orangepi/bmxtg
+Terminal=false
+StartupNotify=false

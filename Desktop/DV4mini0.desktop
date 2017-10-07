@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DV4mini
+Comment=
+Exec=mate-terminal --geometry=75x12 -x sh Actualizar_DV4mini_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/dv4k.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Actualizar DV4mini

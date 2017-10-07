@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DV4mini
+Comment=
+Exec=sh ejecutar_dv4_05.sh
+Icon=/home/orangepi/dv4mini/dv4k.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir DV4mini

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=EditarDExtraircDDB
+Comment=
+Exec=pluma DExtra_Hosts.txt
+Icon=/home/orangepi/SCRIPTS_ORANGE/EDITAR.png
+Path=~/usr/local/etc
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Editar DExtra ircDDB

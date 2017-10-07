@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=D-Star
+Comment=
+Exec=sh ejecutar_d-star_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/DSTAR.png
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir ircDDB
+Path=/home/orangepi/SCRIPTS_ORANGE

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DstarRepeater config
+Comment=
+Exec=sudo dstarrepeaterconfig
+Icon=/home/orangepi/SCRIPTS_ORANGE/Editar_repeater.png
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Editar D-STAR Repeater
+Path=/home/orangepi/OpenDV/DStarRepeater/

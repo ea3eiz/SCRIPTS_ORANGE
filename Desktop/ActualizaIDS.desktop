@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ActualizaIDS
+Comment=
+Exec=mate-terminal -x sh actualizar_IDS_MMDVMHost_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/UPDATE.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Actualiza IDS MMDVMHost

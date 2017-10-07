@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=AbrirsoloDstar
+Comment=
+Exec=/home/orangepi/SCRIPTS_ORANGE/ejecutar_solodstar_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_D-STAR.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir solo D-STAR

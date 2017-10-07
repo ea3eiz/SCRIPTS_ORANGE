@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=CopiarRestaurar
+Comment=
+Exec=/home/orangepi/SCRIPTS_ORANGE/Copia-Restauracion_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/ACTUALIZA_BD.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Copiar Restaurar

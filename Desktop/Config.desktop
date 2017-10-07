@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=D-Star config
+Comment=
+Exec=sudo ircddbgatewayconfig
+Icon=/home/orangepi/SCRIPTS_ORANGE/EDITAR.png
+Path=
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Editar ircDDB

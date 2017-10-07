@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Dstar_solo
+Comment=
+Exec=/home/orangepi/SCRIPTS_ORANGE/ejecutar_solodstar_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_DSTAR.png
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir D-STAR Repeater
+Path=/home/orangepi/SCRIPTS_ORANGE

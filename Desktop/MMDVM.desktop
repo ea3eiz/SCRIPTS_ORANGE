@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Abrir Radio
+Comment=
+Exec=mate-terminal -x sh ejecutar_mmdvm_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/MMDVM.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false

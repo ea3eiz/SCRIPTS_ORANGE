@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Md380tools
+Comment=
+Exec=/home/orangepi/SCRIPTS_ORANGE/md380tools.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/MD380TOOLS.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Instalar Md380tools

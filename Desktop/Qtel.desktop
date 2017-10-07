@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Qtel
+Comment=
+Exec=/usr/local/bin/qtel
+Icon=/home/orangepi/SCRIPTS_ORANGE/Qtel.png
+Path=
+Terminal=false
+StartupNotify=false

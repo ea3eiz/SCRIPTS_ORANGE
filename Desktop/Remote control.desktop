@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Remote control
+Comment=
+Exec=sudo remotecontrol
+Icon=/home/orangepi/SCRIPTS_ORANGE/REMOTE_CONTROL.png
+Path=
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Remote

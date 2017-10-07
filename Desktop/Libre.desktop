@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Abrir Libre
+Comment=
+Exec=mate-terminal -x sh ejecutar_mmdvmLIBRE_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/LIBRE.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+Name[es_ES]=Abrir LIBRE

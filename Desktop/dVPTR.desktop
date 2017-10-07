@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=dVPTR
+Comment=
+Exec=sudo mono dvrptr.exe
+Icon=/home/orangepi/dvrptr/DVPRTRpng.png
+Path=/home/orangepi/dvrptr
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir Dvrptr

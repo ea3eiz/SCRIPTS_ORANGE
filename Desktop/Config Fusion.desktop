@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Comment=
+Exec=mate-terminal --geometry=80x47 -x sh editar_YSF_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/editar_C4FM.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Editar YSF

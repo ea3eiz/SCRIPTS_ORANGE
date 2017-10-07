@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YSFGateway
+Comment=
+Exec=mate-terminal -x sh ejecutar_ysf_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/C4FM.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir YSF

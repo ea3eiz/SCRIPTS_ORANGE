@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Brandmeister
+Comment=
+Exec=mate-terminal -x sh ejecutar_bm_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/DMR.png
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir BM
+Path=/home/orangepi/SCRIPTS_ORANGE
+GenericName=Abrir_MMDVMBM

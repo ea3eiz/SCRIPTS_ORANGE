@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Editar Radio
+Comment=
+Exec=mate-terminal --geometry=80x47 -x sh editar_MMDVM_05.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/EDITAR_BLUEDV.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
