@@ -15,5 +15,4 @@ echo "***********************************************"
 echo "\33[1;37m"
 sudo killall MMDVMDSTAR
 sudo mate-terminal -x ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
-#fi
-#fi 
+
