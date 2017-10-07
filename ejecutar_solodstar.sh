@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd ~/MMDVMHost
-sudo mate-terminal -x ./MMDVMDSTAR MMDVMBM.ini & ircddbgateway -gui
+sudo ircddbgateway -gui & mate-terminal -x ./MMDVMDSTAR MMDVMDSTAR.ini
 
