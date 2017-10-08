@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Editar solo D-STAR
+Name=Editar solo FUSION
 Comment=
-Exec=/home/orangepi/SCRIPTS_ORANGE/ejecutar_bm_05.sh
-Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_D-STAR.png
-Path=/home/orangepi/SCRIPTS_ORANGE
+Exec=pluma MMDVMFUSION.ini
+Icon=/home/orangepi/SCRIPTS_ORANGE/editar_bm.png
+Path=/home/orangepi/MMDVMHost
 Terminal=false
 StartupNotify=false
