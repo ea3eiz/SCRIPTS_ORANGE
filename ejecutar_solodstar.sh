@@ -6,4 +6,4 @@ sed -i "4c Name[es_ES]=Cerrar solo D-STAR" ~/Desktop/AbrirsoloDstar.desktop
 
 
 cd ~/MMDVMHost
-sudo mate-terminal -x ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
+mate-terminal -x ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
