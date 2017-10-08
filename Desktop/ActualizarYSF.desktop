@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=ActualizarYSF
 Comment=
-Exec=/home/orangepi/SCRIPTS_ORANGE/actualizar_YSF_05.sh
+Exec=mate-terminal --geometry=80x47 -x sh actualizar_YSF_05.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/ACTUALIZAR_BD.png
 Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
