@@ -6,4 +6,6 @@
 
 
 cd ~/MMDVMHost
-sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini & ./YSFGateway YSFGateway.ini
+sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
+cd ~/YSFClients/YSFGateway
+sudo mate-terminal -x ./YSFGateway YSFGateway.ini
