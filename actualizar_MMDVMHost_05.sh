@@ -103,7 +103,7 @@ do
 
             #solo Dstar y solo Fusion
             sudo cp -f MMDVMDSTAR.ini ~/MMDVMHost
-            sudo cp -f MMDVMFUSION.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVMFUSION.ini ~/MMDVMHost
             #fin  Dstar y solo Fusion
 
 
