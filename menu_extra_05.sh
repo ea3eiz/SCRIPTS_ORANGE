@@ -27,7 +27,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
-                        git pull 
+                        sudo git pull 
                         sleep 5
                         clear
                         exit;
