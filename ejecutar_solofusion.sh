@@ -4,8 +4,7 @@
 #sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_D-STAR_ON.png" ~/Desktop/AbrirsoloDstar.desktop
 #sed -i "4c Name[es_ES]=Cerrar solo D-STAR" ~/Desktop/AbrirsoloDstar.desktop
 
-
-cd ~/MMDVMHost
-sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
 cd ~/YSFClients/YSFGateway
 sudo mate-terminal -x ./YSFGateway YSFGateway.ini
+cd ~/MMDVMHost
+sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
