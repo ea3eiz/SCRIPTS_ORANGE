@@ -6,5 +6,5 @@ Comment=
 Exec=mate-terminal -x top
 Icon=/home/orangepi/SCRIPTS_ORANGE/top.png
 Path=
-Terminal=true
+Terminal=false
 StartupNotify=false
