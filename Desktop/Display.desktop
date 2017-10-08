@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=Display
 Comment=
-Exec=/home/orangepi/SCRIPTS_ORANGE/editar_display.sh
+Exec=mate-terminal --geometry=80x47 -x sh editar_display.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_DISPLAY.png
 Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
