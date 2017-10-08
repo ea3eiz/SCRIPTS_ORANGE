@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=Md380tools
 Comment=
-Exec=/home/orangepi/SCRIPTS_ORANGE/md380tools.sh
+Exec=mate-terminal --geometry=80x47 -x sh md380tools.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/MD380TOOLS.png
 Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
