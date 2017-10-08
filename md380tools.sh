@@ -11,11 +11,10 @@ echo "   *\33[1;31m                          by EA3EIZ\33[1;32m                 
 echo "   *                                                                  *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;31m  Actualizar la Raspberry Pi (si ha pasado tiempo sin actualizarla)"
-echo "\33[1;36m   2)\33[1;37m  Instalar md380tools (una vez instalado este apartado, ya no hará "
-echo "       falta volver a utilizar este punto"
+echo "\33[1;36m   2)\33[1;37m  Instalar md380tools"
 echo "\33[1;36m   3)\33[1;33m  Introducir firmware experimental en Walki MD380 sin GPS"
 echo "\33[1;36m   4)\33[1;33m  Introducir firmware experimental en Walki MD380 y MD390 con GPS"
-echo "\33[1;36m   5)\33[1;33m  Introducir la base de datos de indicativos Mundial users.csv"
+echo "\33[1;36m   5)\33[1;37m  Introducir la base de datos de indicativos Mundial users.csv"
 echo "\33[1;36m   6)\33[1;37m  Introducir la base de datos de indicativos solo Europa users.csv"
 echo ""
 echo "\33[1;32m   ********************************************************************"
@@ -47,31 +46,31 @@ while true
 do
 clear
 
-	                        read -p 'Quieres Actualizar? Si/No: ' actualizar
-		            case $actualizar in
-			[sS]* ) echo ""
-			echo "Estado: Actualizando >>>>>"
-			sudo apt-get update -y
-                                    sudo apt-get upgrade -y
-			echo ""
-			echo "Ok, se ha actualizado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
+            read -p 'Quieres Actualizar? Si/No: ' actualizar
+            case $actualizar in
+            [sS]* ) echo ""
+            echo "Estado: Actualizando >>>>>"
+            sudo apt-get update -y
+            sudo apt-get upgrade -y
+            echo ""
+            echo "Ok, se ha actualizado correctamente"
+            echo ""
+            break;;
+            [nN]* ) echo ""
+            break;;
 esac
 done;;
-2) 	echo ""
+2)  echo ""
 while true
 do
 clear
-			echo ""
-			echo ""
-			echo ""
-		            read -p 'Descargar e instalar md380tools? Si/No ' installvar
-			case $installvar in
-			[sS]* ) echo ""
-			echo "Descargando md380tools"
+            echo ""
+            echo ""
+            echo ""
+                    read -p 'Descargar e instalar md380tools? Si/No ' installvar
+            case $installvar in
+            [sS]* ) echo ""
+            echo "Descargando md380tools"
                                     sudo apt-get install gcc-arm-none-eabi binutils-arm-none-eabi libusb-1.0 libnewlib-arm-none-eabi python-usb
                                     sleep 1
                                     sudo apt-get install python-pip
@@ -80,25 +79,22 @@ clear
                                     sleep 1
                                     sudo apt-get install git
                                     sleep 1
-                                    cd /home/pi/
+                                    cd ~/
                                     sudo rm -r md380tools
                                     git clone https://github.com/travisgoodspeed/md380tools.git
-                                    sleep 1
-                                    cd md380tools
-                                    sleep 1
-                                    sudo make
-			break;;
-			[nN]* ) echo ""
-			echo ""
-			echo ""
-			echo "volver"
-			echo ""
-			echo ""
-			echo ""
-			break;;			
+                                    
+            break;;
+            [nN]* ) echo ""
+            echo ""
+            echo ""
+            echo "volver"
+            echo ""
+            echo ""
+            echo ""
+            break;;         
 esac
 done;;
-3) 	echo ""
+3)  echo ""
 while true
 do
 clear
@@ -109,22 +105,23 @@ clear
         echo "***************************************************************************"
         echo "\33[1;32m "
         read -p 'Quieres Introducir el firmware experimental bajo tu propio riesgo? Si/No ' installvar1
-			case $installvar1 in
-			[sS]* ) echo ""
+            case $installvar1 in
+            [sS]* ) echo ""
                                     clear
-			echo "Introduciendo firmware experimental"
-                                    cd /home/pi/md380tools
+            echo "Introduciendo firmware experimental"
+                                    cd ~/md380tools
+                                    sudo git pull
                                     sudo make clean
                                     sudo make flash
-      			break;;
-			[nN]* ) echo ""
-			echo ""
-			echo ""
-			echo "volver"
-			echo ""
-			echo ""
-			echo ""
-			break;;			
+                break;;
+            [nN]* ) echo ""
+            echo ""
+            echo ""
+            echo "volver"
+            echo ""
+            echo ""
+            echo ""
+            break;;         
 esac
 done;;
 4)      echo ""
@@ -142,7 +139,8 @@ clear
                         [sS]* ) echo ""
                         clear
                         echo "Introduciendo firmware experimental"
-                        cd /home/pi/md380tools
+                        cd ~/md380tools
+                        sudo gitpull
                         sudo make clean
                         sudo make flash_S13
                         break;;
@@ -160,9 +158,13 @@ done;;
 while true
 do
 clear
-
+        echo "*************************************************************************"
+        echo "* Para que este proceso se efectue correctamente, es imprescindible     *"
+        echo "* actualizar el firmware md380tools en tu Walkie                        *"
+        echo "*************************************************************************"
+        echo""
         echo "\33[1;31m*************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki *"
+        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walkie*"
         echo "*  Encendemos el Walki en modo normal                                   *"
         echo "*************************************************************************"
         echo "\33[1;32m "
@@ -171,7 +173,7 @@ clear
                         [sS]* ) echo ""
                         clear
                         echo "Introduciendo USER.CSV"
-                        cd /home/pi/md380tools
+                        cd ~/md380tools
                         sudo make clean
                         sudo make updatedb flashdb
                         break;;
@@ -189,9 +191,14 @@ done;;
 while true
 do
 clear
+        echo "*************************************************************************"
+        echo "* Para que este proceso se efectue correctamente, es imprescindible     *"
+        echo "* actualizar el firmware md380tools en tu Walkie                        *"
+        echo "*************************************************************************"
+        echo""
         echo "\33[1;31m*************************************************************************"
-        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walki *"
-        echo "*  Encendemos el Walki en modo normal                                   *"
+        echo "*  Conectamos el cable de programación en el USB de la Raspi y en Walkie*"
+        echo "*  Encendemos el Walkie en modo normal                                  *"
         echo "*************************************************************************"
         echo "\33[1;32m "
                         read -p 'Introducir la base de datos Europa users.csv bajo tu propio riesgo? Si/No ' installvar5
@@ -199,7 +206,7 @@ clear
                         [sS]* ) echo ""
                         clear
                         echo "Introduciendo USER.CSV"
-                        cd /home/pi/md380tools
+                        cd ~/md380tools
                         sudo make clean
                         sudo make updatedb_eur flashdb
                         break;;
@@ -217,30 +224,27 @@ done;;
 while true
 do
 clear
-			echo ""
-			echo ""
-			echo ""
-		            read -p 'Quieres actualizar por si hay una nueva versión del md380tools? Si/No ' installvar6
-			case $installvar6 in
-			[sS]* ) echo ""
+            echo ""
+            echo ""
+            echo ""
+                    read -p 'Quieres actualizar por si hay una nueva versión del md380tools? Si/No ' installvar6
+            case $installvar6 in
+            [sS]* ) echo ""
                                     clear
-			echo "Actualizando una nueva versión del md380tools"
-                                    cd /home/pi/
+            echo "Actualizando una nueva versión del md380tools"
+                                    cd ~/
                                     sudo rm -r md380tools
                                     git clone https://github.com/travisgoodspeed/md380tools.git
-                                    sleep 1
-                                    cd md380tools
-                                    sleep 1
-                                    sudo make
-			break;;
-			[nN]* ) echo ""
-			echo ""
-			echo ""
-			echo "volver"
-			echo ""
-			echo ""
-			echo ""
-			break;;			
+                                   
+            break;;
+            [nN]* ) echo ""
+            echo ""
+            echo ""
+            echo "volver"
+            echo ""
+            echo ""
+            echo ""
+            break;;         
 esac
 done;;
 8)      echo ""
@@ -310,7 +314,7 @@ echo "   *                                                *"
 echo "   **************************************************"
 sleep 1
 clear
-exit;;	
+exit;;  
 esac
 done
 
