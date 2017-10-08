@@ -49,7 +49,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
 			            cd ~/SCRIPTS_ORANGE
-                        git pull
+                        sudo git pull
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         chmod +x ~/Desktop
                         clear
