@@ -5,6 +5,4 @@
 #sed -i "4c Name[es_ES]=Cerrar solo D-STAR" ~/Desktop/AbrirsoloDstar.desktop
 
 cd ~/YSFClients/YSFGateway
-sudo mate-terminal -x ./YSFGateway YSFGateway.ini
-cd ~/MMDVMHost
-sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
+sudo mate-terminal -x ./YSFGateway YSFGateway.ini | cd ~/MMDVMHost sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
