@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Svxlink
+Name=Editar Svxlink
 Comment=
 Exec=mate-terminal --geometry=80x47 -x sh editar_svxlink_05.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/DMRPLUS_EDITOR.png
