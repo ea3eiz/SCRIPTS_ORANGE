@@ -20,7 +20,7 @@
 #lxterminal --geometry=80x7 -e sudo sh menu_ejecutar_d-starrepeater_30.sh
 #===================
 
-#else
+
 
 
 sed -i "6c Exec=sudo sh cerrar_bm_05.sh" ~/Desktop/BM.desktop
@@ -41,8 +41,3 @@ echo "***********************************************"
 echo "\33[38;5;138m"
 sudo mate-terminal -x ./MMDVMBM MMDVMBM.ini
 
-sed -i "6c Exec=sudo sh ejecutar_bm_05.sh" ~/Desktop/BM.desktop
-sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/BRANDMEISTER.png" ~/Desktop/BM.desktop
-sed -i "10c Name[es_ES]=Abrir BM" ~/Desktop/BM.desktop
-#fi 
-#fi
