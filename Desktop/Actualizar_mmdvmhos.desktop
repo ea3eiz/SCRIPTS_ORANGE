@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Editar DMRPlus
+Comment=
+Icon=/home/orangepi/SCRIPTS_ORANGE/ACTUALIZAR.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+Name[es_ES]=Actualizar MMDVMHost
+StartupNotify=false
+Exec=mate-terminal -x sh actualizar_MMDVMHost_05.sh
