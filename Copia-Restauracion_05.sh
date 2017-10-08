@@ -27,36 +27,41 @@ clear
 			[sS]* ) echo ""
 			echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK"
 			sleep 3
-			sudo chmod -R 777 /home/pi/Downloads
-            cd /home/pi/MMDVMHost
-            sudo cp -f MMDVM.ini /home/pi/Downloads
-            sudo cp -f MMDVM.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVM.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVM.ini_copia3 /home/pi/Downloads
-            sudo cp -f MMDVM.ini_original /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVMBM.ini_copia3 /home/pi/Downloads
-            sudo cp -f MMDVMLIBRE.ini /home/pi/Downloads
-            sudo cp -f MMDVMLIBRE.ini_uno /home/pi/Downloads
-            sudo cp -f MMDVMLIBRE.ini_dos /home/pi/Downloads       
-            sudo cp -f MMDVMPLUS.ini /home/pi/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
-sleep 10
-            cd  /home/pi/YSFClients/YSFGateway/
-            sudo cp -f YSFGateway.ini /home/pi/Downloads
+			sudo chmod -R 777 ~/Downloads
+            cd ~/MMDVMHost
+            sudo cp -f MMDVM.ini ~/Downloads
+            sudo cp -f MMDVM.ini_copia ~/Downloads
+            sudo cp -f MMDVM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVM.ini_original ~/Downloads
+            sudo cp -f MMDVMBM.ini ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_uno ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_dos ~/Downloads       
+            sudo cp -f MMDVMPLUS.ini ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
+
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/Downloads
+            sudo cp -f MMDVMFUSION.ini ~/Downloads
+            #fin  Dstar y solo Fusion
+
+            cd  ~/YSFClients/YSFGateway/
+            sudo cp -f YSFGateway.ini ~/Downloads
             
-            cd /home/pi/bluedv/
-            sudo cp -f BlueDVconfig.ini /home/pi/Downloads
+            cd ~/bluedv/
+            sudo cp -f BlueDVconfig.ini ~/Downloads
 
             cd /usr/local/etc/svxlink/
-            sudo cp -f svxlink.conf /home/pi/Downloads
+            sudo cp -f svxlink.conf ~/Downloads
 
             cd /usr/local/etc/svxlink/svxlink.d/
-            sudo cp -f ModuleEchoLink.conf /home/pi/Downloads
+            sudo cp -f ModuleEchoLink.conf ~/Downloads
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
@@ -74,28 +79,35 @@ clear
 			[sS]* ) echo ""
 			echo "Restaurando copias editores BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK"
 			sleep 3
-			sudo chmod -R 777 /home/pi/Downloads
-            cd /home/pi/Downloads
-            sudo cp -f MMDVM.ini /home/pi/MMDVMHost
-            sudo cp -f MMDVM.ini_copia /home/pi/MMDVMHost
-            sudo cp -f MMDVM.ini_copia2 /home/pi/MMDVMHost
-            sudo cp -f MMDVM.ini_copia3 /home/pi/MMDVMHost
-            sudo cp -f MMDVM.ini_original /home/pi/MMDVMHost
-            sudo cp -f MMDVMBM.ini /home/pi/MMDVMHost
-            sudo cp -f MMDVMBM.ini_copia /home/pi/MMDVMHost
-            sudo cp -f MMDVMBM.ini_copia2 /home/pi/MMDVMHost
-            sudo cp -f MMDVMBM.ini_copia3 /home/pi/MMDVMHost
-            sudo cp -f MMDVMLIBRE.ini /home/pi/MMDVMHost
-            sudo cp -f MMDVMLIBRE.ini_uno /home/pi/MMDVMHost
-            sudo cp -f MMDVMLIBRE.ini_dos /home/pi/DoMMDVMHost     
-            sudo cp -f MMDVMPLUS.ini /home/pi/MMDVMHost
-            sudo cp -f MMDVMPLUS.ini_copia /home/pi/MMDVMHost
-            sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/MMDVMHost
-            sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/MMDVMHost
+			sudo chmod -R 777 ~/Downloads
+            cd ~/Downloads
+            sudo cp -f MMDVM.ini ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_original ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_dos ~/DoMMDVMHost     
+            sudo cp -f MMDVMPLUS.ini ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
 
-            sudo cp -f YSFGateway.ini /home/pi/YSFClients/YSFGateway/
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/MMDVMHost
+            sudo cp -f MMDVMFUSION.ini ~/MMDVMHost
+            #fin  Dstar y solo Fusion
 
-            sudo cp -f BlueDVconfig.ini /home/pi/bluedv/
+
+
+            sudo cp -f YSFGateway.ini ~/YSFClients/YSFGateway/
+
+            sudo cp -f BlueDVconfig.ini ~/bluedv/
 
             sudo cp -f svxlink.conf /usr/local/etc/svxlink/
             
