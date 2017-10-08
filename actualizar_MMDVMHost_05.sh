@@ -51,8 +51,13 @@ do
             sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
             sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
-	        
-	                   cd ~/
+            
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/Downloads
+            sudo cp -f MMDVMFUSION.ini ~/Downloads
+	          #fin  Dstar y solo Fusion
+	                   
+                     cd ~/
                        sudo rm -r MMDVMHost
                        sudo rm -r MMDVMCal
                        cd ~/
@@ -65,6 +70,11 @@ do
                        sudo cp MMDVMHost MMDVMBM
                        sudo cp MMDVMHost MMDVMPLUS
                        sudo cp MMDVM.ini MMDVM.ini_original
+                  
+                   #solo Dstar y solo Fusion
+                   sudo cp MMDVMHost MMDVMDSTAR
+                   sudo cp MMDVMHost MMDVMFUSION
+                   #fin  Dstar y solo Fusion
 
 		               cd ~/SCRIPTS_ORANGE
 		               sudo cp MMDVMHostLIBRE ~/MMDVMHost
@@ -90,6 +100,11 @@ do
             sudo cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
             sudo cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
             sudo cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
+
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/MMDVMHost
+            sudo cp -f MMDVMFUSION.ini_copia3 ~/MMDVMHost
+            #fin  Dstar y solo Fusion
 
                        echo""
 clear
