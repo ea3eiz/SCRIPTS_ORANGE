@@ -2,7 +2,7 @@
 
 sed -i "6c Exec=sudo sh cerrar_solofusion.sh" ~/Desktop/AbrirsoloYSF.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_D-STAR_ON.png" ~/Desktop/AbrirsoloYSF.desktop
-sed -i "4c Name[es_ES]=Cerrar solo FUSION" ~/Desktop/AbrirsoloYSF.desktop
+sed -i "11c Name[es_ES]=Cerrar solo FUSION" ~/Desktop/AbrirsoloYSF.desktop
 
 cd ~/YSFClients/YSFGateway
 sudo mate-terminal -x ./YSFGateway YSFGateway.ini
