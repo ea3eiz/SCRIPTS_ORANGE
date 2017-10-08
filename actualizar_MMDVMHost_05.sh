@@ -106,6 +106,8 @@ do
             sudo cp -f MMDVMFUSION.ini_copia3 ~/MMDVMHost
             #fin  Dstar y solo Fusion
 
+
+
                        echo""
 clear
 exit;
