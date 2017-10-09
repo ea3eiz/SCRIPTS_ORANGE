@@ -66,11 +66,11 @@ do
 
                        cd ~/MMDVMHost
                        make
-                        cp MMDVM.ini MMDVMBM.ini
-                        cp MMDVM.ini MMDVMPLUS.ini
-                        cp MMDVMHost MMDVMBM
-                        cp MMDVMHost MMDVMPLUS
-                        cp MMDVM.ini MMDVM.ini_original
+                       #sudo cp MMDVM.ini MMDVMBM.ini
+                       #sudo cp MMDVM.ini MMDVMPLUS.ini
+                       sudo cp MMDVMHost MMDVMBM
+                       sudo cp MMDVMHost MMDVMPLUS
+                       #sudo cp MMDVM.ini MMDVM.ini_original
                   
                    #solo Dstar y solo Fusion
                    sudo cp MMDVMHost MMDVMDSTAR
