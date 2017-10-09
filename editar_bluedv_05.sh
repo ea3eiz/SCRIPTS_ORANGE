@@ -6,7 +6,7 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 echo "   *                                                                        *"
-echo "   * Editar fichero .ini de configuración BlueDV \33[1;31mby EA3EIZ & EA4AOJ\33[1;33mV.02.05     \33[1;32m*"
+echo "   * Editar fichero .ini de configuración BlueDV \33[1;31mby EA3EIZ & EA4AOJ\33[1;33m   \33[1;32m*"
 echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo ""
