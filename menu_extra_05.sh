@@ -41,7 +41,7 @@ esac
 done;;
 
 
-3) echo ""
+2) echo ""
 while true
 do
 clear
@@ -49,8 +49,54 @@ clear
 	                ejecutar1=S
 		    case $ejecutar1 in
 			[sS]* ) echo ""
-			echo ">>>>>>>>> COPIAR MSD A LA TARJETA EMMC >>>>>>>>"
+			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
+			            cd ~/SCRIPTS_ORANGE
+                        sudo git pull
+                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        chmod +x ~/Desktop
+                        clear
+                        exit;
+		break;;
+		[nN]* ) echo ""
+clear
+exit;
+			break;;
+esac
+done;;
+
+3) echo ""
+while true
+do
+clear
+
+	        ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo ">>>>>>>>> COPIAR TARJETA   >>>>>"
 			            sudo nand-sata-install
+                        exit;
+		break;;
+		[nN]* ) echo ""
+clear
+exit;
+			break;;
+esac
+done;;
+
+1000) echo ""
+while true
+do
+clear
+
+	                ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
+			            sudo rm -R ~/SCRIPTS_ORANGE
+                        sudo git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
+                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        chmod +x ~/Desktop
+                        clear
                         exit;
 		break;;
 		[nN]* ) echo ""
