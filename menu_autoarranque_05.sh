@@ -274,8 +274,8 @@ clear
 			[sS]* ) echo ""
 			echo "Quitando D-STAR del autoarranque >>>>>"
 			sleep 2
-			cd ~/.config/autostart
-			sudo mv Gateway.desktop ~/
+			#cd ~/.config/autostart
+			#sudo mv Gateway.desktop ~/
 			sed -i "1c D-STAR=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -378,8 +378,8 @@ clear
                   [sS]* ) echo ""
                   echo "Quitando MMDVMBM del autoarranque >>>>>"
                         sleep 2
-                        cd ~/.config/autostart
-                        sudo mv MMDVMBM.desktop ~/
+                        #cd ~/.config/autostart
+                        #sudo mv MMDVMBM.desktop ~/
                         sed -i "7c MMDVMBM=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
