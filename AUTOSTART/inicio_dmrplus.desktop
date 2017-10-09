@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=inicio_dmrplus
+Comment=
+Exec=/home/orangepi/SCRIPTS_ORANGE/ejecutar_plus_05.sh
+Icon=
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+StartupNotify=false
