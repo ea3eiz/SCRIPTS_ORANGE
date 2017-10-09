@@ -63,7 +63,7 @@ do
                        cd ~/
                        git clone https://github.com/g4klx/MMDVMHost
                        git clone https://github.com/g4klx/MMDVMCal
-                       sudo chmod +x -R ~/MMDVMHost
+                      
                        cd ~/MMDVMHost
                        make
                        sudo cp MMDVM.ini MMDVMBM.ini
@@ -107,7 +107,7 @@ do
             sudo cp -f MMDVMFUSION.ini ~/MMDVMHost
             #fin  Dstar y solo Fusion
 
-
+ sudo chmod +x -R ~/MMDVMHost
 
                        echo""
 clear
