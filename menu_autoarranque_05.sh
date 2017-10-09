@@ -434,9 +434,7 @@ clear
             echo "Quitando SOLO_D-STAR del autoarranque >>>>>"
             sleep 3
             cd ~/.config/autostart
-            sudo mv solodstar.desktop ~/
-            #cd ~/
-            #echo "SOLO_DSTAR=OFF" >> autoarranque.ini
+            mv DSTARSOLO.desktop ~/AUTOSTART
             sed -i "11c SOLO_DSTAR=OFF" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
@@ -647,7 +645,6 @@ clear
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
                         cd ~/AUTOSTART
-                        #sudo chmod +x inicio_dmrplus.desktop
                         mv DMRPLUS.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
                         sed -i "6c MMDVMPLUS=ON" ~/status.ini
@@ -774,8 +771,8 @@ clear
             [sS]* ) echo ""
             echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
             sleep 3
-            #cd ~/
-            #sudo mv solodstar.desktop ~/.config/autostart
+            cd ~/AUTOSTART
+            mv DSTARSOLO.desktop ~/.config/autostart/
             sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
