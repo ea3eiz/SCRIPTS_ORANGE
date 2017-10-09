@@ -96,7 +96,7 @@ do
             sudo cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
             sudo cp -f MMDVMLIBRE.ini ~/MMDVMHost
             sudo cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
-            sudo cp -f MMDVMLIBRE.ini_dos ~/DoMMDVMHost     
+            sudo cp -f MMDVMLIBRE.ini_dos ~/MMDVMHost     
             sudo cp -f MMDVMPLUS.ini ~/MMDVMHost
             sudo cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
             sudo cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
