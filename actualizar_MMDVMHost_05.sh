@@ -61,9 +61,9 @@ do
                        sudo rm -r MMDVMHost
                        sudo rm -r MMDVMCal
                        cd ~/
-                       git clone https://github.com/g4klx/MMDVMHost
-                       git clone https://github.com/g4klx/MMDVMCal
-                      
+                       sudo git clone https://github.com/g4klx/MMDVMHost
+                       sudo git clone https://github.com/g4klx/MMDVMCal
+
                        cd ~/MMDVMHost
                        make
                        sudo cp MMDVM.ini MMDVMBM.ini
