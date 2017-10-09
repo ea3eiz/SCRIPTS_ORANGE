@@ -362,7 +362,7 @@ clear
 			      echo "Quitando MMDVMPLUS del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
-                        mv inicio_dmrplus.desktop ~/SCRIPTS_ORANGE/AUTOSTART
+                        sudo mv inicio_dmrplus.desktop ~/SCRIPTS_ORANGE/AUTOSTART
                         sed -i "6c MMDVMPLUS=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
