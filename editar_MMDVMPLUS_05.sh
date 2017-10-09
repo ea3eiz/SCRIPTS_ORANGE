@@ -5,7 +5,7 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *           Script para Modificar MMDVMPLUS.ini             \33[1;31m by EA3EIZ\33[1;32m   *"
+echo "   *           Script para Modificar MMDVMPLUS.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m   *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
@@ -804,7 +804,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              pluma ~/MMDVMHost/MMDVMPLUS.ini
+                              sudo pluma ~/MMDVMHost/MMDVMPLUS.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
