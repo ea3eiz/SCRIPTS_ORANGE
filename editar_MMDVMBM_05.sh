@@ -5,7 +5,7 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *           Script para Modificar MMDVMBM.ini             \33[1;31m by EA3EIZ\33[1;32m     *"
+echo "   *           Script para Modificar MMDVMBM.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
@@ -33,10 +33,10 @@ url=`grep -n "URL" ~/MMDVMHost/MMDVMBM.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "\33[1;36m   6)\33[0m Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)\33[1;33m"
-echo "\33[1;36m   7)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM0)\33[1;33m"
-echo "\33[1;36m   8)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM1)\33[1;33m"
-echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)\33[1;33m"
+echo "\33[1;36m   6)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM0)\33[1;33m"
+echo "\33[1;36m   7)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM1)\33[1;33m"
+echo "\33[1;36m   8)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)\33[1;33m"
+echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB1)\33[1;33m"
 echo -n "                            - "
 
 mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVMBM.ini`
@@ -323,7 +323,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyAMA0" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -337,7 +337,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -351,7 +351,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -366,7 +366,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea4 Port=/dev/ttyUSB1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
