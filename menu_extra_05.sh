@@ -51,8 +51,8 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
 			            cd ~/SCRIPTS_ORANGE
-                        sudo git pull
-                        sudo cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        git pull
+                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         chmod +x ~/Desktop
                         clear
                         exit;
@@ -99,7 +99,7 @@ clear
 			echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
 			            sudo rm -R ~/SCRIPTS_ORANGE
                         cd ~
-                        sudo git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
+                        git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         chmod +x ~/Desktop
                         clear
