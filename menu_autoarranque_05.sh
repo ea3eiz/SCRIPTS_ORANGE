@@ -275,7 +275,7 @@ clear
 			echo "Quitando D-STAR del autoarranque >>>>>"
 			sleep 2
 			cd ~/.config/autostart
-			sudo mv Gateway.desktop /home/pi
+			sudo mv Gateway.desktop ~/
 			sed -i "1c D-STAR=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -293,7 +293,7 @@ clear
 			echo "Quitando BlueDV del autoarranque >>>>>"
             sleep 2
             cd ~/.config/autostart
-			sudo mv BlueDV.desktop /home/pi
+			sudo mv BlueDV.desktop ~/
 			sed -i "2c BlueDV=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -311,7 +311,7 @@ clear
 			           echo "Quitando YSF del autoarranque >>>>>"
                        sleep 2
                        cd ~/.config/autostart
-                       sudo mv ysfgateway.desktop /home/pi
+                       sudo mv ysfgateway.desktop ~/
                        sed -i "3c YSF=OFF" ~/autoarranque.ini
                        break;;
                        [nN]* ) echo ""
@@ -328,7 +328,7 @@ clear
 			            echo "Quitando DV4mini del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
-                        sudo mv dv4mini.desktop /home/pi
+                        sudo mv dv4mini.desktop ~/
                         sed -i "4c DV4mini=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -362,7 +362,7 @@ clear
 			      echo "Quitando MMDVMPLUS del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
-                        sudo mv MMDVMPLUS.desktop /home/pi
+                        sudo rm DMRMPLUS.desktop ~/
                         sed -i "6c MMDVMPLUS=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -379,7 +379,7 @@ clear
                   echo "Quitando MMDVMBM del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
-                        sudo mv MMDVMBM.desktop /home/pi
+                        sudo mv MMDVMBM.desktop ~/
                         sed -i "7c MMDVMBM=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -396,7 +396,7 @@ clear
             echo "Quitando MMDVMLIBRE del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
-                        sudo mv MMDVMLIBRE.desktop /home/pi
+                        sudo mv MMDVMLIBRE.desktop ~/
                         sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -414,7 +414,7 @@ clear
 			echo "Quitando SVXLINK del autoarranque >>>>>"
             sleep 2
             cd ~/.config/autostart
-			sudo mv svxlink.desktop /home/pi
+			sudo mv svxlink.desktop ~/
 			sed -i "8c SVXLINK=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -431,8 +431,8 @@ clear
             echo "Quitando SOLO_D-STAR del autoarranque >>>>>"
             sleep 3
             cd ~/.config/autostart
-            sudo mv solodstar.desktop /home/pi
-            #cd /home/pi
+            sudo mv solodstar.desktop ~/
+            #cd ~/
             #echo "SOLO_DSTAR=OFF" >> autoarranque.ini
             sed -i "11c SOLO_DSTAR=OFF" ~/autoarranque.ini
             break;;
@@ -527,7 +527,7 @@ sleep 5
 else                            
                                             echo "Poniendo BlueDV en el autoarranque >>>>>"
                                             sleep 2
-                                            cd /home/pi
+                                            cd ~/
                                             sudo mv BlueDV.desktop ~/.config/autostart/
                                             sed -i "2c BlueDV=ON" ~/autoarranque.ini
 fi
@@ -553,7 +553,7 @@ bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "OFF" ]
 then
   sleep 2
-                        cd /home/pi
+                        cd ~/
                         sudo mv ysfgateway.desktop ~/.config/autostart/
                         sed -i "3c YSF=ON" ~/autoarranque.ini
                         sed -i "3c YSF=ON" ~/status.ini
@@ -591,7 +591,7 @@ clear
 			            [sS]* ) echo ""
 			            echo "Poniendo DV4mini en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi
+                        cd ~/
                         sudo mv dv4mini.desktop ~/.config/autostart/
                         sed -i "4c DV4mini=ON" ~/autoarranque.ini
                         break;;
@@ -623,17 +623,17 @@ clear
                        actualizar=S
 	             case $actualizar in
 	             [sS]* ) echo ""
-                       blue=`grep "BlueDV" ~/autoarranque.ini`
-                       bm=`grep "MMDVMBM" ~/autoarranque.ini`
-                       plus=`grep "MMDVMPLUS" ~/autoarranque.ini`
-blue=`expr substr $blue 8 2`
-bm=`expr substr $bm 9 2`
-plus=`expr substr $plus 11 2`
-if [ $blue = "ON" ]
-then      
-echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y DMR+ a la vez"
-sleep 5
-else                                     
+                       #blue=`grep "BlueDV" ~/autoarranque.ini`
+                       #bm=`grep "MMDVMBM" ~/autoarranque.ini`
+                       #plus=`grep "MMDVMPLUS" ~/autoarranque.ini`
+#blue=`expr substr $blue 8 2`
+#bm=`expr substr $bm 9 2`
+#plus=`expr substr $plus 11 2`
+#if [ $blue = "ON" ]
+#then      
+#echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y DMR+ a la vez"
+#sleep 5
+#else                                     
             
 #if [ $bm = "ON" ]
 #then     
@@ -643,11 +643,11 @@ else
                             
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi
-                        sudo mv MMDVMPLUS.desktop ~/.config/autostart/
+                        cd ~/
+                        sudo mv DMRPLUS.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
                         sed -i "6c MMDVMPLUS=ON" ~/status.ini
-fi
+#fi
 #fi 
 
                         break;;
@@ -686,7 +686,7 @@ sleep 5
 else                          
                         echo "Poniendo LIBRE en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi
+                        cd ~/
                         sudo mv MMDVMLIBRE.desktop ~/.config/autostart/
                         sed -i "10c MMDVMLIBRE=ON" ~/autoarranque.ini
                         sed -i "10c MMDVMLIBRE=ON" ~/status.ini
@@ -725,7 +725,7 @@ else
                             
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi
+                        cd ~/
                         sudo mv MMDVMBM.desktop ~/.config/autostart/
                         sed -i "7c MMDVMBM=ON" ~/autoarranque.ini
                         sed -i "7c MMDVMBM=ON" ~/status.ini
@@ -751,7 +751,7 @@ clear
 			            [sS]* ) echo ""
 			            echo "Poniendo SVXLINK en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi
+                        cd ~/
 			            sudo mv svxlink.desktop ~/.config/autostart
 			            sed -i "8c SVXLINK=ON" ~/autoarranque.ini
 			            break;;
@@ -770,7 +770,7 @@ clear
             [sS]* ) echo ""
             echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
             sleep 3
-            cd /home/pi
+            cd ~/
             sudo mv solodstar.desktop ~/.config/autostart
             sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
             break;;
