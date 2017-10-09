@@ -256,11 +256,11 @@ echo "\33[0m "
 
 
 
-echo "\33[1;36m  21)\33[1;31m *** REINICIAR LA RASPBERRY PI ***"
+echo "\33[1;36m  22)\33[1;31m *** REINICIAR LA ORANGE PI ***"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo "\33[1;36m   Por favor, elige una opción del 0 al 21" 
+echo "\33[1;36m   Por favor, elige una opción del 0 al 22" 
 read escoger_menu
 echo ""
 
@@ -292,8 +292,8 @@ clear
 			[sS]* ) echo ""
 			echo "Quitando BlueDV del autoarranque >>>>>"
             sleep 2
-            #cd ~/.config/autostart
-			#sudo mv BlueDV.desktop ~/
+            cd ~/.config/autostart
+            mv BLUEDV.desktop ~/AUTOSTART
 			sed -i "2c BlueDV=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -487,55 +487,14 @@ clear
 	                                   actualizar=S
 		                         case $actualizar in
 			               [sS]* ) echo ""
-			               dstar=`grep "D-STAR" ~/autoarranque.ini`
-                                             bm=`grep "MMDVMBM" ~/autoarranque.ini`
-                                             plus=`grep "MMDVMPLUS" ~/autoarranque.ini`
-                                             libre=`grep "MMDVMLIBRE" ~/autoarranque.ini`
-                                             ys=`grep "YSF" ~/autoarranque.ini`
-dstar=`expr substr $dstar 8 2`
-bm=`expr substr $bm 9 2`
-plus=`expr substr $plus 11 2`
-libre=`expr substr $libre 12 2`
-ys=`expr substr $ys 5 2`
-if [ $dstar = "ON" ]
-then      
-echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y D-STAR a la vez"
-sleep 5
-else                                     
-
-if [ $ys = "ON" ]
-then      
-echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y YSF a la vez"
-sleep 5
-else
-			
-if [ $bm = "ON" ]
-then     
-echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y BM a la vez"
-sleep 5
-else          
-
-#if [ $libre = "ON" ]
-#then     
-#echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y LIBRE a la vez"
-#sleep 5
-#else
-
-if [ $plus = "ON" ]
-then     
-echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y DMR+ a la vez"
-sleep 5
-else                            
+			               
+                          
                                             echo "Poniendo BlueDV en el autoarranque >>>>>"
                                             sleep 2
-                                            #cd ~/
-                                            #sudo mv BlueDV.desktop ~/.config/autostart/
+                                            cd ~/AUTOSTART
+                                            mv BLUEDV.desktop ~/.config/autostart/
                                             sed -i "2c BlueDV=ON" ~/autoarranque.ini
-fi
-fi 
-fi 
-fi 
-#fi
+
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -779,9 +738,25 @@ clear
             break;;
 esac
 done;;
-
-
 21) echo ""
+while true
+do
+clear
+            actualizar=S
+            case $actualizar in
+            [sS]* ) echo ""
+            echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
+            sleep 3
+            cd ~/AUTOSTART
+            mv DSTARSOLO.desktop ~/.config/autostart/
+            sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
+            break;;
+            [nN]* ) echo ""
+            break;;
+esac
+done;;
+
+22) echo ""
 
 while true
 do
