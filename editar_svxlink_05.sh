@@ -6,7 +6,7 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 echo "   *                                                                        *"
-echo "   *  Script para Modificar ModuleEcholink y svxlink \33[1;31m by EA3EIZ &EA4AOJ  \33[1;32m  *"
+echo "   *  Script para Modificar ModuleEcholink y svxlink \33[1;31m by EA3EIZ & EA4AOJ  \33[1;32m  *"
 echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo ""
