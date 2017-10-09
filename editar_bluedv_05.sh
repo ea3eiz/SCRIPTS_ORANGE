@@ -6,14 +6,14 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 echo "   *                                                                        *"
-echo "   *   Editar fichero .ini de configuración BlueDV   \33[1;31mby EA3EIZ  \33[1;33mV.02.05     \33[1;32m*"
+echo "   * Editar fichero .ini de configuración BlueDV \33[1;31mby EA3EIZ & EA4AOJ\33[1;33mV.02.05     \33[1;32m*"
 echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo ""
-echo "\33[1;36m   1)\33[0m Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)\33[1;33m"
-echo "\33[1;36m   2)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM0)\33[1;33m"
-echo "\33[1;36m   3)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM1)\33[1;33m"
-echo "\33[1;36m   4)\33[0m Puerto para DVMEGA + Bluestack Raspberry Pi(ttyUSB0)\33[1;33m"
+echo "\33[1;36m   1)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM0)\33[1;33m"
+echo "\33[1;36m   2)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM1)\33[1;33m"
+echo "\33[1;36m   3)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)\33[1;33m"
+echo "\33[1;36m   4)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB1)\33[1;33m"
 echo -n "                                            - "
 var1= sed -n '4p'  ~/bluedv/BlueDVconfig.ini
 echo ""
@@ -32,7 +32,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyAMA0" ~/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyACM0" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -45,7 +45,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyACM0" ~/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyACM1" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -57,7 +57,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyACM1" ~/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyUSB0" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
@@ -69,7 +69,7 @@ do
                         act=S 
                         case $act in
 		            [sS]* ) echo ""
-                        sed -i "4c comport=/dev/ttyUSB0" ~/bluedv/BlueDVconfig.ini
+                        sed -i "4c comport=/dev/ttyUSB1" ~/bluedv/BlueDVconfig.ini
 		            break;;
 		            [nN]* ) echo ""
 		            break;;
