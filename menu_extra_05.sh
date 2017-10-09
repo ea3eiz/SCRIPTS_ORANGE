@@ -5,7 +5,7 @@ clear
 
 echo "\33[1;32m   ********************************************************************"
 echo "   *      Script para hacer actualizaciones y varios \33[1;33mV.02.05          *"
-echo "   *                  \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
+echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Restaurar iconos originales"
