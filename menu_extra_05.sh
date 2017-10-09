@@ -112,6 +112,29 @@ exit;
 esac
 done;;
 
+
+2000) echo ""
+while true
+do
+clear
+
+	        ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo ">>>>>>>>> GIT PULL AUTOSTART   >>>>>"
+			            cd ~/AUTOSTART
+			            git pull
+                        exit;
+		break;;
+		[nN]* ) echo ""
+clear
+exit;
+			break;;
+esac
+done;;
+
+
+
 #31) echo ""
 #while true
 #do
