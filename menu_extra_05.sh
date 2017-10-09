@@ -52,7 +52,7 @@ clear
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
 			            cd ~/SCRIPTS_ORANGE
                         sudo git pull
-                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        sudo cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         chmod +x ~/Desktop
                         clear
                         exit;
