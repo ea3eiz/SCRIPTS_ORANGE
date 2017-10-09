@@ -46,13 +46,8 @@ while true
 do
 clear
 
-            echo "\33[1;31m" #color rojo
-            echo " *****************************************************"
-            echo " ******   OJO!!! ESTO RESTAURA TODO EL GITHUB ********"
-            echo " *****************************************************"
-            echo"\33[1;37m" #color
-            read -p 'Quieres Restaurar el sistema? Si/No: ' ejecutar1
-            case $ejecutar1 in
+	                ejecutar1=S
+		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO ICONOS >>>>>>>>"
 			            cd ~/SCRIPTS_ORANGE
@@ -93,8 +88,13 @@ while true
 do
 clear
 
-	                ejecutar1=S
-		    case $ejecutar1 in
+            echo "\33[1;31m" #color rojo
+            echo " *****************************************************"
+            echo " ******   OJO!!! ESTO RESTAURA TODO EL GITHUB ********"
+            echo " *****************************************************"
+            echo"\33[1;37m" #color
+            read -p 'Quieres Actualizar? Si/No: ' ejecutar1
+            case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
 			            sudo rm -R ~/SCRIPTS_ORANGE
