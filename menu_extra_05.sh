@@ -50,7 +50,7 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> COPIAR MSD A LA TARJETA EMMC >>>>>>>>"
-			            sudo mand-sata-install
+			            sudo nand-sata-install
                         exit;
 		break;;
 		[nN]* ) echo ""
