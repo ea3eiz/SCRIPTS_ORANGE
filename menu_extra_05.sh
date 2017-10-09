@@ -92,7 +92,7 @@ clear
             echo " *****************************************************"
             echo " ******   OJO!!! ESTO RESTAURA TODO EL GITHUB ********"
             echo " *****************************************************"
-            echo"\33[1;37m" #color
+            echo "\33[1;37m" #color
             read -p 'Quieres Actualizar? Si/No: ' ejecutar1
             case $ejecutar1 in
 			[sS]* ) echo ""
