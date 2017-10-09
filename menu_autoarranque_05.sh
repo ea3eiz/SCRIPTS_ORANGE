@@ -77,19 +77,9 @@ bluedv=`grep "MMDVMPLUS" ~/autoarranque.ini`
 
 
 
-echo -n "\33[1;36m   7)\33[1;37m  Quitar BM del autoarranque            - "
-MMDVMBM=`grep "MMDVMBM" ~/autoarranque.ini`
-MMDVMBM=`expr substr $MMDVMBM 9 3`
-if [ $MMDVMBM = "ON" ]
-then
-echo "\33[1;32m$MMDVMBM"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMBM" ~/autoarranque.ini`
 
 
-echo -n "\33[1;36m   8)\33[1;37m  Quitar LIBRE del autoarranque         - "
+echo -n "\33[1;36m   7)\33[1;37m  Quitar LIBRE del autoarranque         - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" ~/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "ON" ]
@@ -99,6 +89,18 @@ else
 echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMLIBRE" ~/autoarranque.ini`
+
+
+echo -n "\33[1;36m   8)\33[1;37m  Quitar BM del autoarranque            - "
+MMDVMBM=`grep "MMDVMBM" ~/autoarranque.ini`
+MMDVMBM=`expr substr $MMDVMBM 9 3`
+if [ $MMDVMBM = "ON" ]
+then
+echo "\33[1;32m$MMDVMBM"
+else
+echo "\33[1;31m"
+fi
+bluedv=`grep "MMDVMBM" ~/autoarranque.ini`
 
 
 
@@ -396,10 +398,10 @@ clear
                         actualizar=S
                 case $actualizar in
             [sS]* ) echo ""
-            echo "Quitando MMDVMLIBRE del autoarranque >>>>>"
+            echo "Quitando BM del autoarranque >>>>>"
                         sleep 2
-                        #cd ~/.config/autostart
-                        #sudo mv MMDVMLIBRE.desktop ~/
+                        cd ~/.config/autostart
+                        mv BM.desktop ~/AUTOSTART
                         sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -583,23 +585,7 @@ clear
                        actualizar=S
 	             case $actualizar in
 	             [sS]* ) echo ""
-                       #blue=`grep "BlueDV" ~/autoarranque.ini`
-                       #bm=`grep "MMDVMBM" ~/autoarranque.ini`
-                       #plus=`grep "MMDVMPLUS" ~/autoarranque.ini`
-#blue=`expr substr $blue 8 2`
-#bm=`expr substr $bm 9 2`
-#plus=`expr substr $plus 11 2`
-#if [ $blue = "ON" ]
-#then      
-#echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y DMR+ a la vez"
-#sleep 5
-#else                                     
-            
-#if [ $bm = "ON" ]
-#then     
-#echo "\33[1;31m No pueden estar en el autoarranque  DMR+ y BM a la vez"
-#sleep 5
-#else          
+                            
                             
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
@@ -607,8 +593,7 @@ clear
                         mv DMRPLUS.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
                         sed -i "6c MMDVMPLUS=ON" ~/status.ini
-#fi
-#fi 
+
 
                         break;;
                         [nN]* ) echo ""
@@ -665,32 +650,13 @@ clear
                         actualizar=S
                  case $actualizar in
                  [sS]* ) echo ""
-                       blue=`grep "BlueDV" ~/autoarranque.ini`
-                       bm=`grep "MMDVMBM" ~/autoarranque.ini`
-                       plus=`grep "MMDVMPLUS" ~/autoarranque.ini`
-blue=`expr substr $blue 8 2`
-bm=`expr substr $bm 9 2`
-plus=`expr substr $plus 11 2`
-if [ $blue = "ON" ]
-then      
-echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y BM a la vez"
-sleep 5
-else                                     
-            
-#if [ $plus = "ON" ]
-#then     
-#echo "\33[1;31m No pueden estar en el autoarranque  DMR+ y BM a la vez"
-#sleep 5
-#else          
-                            
+                                                  
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
-                        #cd ~/
-                        #sudo mv MMDVMBM.desktop ~/.config/autostart/
+                        cd ~/AUTOSTART
+                        mv BM.desktop ~/.config/autostart/
                         sed -i "7c MMDVMBM=ON" ~/autoarranque.ini
                         sed -i "7c MMDVMBM=ON" ~/status.ini
-fi
-#fi 
 
                         break;;
                         [nN]* ) echo ""
