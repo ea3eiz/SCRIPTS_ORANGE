@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=inicio_dmrplus
+Name=inicio_dmrplus_
 Comment=
 Exec=sh -c "cd /home/orangepi/SCRIPTS_ORANGE/;sleep 10;sudo sh ejecutar_plus_05.sh"
 Icon=
