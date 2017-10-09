@@ -9,7 +9,7 @@ echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                 
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Restaurar iconos originales"
-echo "\33[1;36m   2)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
+echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 #echo "\33[1;36m   2)\33[1;37m Actualizar DV4mini Control Panel (Stick ID:8D-6E-8C V1,77)"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
