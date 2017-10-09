@@ -28,7 +28,7 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-			cd /home/pi/YSFClients/YSFGateway
+			cd ~/YSFClients/YSFGateway
 			sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
 			sleep 3
 
