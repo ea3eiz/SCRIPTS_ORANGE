@@ -179,8 +179,6 @@ done;;
 while true
 do
 
-
-           	          read -p 'Pulsa enter para abrir el fichero ModuleEchoLink.conf: ' var2
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
