@@ -647,9 +647,9 @@ clear
                             
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
-                        #cd ~/SCRIPTS_ORANGE/AUTOSTART
+                        cd ~/AUTOSTART
                         #sudo chmod +x inicio_dmrplus.desktop
-                        sudo mv inicio_dmrplus.desktop ~/.config/autostart/
+                        cp DMRPLUS.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
                         sed -i "6c MMDVMPLUS=ON" ~/status.ini
 #fi
