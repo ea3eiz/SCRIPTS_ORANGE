@@ -3,8 +3,8 @@
 
 
 cd ~/YSFClients/YSFGateway
-sudo mate-terminal -x ./YSFGateway YSFGateway.ini & cd ~/MMDVMHost
-sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
+sudo ./YSFGateway YSFGateway.ini & cd ~/MMDVMHost
+sudo ./MMDVMFUSION MMDVMFUSION.ini
 
 #sed -i "6c Exec=sudo sh ejecutar_solofusion.sh" ~/Desktop/AbrirsoloYSF.desktop
 #sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_YSF.png" ~/Desktop/AbrirsoloYSF.desktop
