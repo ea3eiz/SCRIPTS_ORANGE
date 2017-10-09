@@ -292,8 +292,8 @@ clear
 			[sS]* ) echo ""
 			echo "Quitando BlueDV del autoarranque >>>>>"
             sleep 2
-            cd ~/.config/autostart
-			sudo mv BlueDV.desktop ~/
+            #cd ~/.config/autostart
+			#sudo mv BlueDV.desktop ~/
 			sed -i "2c BlueDV=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -310,8 +310,8 @@ clear
 			           [sS]* ) echo ""
 			           echo "Quitando YSF del autoarranque >>>>>"
                        sleep 2
-                       cd ~/.config/autostart
-                       sudo mv ysfgateway.desktop ~/
+                       #cd ~/.config/autostart
+                       #sudo mv ysfgateway.desktop ~/
                        sed -i "3c YSF=OFF" ~/autoarranque.ini
                        break;;
                        [nN]* ) echo ""
@@ -327,8 +327,8 @@ clear
 			            [sS]* ) echo ""
 			            echo "Quitando DV4mini del autoarranque >>>>>"
                         sleep 2
-                        cd ~/.config/autostart
-                        sudo mv dv4mini.desktop ~/
+                        # cd ~/.config/autostart
+                        # sudo mv dv4mini.desktop ~/
                         sed -i "4c DV4mini=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -344,8 +344,8 @@ clear
 			      [sS]* ) echo ""
 			      echo "Quitando MMDVM del autoarranque >>>>>"
                         sleep 2
-                        cd ~/.config/autostart
-                        sudo mv  MMDVM.desktop ~/
+                        #cd ~/.config/autostart
+                        #sudo mv  MMDVM.desktop ~/
                         sed -i "5c MMDVMPLACA=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -361,8 +361,8 @@ clear
 			      [sS]* ) echo ""
 			      echo "Quitando MMDVMPLUS del autoarranque >>>>>"
                         sleep 2
-                        cd ~/.config/autostart
-                        sudo mv inicio_dmrplus.desktop ~/SCRIPTS_ORANGE/AUTOSTART
+                        #cd ~/.config/autostart
+                        #sudo mv inicio_dmrplus.desktop ~/SCRIPTS_ORANGE/AUTOSTART
                         sed -i "6c MMDVMPLUS=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -399,8 +399,8 @@ clear
             [sS]* ) echo ""
             echo "Quitando MMDVMLIBRE del autoarranque >>>>>"
                         sleep 2
-                        cd ~/.config/autostart
-                        sudo mv MMDVMLIBRE.desktop ~/
+                        #cd ~/.config/autostart
+                        #sudo mv MMDVMLIBRE.desktop ~/
                         sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -417,8 +417,8 @@ clear
 			[sS]* ) echo ""
 			echo "Quitando SVXLINK del autoarranque >>>>>"
             sleep 2
-            cd ~/.config/autostart
-			sudo mv svxlink.desktop ~/
+            #cd ~/.config/autostart
+			#sudo mv svxlink.desktop ~/
 			sed -i "8c SVXLINK=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -457,8 +457,8 @@ clear
 
                   if [ $bluedv = "OFF" ]
                   then
-                  cd ~/
-			sudo mv Gateway.desktop ~/.config/autostart/
+                  #cd ~/
+			#sudo mv Gateway.desktop ~/.config/autostart/
 			sed -i "1c D-STAR=ON" ~/autoarranque.ini
                   clear
                   echo "\33[1;32m**********************************************************"
@@ -531,8 +531,8 @@ sleep 5
 else                            
                                             echo "Poniendo BlueDV en el autoarranque >>>>>"
                                             sleep 2
-                                            cd ~/
-                                            sudo mv BlueDV.desktop ~/.config/autostart/
+                                            #cd ~/
+                                            #sudo mv BlueDV.desktop ~/.config/autostart/
                                             sed -i "2c BlueDV=ON" ~/autoarranque.ini
 fi
 fi 
@@ -557,8 +557,8 @@ bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "OFF" ]
 then
   sleep 2
-                        cd ~/
-                        sudo mv ysfgateway.desktop ~/.config/autostart/
+                        #cd ~/
+                        #sudo mv ysfgateway.desktop ~/.config/autostart/
                         sed -i "3c YSF=ON" ~/autoarranque.ini
                         sed -i "3c YSF=ON" ~/status.ini
 
@@ -595,8 +595,8 @@ clear
 			            [sS]* ) echo ""
 			            echo "Poniendo DV4mini en el autoarranque >>>>>"
                         sleep 2
-                        cd ~/
-                        sudo mv dv4mini.desktop ~/.config/autostart/
+                        #cd ~/
+                        #sudo mv dv4mini.desktop ~/.config/autostart/
                         sed -i "4c DV4mini=ON" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -611,8 +611,8 @@ clear
 		            case $actualizar in
 			      [sS]* ) echo ""
 			      echo "Poniendo Radio en el autoarranque >>>>>"
-                        cd ~/
-                        sudo mv MMDVM.desktop ~/.config/autostart/
+                        #cd ~/
+                        #sudo mv MMDVM.desktop ~/.config/autostart/
                         sed -i "5c MMDVMPLACA=ON" ~/autoarranque.ini		            			            
                         sleep 5                
                         break;;
@@ -647,8 +647,8 @@ clear
                             
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
-                        cd ~/SCRIPTS_ORANGE/AUTOSTART
-                        sudo chmod +x inicio_dmrplus.desktop
+                        #cd ~/SCRIPTS_ORANGE/AUTOSTART
+                        #sudo chmod +x inicio_dmrplus.desktop
                         sudo mv inicio_dmrplus.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
                         sed -i "6c MMDVMPLUS=ON" ~/status.ini
@@ -691,8 +691,8 @@ sleep 5
 else                          
                         echo "Poniendo LIBRE en el autoarranque >>>>>"
                         sleep 2
-                        cd ~/
-                        sudo mv MMDVMLIBRE.desktop ~/.config/autostart/
+                        #cd ~/
+                        #sudo mv MMDVMLIBRE.desktop ~/.config/autostart/
                         sed -i "10c MMDVMLIBRE=ON" ~/autoarranque.ini
                         sed -i "10c MMDVMLIBRE=ON" ~/status.ini
 #fi
@@ -730,8 +730,8 @@ else
                             
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
-                        cd ~/
-                        sudo mv MMDVMBM.desktop ~/.config/autostart/
+                        #cd ~/
+                        #sudo mv MMDVMBM.desktop ~/.config/autostart/
                         sed -i "7c MMDVMBM=ON" ~/autoarranque.ini
                         sed -i "7c MMDVMBM=ON" ~/status.ini
 fi
@@ -756,8 +756,8 @@ clear
 			            [sS]* ) echo ""
 			            echo "Poniendo SVXLINK en el autoarranque >>>>>"
                         sleep 2
-                        cd ~/
-			            sudo mv svxlink.desktop ~/.config/autostart
+                        #cd ~/
+			            #sudo mv svxlink.desktop ~/.config/autostart
 			            sed -i "8c SVXLINK=ON" ~/autoarranque.ini
 			            break;;
 			            [nN]* ) echo ""
@@ -775,8 +775,8 @@ clear
             [sS]* ) echo ""
             echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
             sleep 3
-            cd ~/
-            sudo mv solodstar.desktop ~/.config/autostart
+            #cd ~/
+            #sudo mv solodstar.desktop ~/.config/autostart
             sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
@@ -792,7 +792,7 @@ do
 clear
 echo " \33[1;31m  ************************************************************"
 echo "   *                                                          *"
-echo "   *     OJO!!   SE VA A REINICIAR LA RASPBERRY PI            *"
+echo "   *     OJO!!   SE VA A REINICIAR LA ORANGE PI               *"
 echo "   *                                                          *"
 echo "   ************************************************************"
 echo ""
