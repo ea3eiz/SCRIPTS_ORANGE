@@ -5,7 +5,7 @@ do
 clear
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *           Script para Modificar YSFGateway.ini\33[1;33m V.02.05  \33[1;31m by EA3EIZ\33[1;32m     *"
+echo "   *     Script para Modificar YSFGateway.ini\33[1;33m    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
@@ -115,7 +115,7 @@ do
                               actualizar=S 
                               case $actualizar in
                                        [sS]* ) echo ""
-                              pluma ~/YSFClients/YSFGateway/YSFGateway.ini
+                              sudo pluma ~/YSFClients/YSFGateway/YSFGateway.ini
                                        break;;
                                        [nN]* ) echo ""
                                        break;;
