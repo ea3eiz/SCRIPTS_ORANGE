@@ -144,7 +144,7 @@ clear
 			echo ">>>>>>>>> INSTALANDO BMXTG   >>>>>"
 			            cd ~/
 			            sudo dpkg -i bmxtg-1.3.deb
-			            sudo apt-get install python-requests
+			            sudo apt-get install python-requests -y
 			            cp -r /etc/bmxtg ~/
 			            cp /usr/local/bin/bmxtg.py ~/bmxtg
 			            cd ~/bmxtg
