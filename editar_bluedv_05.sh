@@ -17,11 +17,11 @@ echo "\33[1;36m   4)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (tty
 echo -n "                                            - "
 var1= sed -n '4p'  ~/bluedv/BlueDVconfig.ini
 echo ""
-echo "\33[1;36m   5)\33[1;33m Abrir fichero .ini para hacer cualquier cambio\33[1;33m"
-echo ""
+#echo "\33[1;36m   5)\33[1;33m Abrir fichero .ini para hacer cualquier cambio\33[1;33m"
+#echo ""
 echo "\33[1;36m   0)\33[1;33m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 5 : " 
+echo -n "\33[1;36m   Elige una opción del 0 al 4 : " 
 read escoger_menu
 case $escoger_menu in
 
@@ -75,7 +75,7 @@ do
 		            break;;
 esac
 done;;
-5) echo ""
+5555555) echo ""
 while true
 do
                               actualizar=S 
