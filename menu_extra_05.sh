@@ -30,7 +30,7 @@ clear
                         cd ~/SCRIPTS_ORANGE
                         git pull 
                         cd ~/
-                        sudo chmod +x SCRIPTS_ORANGE
+                        sudo chmod -R 777 SCRIPTS_ORANGE
                         sleep 5
                         clear
                         exit;
