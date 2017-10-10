@@ -29,6 +29,8 @@ clear
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
                         git pull 
+                        cd ~/
+                        sudo chmod +x SCRIPTS_ORANGE
                         sleep 5
                         clear
                         exit;
