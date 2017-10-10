@@ -6,7 +6,7 @@
 
 
 sed -i "6 cExec=mate-terminal -x sh cerrar_mmdvm_05.sh" ~/Desktop/MMDVM.desktop
-sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/BRANDMEISTER_ON.png" ~/Desktop/MMDVM.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/MMDVM_ON.png" ~/Desktop/MMDVM.desktop
 sed -i "4c Name[es_ES]=Cerrar Radio" ~/Desktop/MMDVM.desktop
 
 
