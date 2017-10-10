@@ -31,7 +31,6 @@ clear
                         git pull 
                         cd ~/
                         sudo chmod -R 777 SCRIPTS_ORANGE
-                        sleep 5
                         clear
                         exit;
 		break;;
