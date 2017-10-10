@@ -133,7 +133,30 @@ exit;
 esac
 done;;
 
+3000) echo ""
+while true
+do
+clear
 
+	        ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo ">>>>>>>>> INSTALANDO BMXTG   >>>>>"
+			            cd ~/
+			            sudo dpkg -i bmxtg-1.3.deb
+			            sudo apt-get install python-requests
+			            cp -r /etc/bmxtg ~/
+			            cp /usr/local/bin/bmxtg.py ~/bmxtg
+			            cd ~/bmxtg
+			            sudo chmod +x bmxtg.py
+                        exit;
+		break;;
+		[nN]* ) echo ""
+clear
+exit;
+			break;;
+esac
+done;;
 
 #31) echo ""
 #while true
