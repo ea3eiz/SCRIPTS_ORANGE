@@ -346,8 +346,8 @@ clear
 			      [sS]* ) echo ""
 			      echo "Quitando MMDVM del autoarranque >>>>>"
                         sleep 2
-                        #cd ~/.config/autostart
-                        #sudo mv  MMDVM.desktop ~/
+                        cd ~/.config/autostart
+                        mv RADIO.desktop ~/AUTOSTART
                         sed -i "5c MMDVMPLACA=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -564,11 +564,11 @@ while true
 do
 clear           
                         actualizar=S
-		            case $actualizar in
-			      [sS]* ) echo ""
-			      echo "Poniendo Radio en el autoarranque >>>>>"
-                        #cd ~/
-                        #sudo mv MMDVM.desktop ~/.config/autostart/
+		                    case $actualizar in
+			                  [sS]* ) echo ""
+			                  echo "Poniendo Radio en el autoarranque >>>>>"
+                        cd ~/AUTOSTART
+                        mv RADIO.desktop ~/.config/autostart/
                         sed -i "5c MMDVMPLACA=ON" ~/autoarranque.ini		            			            
                         sleep 5                
                         break;;
@@ -580,19 +580,15 @@ done;;
 while true
 do
 clear              
-                       actualizar=S
-	             case $actualizar in
-	             [sS]* ) echo ""
-                            
-                            
+                        actualizar=S
+	                      case $actualizar in
+	                      [sS]* ) echo ""
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
                         cd ~/AUTOSTART
                         mv DMRPLUS.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
                         sed -i "6c MMDVMPLUS=ON" ~/status.ini
-
-
                         break;;
                         [nN]* ) echo ""
                         break;;
