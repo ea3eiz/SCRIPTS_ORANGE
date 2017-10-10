@@ -7,5 +7,5 @@
 #sed -i "5c Icon=/home/pi/V30/REPEATER_ON.png" /home/pi/Desktop/Abrir_D-STARRepeater
 #sed -i "10c Name[es_ES]=Cerrar D-STAR Repeater" /home/pi/Desktop/Abrir_D-STARRepeater
 
-sudo ircddbgateway -gui  & dstarrepeater
+ircddbgateway -gui  & dstarrepeater
 
