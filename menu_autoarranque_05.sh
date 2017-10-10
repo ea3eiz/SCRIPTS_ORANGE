@@ -406,18 +406,17 @@ clear
                         break;;
 esac
 done;;
-
 9) echo ""
 while true
 do
 clear	        
-		    actualizar=S
-		    case $actualizar in
+		  actualizar=S
+		  case $actualizar in
 			[sS]* ) echo ""
 			echo "Quitando SVXLINK del autoarranque >>>>>"
-            sleep 2
-            #cd ~/.config/autostart
-			#sudo mv svxlink.desktop ~/
+      sleep 2
+      cd ~/.config/autostart
+      mv SVXLINK.desktop ~/AUTOSTART
 			sed -i "8c SVXLINK=OFF" ~/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -598,40 +597,15 @@ done;;
 while true
 do
 clear              
-                       actualizar=S
-               case $actualizar in
-               [sS]* ) echo ""
-                       blue=`grep "BlueDV" ~/autoarranque.ini`
-                       bm=`grep "MMDVMBM" ~/autoarranque.ini`
-                       plus=`grep "MMDVMPLUS" ~/autoarranque.ini`
-blue=`expr substr $blue 8 2`
-bm=`expr substr $bm 9 2`
-plus=`expr substr $plus 11 2`
-#if [ $blue = "ON" ]
-#then      
-#echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y LIBRE+ a la vez"
-#sleep 5
-#else                                     
-            
-if [ $bm = "ON" ]
-then     
-echo "\33[1;31m No pueden estar en el autoarranque  DMR+ , BM y LIBRE a la vez"
-sleep 5
-else          
-if [ $plus = "ON" ]
-then  
-echo "\33[1;31m No pueden estar en el autoarranque  DMR+ , BM y LIBRE a la vez"
-sleep 5
-else                          
+                        actualizar=S
+                        case $actualizar in
+                        [sS]* ) echo ""
                         echo "Poniendo LIBRE en el autoarranque >>>>>"
                         sleep 2
                         #cd ~/
                         #sudo mv MMDVMLIBRE.desktop ~/.config/autostart/
                         sed -i "10c MMDVMLIBRE=ON" ~/autoarranque.ini
                         sed -i "10c MMDVMLIBRE=ON" ~/status.ini
-#fi
-fi 
-fi
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -650,36 +624,28 @@ clear
                         mv BM.desktop ~/.config/autostart/
                         sed -i "7c MMDVMBM=ON" ~/autoarranque.ini
                         sed -i "7c MMDVMBM=ON" ~/status.ini
-
                         break;;
                         [nN]* ) echo ""
                         break;;
 esac
 done;;
-
-
 19) echo ""
-
 while true
 do
 clear
-
-	        sleep 5
-		                actualizar=S
-		                case $actualizar in
+		              actualizar=S
+		              case $actualizar in
 			            [sS]* ) echo ""
 			            echo "Poniendo SVXLINK en el autoarranque >>>>>"
-                        sleep 2
-                        #cd ~/
-			            #sudo mv svxlink.desktop ~/.config/autostart
+                  sleep 2
+                  cd ~/AUTOSTART
+                  mv SVXLINK.desktop ~/.config/autostart/
 			            sed -i "8c SVXLINK=ON" ~/autoarranque.ini
 			            break;;
 			            [nN]* ) echo ""
 			            break;;
 esac
 done;;
-
-
 20) echo ""
 while true
 do
