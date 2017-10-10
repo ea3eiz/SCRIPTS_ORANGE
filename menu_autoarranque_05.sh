@@ -379,13 +379,11 @@ while true
 do
 clear              
                         actualizar=S
-                    case $actualizar in
-                  [sS]* ) echo ""
-                  echo "Quitando MMDVMBM del autoarranque >>>>>"
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        echo "Quitando LIBRE del autoarranque >>>>>"
                         sleep 2
-                        #cd ~/.config/autostart
-                        #sudo mv MMDVMBM.desktop ~/
-                        sed -i "7c MMDVMBM=OFF" ~/autoarranque.ini
+                        sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -396,13 +394,13 @@ while true
 do
 clear              
                         actualizar=S
-                case $actualizar in
-            [sS]* ) echo ""
-            echo "Quitando BM del autoarranque >>>>>"
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        echo "Quitando BM del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
                         mv BM.desktop ~/AUTOSTART
-                        sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
+                        sed -i "7c MMDVMBM=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -648,9 +646,8 @@ while true
 do
 clear
                         actualizar=S
-                 case $actualizar in
-                 [sS]* ) echo ""
-                                                  
+                        case $actualizar in
+                        [sS]* ) echo ""
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
                         cd ~/AUTOSTART
