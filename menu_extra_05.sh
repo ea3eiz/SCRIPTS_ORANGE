@@ -58,6 +58,26 @@ exit;
 break;;
 esac
 done;;
+3) echo ""
+while true
+do
+clear
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
+			            sudo cp ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
+                        cd ~/MMDVMHost/Nextion_DB2OE
+                        sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
+                        sleep 5
+                        exit;
+		                break;;
+		                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 1000) echo ""
 while true
 do
@@ -103,29 +123,29 @@ exit;
 break;;
 esac
 done;;
-3000) echo ""
-while true
-do
-clear
-	        			ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> INSTALANDO BMXTG   >>>>>"
-			            cd ~/
-			            sudo dpkg -i bmxtg-1.3.deb
-			            sudo apt-get install python-requests -y
-			            cp -r /etc/bmxtg ~/
-			            cp /usr/local/bin/bmxtg.py ~/bmxtg
-			            cd ~/bmxtg
-			            sudo chmod +x bmxtg.py
-                        exit;
-						break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
+#3000) echo ""
+#while true
+#do
+#clear
+	        			#ejecutar1=S
+		    			#case $ejecutar1 in
+						#[sS]* ) echo ""
+						#echo ">>>>>>>>> INSTALANDO BMXTG   >>>>>"
+			            #cd ~/
+			            #sudo dpkg -i bmxtg-1.3.deb
+			            #sudo apt-get install python-requests -y
+			            #cp -r /etc/bmxtg ~/
+			            #cp /usr/local/bin/bmxtg.py ~/bmxtg
+			            #cd ~/bmxtg
+			            #sudo chmod +x bmxtg.py
+                        #exit;
+						#break;;
+						#[nN]* ) echo ""
+#clear
+#exit;
+#break;;
+#esac
+#done;;
 4000) echo ""
 while true
 do
