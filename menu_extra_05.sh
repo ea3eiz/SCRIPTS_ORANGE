@@ -44,7 +44,6 @@ done;;
 while true
 do
 clear
-	                    #
 	                    ejecutar1=S
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
