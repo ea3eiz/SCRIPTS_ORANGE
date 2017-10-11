@@ -124,7 +124,7 @@ clear
 	        ejecutar1=S
 		    case $ejecutar1 in
 			[sS]* ) echo ""
-			echo ">>>>>>>>> GIT PULL AUTOSTART   >>>>>"
+			echo ">>>>>>>>> GIT PULL AUTOSTART  recoge los botones autoarranque >>>>>"
 			            cd ~/AUTOSTART
 			            git pull
                         exit;
