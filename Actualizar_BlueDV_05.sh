@@ -191,7 +191,7 @@ echo "\33[1;33m"
 			sudo rm -r ~/bluedv
 			
 			cd ~/
-			git clone https://github.com/ea3eiz/bluedv
+			sudo git clone https://github.com/ea3eiz/bluedv
                                     sleep 5
                                     clear
 		            echo ""
