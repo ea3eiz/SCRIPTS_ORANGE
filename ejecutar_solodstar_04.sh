@@ -7,3 +7,4 @@ sed -i "10c Name[es_ES]=Cerrar D-STAR Repeater" ~/Desktop/Dstar_solo.desktop
 
 ircddbgateway -gui  & dstarrepeater
 
+#
