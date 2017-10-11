@@ -28,7 +28,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
-                        git pull 
+                        sudo git pull 
                         cd ~/
                         sudo chmod -R 777 SCRIPTS_ORANGE
                         clear
