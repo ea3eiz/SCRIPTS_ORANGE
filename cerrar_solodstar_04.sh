@@ -5,7 +5,7 @@ sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_DSTAR.png" ~/Desktop/Dstar_so
 sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" ~/Desktop/Dstar_solo.desktop
 
 
-#
+
 #cierra ircDDBGateway
 sudo killall ircddbgateway
 #cierra D-STARRepeater
