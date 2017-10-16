@@ -279,7 +279,7 @@ solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 solof=`expr substr $solof 13 3`
 if [ $solof = "OFF" ]
 then
-echo "\33[1;31m$solod"
+echo "\33[1;31m$solof"
 else
 echo "\33[1;31m"
 fi
