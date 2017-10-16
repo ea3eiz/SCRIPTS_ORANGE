@@ -77,6 +77,29 @@ exit;
 break;;
 esac
 done;;
+
+4) echo ""
+while true
+do
+clear
+	                    echo "\33[1;31m" #color rojo
+                        echo " *****************************************************"
+                        echo " ******   OJO!!! ESTO RESTAURA TODO EL GITHUB ********"
+                        echo " *****************************************************"
+                        echo "\33[1;37m" #color
+                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
+			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+                        exit;
+		                break;;
+		                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 1000) echo ""
 while true
 do
