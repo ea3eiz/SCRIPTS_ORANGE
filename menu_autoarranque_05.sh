@@ -477,7 +477,7 @@ clear
 esac
 done;;
 
-10000) echo ""
+11) echo ""
 while true
 do
 clear
@@ -488,7 +488,7 @@ clear
             sleep 3
             cd ~/.config/autostart
             mv FUSIONSOLO.desktop ~/AUTOSTART
-            sed -i "11c SOLO_DSTAR=OFF" ~/autoarranque.ini
+            sed -i "12c SOLO_FUSION=OFF" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
             break;;
@@ -719,7 +719,7 @@ clear
             break;;
 esac
 done;;
-20000) echo ""
+22) echo ""
 while true
 do
 clear
@@ -730,7 +730,7 @@ clear
             sleep 3
             cd ~/AUTOSTART
             mv FUSIONSOLO.desktop ~/.config/autostart/
-            sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
+            sed -i "12c SOLO_FUSION=ON" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
             break;;
