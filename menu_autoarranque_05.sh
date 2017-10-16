@@ -276,7 +276,7 @@ solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 #==================================================================================
 echo -n "\33[1;36m  22)\33[1;33m  Poner SOLO_FUSION en el autoarranque  - "
 solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
-solof=`expr substr $solod 13 3`
+solof=`expr substr $solof 13 3`
 if [ $solof = "OFF" ]
 then
 echo "\33[1;31m$solod"
