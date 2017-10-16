@@ -133,15 +133,15 @@ solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m  11)\33[1;37m  Quitar SOLO_FUSION del autoarranque   - \33[1;32m"
-solod=`grep "SOLO_FUSION" ~/autoarranque.ini`
-solod=`expr substr $solod 12 3`
-if [ $solod = "ON" ]
+solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
+solof=`expr substr $solof 12 3`
+if [ $solof = "ON" ]
 then
-echo "\33[1;32m$solod"
+echo "\33[1;32m$solof"
 else
 echo "\33[1;31m"
 fi
-solod=`grep "SOLO_FUSION" ~/autoarranque.ini`
+solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #=================================================================================
 
 
