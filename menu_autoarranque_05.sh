@@ -130,6 +130,24 @@ fi
 solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 #=================================================================================
 
+
+#==================================================================================
+echo -n "\33[1;36m 100)\33[1;37m  Quitar SOLO_DSTAR del autoarranque    - \33[1;32m"
+solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
+solod=`expr substr $solod 12 3`
+if [ $solod = "ON" ]
+then
+echo "\33[1;32m$solod"
+else
+echo "\33[1;31m"
+fi
+solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
+#=================================================================================
+
+
+
+
+
 echo "\33[1;33m"
 
 echo -n "\33[1;36m  11)\33[1;33m  Poner ircDDB en el autoarranque       - "
@@ -252,6 +270,24 @@ echo "\33[1;31m"
 fi
 solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 #==================================================================================
+
+
+
+#==================================================================================
+echo -n "\33[1;36m 200)\33[1;33m  Poner SOLO_FUSION en el autoarranque   - "
+solod=`grep "SOLO_FUSION" ~/autoarranque.ini`
+solod=`expr substr $solod 12 3`
+if [ $solod = "OFF" ]
+then
+echo "\33[1;31m$solod"
+else
+echo "\33[1;31m"
+fi
+solod=`grep "SOLO_FUSION" ~/autoarranque.ini`
+#==================================================================================
+
+
+
 
 
 echo "\33[0m "
@@ -440,6 +476,26 @@ clear
             break;;
 esac
 done;;
+
+100) echo ""
+while true
+do
+clear
+            actualizar=S
+            case $actualizar in
+            [sS]* ) echo ""
+            echo "Quitando SOLO_FUSION del autoarranque >>>>>"
+            sleep 3
+            cd ~/.config/autostart
+            mv FUSIONSOLO.desktop ~/AUTOSTART
+            sed -i "11c SOLO_FUSION=OFF" ~/autoarranque.ini
+            break;;
+            [nN]* ) echo ""
+            break;;
+esac
+done;;
+
+
 11) echo ""
 while true
 do
@@ -663,18 +719,18 @@ clear
             break;;
 esac
 done;;
-21) echo ""
+200) echo ""
 while true
 do
 clear
             actualizar=S
             case $actualizar in
             [sS]* ) echo ""
-            echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
+            echo "Poniendo solo FUSION en el autoarranque >>>>>"
             sleep 3
             cd ~/AUTOSTART
-            mv DSTARSOLO.desktop ~/.config/autostart/
-            sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
+            mv FUSIONSOLO.desktop ~/.config/autostart/
+            sed -i "11c SOLO_FUSION=ON" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
             break;;
