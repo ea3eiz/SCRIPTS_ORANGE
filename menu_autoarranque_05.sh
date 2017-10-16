@@ -132,7 +132,7 @@ solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 
 
 #==================================================================================
-echo -n "\33[1;36m 100)\33[1;37m  Quitar SOLO_FUSION del autoarranque    - \33[1;32m"
+echo -n "\33[1;36m 100)\33[1;37m  Quitar SOLO_FUSION del autoarranque   - \33[1;32m"
 solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 solod=`expr substr $solod 12 3`
 if [ $solod = "ON" ]
@@ -274,7 +274,7 @@ solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 
 
 #==================================================================================
-echo -n "\33[1;36m 200)\33[1;33m  Poner SOLO_FUSION en el autoarranque   - "
+echo -n "\33[1;36m 200)\33[1;33m  Poner SOLO_FUSION en el autoarranque  - "
 solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 solod=`expr substr $solod 12 3`
 if [ $solod = "OFF" ]
@@ -477,7 +477,7 @@ clear
 esac
 done;;
 
-100) echo ""
+10000) echo ""
 while true
 do
 clear
@@ -719,7 +719,7 @@ clear
             break;;
 esac
 done;;
-200) echo ""
+20000) echo ""
 while true
 do
 clear
