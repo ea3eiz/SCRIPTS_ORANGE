@@ -488,7 +488,7 @@ clear
             sleep 3
             cd ~/.config/autostart
             mv FUSIONSOLO.desktop ~/AUTOSTART
-            sed -i "11c SOLO_FUSION=OFF" ~/autoarranque.ini
+            sed -i "11c SOLO_DSTAR=OFF" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
             break;;
@@ -730,7 +730,7 @@ clear
             sleep 3
             cd ~/AUTOSTART
             mv FUSIONSOLO.desktop ~/.config/autostart/
-            sed -i "11c SOLO_FUSION=ON" ~/autoarranque.ini
+            sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
             break;;
             [nN]* ) echo ""
             break;;
