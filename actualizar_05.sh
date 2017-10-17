@@ -3,6 +3,9 @@
 # pone el altavoz en la barra superior
 pasystray
 
+# pone la hora al sistema a quien le falle la del armbian
+sudo ntpdate -u hora.roa.es
+
 #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
 #pone todos los status de inicio en OFF
 #sed -i "1c D-STAR=OFF" /home/pi/status.ini
