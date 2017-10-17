@@ -96,9 +96,12 @@ clear
                         #cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         #chmod +x ~/Desktop
                         sudo rm -R ~/AUTOSTART
-                        cd ~                       
+                        #cd ~
                         git clone https://github.com/ea3eiz/AUTOSTART
                         chmod +x ~/AUTOSTART
+
+
+
                         clear
                         exit;
 						break;;
