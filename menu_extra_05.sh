@@ -94,15 +94,6 @@ clear
                         cd ~
                         git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                        chmod +x ~/Desktop
-
-                        sudo rm -R ~/AUTOSTART
-                        cd ~
-                        git clone https://github.com/ea3eiz/AUTOSTART
-                       
-
-
-
                         clear
                         exit;
 						break;;
