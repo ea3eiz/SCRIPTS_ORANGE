@@ -2,8 +2,8 @@
 pasystray
 
 #recoge los botones nuevos
-cd ~/AUTOSTART
-git pull
+#cd ~/AUTOSTART
+#git pull
 
 #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
 #pone todos los status de inicio en OFF
