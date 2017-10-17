@@ -67,4 +67,4 @@
 #sed -i "10c Name[es_ES]=Abrir SVXLINK" /home/pi/Desktop/svxlink
 
 cd ~/SCRIPTS_ORANGE/
-sudo git pull
+git pull
