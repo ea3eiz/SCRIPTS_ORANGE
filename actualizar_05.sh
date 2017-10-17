@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# pone el altavoz en la barra superior
-pasystray
-
 sleep 10
 
 cd ~/SCRIPTS_ORANGE/
@@ -12,7 +9,8 @@ git pull
 cd ~/AUTOSTART
 git pull
 
-
-
 # pone la hora al sistema a quien le falle la del armbian
 sudo ntpdate -u hora.roa.es
+
+# pone el altavoz en la barra superior
+pasystray &
