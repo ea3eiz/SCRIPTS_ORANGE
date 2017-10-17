@@ -1,5 +1,10 @@
 #!/bin/bash
 pasystray
+
+#recoge los botones nuevos
+cd ~/AUTOSTART
+git pull
+
 #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
 #pone todos los status de inicio en OFF
 #sed -i "1c D-STAR=OFF" /home/pi/status.ini
