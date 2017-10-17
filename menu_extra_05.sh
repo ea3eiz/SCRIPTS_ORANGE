@@ -77,29 +77,6 @@ exit;
 break;;
 esac
 done;;
-
-6000) echo ""
-while true
-do
-clear
-	                    echo "\33[1;31m" #color rojo
-                        echo " *****************************************************"
-                        echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
-                        echo " *****************************************************"
-                        echo "\33[1;37m" #color
-                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
-			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
-                        exit;
-		                break;;
-		                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
 1000) echo ""
 while true
 do
@@ -168,7 +145,7 @@ done;;
 #break;;
 #esac
 #done;;
-4000) echo ""
+3000) echo ""
 while true
 do
 clear
@@ -190,8 +167,28 @@ exit;
 break;;
 esac
 done;;
-
-
+4000) echo ""
+while true
+do
+clear
+	                    echo "\33[1;31m" #color rojo
+                        echo " *****************************************************"
+                        echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
+                        echo " *****************************************************"
+                        echo "\33[1;37m" #color
+                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
+			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+                        exit;
+		                break;;
+		                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 9000) echo ""
 while true
 do
@@ -204,8 +201,8 @@ clear
                         #clear
                         echo "1000 ESTO RESTAURA TODO EL GITHUB"
                         echo "2000 GIT PULL AUTOSTART  recoge los botones nuevos autoarranque"
-                        echo "4000 RESTAURA ICONOS ESCRITORIO"
-                        echo "6000 COPIAR autoarranque.ini"
+                        echo "3000 RESTAURA ICONOS ESCRITORIO"
+                        echo "4000 COPIAR autoarranque.ini"
                         sleep 10
                         #exit;
 		                break;;
@@ -215,7 +212,6 @@ exit;
 break;;
 esac
 done;;
-
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
