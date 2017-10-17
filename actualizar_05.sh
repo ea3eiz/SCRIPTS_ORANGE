@@ -8,7 +8,9 @@ sudo ntpdate -u hora.roa.es
 
 #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
 
-
+# RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS
+cd ~/AUTOSTART
+git pull
 
 #pone todos los status de inicio en OFF
 #sed -i "1c D-STAR=OFF" /home/pi/status.ini
