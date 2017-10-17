@@ -213,9 +213,9 @@ done;;
 while true
 do
 clear
-	                    #ejecutar1=S
-		                #case $ejecutar1 in
-			            #[sS]* ) echo ""
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
 			            #echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
 			            #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
                         #clear
