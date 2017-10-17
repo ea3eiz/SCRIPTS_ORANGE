@@ -92,6 +92,11 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
+
+#recoge los botones nuevos
+cd ~/AUTOSTART
+git pull
+			            
 			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
                         exit;
 		                break;;
