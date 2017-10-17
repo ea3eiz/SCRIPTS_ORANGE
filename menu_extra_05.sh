@@ -199,7 +199,7 @@ clear
 			            #echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
 			            #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
                         #clear
-                        echo "1000 ESTO RESTAURA TODO EL GITHUB"
+                        echo "1000 ESTO RESTAURA TODO EL GITHUB>>>>>>>>>>>>>>>>>>"
                         echo "2000 RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
                         echo "3000 RESTAURA ICONOS ESCRITORIO"
                         echo "4000 COPIAR autoarranque.ini"
