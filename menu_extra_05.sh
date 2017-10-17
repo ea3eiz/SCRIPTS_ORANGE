@@ -91,6 +91,7 @@ clear
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
 			            sudo rm -R ~/SCRIPTS_ORANGE
+			            sleep 5
                         cd ~
                         git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
