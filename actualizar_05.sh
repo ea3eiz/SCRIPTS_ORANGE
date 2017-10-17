@@ -1,5 +1,5 @@
 #!/bin/bash
-pasystray
+#pasystray
 
 #recoge los botones nuevos
 #cd ~/AUTOSTART
