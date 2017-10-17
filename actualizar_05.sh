@@ -7,6 +7,9 @@ pasystray
 sudo ntpdate -u hora.roa.es
 
 #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+
+
+
 #pone todos los status de inicio en OFF
 #sed -i "1c D-STAR=OFF" /home/pi/status.ini
 #sed -i "2c BlueDV=OFF" /home/pi/status.ini

@@ -190,6 +190,27 @@ exit;
 break;;
 esac
 done;;
+
+7000) echo ""
+while true
+do
+clear
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
+			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+                        clear
+                        exit;
+		                break;;
+		                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+
+
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
