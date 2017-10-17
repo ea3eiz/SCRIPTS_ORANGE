@@ -191,24 +191,7 @@ break;;
 esac
 done;;
 
-7000) echo ""
-while true
-do
-clear
-	                    ejecutar1=S
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
-			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
-                        clear
-                        exit;
-		                break;;
-		                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
+
 9000) echo ""
 while true
 do
@@ -219,9 +202,12 @@ clear
 			            #echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
 			            #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
                         #clear
-                        echo " 7000 COPIAR AUTOARRANQUE .INI"
-                        sleep 20
-                        exit;
+                        echo "1000 ESTO RESTAURA TODO EL GITHUB"
+                        echo "2000 GIT PULL AUTOSTART  recoge los botones nuevos autoarranque"
+                        echo "4000 RESTAURA ICONOS ESCRITORIO"
+                        echo "6000 COPIAR autoarranque.ini"
+                        sleep 10
+                        #exit;
 		                break;;
 		                [nN]* ) echo ""
 clear
