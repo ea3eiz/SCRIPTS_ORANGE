@@ -90,11 +90,21 @@ clear
                         case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
-			            sudo rm -R ~/SCRIPTS_ORANGE
+			            #sudo rm -R ~/SCRIPTS_ORANGE
+			            #sleep 5
+                        #cd ~
+                        #git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
+                        #cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+
+
+                        sudo rm -R ~/AUTOSTART
 			            sleep 5
                         cd ~
-                        git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
-                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        git clone https://github.com/ea3eiz/AUTOSTART
+                      
+
+
+
                         clear
                         exit;
 						break;;
