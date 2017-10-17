@@ -210,7 +210,7 @@ clear
 			            #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
                         #clear
                         echo "**********************************"
-                        echo "*  MENU AYUDAS COMANDOS OCULTOS  *"
+                        echo "*  MENU AYUDAS COMANDOS OCULTOS  ******************"
                         echo "**********************************"
                         echo ""
                         echo "1000 ESTO RESTAURA TODOS LOS GITHUB"
