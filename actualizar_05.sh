@@ -1,9 +1,7 @@
 #!/bin/bash
-#pasystray
 
-#recoge los botones nuevos
-#cd ~/AUTOSTART
-#git pull
+# pone el altavoz en la barra superior
+pasystray
 
 #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
 #pone todos los status de inicio en OFF
