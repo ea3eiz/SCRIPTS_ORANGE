@@ -539,17 +539,10 @@ done;;
 while true
 do
 clear	        
-		      actualizar=S
-		      case $actualizar in
-			[sS]* ) echo ""
-			echo "Poniendo DSTAR en el autoarranque >>>>>"
-			bluedv=`grep "BlueDV" ~/autoarranque.ini`
-                  bluedv=`expr substr $bluedv 8 3`
-
-                  if [ $bluedv = "OFF" ]
-                  then
-                  #cd ~/
-			#sudo mv Gateway.desktop ~/.config/autostart/
+		              actualizar=S
+		              case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Poniendo DSTAR en el autoarranque >>>>>"
 			            sed -i "1c D-STAR=ON" ~/autoarranque.ini
                   clear
                   echo "\33[1;32m**********************************************************"
@@ -560,17 +553,9 @@ clear
                   echo "**********************************************************"
                   echo ""
                   echo ""
-                  #echo -n "\33[1;37mPulsa enter para seguir  "
-                  #read parado
-                  sleep 5
-                  else
-                  clear
-                  echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y D-STAR a la vez"
-                  sleep 5
-                  fi        
-			break;;
-			[nN]* ) echo ""
-			break;;
+			            break;;
+			            [nN]* ) echo ""
+			            break;;
 esac
 done;;
 14) echo ""
