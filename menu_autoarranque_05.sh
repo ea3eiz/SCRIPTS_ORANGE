@@ -144,7 +144,18 @@ fi
 solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #=================================================================================
 
-
+#==================================================================================
+echo -n "\33[1;36m  24)\33[1;37m  Quitar DVRPTR      del autoarranque   - \33[1;32m"
+dvrptrq=`grep "DVRPTR" ~/autoarranque.ini`
+dvrptrq=`expr substr $dvrptrq 8 3`
+if [ $dvrptrq = "ON" ]
+then
+echo "\33[1;32m$dvrptrq"
+else
+echo "\33[1;31m"
+fi
+solof=`grep "DVRPTR" ~/autoarranque.ini`
+#=================================================================================
 
 
 
@@ -306,7 +317,7 @@ echo "\33[0m "
 
 
 
-echo "\33[1;36m  24)\33[1;31m *** REINICIAR LA ORANGE PI ***"
+echo "\33[1;36m  25)\33[1;31m *** REINICIAR LA ORANGE PI ***"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
