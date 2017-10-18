@@ -33,10 +33,10 @@ url=`grep -n "URL" ~/MMDVMHost/MMDVMDSTAR.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "\33[1;36m   6)\33[0m Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)\33[1;33m"
-echo "\33[1;36m   7)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM0)\33[1;33m"
-echo "\33[1;36m   8)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM1)\33[1;33m"
-echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)\33[1;33m"
+echo "\33[1;36m   6)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM0)\33[1;33m"
+echo "\33[1;36m   7)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM1)\33[1;33m"
+echo "\33[1;36m   8)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)\33[1;33m"
+echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB1)\33[1;33m"
 echo -n "                            - "
 
 mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVMDSTAR.ini`
