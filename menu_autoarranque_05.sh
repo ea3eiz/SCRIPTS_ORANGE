@@ -768,7 +768,7 @@ clear
       break;;
 esac
 done;;
-24) echo ""
+25) echo ""
 
 while true
 do
@@ -793,7 +793,7 @@ echo ""
 esac
 done;;
 
-25) echo ""
+24) echo ""
 while true
 do
 clear
