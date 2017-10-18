@@ -209,16 +209,17 @@ clear
 			            #echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
 			            #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
                         #clear
-                        echo "**********************************"
-                        echo "*  MENU AYUDAS COMANDOS OCULTOS  *"
-                        echo "**********************************"
+                        echo "\33[1;32m       ***********************************************************"
+                        echo "       *             MENU AYUDAS COMANDOS OCULTOS                *"
+                        echo "      ***********************************************************"
                         echo ""
-                        echo "1000 ESTO RESTAURA TODOS LOS GITHUB"
-                        echo "2000 RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
-                        echo "3000 RESTAURA ICONOS ESCRITORIO"
-                        echo "4000 COPIAR autoarranque.ini"
-                        sleep 10
-                        #exit;
+                        echo "\33[1;36m1000\33[1;33m       ESTO RESTAURA TODOS LOS GITHUB"
+                        echo "\33[1;36m2000\33[1;33m       RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
+                        echo "\33[1;36m3000\33[1;33m       RESTAURA ICONOS ESCRITORIO"
+                        echo "\33[1;36m4000\33[1;33m       COPIAR autoarranque.ini"
+                        echo ""
+                        echo -n "\33[1;37m      Pulsa la tecla ENTER para salir"
+                        read A
 		                break;;
 		                [nN]* ) echo ""
 clear
