@@ -3,8 +3,8 @@ Version=1.0
 Type=Application
 Name=Editar solo FUSION
 Comment=
-Exec=sudo pluma MMDVMFUSION.ini
+Exec=mate-terminal --geometry=80x41 -x sh editar_MMDVMFUSION_05.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/editar_bm.png
-Path=/home/orangepi/MMDVMHost
+Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
 StartupNotify=false
