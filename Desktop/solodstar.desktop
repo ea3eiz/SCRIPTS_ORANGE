@@ -5,6 +5,6 @@ Name=Editar solo D-STAR
 Comment=
 Exec=mate-terminal --geometry=80x47 -x sh editar_MMDVMDSTAR_05.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/SOLO_D-STAR.png
-Path=/home/orangepi/MMDVMHost
+Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
 StartupNotify=false
