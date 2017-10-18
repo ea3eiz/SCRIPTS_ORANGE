@@ -287,7 +287,7 @@ solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #==================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m  23)\33[1;33m  Poner DVRPTR en el autoarranque        - "
+echo -n "\33[1;36m  23)\33[1;33m  Poner DVRPTR en el autoarranque       - "
 dvrptr=`grep "DVRPTR" ~/autoarranque.ini`
 dvrptr=`expr substr $dvrptr 8 3`
 if [ $dvrptr = "OFF" ]
