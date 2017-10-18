@@ -550,7 +550,7 @@ clear
                   then
                   #cd ~/
 			#sudo mv Gateway.desktop ~/.config/autostart/
-			sed -i "1c D-STAR=ON" ~/autoarranque.ini
+			            sed -i "1c D-STAR=ON" ~/autoarranque.ini
                   clear
                   echo "\33[1;32m**********************************************************"
                   echo "*                                                        *"
