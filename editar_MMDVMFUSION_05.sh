@@ -771,7 +771,7 @@ do
                               actualizar=S 
                               case $actualizar in
                               [sS]* ) echo ""
-                              geany ~/MMDVMHost/MMDVMBM.ini
+                              sudo pluma ~/MMDVMHost/MMDVMBM.ini
                               break;;
                               [nN]* ) echo ""
                               break;;
