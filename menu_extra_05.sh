@@ -218,7 +218,7 @@ clear
                         echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
                         echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
                         echo ""
-                        echo -n "\33[1;37m      Pulsa la tecla ENTER para salir"
+                        echo -n "\33[1;37m       Pulsa la tecla ENTER para salir"
                         read A
 		                break;;
 		                [nN]* ) echo ""
