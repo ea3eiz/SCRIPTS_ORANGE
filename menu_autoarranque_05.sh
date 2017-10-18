@@ -145,7 +145,7 @@ solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m  24)\33[1;37m  Quitar DVRPTR      del autoarranque   - \33[1;32m"
+echo -n "\33[1;36m  29)\33[1;37m  Quitar DVRPTR del autoarranque        - \33[1;32m"
 dvrptrq=`grep "DVRPTR" ~/autoarranque.ini`
 dvrptrq=`expr substr $dvrptrq 8 3`
 if [ $dvrptrq = "ON" ]
@@ -779,6 +779,26 @@ clear
       break;;
 esac
 done;;
+
+
+29) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando DVRPTR en el autoarranque >>>>>"
+                                            sleep 3
+                                            cd ~/.config/autostart
+                                            mv DVRPTR.desktop ~/AUTOSTART
+                                            sed -i "13c DVRPTR=OFF" ~/autoarranque.ini
+
+      break;;
+      [nN]* ) echo ""
+      break;;
+esac
+done;;
 25) echo ""
 
 while true
@@ -803,26 +823,6 @@ echo ""
                         break;;
 esac
 done;;
-
-24) echo ""
-while true
-do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""                   
-                                            echo "Quitando DVRPTR en el autoarranque >>>>>"
-                                            sleep 3
-                                            cd ~/.config/autostart
-                                            mv DVRPTR.desktop ~/AUTOSTART
-                                            sed -i "13c DVRPTR=OFF" ~/autoarranque.ini
-
-      break;;
-      [nN]* ) echo ""
-      break;;
-esac
-done;;
-
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
