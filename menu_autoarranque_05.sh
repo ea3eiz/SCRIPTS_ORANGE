@@ -762,7 +762,26 @@ echo ""
 esac
 done;;
 
+24) echo ""
+while true
+do
+clear
+                                     actualizar=S
+                             case $actualizar in
+                     [sS]* ) echo ""
+                     
+                          
+                                            echo "Poniendo BlueDV en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv DVRPTR.desktop ~/.config/autostart/
+                                            sed -i "13c DVRPTR=ON" ~/autoarranque.ini
 
+      break;;
+      [nN]* ) echo ""
+      break;;
+esac
+done;;
 
 0) echo ""
 clear
