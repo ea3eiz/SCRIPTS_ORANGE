@@ -286,6 +286,18 @@ fi
 solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #==================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m  23)\33[1;33m  Poner DVRPTR en el autoarranque  - "
+dvrptr=`grep "DVRPTR" ~/autoarranque.ini`
+dvrptr=`expr substr $dvrptr 8 3`
+if [ $dvrptr = "OFF" ]
+then
+echo "\33[1;31m$dvrptr"
+else
+echo "\33[1;31m"
+fi
+solof=`grep "DVRPTR" ~/autoarranque.ini`
+#==================================================================================
 
 
 
@@ -294,7 +306,7 @@ echo "\33[0m "
 
 
 
-echo "\33[1;36m  23)\33[1;31m *** REINICIAR LA ORANGE PI ***"
+echo "\33[1;36m  24)\33[1;31m *** REINICIAR LA ORANGE PI ***"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -736,8 +748,27 @@ clear
             break;;
 esac
 done;;
-
 23) echo ""
+while true
+do
+clear
+                                     actualizar=S
+                             case $actualizar in
+                     [sS]* ) echo ""
+                     
+                          
+                                            echo "Poniendo DVRPTR en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv DVRPTR.desktop ~/.config/autostart/
+                                            sed -i "13c DVRPTR=ON" ~/autoarranque.ini
+
+      break;;
+      [nN]* ) echo ""
+      break;;
+esac
+done;;
+24) echo ""
 
 while true
 do
@@ -762,20 +793,18 @@ echo ""
 esac
 done;;
 
-24) echo ""
+25) echo ""
 while true
 do
 clear
-                                     actualizar=S
-                             case $actualizar in
-                     [sS]* ) echo ""
-                     
-                          
-                                            echo "Poniendo BlueDV en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/AUTOSTART
-                                            mv DVRPTR.desktop ~/.config/autostart/
-                                            sed -i "13c DVRPTR=ON" ~/autoarranque.ini
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando DVRPTR en el autoarranque >>>>>"
+                                            sleep 3
+                                            cd ~/.config/autostart
+                                            mv DVRPTR.desktop ~/AUTOSTART
+                                            sed -i "13c DVRPTR=OFF" ~/autoarranque.ini
 
       break;;
       [nN]* ) echo ""
