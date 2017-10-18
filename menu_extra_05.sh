@@ -211,12 +211,12 @@ clear
                         #clear
                         echo "\33[1;32m       ***********************************************************"
                         echo "       *             MENU AYUDAS COMANDOS OCULTOS                *"
-                        echo "      ***********************************************************"
+                        echo "       ***********************************************************"
                         echo ""
-                        echo "\33[1;36m1000\33[1;33m       ESTO RESTAURA TODOS LOS GITHUB"
-                        echo "\33[1;36m2000\33[1;33m       RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
-                        echo "\33[1;36m3000\33[1;33m       RESTAURA ICONOS ESCRITORIO"
-                        echo "\33[1;36m4000\33[1;33m       COPIAR autoarranque.ini"
+                        echo "\33[1;36m       1000\33[1;33m ESTO RESTAURA TODOS LOS GITHUB"
+                        echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
+                        echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
+                        echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
                         echo ""
                         echo -n "\33[1;37m      Pulsa la tecla ENTER para salir"
                         read A
