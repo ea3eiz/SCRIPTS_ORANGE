@@ -5,31 +5,31 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *         Script para Modificar MMDVMSOLODSTAR.ini \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m   *"
+echo "   *         Script para Modificar MMDVMDSTAR.ini \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m   *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
-ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMDSTAR.ini`
 ind1=`expr substr $ind 3 30`
 echo "$ind1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - \33[1;33m"
-rxf=`grep -n "RXFrequency" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+rxf=`grep -n "RXFrequency" ~/MMDVMHost/MMDVMDSTAR.ini`
 rxf1=`expr substr $rxf 4 30`
 echo "$rxf1"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - \33[1;33m"
-txf=`grep -n "TXFrequency" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+txf=`grep -n "TXFrequency" ~/MMDVMHost/MMDVMDSTAR.ini`
 txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
 echo -n "\33[1;36m   4)\33[0m Modificar Location    - \33[1;33m"
-loca=`grep -n "Locatio" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+loca=`grep -n "Locatio" ~/MMDVMHost/MMDVMDSTAR.ini`
 loca1=`expr substr $loca 4 30`
 echo "$loca1"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
-url=`grep -n "URL" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+url=`grep -n "URL" ~/MMDVMHost/MMDVMDSTAR.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
@@ -39,22 +39,22 @@ echo "\33[1;36m   8)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (tty
 echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB1)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 mode1=`expr substr $mode 4 30`
 linea=`expr substr $mode 1 2`
 linea=`expr $linea + 2`
 linea33=$linea
 letra=p
 linea2=$linea$letra
-var99= sed -n $linea2  ~/MMDVMHost/MMDVMSOLODSTAR.ini;
+var99= sed -n $linea2  ~/MMDVMHost/MMDVMDSTAR.ini;
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
-idd=`grep -n "Id=" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+idd=`grep -n "Id=" ~/MMDVMHost/MMDVMDSTAR.ini`
 idd1=`expr substr $idd 4 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Modificar Address     - \33[1;33m"
-master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
 largo=`expr index $master $buscar`
 largo=`expr $largo + 1`
@@ -71,60 +71,60 @@ lineaport=`expr $lineaport + 1`
 linea3port=$lineaport
 letra=p
 linea2port=$lineaport$letra
-var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMSOLODSTAR.ini;
+var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDSTAR.ini;
 
 echo -n "\33[1;36m  13)\33[0m Modificar Password    - \33[1;33m"
-pas=`grep -n '\<Password\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+pas=`grep -n '\<Password\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 pas1=`expr substr $pas 5 30`
 echo "$pas1"
 
 echo -n "\33[1;36m  14)\33[0m Modificar TXInvert    - \33[1;33m"
-txinv=`grep -n '\<TXInvert\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+txinv=`grep -n '\<TXInvert\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 txinv1=`expr substr $txinv 4 30`
 echo "$txinv1"
 
 echo -n "\33[1;36m  15)\33[0m Modificar RXLevel     - \33[1;33m"
-rx=`grep -n '\<RXLevel\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+rx=`grep -n '\<RXLevel\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 rx1=`expr substr $rx 4 30`
 echo "$rx1"
 
 echo -n "\33[1;36m  16)\33[0m Modificar TXLevel     - \33[1;33m"
-tx=`grep -n -m 1 '\<TXLevel\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+tx=`grep -n -m 1 '\<TXLevel\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 tx1=`expr substr $tx 4 30`
 echo "$tx1"
 
 echo -n "\33[1;36m  17)\33[0m Modificar Duplex      - \33[1;33m"
-dup=`grep -n -m 1 '\<Duplex\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+dup=`grep -n -m 1 '\<Duplex\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 dup1=`expr substr $dup 3 30`
 echo "$dup1"
 
 echo -n "\33[1;36m  18)\33[0m Modificar TXHang      - \33[1;33m"
-txh=`grep -n -m 1 '\<TXHang\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+txh=`grep -n -m 1 '\<TXHang\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 txh1=`expr substr $txh 4 30`
 echo "$txh1"
 
 echo -n "\33[1;36m  19)\33[0m Modificar Tramas      - \33[1;33m"
-lg=`grep -n -m 1 '\<DisplayLevel\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+lg=`grep -n -m 1 '\<DisplayLevel\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 lg1=`expr substr $lg 4 30`
 echo "$lg1"
 
 echo -n "\33[1;36m  20)\33[0m Modificar Slot1       - \33[1;33m"
-sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
 echo -n "\33[1;36m  21)\33[0m Modificar OscOffset   - \33[1;33m"
-salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 if [ $salto = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 salto1=`expr substr $salto 4 30`
 echo "$salto1"
 fi
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
@@ -134,15 +134,15 @@ linea=`expr $linea - 2`
 linea3=$linea
 letra=p
 linea2=$linea$letra
-var200= sed -n $linea2  ~/MMDVMHost/MMDVMSOLODSTAR.ini;
+var200= sed -n $linea2  ~/MMDVMHost/MMDVMDSTAR.ini;
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
-lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMDSTAR.ini`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
-long=`grep -n "Longitude" ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+long=`grep -n "Longitude" ~/MMDVMHost/MMDVMDSTAR.ini`
 long1=`expr substr $long 4 30`
 echo "$long1"
 
@@ -152,10 +152,10 @@ OPCION=`expr $OPCION + 5`
 linea33port=$OPCION
 letra=p
 linea22port=$OPCION$letra
-var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMSOLODSTAR.ini;
+var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMDSTAR.ini;
 
 echo -n "\33[1;36m  27)\33[0m Modificar RXInvert    - \33[1;33m"
-rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 rxinv1=`expr substr $rxinv 4 30`
 echo "$rxinv1"
 
@@ -195,7 +195,7 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           case $actualizar in
 			              [sS]* ) echo ""
 			              indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                          sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -220,7 +220,7 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                              sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                              sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/MMDVMDSTAR.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -245,7 +245,7 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXFrequency=$var2" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea TXFrequency=$var2" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -270,7 +270,7 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  loc1=`echo "$loc1" | tr -d '[[:space:]]'`
-              sed -i "$linea Location=$loc1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+              sed -i "$linea Location=$loc1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -295,7 +295,7 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  ur1=`echo "$ur1" | tr -d '[[:space:]]'`
-                          sed -i "$linea URL=$ur1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea URL=$ur1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -309,7 +309,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -323,7 +323,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -337,7 +337,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -352,7 +352,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyUSB1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Port=/dev/ttyUSB1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -377,7 +377,7 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Id=$miid" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Id=$miid" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -394,7 +394,7 @@ echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
                     master1=`echo "$master1" | tr -d '[[:space:]]'`
                     letra=c            
 linea=$largo$letra
-                          sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMDSTAR.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -404,14 +404,14 @@ done;;
 while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
-                          var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMSOLODSTAR.ini;
+                          var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDSTAR.ini;
                       read -p 'Puerto para Brandmeister=62031 puerto para DMR+=55555 : ' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
                           letra1=c
                           linea4=$linea3port$letra1
-                          sed -i "$linea4 Port=$miid" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Port=$miid" ~/MMDVMHost/MMDVMDSTAR.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -436,7 +436,7 @@ echo "   Valor actual del Password: \33[1;33m${pas#*=}\33[1;37m"
                           case $actualizar in
 			              [sS]* ) echo ""
 			              pas1=`echo "$pas1" | tr -d '[[:space:]]'`
-                          sed -i "$linea Password=$pas1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Password=$pas1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -460,7 +460,7 @@ echo "Valor  actual del  TXInvert: \33[1;33m${txinv#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXInvert=$txinv1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea TXInvert=$txinv1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -484,7 +484,7 @@ echo "Valor  actual  del  RXLevel : \33[1;33m${rx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea RXLevel=$var2" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea RXLevel=$var2" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -508,7 +508,7 @@ echo "Valor  actual  del  TXLevel : \33[1;33m${tx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXLevel=$var2" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea TXLevel=$var2" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -532,7 +532,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$dup1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Duplex=$dup1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -556,7 +556,7 @@ echo "Valor actual del TXHang: \33[1;33m${txh#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXHang=$txh1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea TXHang=$txh1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -580,7 +580,7 @@ echo "Valor actual del DisplayLevel: \33[1;33m${lg#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea DisplayLevel=$lg1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea DisplayLevel=$lg1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -590,11 +590,11 @@ done;;
 while true
 do
 
-sl=`grep -n -m 1 -c '\<Slot1\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+sl=`grep -n -m 1 -c '\<Slot1\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 if [ $sl = 0 ]; then
 echo "no existe este comando"
 else
-sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMSOLODSTAR.ini`
+sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 fi
@@ -617,7 +617,7 @@ echo "Valor actual del Slot1=: \33[1;33m${sl#*=}\33[1;37m"
                           case $actualizar in                                            
 			              [sS]* ) echo ""
 			              V=`echo "$V" | tr -d '[[:space:]]'`			  
-                          sed -i "$linea Slot1=$V" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Slot1=$V" ~/MMDVMHost/MMDVMDSTAR.ini
               
 			  break;;
 			  [nN]* ) echo ""
@@ -642,7 +642,7 @@ echo "Valor  actual  del  scOffset : \33[1;33m${salto#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -666,7 +666,7 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -676,14 +676,14 @@ done;;
 while true
 do
 echo -n "Valor  actual  del \33[1;33m${var200#*=}\33[1;37m"
-                          var100= sed -n $linea2  ~/MMDVMHost/MMDVMSOLODSTAR.ini;
+                          var100= sed -n $linea2  ~/MMDVMHost/MMDVMDSTAR.ini;
            	              read -p 'Desactivado=0 Activado=1: '   dmrac1
                           actualizar=S 
                           case $actualizar in
 			              [sS]* ) echo ""
                           letra1=c
                           linea4=$linea3$letra1
-                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/MMDVMDSTAR.ini
 			              break;;
 			              [nN]* ) echo ""
 			              break;;
@@ -709,7 +709,7 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Latitude=$lat1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Latitude=$lat1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -734,7 +734,7 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Longitude=$long1" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea Longitude=$long1" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -751,12 +751,12 @@ do
 			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  letra1=c
                           linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 esac
 done;;
@@ -778,7 +778,7 @@ echo "Valor  actual del  RXInvert: \33[1;33m${rxinv#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea RXInvert=$rxinv11" ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                          sed -i "$linea RXInvert=$rxinv11" ~/MMDVMHost/MMDVMDSTAR.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -793,7 +793,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			[sS]* ) echo ""
-                              sudo pluma ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                              sudo pluma ~/MMDVMHost/MMDVMDSTAR.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -809,7 +809,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVMSOLODSTAR.ini ~/MMDVMHost/MMDVMSOLODSTAR.ini_copia
+                        sudo cp -f ~/MMDVMHost/MMDVMDSTAR.ini ~/MMDVMHost/MMDVMDSTAR.ini_copia
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -825,7 +825,7 @@ do
                         clear
                         echo "<<<<<< Restaurando copia de seguridad >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVMSOLODSTAR.ini_copia ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMDSTAR.ini_copia ~/MMDVMHost/MMDVMDSTAR.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -841,7 +841,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVMSOLODSTAR.ini ~/MMDVMHost/MMDVMSOLODSTAR.ini_copia2
+                        sudo cp -f ~/MMDVMHost/MMDVMDSTAR.ini ~/MMDVMHost/MMDVMDSTAR.ini_copia2
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -857,7 +857,7 @@ do
                         clear
                         echo "<<<<<< Restaurando copia de seguridad >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVMSOLODSTAR.ini_copia2 ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMDSTAR.ini_copia2 ~/MMDVMHost/MMDVMDSTAR.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -873,7 +873,7 @@ do
                         clear
                         echo "<<<<<< Haciendo copia de seguridad >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVMSOLODSTAR.ini ~/MMDVMHost/MMDVMSOLODSTAR.ini_copia3
+                        sudo cp -f ~/MMDVMHost/MMDVMDSTAR.ini ~/MMDVMHost/MMDVMDSTAR.ini_copia3
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -889,7 +889,7 @@ do
                         clear
                         echo "<<<<<< Restaurando copia de seguridad >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVMSOLODSTAR.ini_copia3 ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                        sudo cp -f ~/MMDVMHost/MMDVMDSTAR.ini_copia3 ~/MMDVMHost/MMDVMDSTAR.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
@@ -905,7 +905,7 @@ do
                         clear
                         echo "<<<<<< Restaurando el fichero original MMDVMPLUS.ini >>>>>"
                         sleep 3
-                        sudo cp -f ~/MMDVMHost/MMDVM.ini_original ~/MMDVMHost/MMDVMSOLODSTAR.ini
+                        sudo cp -f ~/MMDVMHost/MMDVM.ini_original ~/MMDVMHost/MMDVMDSTAR.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
