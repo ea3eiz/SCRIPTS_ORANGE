@@ -14,5 +14,3 @@ sudo ntpdate -u hora.roa.es
 
 # pone el altavoz en la barra superior
 pasystray &
-
-##
