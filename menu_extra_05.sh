@@ -8,7 +8,7 @@ echo "   *      SCript para hacer actualizaciones y varios \33[1;33mV.02.05     
 echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
-echo "\33[1;36m   2)\33[1;37m Grabar Nextion 2.4 pulgadas"
+echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 #echo "\33[1;36m   2)\33[1;37m Actualizar DV4mini Control Panel (Stick ID:8D-6E-8C V1,77)"
 echo ""
@@ -48,10 +48,12 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        cd ~/MMDVMHost/Nextion_DB2OE
-                        sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
-                        sleep 5
+			            #sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
+                        #cd ~/MMDVMHost/Nextion_DB2OE
+                        #sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
+                        #sleep 5
+                        cd ~/SCRIPTS_ORANGE/
+                        sudo sh grabar_nextion_05.sh
                         exit;
 		                break;;
 		                [nN]* ) echo ""
