@@ -10,7 +10,7 @@ echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
-#echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
+echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -88,7 +88,7 @@ clear
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> CAMBIAR CLAVE VNC >>>>>>>>"
                         x11vnc --storepasswd
-                        read a
+                        sleep 2
                         exit;
 		                break;;
 						[nN]* ) echo ""
