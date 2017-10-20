@@ -88,6 +88,7 @@ clear
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> CAMBIAR CLAVE VNC >>>>>>>>"
                         x11vnc —storepasswd
+                        sleep 10
                         exit;
 		                break;;
 						[nN]* ) echo ""
