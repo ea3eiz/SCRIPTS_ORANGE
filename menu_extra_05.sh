@@ -87,7 +87,7 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> CAMBIAR CLAVE VNC >>>>>>>>"
-                        sudo x11vnc —storepasswd
+                        x11vnc --storepasswd
                         read a
                         exit;
 		                break;;
