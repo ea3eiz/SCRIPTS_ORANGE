@@ -228,7 +228,7 @@ clear
 						[sS]* ) echo ""
 						echo ">>>>>>>>> coloca dcs_default.cfg en /root/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
 			            cd ~/SCRIPTS_ORANGE/
-			            sudo cp -f dcs_default.cfg ~/dvrptr/
+			            sudo cp -f dcs_default.cfg /root/.config/Microsoft/dvrptr/1.0.0.0
 			            sleep 10
 						break;;
 						[nN]* ) echo ""
