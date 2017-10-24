@@ -219,7 +219,7 @@ exit;
 break;;
 esac
 done;;
-5000) echo ""
+6000) echo ""
 while true
 do
 clear
