@@ -219,6 +219,24 @@ exit;
 break;;
 esac
 done;;
+5000) echo ""
+while true
+do
+clear
+	        			ejecutar1=S
+		    			case $ejecutar1 in
+						[sS]* ) echo ""
+						echo ">>>>>>>>> coloca dcs_default.cfg en /root/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
+			            cd ~/SCRIPTS_ORANGE/
+			            sudo cp -f dcs_default.cfg /root/.config/Microsoft/dvrptr/1.0.0.0
+			            sleep 2
+						break;;
+						[nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 9000) echo ""
 while true
 do
@@ -237,6 +255,7 @@ clear
                         echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
                         echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
                         echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
+                        echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
                         echo ""
                         echo -n "\33[1;37m       Pulsa la tecla ENTER para salir"
                         read A
