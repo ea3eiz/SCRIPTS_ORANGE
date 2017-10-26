@@ -98,6 +98,23 @@ exit;
 break;;
 esac
 done;;
+5) echo ""
+while true
+do
+clear
+	        			ejecutar1=S
+		    			case $ejecutar1 in
+						[sS]* ) echo ""
+						echo ">>>>>>>>> Arregla la fecha y hora >>>>>"
+			            sudo apt-get install ntpdate
+			            sudo ntpdate -u hora.roa.es
+						break;;
+						[nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 1000) echo ""
 while true
 do
@@ -153,29 +170,6 @@ exit;
 break;;
 esac
 done;;
-#3000) echo ""
-#while true
-#do
-#clear
-	        			#ejecutar1=S
-		    			#case $ejecutar1 in
-						#[sS]* ) echo ""
-						#echo ">>>>>>>>> INSTALANDO BMXTG   >>>>>"
-			            #cd ~/
-			            #sudo dpkg -i bmxtg-1.3.deb
-			            #sudo apt-get install python-requests -y
-			            #cp -r /etc/bmxtg ~/
-			            #cp /usr/local/bin/bmxtg.py ~/bmxtg
-			            #cd ~/bmxtg
-			            #sudo chmod +x bmxtg.py
-                        #exit;
-						#break;;
-						#[nN]* ) echo ""
-#clear
-#exit;
-#break;;
-#esac
-#done;;
 3000) echo ""
 while true
 do
@@ -220,23 +214,6 @@ exit;
 break;;
 esac
 done;;
-5000) echo ""
-while true
-do
-clear
-	        			ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> Arregla la fecha y hora >>>>>"
-			            sudo apt-get install ntpdate
-			            sudo ntpdate -u hora.roa.es
-						break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
 6000) echo ""
 while true
 do
@@ -273,7 +250,6 @@ clear
                         echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
                         echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
                         echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
-                        echo "\33[1;36m       5000\33[1;33m ARREGLO DE FECHA Y HORA"
                         echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
                         echo ""
                         echo -n "\33[1;37m       Pulsa la tecla ENTER para salir"
