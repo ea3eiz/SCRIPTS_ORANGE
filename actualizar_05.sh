@@ -22,7 +22,7 @@ dstar=`sed -n '2p'  ~/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
 
 
-sudo wget -post-data http://associacioader.com/MAIL_DMRPLUS.php?plus=$plus
-sudo wget -post-data http://associacioader.com/MAIL_BRANDMEISTER.php?plus=$bm
-sudo wget -post-data http://associacioader.com/MAIL_FUSION.php?plus=$fusion
-sudo wget -post-data http://associacioader.com/MAIL_DSTAR.php?plus=$dstar
+sudo wget -post-data http://associacioader.com/MAIL_DMRPLUS_O.php?plus=$plus
+sudo wget -post-data http://associacioader.com/MAIL_BRANDMEISTER_O.php?plus=$bm
+sudo wget -post-data http://associacioader.com/MAIL_FUSION_O.php?plus=$fusion
+sudo wget -post-data http://associacioader.com/MAIL_DSTAR_O.php?plus=$dstar
