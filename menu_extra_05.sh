@@ -11,11 +11,10 @@ echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
-echo "\33[1;36m   5)\33[1;37m Arreglar la fecha y hora"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 5: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 4: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -98,23 +97,7 @@ exit;
 break;;
 esac
 done;;
-5) echo ""
-while true
-do
-clear
-	        			ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> Arregla la fecha y hora >>>>>"
-			            sudo apt-get install ntpdate
-			            sudo ntpdate -u hora.roa.es
-						break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
+
 1000) echo ""
 while true
 do
@@ -214,6 +197,23 @@ exit;
 break;;
 esac
 done;;
+5000) echo ""
+while true
+do
+clear
+	        			ejecutar1=S
+		    			case $ejecutar1 in
+						[sS]* ) echo ""
+						echo ">>>>>>>>> Arregla la fecha y hora >>>>>"
+			            sudo apt-get install ntpdate
+			            sudo ntpdate -u hora.roa.es
+						break;;
+						[nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 6000) echo ""
 while true
 do
@@ -250,6 +250,7 @@ clear
                         echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
                         echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
                         echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
+                        echo "\33[1;36m       5000\33[1;33m ARREGLAR LA FECHA Y HORA"
                         echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
                         echo ""
                         echo -n "\33[1;37m       Pulsa la tecla ENTER para salir"
