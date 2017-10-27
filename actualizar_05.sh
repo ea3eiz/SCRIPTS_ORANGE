@@ -35,5 +35,5 @@ fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
 
 
 
-sudo wget -post-data http://associacioader.com/MAIL_ORANGEPI.php?plus=$plus'<DMR+   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
+sudo wget -post-data http://associacioader.com/MAIL_ORANGEPI.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
 
