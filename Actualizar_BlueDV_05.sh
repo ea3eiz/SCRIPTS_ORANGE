@@ -32,11 +32,13 @@ echo "\33[1;33m"
 			echo "ok >>>>>"
 			sudo rm -r ~/bluedv
 			cd ~/
-			sudo git clone https://github.com/ea3eiz/bluedv
+			git clone https://github.com/ea3eiz/bluedv
+			
+			chmod -R ~/bluedv
 			cd ~/bluedv
-			sudo chmod 777 DExtra_Hosts.txt
-			sudo chmod 777 BlueDVconfig.ini
-            clear
+			chmod 777 *
+			
+			clear
 		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
