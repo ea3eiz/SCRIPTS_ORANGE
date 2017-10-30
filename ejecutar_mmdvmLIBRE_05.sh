@@ -14,5 +14,3 @@ echo "***********************************************"
 echo "\33[38;5;209m"
 sudo ./MMDVMHostLIBRE MMDVMLIBRE.ini
 
-#fi 
-#fi

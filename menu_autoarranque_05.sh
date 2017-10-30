@@ -330,17 +330,17 @@ case $escoger_menu in
 while true
 do
 clear
-	        actualizar=S
-		    case $actualizar in
-			[sS]* ) echo ""
-			echo "Quitando D-STAR del autoarranque >>>>>"
-			sleep 2
-			#cd ~/.config/autostart
-			#sudo mv Gateway.desktop ~/
-			sed -i "1c D-STAR=OFF" ~/autoarranque.ini
-			break;;
-			[nN]* ) echo ""
-			break;;
+	                     actualizar=S
+		                   case $actualizar in
+			                 [sS]* ) echo ""
+			                 echo "Quitando D-STAR del autoarranque >>>>>"
+			                 sleep 2
+			                 cd ~/.config/autostart
+                       mv ircDDB.desktop ~/AUTOSTART
+			                 sed -i "1c D-STAR=OFF" ~/autoarranque.ini
+			                 break;;
+			                 [nN]* ) echo ""
+			                 break;;
 esac
 done;;
 
@@ -348,17 +348,17 @@ done;;
 while true
 do
 clear
-	        actualizar=S
-		    case $actualizar in
-			[sS]* ) echo ""
-			echo "Quitando BlueDV del autoarranque >>>>>"
-            sleep 2
-            cd ~/.config/autostart
-            mv BLUEDV.desktop ~/AUTOSTART
-			sed -i "2c BlueDV=OFF" ~/autoarranque.ini
-			break;;
-			[nN]* ) echo ""
-			break;;
+	                     actualizar=S
+		                   case $actualizar in
+			                 [sS]* ) echo ""
+			                 echo "Quitando BlueDV del autoarranque >>>>>"
+                       sleep 2
+                       cd ~/.config/autostart
+                       mv BLUEDV.desktop ~/AUTOSTART
+			                 sed -i "2c BlueDV=OFF" ~/autoarranque.ini
+			                 break;;
+			                 [nN]* ) echo ""
+			                 break;;
 esac
 done;;
 3) echo ""
@@ -367,12 +367,12 @@ do
 clear
 
                        actualizar=S
-		               case $actualizar in
-			           [sS]* ) echo ""
-			           echo "Quitando YSF del autoarranque >>>>>"
+		                   case $actualizar in
+			                 [sS]* ) echo ""
+			                 echo "Quitando YSF del autoarranque >>>>>"
                        sleep 2
-                       #cd ~/.config/autostart
-                       #sudo mv ysfgateway.desktop ~/
+                       cd ~/.config/autostart
+                       mv YSF.desktop ~/AUTOSTART
                        sed -i "3c YSF=OFF" ~/autoarranque.ini
                        break;;
                        [nN]* ) echo ""
@@ -418,9 +418,9 @@ while true
 do
 clear              
                         actualizar=S
-		            case $actualizar in
-			      [sS]* ) echo ""
-			      echo "Quitando MMDVMPLUS del autoarranque >>>>>"
+		                    case $actualizar in
+			                  [sS]* ) echo ""
+			                  echo "Quitando MMDVMPLUS del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
                         mv DMRPLUS.desktop ~/AUTOSTART
@@ -442,6 +442,8 @@ clear
                         [sS]* ) echo ""
                         echo "Quitando LIBRE del autoarranque >>>>>"
                         sleep 2
+                        cd ~/.config/autostart
+                        mv LIBRE.desktop ~/AUTOSTART
                         sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -490,7 +492,7 @@ clear
             case $actualizar in
             [sS]* ) echo ""
             echo "Quitando SOLO_D-STAR del autoarranque >>>>>"
-            sleep 3
+            sleep 2
             cd ~/.config/autostart
             mv DSTARSOLO.desktop ~/AUTOSTART
             sed -i "11c SOLO_DSTAR=OFF" ~/autoarranque.ini
@@ -499,7 +501,6 @@ clear
             break;;
 esac
 done;;
-
 11) echo ""
 while true
 do
@@ -508,7 +509,7 @@ clear
             case $actualizar in
             [sS]* ) echo ""
             echo "Quitando SOLO_FUSION del autoarranque >>>>>"
-            sleep 3
+            sleep 2
             cd ~/.config/autostart
             mv FUSIONSOLO.desktop ~/AUTOSTART
             sed -i "12c SOLO_FUSION=OFF" ~/autoarranque.ini
@@ -525,14 +526,13 @@ clear
                                             case $actualizar in
                                             [sS]* ) echo ""                   
                                             echo "Quitando DVRPTR en el autoarranque >>>>>"
-                                            sleep 3
+                                            sleep 2
                                             cd ~/.config/autostart
                                             mv DVRPTR.desktop ~/AUTOSTART
                                             sed -i "13c DVRPTR=OFF" ~/autoarranque.ini
-
-      break;;
-      [nN]* ) echo ""
-      break;;
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
 esac
 done;;
 13) echo ""
@@ -543,6 +543,9 @@ clear
 		              case $actualizar in
 			            [sS]* ) echo ""
 			            echo "Poniendo DSTAR en el autoarranque >>>>>"
+                  sleep 2
+                  cd ~/AUTOSTART
+                  mv ircDDB.desktop ~/.config/autostart/
 			            sed -i "1c D-STAR=ON" ~/autoarranque.ini
                   clear
                   echo "\33[1;32m**********************************************************"
@@ -562,20 +565,17 @@ done;;
 while true
 do
 clear
-	                                   actualizar=S
-		                         case $actualizar in
-			               [sS]* ) echo ""
-			               
-                          
+	                                          actualizar=S
+		                                        case $actualizar in
+			                                      [sS]* ) echo ""                          
                                             echo "Poniendo BlueDV en el autoarranque >>>>>"
                                             sleep 2
                                             cd ~/AUTOSTART
                                             mv BLUEDV.desktop ~/.config/autostart/
                                             sed -i "2c BlueDV=ON" ~/autoarranque.ini
-
-			break;;
-			[nN]* ) echo ""
-			break;;
+			                                      break;;
+			                                      [nN]* ) echo ""
+			                                      break;;
 esac
 done;;
 15) echo ""
@@ -583,19 +583,13 @@ while true
 do
 clear              
                         actualizar=S
-		                case $actualizar in
-			            [sS]* ) echo ""
-			            echo "Poniendo YSF en el autoarranque >>>>>"
-bluedv=`grep "BlueDV" ~/autoarranque.ini`
-bluedv=`expr substr $bluedv 8 3`
-if [ $bluedv = "OFF" ]
-then
-  sleep 2
-                        #cd ~/
-                        #sudo mv ysfgateway.desktop ~/.config/autostart/
+		                    case $actualizar in
+			                  [sS]* ) echo ""
+			                  echo "Poniendo YSF en el autoarranque >>>>>"
+                        sleep 2
+                        cd ~/AUTOSTART
+                        mv YSF.desktop ~/.config/autostart/
                         sed -i "3c YSF=ON" ~/autoarranque.ini
-                        sed -i "3c YSF=ON" ~/status.ini
-
                         clear
                         echo "\33[1;32m**********************************************************"
                         echo "*                                                        *"
@@ -604,17 +598,7 @@ then
                         echo "*                                                        *"
                         echo "**********************************************************"
                         echo ""
-                        echo ""
-                        #echo -n "\33[1;37mPulsa enter para seguir  "
-                        #read parado
-                        sleep 5
-
-                        else
-                        clear
-                        echo "\33[1;31m No pueden estar en el autoarranque  BlueDV y YSF a la vez"
-                        sleep 5
-                        fi        
-
+                        echo ""                            
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -628,6 +612,7 @@ clear
 		                    case $actualizar in
 			                  [sS]* ) echo ""
 			                  echo "Poniendo DV4mini en el autoarranque >>>>>"
+                        sleep 2
                         cd ~/AUTOSTART
                         mv DV4mini.desktop ~/.config/autostart/
                         sed -i "4c DV4mini=ON" ~/autoarranque.ini
@@ -644,6 +629,7 @@ clear
 		                    case $actualizar in
 			                  [sS]* ) echo ""
 			                  echo "Poniendo Radio en el autoarranque >>>>>"
+                        sleep 2
                         cd ~/AUTOSTART
                         mv RADIO.desktop ~/.config/autostart/
                         sed -i "5c MMDVMPLACA=ON" ~/autoarranque.ini		            			            
@@ -665,7 +651,6 @@ clear
                         cd ~/AUTOSTART
                         mv DMRPLUS.desktop ~/.config/autostart/
                         sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
-                        sed -i "6c MMDVMPLUS=ON" ~/status.ini
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -680,10 +665,9 @@ clear
                         [sS]* ) echo ""
                         echo "Poniendo LIBRE en el autoarranque >>>>>"
                         sleep 2
-                        #cd ~/
-                        #sudo mv MMDVMLIBRE.desktop ~/.config/autostart/
+                        cd ~/AUTOSTART
+                        mv LIBRE.desktop ~/.config/autostart/
                         sed -i "10c MMDVMLIBRE=ON" ~/autoarranque.ini
-                        sed -i "10c MMDVMLIBRE=ON" ~/status.ini
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -701,7 +685,6 @@ clear
                         cd ~/AUTOSTART
                         mv BM.desktop ~/.config/autostart/
                         sed -i "7c MMDVMBM=ON" ~/autoarranque.ini
-                        sed -i "7c MMDVMBM=ON" ~/status.ini
                         break;;
                         [nN]* ) echo ""
                         break;;
@@ -732,7 +715,7 @@ clear
             case $actualizar in
             [sS]* ) echo ""
             echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
-            sleep 3
+            sleep 2
             cd ~/AUTOSTART
             mv DSTARSOLO.desktop ~/.config/autostart/
             sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
@@ -749,7 +732,7 @@ clear
             case $actualizar in
             [sS]* ) echo ""
             echo "Poniendo solo FUSION en el autoarranque >>>>>"
-            sleep 3
+            sleep 2
             cd ~/AUTOSTART
             mv FUSIONSOLO.desktop ~/.config/autostart/
             sed -i "12c SOLO_FUSION=ON" ~/autoarranque.ini
@@ -762,20 +745,17 @@ done;;
 while true
 do
 clear
-                                     actualizar=S
-                             case $actualizar in
-                     [sS]* ) echo ""
-                     
-                          
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
                                             echo "Poniendo DVRPTR en el autoarranque >>>>>"
                                             sleep 2
                                             cd ~/AUTOSTART
                                             mv DVRPTR.desktop ~/.config/autostart/
                                             sed -i "13c DVRPTR=ON" ~/autoarranque.ini
-
-      break;;
-      [nN]* ) echo ""
-      break;;
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
 esac
 done;;
 25) echo ""
