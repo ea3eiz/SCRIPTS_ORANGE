@@ -384,12 +384,12 @@ while true
 do
 clear            
                         actualizar=S
-		                case $actualizar in
-			            [sS]* ) echo ""
-			            echo "Quitando DV4mini del autoarranque >>>>>"
+		                    case $actualizar in
+			                  [sS]* ) echo ""
+			                  echo "Quitando DV4mini del autoarranque >>>>>"
                         sleep 2
-                        # cd ~/.config/autostart
-                        # sudo mv dv4mini.desktop ~/
+                        cd ~/.config/autostart
+                        mv DV4mini.desktop ~/AUTOSTART
                         sed -i "4c DV4mini=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -401,9 +401,9 @@ while true
 do
 clear              
                         actualizar=S
-		            case $actualizar in
-			      [sS]* ) echo ""
-			      echo "Quitando MMDVM del autoarranque >>>>>"
+		                    case $actualizar in
+			                  [sS]* ) echo ""
+			                  echo "Quitando MMDVM del autoarranque >>>>>"
                         sleep 2
                         cd ~/.config/autostart
                         mv RADIO.desktop ~/AUTOSTART
@@ -625,12 +625,11 @@ while true
 do
 clear               
                         actualizar=S
-		                case $actualizar in
-			            [sS]* ) echo ""
-			            echo "Poniendo DV4mini en el autoarranque >>>>>"
-                        sleep 2
-                        #cd ~/
-                        #sudo mv dv4mini.desktop ~/.config/autostart/
+		                    case $actualizar in
+			                  [sS]* ) echo ""
+			                  echo "Poniendo DV4mini en el autoarranque >>>>>"
+                        cd ~/AUTOSTART
+                        mv DV4mini.desktop ~/.config/autostart/
                         sed -i "4c DV4mini=ON" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
