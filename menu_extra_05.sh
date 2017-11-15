@@ -232,6 +232,99 @@ exit;
 break;;
 esac
 done;;
+7000) echo ""
+while true
+do
+clear
+	        			ejecutar1=S
+		    			case $ejecutar1 in
+						[sS]* ) echo ""
+						echo ">>>>>>>>> Restaurar MMDVMHost >>>>>"
+			            sudo chmod -R 777 ~/Downloads
+            cd ~/MMDVMHost
+            sudo cp -f MMDVM.ini ~/Downloads
+            sudo cp -f MMDVM.ini_copia ~/Downloads
+            sudo cp -f MMDVM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVM.ini_original ~/Downloads
+            sudo cp -f MMDVMBM.ini ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_uno ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_dos ~/Downloads       
+            sudo cp -f MMDVMPLUS.ini ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
+            
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/Downloads
+            sudo cp -f MMDVMFUSION.ini ~/Downloads
+	          #fin  Dstar y solo Fusion
+	                   
+                     cd ~/
+                       sudo rm -r MMDVMHost
+                       cd ~/
+                       git clone https://github.com/ea3eiz/MMDVMHost
+
+                       cd ~/MMDVMHost
+                       make
+                       #sudo cp MMDVM.ini MMDVMBM.ini
+                       #sudo cp MMDVM.ini MMDVMPLUS.ini
+                       sudo cp MMDVMHost MMDVMBM
+                       sudo cp MMDVMHost MMDVMPLUS
+                       #sudo cp MMDVM.ini MMDVM.ini_original
+                  
+                   #solo Dstar y solo Fusion
+                   sudo cp MMDVMHost MMDVMDSTAR
+                   sudo cp MMDVMHost MMDVMFUSION
+                   #fin  Dstar y solo Fusion
+
+		               cd ~/SCRIPTS_ORANGE
+		               sudo cp MMDVMHostLIBRE ~/MMDVMHost
+		               sudo cp MMDVMLIBRE.ini ~/MMDVMHost
+
+		               cd ~/MMDVMHost
+		               sudo chmod +x MMDVMHostLIBRE
+
+		    cd ~/Downloads
+            sudo cp -f MMDVM.ini ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_original ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_dos ~/MMDVMHost     
+            sudo cp -f MMDVMPLUS.ini ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
+
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/MMDVMHost
+            sudo cp -f MMDVMFUSION.ini ~/MMDVMHost
+            #fin  Dstar y solo Fusion
+
+ sudo chmod +x -R ~/MMDVMHost
+
+						break;;
+						[nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+			
+
+
+
 9000) echo ""
 while true
 do
