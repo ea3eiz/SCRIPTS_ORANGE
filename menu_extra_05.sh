@@ -266,7 +266,6 @@ clear
 	                   
                      cd ~/
                        sudo rm -r MMDVMHost
-                       read a
                        cd ~/
                        git clone https://github.com/ea3eiz/MMDVMHost
 
