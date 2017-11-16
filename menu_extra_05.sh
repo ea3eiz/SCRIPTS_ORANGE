@@ -270,6 +270,7 @@ clear
                        git clone https://github.com/ea3eiz/MMDVMHost
 
                        cd ~/MMDVMHost
+                       make clean
                        make
                        #sudo cp MMDVM.ini MMDVMBM.ini
                        #sudo cp MMDVM.ini MMDVMPLUS.ini
