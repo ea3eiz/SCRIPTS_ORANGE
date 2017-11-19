@@ -221,7 +221,7 @@ clear
 	        			ejecutar1=S
 		    			case $ejecutar1 in
 						[sS]* ) echo ""
-						echo ">>>>>>>>> coloca dcs_default.cfg en /root/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
+						echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
 			            cd ~/SCRIPTS_ORANGE/
 			            sudo cp -f dcs_default.cfg /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/
 			            sleep 10
