@@ -123,13 +123,10 @@ modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
-echo -n "\33[1;36m  23)\33[0m Desactivar DMR        - \33[1;33m"
-linea=`expr substr $idd 1 1`
-linea=`expr $linea + 72`
-linea3=$linea
-letra=p
-linea2=$linea$letra
-var200= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
+echo -n "\33[1;36m  23)\33[0m Tipo de pantalla      - \33[1;33m"
+mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMBM.ini`
+mo1=`expr substr $mo 4 30`
+echo "$mo1"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMBM.ini`
@@ -688,22 +685,27 @@ done;;
 23) echo ""
 while true
 do
-echo -n "Valor  actual  del \33[1;33m${var200#*=}\33[1;37m"
-                          var100= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
-           	              read -p 'Desactivado=0 Activado=1: '   dmrac1
+buscar=":"
+largo=`expr index $mo $buscar`
+echo "Valor  actual  del  Module: \33[1;33m${mo#*=}\33[1;37m"
+                      read -p 'Valor óptimo para D-STAR=B: '  modu1
+                          letra=c
+                         if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $mo 1 2`
+                          else
+                          linea=`expr substr $mo 1 3`
+                          fi
+                          linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			              [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea3$letra1
-                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/MMDVMBM.ini
-			              break;;
-			              [nN]* ) echo ""
-			              break;;
+        [sS]* ) echo ""
+                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
-
-
 24) echo ""
 while true
 do
