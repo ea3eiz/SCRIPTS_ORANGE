@@ -689,6 +689,10 @@ buscar=":"
 largo=`expr index $mo $buscar`
 echo "Valor  actual  del  Module: \33[1;33m${mo#*=}\33[1;37m"
                       read -p 'Valor óptimo para D-STAR=B: '  screen1
+echo "$mo"
+echo "$largo"
+read a
+
                           letra=c
                          if [ $largo = 3 ]
                           then
@@ -701,8 +705,7 @@ echo "Valor  actual  del  Module: \33[1;33m${mo#*=}\33[1;37m"
                           case $actualizar in
         [sS]* ) echo ""
 
-echo"$linea"
-read a
+
                           sed -i "$linea ScreenLayout=$screen1" ~/MMDVMHost/MMDVMBM.ini
         break;;
         [nN]* ) echo ""
