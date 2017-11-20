@@ -655,7 +655,7 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea Display=$modu1" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
         break;;
         [nN]* ) echo ""
         break;;
