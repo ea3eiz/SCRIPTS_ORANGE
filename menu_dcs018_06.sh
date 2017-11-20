@@ -106,6 +106,347 @@ exit;
 break;;
 esac
 done;;
+5) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 E >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c E" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+6) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 F >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c F" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+7) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 G >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c G" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+8) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 H >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c H" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+9) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 I >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c I" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+10) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 J >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c J" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+11) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 K >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c K" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+12) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 L >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c L" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+13) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 M >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c M" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+14) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 N >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c N" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+15) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 O >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c 0" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+16) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 P >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c P" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+17) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 Q >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c Q" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+18) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 R >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c R" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+19) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 S >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c S" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+
+20) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 T >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c T" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+21) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 U >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c U" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+22) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 V >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c V" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+23) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 W >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c W" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+24) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DCS018 Z >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c Z" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
