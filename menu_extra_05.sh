@@ -223,14 +223,11 @@ clear
 						[sS]* ) echo ""
 						echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
 			            cd ~/SCRIPTS_ORANGE/
-                        sleep 3
-                        #sudo chmod 777 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
+			            #sudo rm /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
                         #sleep 3
-			            sudo rm /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
-                        sleep 3
                         sudo cp -f dcs_default.cfg /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/
-                        sleep 3
-                        sudo chmod 640 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
+                        #sleep 3
+                        #sudo chmod 640 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
 			            break;;
 						[nN]* ) echo ""
 clear
