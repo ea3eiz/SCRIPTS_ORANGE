@@ -696,7 +696,7 @@ do
 buscar=":"
 largo=`expr index $mo $buscar`
 echo "Valor  actual  del  Brightness: \33[1;33m${mo#*=}\33[1;37m"
-                          read -p 'Valor ScreenLayout 1 ó 2: '  screen1
+                          read -p 'Valor Brightness +- de 10 a 50: '  screen1
                           letra=c
                           if [ $largo = 3 ]
                           then
