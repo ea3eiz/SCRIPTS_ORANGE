@@ -381,6 +381,23 @@ exit;
 break;;
 esac
 done;;
+12) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c B" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
