@@ -125,7 +125,7 @@ echo "$modu1"
 
 echo -n "\33[1;36m  23)\33[0m Tipo de pantalla      - \33[1;33m"
 mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMBM.ini`
-mo1=`expr substr $mo 4 30`
+mo1=`expr substr $mo 5 30`
 echo "$mo1"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
