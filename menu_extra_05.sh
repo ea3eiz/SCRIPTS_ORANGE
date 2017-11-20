@@ -11,10 +11,11 @@ echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
+echo "\33[1;36m   5)\33[1;37m CONEXIONES DCS018"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 4: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 5: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -97,7 +98,28 @@ exit;
 break;;
 esac
 done;;
-
+5) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
+                        #sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
+                        #cd ~/MMDVMHost/Nextion_DB2OE
+                        #sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
+                        #sleep 5
+                        cd ~/SCRIPTS_ORANGE/
+                        sudo sh menu_dcs018_06.sh
+                        exit;
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
 1000) echo ""
 while true
 do
@@ -364,40 +386,7 @@ exit;
 break;;
 esac
 done;;
-11) echo ""
-while true
-do
-clear
-                        ejecutar1=S
-                        case $ejecutar1 in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
-                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-                        sudo sed -i "21c A" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-                        break;;
-                        [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-12) echo ""
-while true
-do
-clear
-                        ejecutar1=S
-                        case $ejecutar1 in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
-                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-                        sudo sed -i "21c B" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-                        break;;
-                        [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
+
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
