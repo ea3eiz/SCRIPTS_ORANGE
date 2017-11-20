@@ -648,9 +648,9 @@ read a
 echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
                       read -p 'Nextion, OLED: '  modu1
                           letra=c
-                         if [ $largo = 3 ]
+                          if [ $largo = 2 ]
                           then
-                          linea=`expr substr $mod 1 2`
+                          linea=`expr substr $mod 1 1`
                           else
                           linea=`expr substr $mod 1 3`
                           fi
