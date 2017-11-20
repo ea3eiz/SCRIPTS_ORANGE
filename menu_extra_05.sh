@@ -231,8 +231,8 @@ clear
                         sudo cp -f dcs_default.cfg /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/
                         sleep 3
                         sudo chmod 640 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
-                        sudo sed -i "21c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-                        sudo sed -i "22c D" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
+                        sudo sed -i "21c D" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
 			            break;;
 						[nN]* ) echo ""
 clear
