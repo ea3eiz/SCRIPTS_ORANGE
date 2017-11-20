@@ -113,15 +113,10 @@ sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
-echo -n "\33[1;36m  21)\33[0m Modificar OscOffset   - \33[1;33m"
-salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
-if [ $salto = 0 ]; then
-echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
-else
-salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
-salto1=`expr substr $salto 4 30`
-echo "$salto1"
-fi
+echo -n "\33[1;36m  21)\33[0m Activar display   - \33[1;33m"
+loca=`grep -n "Display=" ~/MMDVMHost/MMDVMBM.ini`
+loca1=`expr substr $loca 4 30`
+echo "$loca1"
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
 modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
