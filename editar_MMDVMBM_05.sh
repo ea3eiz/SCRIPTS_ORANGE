@@ -113,12 +113,12 @@ sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
-echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
+echo -n "\33[1;36m  21)\33[0m Tipo Pantalla Display - \33[1;33m"
 mod=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
 mod1=`expr substr $mod 3 30`
 echo "$mod1"
 
-echo -n "\33[1;36m  22)\33[0m Tipo de Display       - \33[1;33m"
+echo -n "\33[1;36m  22)\33[0m Version Pantalla Display - \33[1;33m"
 mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMBM.ini`
 mo1=`expr substr $mo 5 30`
 echo "$mo1"
