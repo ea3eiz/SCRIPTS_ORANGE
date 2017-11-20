@@ -115,7 +115,7 @@ echo "$sl1"
 
 echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
 modu=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
-modu1=`expr substr $modu 4 30`
+modu1=`expr substr $modu 3 30`
 echo "$modu1"
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
@@ -655,7 +655,7 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea Display=$modu1" ~/MMDVMHost/MMDVMBM.ini
         break;;
         [nN]* ) echo ""
         break;;
