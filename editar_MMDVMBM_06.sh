@@ -118,8 +118,14 @@ mod=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
 mod1=`expr substr $mod 3 30`
 echo "$mod1"
 
-echo -n "\33[1;36m  23)\33[0m Tipo de Display       - \33[1;33m"
+echo -n "\33[1;36m  22)\33[0m Tipo de Display       - \33[1;33m"
 mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMBM.ini`
+mo1=`expr substr $mo 5 30`
+echo "$mo1"
+
+#Brightness
+echo -n "\33[1;36m  23)\33[0m Brillo de la Nextion  - \33[1;33m"
+mo=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMBM.ini`
 mo1=`expr substr $mo 5 30`
 echo "$mo1"
 
@@ -660,31 +666,7 @@ echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
         break;;
 esac
 done;;
-26) echo ""
-while true
-do
-buscar=":"
-largo=`expr index $modu $buscar`
-echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
-           	          read -p 'Valor óptimo para D-STAR=B: '  modu1
-                          letra=c
-                         if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $modu 1 2`
-                          else
-                          linea=`expr substr $modu 1 3`
-                          fi
-                          linea=$linea$letra
-                          actualizar=S 
-                          case $actualizar in
-			  [sS]* ) echo ""
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
-esac
-done;;
-23) echo ""
+22) echo ""
 while true
 do
 buscar=":"
@@ -703,6 +685,30 @@ echo "Valor  actual  del  ScreenLayout: \33[1;33m${mo#*=}\33[1;37m"
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea ScreenLayout=$screen1" ~/MMDVMHost/MMDVMBM.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+23) echo ""
+while true
+do
+buscar=":"
+largo=`expr index $mo $buscar`
+echo "Valor  actual  del  Brightness: \33[1;33m${mo#*=}\33[1;37m"
+                          read -p 'Valor ScreenLayout 1 ó 2: '  screen1
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $mo 1 2`
+                          else
+                          linea=`expr substr $mo 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea Brightness=$screen1" ~/MMDVMHost/MMDVMBM.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -755,6 +761,30 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
+esac
+done;;
+26) echo ""
+while true
+do
+buscar=":"
+largo=`expr index $modu $buscar`
+echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
+                      read -p 'Valor óptimo para D-STAR=B: '  modu1
+                          letra=c
+                         if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $modu 1 2`
+                          else
+                          linea=`expr substr $modu 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+        [sS]* ) echo ""
+                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
 #26) echo ""
