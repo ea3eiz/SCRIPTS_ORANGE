@@ -114,9 +114,9 @@ sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
 echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
-modu=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
-modu1=`expr substr $modu 3 30`
-echo "$modu1"
+mod=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
+mod1=`expr substr $mod 3 30`
+echo "$mod1"
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
 modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
@@ -641,21 +641,21 @@ done;;
 while true
 do
 buscar=":"
-largo=`expr index $modu $buscar`
-echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
-                      read -p 'Valor óptimo para D-STAR=B: '  modu1
+largo=`expr index $mod $buscar`
+echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
+                      read -p 'Nextion, OLED: '  modu1
                           letra=c
                          if [ $largo = 3 ]
                           then
-                          linea=`expr substr $modu 1 2`
+                          linea=`expr substr $mod 1 2`
                           else
-                          linea=`expr substr $modu 1 3`
+                          linea=`expr substr $mod 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea Display=$modu1" ~/MMDVMHost/MMDVMBM.ini
         break;;
         [nN]* ) echo ""
         break;;
