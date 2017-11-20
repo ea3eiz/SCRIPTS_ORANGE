@@ -113,28 +113,15 @@ sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
-echo -n "\33[1;36m  21)\33[0m Modificar OscOffset   - \33[1;33m"
-salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
-if [ $salto = 0 ]; then
-echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
-else
-salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
-salto1=`expr substr $salto 4 30`
-echo "$salto1"
-fi
+echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
+mod=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
+mod1=`expr substr $mod 3 30`
+echo "$mod1"
 
-echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
-modu1=`expr substr $modu 4 30`
-echo "$modu1"
-
-echo -n "\33[1;36m  23)\33[0m Desactivar DMR        - \33[1;33m"
-linea=`expr substr $idd 1 1`
-linea=`expr $linea + 72`
-linea3=$linea
-letra=p
-linea2=$linea$letra
-var200= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
+echo -n "\33[1;36m  23)\33[0m Tipo de Display       - \33[1;33m"
+mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMBM.ini`
+mo1=`expr substr $mo 5 30`
+echo "$mo1"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMBM.ini`
@@ -145,6 +132,13 @@ echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
 long=`grep -n "Longitude" ~/MMDVMHost/MMDVMBM.ini`
 long1=`expr substr $long 4 30`
 echo "$long1"
+
+echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
+modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
+modu1=`expr substr $modu 4 30`
+echo "$modu1"
+
+
 
 #echo -n "\33[1;36m  26)\33[0m Entra reflector DMR+  - \33[1;33m"
 #OPCION=`expr substr $master 1 $largo1`
@@ -646,27 +640,27 @@ done;;
 while true
 do
 buscar=":"
-largo=`expr index $salto $buscar`
-echo "Valor  actual  del  scOffset : \33[1;33m${salto#*=}\33[1;37m"
-           	          read -p 'Valor óptimo para DVMEGA=-50 : ' of1
+largo=`expr index $mod $buscar`
+echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
+                      read -p 'TFT Serial, HD44780, Nextion, OLED, LCDproc : '  modu1
                           letra=c
-                         if [ $largo = 3 ]
+                          if [ $largo = 2 ]
                           then
-                          linea=`expr substr $salto 1 2`
+                          linea=`expr substr $mod 1 1`
                           else
-                          linea=`expr substr $salto 1 3`
+                          linea=`expr substr $mod 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
-                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMBM.ini
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
+        [sS]* ) echo ""
+                          sed -i "$linea Display=$modu1" ~/MMDVMHost/MMDVMBM.ini
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
-22) echo ""
+26) echo ""
 while true
 do
 buscar=":"
@@ -693,22 +687,27 @@ done;;
 23) echo ""
 while true
 do
-echo -n "Valor  actual  del \33[1;33m${var200#*=}\33[1;37m"
-                          var100= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
-           	              read -p 'Desactivado=0 Activado=1: '   dmrac1
+buscar=":"
+largo=`expr index $mo $buscar`
+echo "Valor  actual  del  ScreenLayout: \33[1;33m${mo#*=}\33[1;37m"
+                          read -p 'Valor ScreenLayout 1 ó 2: '  screen1
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $mo 1 2`
+                          else
+                          linea=`expr substr $mo 1 3`
+                          fi
+                          linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			              [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea3$letra1
-                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/MMDVMBM.ini
-			              break;;
-			              [nN]* ) echo ""
-			              break;;
+                          [sS]* ) echo ""
+                          sed -i "$linea ScreenLayout=$screen1" ~/MMDVMHost/MMDVMBM.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
-
-
 24) echo ""
 while true
 do
@@ -758,26 +757,26 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
 			  break;;
 esac
 done;;
-26) echo ""
-while true
-do
-              read -p 'Estas en DMR+ ? S/N ' actualizar     
+#26) echo ""
+#while true
+#do
+              #read -p 'Estas en DMR+ ? S/N ' actualizar     
            	 
                           
-                          case $actualizar in
-			  [sS]* ) echo ""
-			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
-                          letra1=c
-                          linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
-			  break;;
-			  [nN]* ) echo ""
-			  letra1=c
-                          linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
-			  break;;
-esac
-done;;
+                          #case $actualizar in
+			  #[sS]* ) echo ""
+			   #read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          #letra1=c
+                          #linea4=$linea33port$letra1
+                          #sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
+			  #break;;
+			  #[nN]* ) echo ""
+			  #letra1=c
+                          #linea4=$linea33port$letra1
+			  #sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
+			  #break;;
+#esac
+#done;;
 27) echo ""
 while true
 do
