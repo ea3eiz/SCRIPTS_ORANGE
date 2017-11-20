@@ -118,12 +118,7 @@ mod=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
 mod1=`expr substr $mod 3 30`
 echo "$mod1"
 
-echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
-modu1=`expr substr $modu 4 30`
-echo "$modu1"
-
-echo -n "\33[1;36m  23)\33[0m Tipo de pantalla      - \33[1;33m"
+echo -n "\33[1;36m  23)\33[0m Tipo de Display      - \33[1;33m"
 mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMBM.ini`
 mo1=`expr substr $mo 5 30`
 echo "$mo1"
@@ -137,6 +132,13 @@ echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
 long=`grep -n "Longitude" ~/MMDVMHost/MMDVMBM.ini`
 long1=`expr substr $long 4 30`
 echo "$long1"
+
+echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
+modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
+modu1=`expr substr $modu 4 30`
+echo "$modu1"
+
+
 
 #echo -n "\33[1;36m  26)\33[0m Entra reflector DMR+  - \33[1;33m"
 #OPCION=`expr substr $master 1 $largo1`
@@ -658,7 +660,7 @@ echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
         break;;
 esac
 done;;
-22) echo ""
+26) echo ""
 while true
 do
 buscar=":"
@@ -755,26 +757,26 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
 			  break;;
 esac
 done;;
-26) echo ""
-while true
-do
-              read -p 'Estas en DMR+ ? S/N ' actualizar     
+#26) echo ""
+#while true
+#do
+              #read -p 'Estas en DMR+ ? S/N ' actualizar     
            	 
                           
-                          case $actualizar in
-			  [sS]* ) echo ""
-			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
-                          letra1=c
-                          linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
-			  break;;
-			  [nN]* ) echo ""
-			  letra1=c
-                          linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
-			  break;;
-esac
-done;;
+                          #case $actualizar in
+			  #[sS]* ) echo ""
+			   #read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          #letra1=c
+                          #linea4=$linea33port$letra1
+                          #sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
+			  #break;;
+			  #[nN]* ) echo ""
+			  #letra1=c
+                          #linea4=$linea33port$letra1
+			  #sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMBM.ini
+			  #break;;
+#esac
+#done;;
 27) echo ""
 while true
 do
