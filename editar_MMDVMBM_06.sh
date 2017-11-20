@@ -115,7 +115,7 @@ echo "$sl1"
 
 echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
 salto=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMBM.ini`
-salto1=`expr substr $salto 4 30`
+salto1=`expr substr $salto 3 30`
 echo "$salto1"
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
