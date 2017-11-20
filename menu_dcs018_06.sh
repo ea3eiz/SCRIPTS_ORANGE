@@ -4,7 +4,7 @@ do
 clear
 
 echo "\33[1;32m   ********************************************************************"
-echo "   *      Script para Grabar pantallas Nextion \33[1;33mV.02.05                \33[1;32m*"
+echo "   *      Script Conexiones dvrptr DCS018          \33[1;33mV.02.05                \33[1;32m*"
 echo "   *                     \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                           *"
 echo "   ********************************************************************"
 echo -n "\33[1;36m   1)\33[1;37m DCS018 A WORLD WIDE"
