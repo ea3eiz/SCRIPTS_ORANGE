@@ -124,7 +124,7 @@ mo1=`expr substr $mo 5 30`
 echo "$mo1"
 
 #Brightness
-echo -n "\33[1;36m  23)\33[0m Brillo de la Nextion  - \33[1;33m"
+echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
 mo=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMBM.ini`
 mo1=`expr substr $mo 5 30`
 echo "$mo1"
