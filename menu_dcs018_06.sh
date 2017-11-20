@@ -7,7 +7,7 @@ echo "\33[1;32m   **************************************************************
 echo "   *      Script para Grabar pantallas Nextion \33[1;33mV.02.05                \33[1;32m*"
 echo "   *                     \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                           *"
 echo "   ********************************************************************"
-echo "\33[1;36m   1)\33[1;37m DCS018 A WORLD WIDE"
+echo -n "\33[1;36m   1)\33[1;37m DCS018 A WORLD WIDE"
 echo "\33[1;36m   2)\33[1;37m DCS018 B REM"
 echo "\33[1;36m   3)\33[1;37m DCS018 C INTERNACIONAL"
 echo "\33[1;36m   4)\33[1;37m DCS018 D SPAIN"
