@@ -643,6 +643,7 @@ do
 buscar=":"
 largo=`expr index $mod $buscar`
 echo "$largo"
+echo "$mod"
 read a
 echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
                       read -p 'Nextion, OLED: '  modu1
