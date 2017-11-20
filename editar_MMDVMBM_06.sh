@@ -642,11 +642,8 @@ while true
 do
 buscar=":"
 largo=`expr index $mod $buscar`
-echo "$largo"
-echo "$mod"
-read a
 echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
-                      read -p 'Nextion, OLED: '  modu1
+                      read -p 'TFT Serial, HD44780, Nextion, OLED, LCDproc : '  modu1
                           letra=c
                           if [ $largo = 2 ]
                           then
