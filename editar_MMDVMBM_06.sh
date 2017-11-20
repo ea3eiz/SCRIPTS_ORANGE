@@ -655,7 +655,7 @@ echo "Valor  actual  del  scOffset : \33[1;33m${salto#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea Display=$of1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
