@@ -113,10 +113,15 @@ sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
-echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
-dpl=`grep -n "Display=" ~/MMDVMHost/MMDVMBM.ini`
-dpl1=`expr substr $dpl 3 30`
-echo "$dpl1"
+echo -n "\33[1;36m  21)\33[0m Modificar OscOffset   - \33[1;33m"
+salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
+if [ $salto = 0 ]; then
+echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
+else
+salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMBM.ini`
+salto1=`expr substr $salto 4 30`
+echo "$salto1"
+fi
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
 modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
@@ -642,10 +647,10 @@ while true
 do
 buscar=":"
 largo=`expr index $salto $buscar`
-echo "Valor  actual  del  Display : \33[1;33m${salto#*=}\33[1;37m"
-           	              read -p 'TFT Serial, HD44780, Nextion, OLED, LCDproc : ' of1
+echo "Valor  actual  del  scOffset : \33[1;33m${salto#*=}\33[1;37m"
+           	          read -p 'Valor óptimo para DVMEGA=-50 : ' of1
                           letra=c
-                          if [ $largo = 3 ]
+                         if [ $largo = 3 ]
                           then
                           linea=`expr substr $salto 1 2`
                           else
@@ -655,7 +660,7 @@ echo "Valor  actual  del  Display : \33[1;33m${salto#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Display=$of1" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
