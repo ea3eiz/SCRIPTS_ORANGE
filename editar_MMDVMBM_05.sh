@@ -113,9 +113,9 @@ sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMBM.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
-echo -n "\33[1;36m  21)\33[0m Activar display   - \33[1;33m"
+echo -n "\33[1;36m  21)\33[0m Display               - \33[1;33m"
 loca=`grep -n "Display=" ~/MMDVMHost/MMDVMBM.ini`
-loca1=`expr substr $loca 4 30`
+loca1=`expr substr $loca 3 30`
 echo "$loca1"
 
 echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
