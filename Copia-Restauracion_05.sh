@@ -123,6 +123,57 @@ clear
 			break;;
 esac
 done;;
+
+1000) echo ""
+while true
+do
+clear
+                ejecutar1=S
+                case $ejecutar1 in
+                  [sS]* ) echo ""
+                  echo "Restaurando copias editores BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK"
+                  sleep 3
+            cd ~/Downloads/copias
+            sudo cp -f MMDVM.ini ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVM.ini_original ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
+            sudo cp -f MMDVMLIBRE.ini_dos ~/DoMMDVMHost     
+            sudo cp -f MMDVMPLUS.ini ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
+
+            #solo Dstar y solo Fusion
+            sudo cp -f MMDVMDSTAR.ini ~/MMDVMHost
+            sudo cp -f MMDVMFUSION.ini ~/MMDVMHost
+            #fin  Dstar y solo Fusion
+
+
+
+            sudo cp -f YSFGateway.ini ~/YSFClients/YSFGateway/
+
+            sudo cp -f BlueDVconfig.ini ~/bluedv/
+
+            sudo cp -f svxlink.conf /usr/local/etc/svxlink/
+            
+            sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
+
+                  echo ""
+                  echo "Ok, se ha ejecutado correctamente"
+                  echo ""
+                  break;;
+                  [nN]* ) echo ""
+                  break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
