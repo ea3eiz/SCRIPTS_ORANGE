@@ -63,7 +63,8 @@ clear
             cd /usr/local/etc/svxlink/svxlink.d/
             sudo cp -f ModuleEchoLink.conf ~/.copias
 
-            sudo cp -R -f ~/.copias ~/Downloads/copias
+            rm ~/Downloads/copias
+            #sudo cp -R ~/.copias ~/Downloads/copias
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
