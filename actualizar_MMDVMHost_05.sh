@@ -19,7 +19,7 @@ read escoger_menu
 case $escoger_menu in
 
 #de momento actualización deshabilitada la posicion del ID a pasao a la numero 2
-1000) echo ""
+1) echo ""
 while true
 do
 clear
