@@ -64,7 +64,7 @@ clear
             sudo cp -f ModuleEchoLink.conf ~/.copias
 
             sudo rm -R ~/Downloads/copias
-            #sudo cp -R ~/.copias ~/Downloads/copias
+            sudo cp -R ~/.copias ~/Downloads/copias
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
