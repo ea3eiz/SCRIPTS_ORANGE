@@ -125,9 +125,9 @@ echo "$mo1"
 
 #Brightness
 echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
-mo=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMBM.ini`
-mo1=`expr substr $mo 5 30`
-echo "$mo1"
+m=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMBM.ini`
+m1=`expr substr $m 5 30`
+echo "$m1"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMBM.ini`
@@ -694,15 +694,15 @@ done;;
 while true
 do
 buscar=":"
-largo=`expr index $mo $buscar`
-echo "Valor  actual  del  Brightness: \33[1;33m${mo#*=}\33[1;37m"
+largo=`expr index $m $buscar`
+echo "Valor  actual  del  Brightness: \33[1;33m${m#*=}\33[1;37m"
                           read -p 'Valor Brightness +- de 10 a 50: '  screen1
                           letra=c
                           if [ $largo = 3 ]
                           then
-                          linea=`expr substr $mo 1 2`
+                          linea=`expr substr $m 1 2`
                           else
-                          linea=`expr substr $mo 1 3`
+                          linea=`expr substr $m 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
