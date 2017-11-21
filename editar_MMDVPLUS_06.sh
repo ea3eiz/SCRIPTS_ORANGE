@@ -154,10 +154,13 @@ echo "$modu1"
 #linea22port=$OPCION$letra
 #var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMPLUS.ini;
 
-echo -n "\33[1;36m  27)\33[0m Modificar RXInvert    - \33[1;33m"
-rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/MMDVMPLUS.ini`
-rxinv1=`expr substr $rxinv 4 30`
-echo "$rxinv1"
+echo -n "\33[1;36m  27)\33[0m Entra reflector DMR+  - \33[1;33m"
+OPCION=`expr substr $master 1 $largo1`
+OPCION=`expr $OPCION + 5`
+linea33port=$OPCION
+letra=p
+linea22port=$OPCION$letra
+var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMPLUS.ini;
 
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero MMDVMPLUS.ini para hacer cualquier cambio\33[1;33m"
@@ -807,30 +810,32 @@ done;;
 			  #break;;
 #esac
 #done;;
+
+
 27) echo ""
 while true
 do
-buscar=":"
-largo=`expr index $rxinv $buscar`
-echo "Valor  actual del  RXInvert: \33[1;33m${rxinv#*=}\33[1;37m"
-                      read -p 'Valor óptimo para Motorola=0 para otras=1 : ' rxinv11
-                          letra=c
-                         if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $rxinv 1 2`
-                          else
-                          linea=`expr substr $rxinv 1 3`
-                          fi
-                          linea=$linea$letra
-                          actualizar=S 
+              read -p 'Estas en DMR+ ? S/N ' actualizar     
+             
+                          
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea RXInvert=$rxinv11" ~/MMDVMHost/MMDVMPLUS.ini
+         read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          letra1=c
+                          linea4=$linea33port$letra1
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
         break;;
         [nN]* ) echo ""
+        letra1=c
+                          linea4=$linea33port$letra1
+        sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
         break;;
 esac
 done;;
+
+
+
+
 28) echo ""
 while true
 do
