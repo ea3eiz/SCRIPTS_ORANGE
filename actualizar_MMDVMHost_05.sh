@@ -4,7 +4,7 @@ do
 clear
 echo "\33[1;32m   *********************************************************************"
 echo "   *                                                                   *"
-echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
+echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m       *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
 #echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
