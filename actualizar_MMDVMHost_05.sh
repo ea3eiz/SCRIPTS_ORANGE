@@ -33,14 +33,14 @@ clear
             [sS]* ) echo ""
             echo "ok >>>>>"
             
-                      rm ~/.copias
-                      mkdir ~/.copias
-                      sudo rm ~/Downloads/MMDVM*.*
-                      cd ~/
-                      sudo rm -r MMDVMHost
-                      git clone https://github.com/g4klx/MMDVMHost
-                      cd ~/MMDVMHost
-                      make
+                    rm ~/.copias
+                    mkdir ~/.copias
+                    sudo rm ~/Downloads/MMDVM*.*
+                    cd ~/
+                    sudo rm -r MMDVMHost
+                    git clone https://github.com/g4klx/MMDVMHost
+                    cd ~/MMDVMHost
+                    make
 
                     # Crea los ejecutables para estas 4 aplicaciones  
                     sudo cp MMDVMHost MMDVMBM
