@@ -5,7 +5,7 @@ clear
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *           Script para Modificar MMDVMPLUS.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m   *"
+echo "   *           Script para Modificar MMDVMPLUS.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
@@ -113,28 +113,21 @@ sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMPLUS.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 
-echo -n "\33[1;36m  21)\33[0m Modificar OscOffset   - \33[1;33m"
-salto=`grep -n -m 1 -c '\<OscOffset\>' ~/MMDVMHost/MMDVMPLUS.ini`
-if [ $salto = 0 ]; then
-echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
-else
-salto=`grep -n -m 1 '\<OscOffset\>' ~/MMDVMHost/MMDVMPLUS.ini`
-salto1=`expr substr $salto 4 30`
-echo "$salto1"
-fi
+echo -n "\33[1;36m  21)\33[0m Tipo Pantalla Display - \33[1;33m"
+mod=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMPLUS.ini`
+mod1=`expr substr $mod 3 30`
+echo "$mod1"
 
-echo -n "\33[1;36m  22)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMPLUS.ini`
-modu1=`expr substr $modu 4 30`
-echo "$modu1"
+echo -n "\33[1;36m  22)\33[0m Version Display       - \33[1;33m"
+mo=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMPLUS.ini`
+mo1=`expr substr $mo 5 30`
+echo "$mo1"
 
-echo -n "\33[1;36m  23)\33[0m Desactivar DMR        - \33[1;33m"
-linea=`expr substr $idd 1 1`
-linea=`expr $linea + 72`
-linea3=$linea
-letra=p
-linea2=$linea$letra
-var200= sed -n $linea2  ~/MMDVMHost/MMDVMPLUS.ini;
+#Brightness
+echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
+m=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMPLUS.ini`
+m1=`expr substr $m 5 30`
+echo "$m1"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMPLUS.ini`
@@ -146,7 +139,22 @@ long=`grep -n "Longitude" ~/MMDVMHost/MMDVMPLUS.ini`
 long1=`expr substr $long 4 30`
 echo "$long1"
 
-echo -n "\33[1;36m  26)\33[0m Entra reflector DMR+  - \33[1;33m"
+echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
+modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMPLUS.ini`
+modu1=`expr substr $modu 4 30`
+echo "$modu1"
+
+
+
+#echo -n "\33[1;36m  26)\33[0m Entra reflector DMR+  - \33[1;33m"
+#OPCION=`expr substr $master 1 $largo1`
+#OPCION=`expr $OPCION + 5`
+#linea33port=$OPCION
+#letra=p
+#linea22port=$OPCION$letra
+#var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMPLUS.ini;
+
+echo -n "\33[1;36m  27)\33[0m Entra reflector DMR+  - \33[1;33m"
 OPCION=`expr substr $master 1 $largo1`
 OPCION=`expr $OPCION + 5`
 linea33port=$OPCION
@@ -154,31 +162,26 @@ letra=p
 linea22port=$OPCION$letra
 var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMPLUS.ini;
 
-echo -n "\33[1;36m  27)\33[0m Modificar RXInvert    - \33[1;33m"
-rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/MMDVMPLUS.ini`
-rxinv1=`expr substr $rxinv 4 30`
-echo "$rxinv1"
-
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero MMDVMPLUS.ini para hacer cualquier cambio\33[1;33m"
 
 echo "\33[1;36m  29)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
 echo -n "\33[1;36m  30)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
-pluscopia=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMPLUS.ini_copia`
-pluscopia=`expr substr $pluscopia 13 40`
-echo "$pluscopia"
+reflector=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMPLUS.ini_copia`
+reflector=`expr substr $reflector 13 40`
+echo "$reflector"
 
 echo "\33[1;36m  31)\33[1;37m Guardar  fichero de Configuración en M2: \33[1;36m"
 echo -n "\33[1;36m  32)\33[1;32m Utilizar fichero de Configuración en M2: \33[1;36m"
-pluscopia2=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMPLUS.ini_copia2`
-pluscopia2=`expr substr $pluscopia2 13 40`
-echo "$pluscopia2"
+reflector2=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMPLUS.ini_copia2`
+reflector2=`expr substr $reflector2 13 40`
+echo "$reflector2"
 
 echo "\33[1;36m  33)\33[1;37m Guardar  fichero de Configuración en M3: \33[1;36m"
 echo -n "\33[1;36m  34)\33[1;32m Utilizar fichero de Configuración en M3: \33[1;36m"
-pluscopia3=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMPLUS.ini_copia3`
-pluscopia3=`expr substr $pluscopia3 13 40`
-echo "$pluscopia3"
+reflector3=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMPLUS.ini_copia3`
+reflector3=`expr substr $reflector3 13 40`
+echo "$reflector3"
 
 echo ""
 echo "\33[1;36m  35)\33[1;31m Recuperar el fichero original MMDVMPLUS.ini\33[1;33m"
@@ -400,8 +403,9 @@ done;;
 11) echo ""
 while true
 do
-echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
-                      read -p 'DMR+=eamaster04.xreflector.es  ó  eaglobalmaster.xreflector.es: ' master1
+echo "   Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
+echo "   Brandmeister=84.232.5.113 / DMR+=217.61.0.154:"
+                      read -p '   Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
                           actualizar=S 
                           case $actualizar in
                     [sS]* ) echo ""
@@ -409,6 +413,9 @@ echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
                     letra=c            
 linea=$largo$letra
                           sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMPLUS.ini
+                          
+                         
+                          
         break;;
         [nN]* ) echo ""
         break;;
@@ -436,8 +443,8 @@ while true
 do
 buscar=":"
 largo=`expr index $pas $buscar`
-echo "   Valor actual del Password: \33[1;33m${pas#*=}\33[1;37m"
-           	          read -p '   Introduce el password que corresponda: ' pas1
+   echo "   Valor actual del Password: \33[1;33m${pas#*=}\33[1;37m"
+read -p '   Introduce el password que corresponda: ' pas1
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -642,69 +649,74 @@ done;;
 while true
 do
 buscar=":"
-largo=`expr index $salto $buscar`
-echo "Valor  actual  del  scOffset : \33[1;33m${salto#*=}\33[1;37m"
-           	          read -p 'Valor óptimo para DVMEGA=-50 : ' of1
+largo=`expr index $mod $buscar`
+echo "Valor  actual  del  Display: \33[1;33m${mod#*=}\33[1;37m"
+                      read -p 'TFT Serial, HD44780, Nextion, OLED, LCDproc : '  modu1
                           letra=c
-                         if [ $largo = 3 ]
+                          if [ $largo = 2 ]
                           then
-                          linea=`expr substr $salto 1 2`
+                          linea=`expr substr $mod 1 1`
                           else
-                          linea=`expr substr $salto 1 3`
+                          linea=`expr substr $mod 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
-                          sed -i "$linea OscOffset=$of1" ~/MMDVMHost/MMDVMPLUS.ini
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
+        [sS]* ) echo ""
+                          sed -i "$linea Display=$modu1" ~/MMDVMHost/MMDVMPLUS.ini
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
 22) echo ""
 while true
 do
 buscar=":"
-largo=`expr index $modu $buscar`
-echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
-           	          read -p 'Valor óptimo para D-STAR=B: '  modu1
+largo=`expr index $mo $buscar`
+echo "Valor  actual  del  ScreenLayout: \33[1;33m${mo#*=}\33[1;37m"
+                          read -p 'Valor ScreenLayout 1 ó 2: '  screen1
                           letra=c
-                         if [ $largo = 3 ]
+                          if [ $largo = 3 ]
                           then
-                          linea=`expr substr $modu 1 2`
+                          linea=`expr substr $mo 1 2`
                           else
-                          linea=`expr substr $modu 1 3`
+                          linea=`expr substr $mo 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMPLUS.ini
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
+                          [sS]* ) echo ""
+                          sed -i "$linea ScreenLayout=$screen1" ~/MMDVMHost/MMDVMPLUS.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 23) echo ""
 while true
 do
-echo -n "Valor  actual  del \33[1;33m${var200#*=}\33[1;37m"
-                          var100= sed -n $linea2  ~/MMDVMHost/MMDVMPLUS.ini;
-           	              read -p 'Desactivado=0 Activado=1: '   dmrac1
+buscar=":"
+largo=`expr index $m $buscar`
+echo "Valor  actual  del  Brightness: \33[1;33m${m#*=}\33[1;37m"
+                          read -p 'Valor Brightness +- de 10 a 50: '  screen1
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $m 1 2`
+                          else
+                          linea=`expr substr $m 1 3`
+                          fi
+                          linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
-			              [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea3$letra1
-                          sed -i "$linea4 Enable=$dmrac1" ~/MMDVMHost/MMDVMPLUS.ini
-			              break;;
-			              [nN]* ) echo ""
-			              break;;
+                          [sS]* ) echo ""
+                          sed -i "$linea Brightness=$screen1" ~/MMDVMHost/MMDVMPLUS.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
-
-
 24) echo ""
 while true
 do
@@ -757,47 +769,73 @@ done;;
 26) echo ""
 while true
 do
-              read -p 'Estas en DMR+ ? S/N ' actualizar     
-           	 
-                          
-                          case $actualizar in
-			  [sS]* ) echo ""
-			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
-                          letra1=c
-                          linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
-			  break;;
-			  [nN]* ) echo ""
-			  letra1=c
-                          linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
-			  break;;
-esac
-done;;
-27) echo ""
-while true
-do
 buscar=":"
-largo=`expr index $rxinv $buscar`
-echo "Valor  actual del  RXInvert: \33[1;33m${rxinv#*=}\33[1;37m"
-                      read -p 'Valor óptimo para Motorola=0 para otras=1 : ' rxinv11
+largo=`expr index $modu $buscar`
+echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
+                      read -p 'Valor óptimo para D-STAR=B: '  modu1
                           letra=c
                          if [ $largo = 3 ]
                           then
-                          linea=`expr substr $rxinv 1 2`
+                          linea=`expr substr $modu 1 2`
                           else
-                          linea=`expr substr $rxinv 1 3`
+                          linea=`expr substr $modu 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
-                          sed -i "$linea RXInvert=$rxinv11" ~/MMDVMHost/MMDVMPLUS.ini
+                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMPLUS.ini
         break;;
         [nN]* ) echo ""
         break;;
 esac
 done;;
+#26) echo ""
+#while true
+#do
+              #read -p 'Estas en DMR+ ? S/N ' actualizar     
+           	 
+                          
+                          #case $actualizar in
+			  #[sS]* ) echo ""
+			   #read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          #letra1=c
+                          #linea4=$linea33port$letra1
+                          #sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
+			  #break;;
+			  #[nN]* ) echo ""
+			  #letra1=c
+                          #linea4=$linea33port$letra1
+			  #sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
+			  #break;;
+#esac
+#done;;
+
+
+27) echo ""
+while true
+do
+              read -p 'Estas en DMR+ ? S/N ' actualizar     
+             
+                          
+                          case $actualizar in
+        [sS]* ) echo ""
+         read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+                          letra1=c
+                          linea4=$linea33port$letra1
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
+        break;;
+        [nN]* ) echo ""
+        letra1=c
+                          linea4=$linea33port$letra1
+        sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
+        break;;
+esac
+done;;
+
+
+
+
 28) echo ""
 while true
 do
@@ -812,82 +850,94 @@ esac
 done;;
 29) echo ""
 while true
-do
-                        actualizar=S
+do      	        
+                        actualizar=S 
                         case $actualizar in
 			                  [sS]* ) echo ""
                         clear
                         echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sudo cp -f ~/MMDVMHost/MMDVMPLUS.ini ~/MMDVMHost/MMDVMPLUS.ini_copia
-			                  break;;
-			                  [nN]* ) echo ""
-			                  break;;
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 30) echo ""
 while true
 do
-                        actualizar=S
+          	        
+           	            #read -p 'Quieres Recuperar el  fichero de Configuración Brandmeister Spain S/N ' restaurar   
+                        actualizar=S 
                         case $actualizar in
-                        [sS]* ) echo ""
+			                  [sS]* ) echo ""
                         clear
                         echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
                         sleep 3
                         sudo cp -f ~/MMDVMHost/MMDVMPLUS.ini_copia ~/MMDVMHost/MMDVMPLUS.ini
-			                  break;;
-			                  [nN]* ) echo ""
-			                  break;;
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 31) echo ""
 while true
 do
+          	        
+           	            #read -p 'Quieres Guardar el fichero de Configuración Brandmeister (1) ? S/N ' copia   
                         actualizar=S 
                         case $actualizar in
 			                  [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
+                        echo "<<<<<< Haciendo copia de seguridad de la M2  >>>>>"
                         sleep 3
                         sudo cp -f ~/MMDVMHost/MMDVMPLUS.ini ~/MMDVMHost/MMDVMPLUS.ini_copia2
-			                  break;;
-			                  [nN]* ) echo ""
-			                  break;;
+                        #sed -i "2c $master1" ~/V30/info_MMDVMPLUS.ini
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 32) echo ""
 while true
 do
+          	        
+           	            #read -p 'Quieres Recuperar el fichero de Configuración Brandmeister (1) ? S/N ' restaurar   
                         actualizar=S 
                         case $actualizar in
 			                  [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Restaurando copia de seguridad  de la M2 >>>>>"
+                        echo "<<<<<< Restaurando copia de seguridad de la M2>>>>>"
                         sleep 3
                         sudo cp -f ~/MMDVMHost/MMDVMPLUS.ini_copia2 ~/MMDVMHost/MMDVMPLUS.ini
-			                  break;;
-			                  [nN]* ) echo ""
-			                  break;;
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 33) echo ""
 while true
 do
+          	        
+           	            #read -p 'Quieres Guardar otro fichero de Configuración Brandmeister (2) ? S/N ' copia   
                         actualizar=S 
                         case $actualizar in
 			                  [sS]* ) echo ""
                         clear
-                        echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
+                        echo "<<<<<< Haciendo copia de seguridad de la M3>>>>>"
                         sleep 3
                         sudo cp -f ~/MMDVMHost/MMDVMPLUS.ini ~/MMDVMHost/MMDVMPLUS.ini_copia3
-			                  break;;
-			                  [nN]* ) echo ""
-			                  break;;
+                        #sed -i "3c $master1" ~/V30/info_MMDVMPLUS.ini
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 34) echo ""
 while true
 do
+          	        
+           	            #read -p 'Quieres Recuperar otro fichero de Configuración Brandmeister (2) ? S/N ' restaurar   
                         actualizar=S 
                         case $actualizar in
 			                  [sS]* ) echo ""
@@ -895,18 +945,18 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
                         sleep 3
                         sudo cp -f ~/MMDVMHost/MMDVMPLUS.ini_copia3 ~/MMDVMHost/MMDVMPLUS.ini
-			                  break;;
-			                  [nN]* ) echo ""
-			                  break;;
+			break;;
+			[nN]* ) echo ""
+			break;;
 esac
 done;;
 35) echo ""
 while true
 do
           	        
-           	        read -p 'Quieres restaurar el fichero original MMDVMPLUS.ini? S/N ' restaurar1   
+           	            read -p 'Quieres restaurar el fichero original MMDVM.ini? S/N ' restaurar1   
                         case $restaurar1 in
-			[sS]* ) echo ""
+			                  [sS]* ) echo ""
                         clear
                         echo "<<<<<< Restaurando el fichero original MMDVMPLUS.ini >>>>>"
                         sleep 3
