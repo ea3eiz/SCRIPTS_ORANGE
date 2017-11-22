@@ -19,6 +19,7 @@ echo -n "\33[1;36m   Elige una opción del 0 al 5: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+
 1) echo ""
 while true
 do
@@ -36,6 +37,28 @@ clear
                         exit;
 		                break;;
 						[nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+6) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
+                        cd ~/Downloads
+                        wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y
+                        sudo apt-get -f install -y
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y 
+                        echo "Anydesk Instalado"
+                        sleep 2
+                        break;;
+                        [nN]* ) echo ""
 clear
 exit;
 break;;
