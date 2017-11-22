@@ -12,10 +12,11 @@ echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
+echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 5: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 6: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -37,28 +38,6 @@ clear
                         exit;
 		                break;;
 						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-6) echo ""
-while true
-do
-clear
-                        ejecutar1=S
-                        case $ejecutar1 in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
-                        cd ~/Downloads
-                        wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y
-                        sudo apt-get -f install
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y 
-                        echo "Anydesk Instalado"
-                        sleep 2
-                        break;;
-                        [nN]* ) echo ""
 clear
 exit;
 break;;
@@ -136,6 +115,28 @@ clear
                         cd ~/SCRIPTS_ORANGE/
                         sudo sh menu_dcs018_06.sh
                         exit;
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+6) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
+                        cd ~/Downloads
+                        wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y
+                        sudo apt-get -f install
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y 
+                        echo "Anydesk Instalado"
+                        sleep 2
                         break;;
                         [nN]* ) echo ""
 clear
