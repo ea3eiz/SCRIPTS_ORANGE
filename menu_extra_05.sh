@@ -1,4 +1,4 @@
-9#!/bin/bash
+#!/bin/bash
 while true
 do
 clear
