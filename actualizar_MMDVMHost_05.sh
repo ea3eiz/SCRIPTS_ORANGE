@@ -33,9 +33,9 @@ clear
             [sS]* ) echo ""
             echo "ok >>>>>"
             
-                    rm ~/.copias
+                    sudo rm -R ~/.copias
                     mkdir ~/.copias
-                    sudo rm ~/Downloads/MMDVM*.*
+                    sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
                     sudo rm -R MMDVMHost_old
                     read a
