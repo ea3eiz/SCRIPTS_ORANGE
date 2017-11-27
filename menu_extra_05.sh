@@ -134,7 +134,7 @@ clear
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y
                         sudo apt-get -f install
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y 
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -y
                         echo "Anydesk Instalado"
                         sleep 2
                         break;;
