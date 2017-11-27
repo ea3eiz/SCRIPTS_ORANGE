@@ -38,9 +38,7 @@ clear
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
                     sudo rm -R MMDVMHost_old
-                    read a
                     sudo mv -f MMDVMHost MMDVMHost_old
-                    read a
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
                     make
