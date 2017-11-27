@@ -52,6 +52,7 @@ clear
             echo "Estado: Actualizando >>>>>"
             sudo apt-get update -y
             sudo apt-get upgrade -y
+            sudo h3disp -m 34
             echo ""
             echo "Ok, se ha actualizado correctamente"
             echo ""
