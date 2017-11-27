@@ -7,8 +7,8 @@ echo "   *                                                                   *"
 echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m       *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
-#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
-echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
+echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
+#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 #echo  "\33[1;31m      Esta opción está deshabilitada \33[1;32m(Firmware actualizado 20170719)   \33[1;33m"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -19,7 +19,7 @@ read escoger_menu
 case $escoger_menu in
 
 #de momento actualización deshabilitada la posicion del ID a pasao a la numero 2
-1) echo ""
+1000) echo ""
 while true
 do
 clear
