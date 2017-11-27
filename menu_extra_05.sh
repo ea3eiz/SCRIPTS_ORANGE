@@ -132,9 +132,9 @@ clear
                         echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
                         cd ~/Downloads
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -s
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -Y
                         sudo apt-get -f install
-                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -s
+                        sudo dpkg -i anydesk_2.9.4-1_armhf.deb -Y
                         echo "Anydesk Instalado"
                         sleep 2
                         break;;
