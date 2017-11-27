@@ -37,7 +37,7 @@ clear
                     mkdir ~/.copias
                     sudo rm ~/Downloads/MMDVM*.*
                     cd ~/
-                    sudo rm MMDVMHost_old
+                    sudo rm -R MMDVMHost_old
                     read a
                     sudo mv -f MMDVMHost MMDVMHost_old
                     read a
