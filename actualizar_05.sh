@@ -35,6 +35,6 @@ dstar=`sed -n '2p'  ~/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
 
 
-
+cd ~/.config
 sudo wget -post-data http://associacioader.com/MAIL_ORANGEPI.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
 
