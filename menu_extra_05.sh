@@ -130,6 +130,7 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
+                        sudo rm -R ~/.anydesk
                         cd ~/Downloads
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
