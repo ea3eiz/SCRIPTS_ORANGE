@@ -40,7 +40,6 @@ clear
                     mkdir MMDVMHost_anterior
                     cp MMDVMHost/*.* MMDVMHost_anterior/
                     sudo rm -r MMDVMHost
-                    read a
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
                     make
