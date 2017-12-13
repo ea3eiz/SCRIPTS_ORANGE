@@ -40,6 +40,7 @@ clear
                     sudo cp -R -f MMDVMHost MMDVMHost_anterior
                     #sudo rm -R MMDVMHost_old
                     #sudo mv -f MMDVMHost MMDVMHost_old
+                    read a
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
                     make
