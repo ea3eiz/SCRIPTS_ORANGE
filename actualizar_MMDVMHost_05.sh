@@ -37,6 +37,7 @@ clear
                     mkdir ~/.copias
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
+                    sudo chamod 77 -R MMDVMHost_anterior
                     sudo mv -f -R MMDVMHost MMDVMHost_anterior
                     #sudo rm -R MMDVMHost_old
                     #sudo mv -f MMDVMHost MMDVMHost_old
