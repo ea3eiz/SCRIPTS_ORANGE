@@ -10,7 +10,7 @@ echo "   *********************************************************************"
 #echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
 echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Volver a la versión anterior de MMDVMHost \33[1;33m"
-echo  "\33[1;36m   3)\33[1;32m Recuperar los .INI de la versión anterior de MMDVMHost \33[1;33m"
+echo  "\33[1;36m   3)\33[1;32m Recuperar solo los .INI de la versión anterior de MMDVMHost \33[1;33m"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -37,15 +37,14 @@ clear
                     mkdir ~/.copias
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
-                    sudo chmod 777 -R MMDVMHost_anterior
-                    sudo cp -f MMDVMHost MMDVMHost_anterior
+                    sudo mv -f MMDVMHost MMDVMHost_anterior
                     #sudo rm -R MMDVMHost_old
                     #sudo mv -f MMDVMHost MMDVMHost_old
                     read a
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
                     make
-read a
+
                     # Crea los ejecutables para estas 4 aplicaciones  
                     sudo cp MMDVMHost MMDVMBM
                     sudo cp MMDVMHost MMDVMPLUS
@@ -132,7 +131,7 @@ clear
             ejecutar1=S
             case $ejecutar1 in
             [sS]* ) echo ""
-            echo "Restaurando todos los .INI de la version anterior MMDVMHost"
+            echo "Restaurando todos los .INI de la version anterior MMDVMH"
             sleep 3
             cd ~/MMDVMHost_anterior
             sudo cp -f MMDVM.ini ~/MMDVMHost
