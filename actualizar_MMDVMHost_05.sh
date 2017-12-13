@@ -36,9 +36,8 @@ clear
                     sudo rm -R ~/.copias
                     mkdir ~/.copias
                     sudo rm -R ~/Downloads/MMDVM*.*
-                   
-                    sudo chmod 777 -r ~/MMDVMHost_anterior/
-                    sudo cp -r ~/MMDVMHost/ ~/MMDVMHost_anterior/
+                    cd ~/
+                    mv MMDVMHost MMDVMHost_anterior
                     #sudo rm -R MMDVMHost_old
                     #sudo mv -f MMDVMHost MMDVMHost_old
                     read a
@@ -132,7 +131,7 @@ clear
             ejecutar1=S
             case $ejecutar1 in
             [sS]* ) echo ""
-            echo "Restaurando todos los .INI de la version anterior MMDVMH"
+            echo "Restaurando todos los .INI de la version anterior"
             sleep 3
             cd ~/MMDVMHost_anterior
             sudo cp -f MMDVM.ini ~/MMDVMHost
