@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Qtel
+Name=Borrar log
 Comment=
-Exec=/usr/local/bin/qtel
+Exec=sh -c "sudo rm /var/log/MMDVM/*.log; sudo rm /var/log/irc*.log"
 Icon=/home/orangepi/SCRIPTS_ORANGE/papelera1.png
 Path=
 Terminal=false
