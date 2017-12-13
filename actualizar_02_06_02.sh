@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO>>>>>>>>"
-#En la próxima versión, hacer un 4000 para colocar el contenido de borrar logs
+#En la nueva versión V.02.06.03 ya no estan estas 3 lineas que carga el icono borrar logs
 cd /home/orangepi/SCRIPTS_ORANGE
 cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/pi/
 chmod +x /home/orangepi/Desktop
