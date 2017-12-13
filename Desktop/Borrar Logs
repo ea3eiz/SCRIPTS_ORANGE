@@ -1,0 +1,8 @@
+[Desktop Entry]
+Comment=EA3EIZ
+Exec=sh -c "sudo rm /var/log/MMDVM/*.log; sudo rm /var/log/irc*.log"
+Type=Application
+Terminal=true
+Comment[es_ES]=
+Name[es_ES]=Borrar logs
+Icon=/home/pi/SCRIPTS_ORANGE/papelera1.png
