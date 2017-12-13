@@ -50,18 +50,17 @@ clear
                     sudo cp MMDVMHost MMDVMPLUS
                     sudo cp MMDVMHost MMDVMDSTAR
                     sudo cp MMDVMHost MMDVMFUSION
-                    #===============================================
-                   
+                    #=================================================
 
-                   # Rutina solo para el LIBRE ======================
-                   cd ~/SCRIPTS_ORANGE
-                   sudo cp MMDVMHostLIBRE ~/MMDVMHost
-                   sudo cp MMDVMLIBRE.ini ~/MMDVMHost
-                   cd ~/MMDVMHost
-                   sudo chmod +x MMDVMHostLIBRE
-                   #=================================================
+                    # Rutina solo para el LIBRE ======================
+                    cd ~/SCRIPTS_ORANGE
+                    sudo cp MMDVMHostLIBRE ~/MMDVMHost
+                    sudo cp MMDVMLIBRE.ini ~/MMDVMHost
+                    cd ~/MMDVMHost
+                    sudo chmod +x MMDVMHostLIBRE
+                    #=================================================
 
-            
+                    # Crea los ficheros de Memorias ==================
                     sudo cp MMDVM.ini MMDVM.ini_original
                     sudo cp MMDVM.ini MMDVM.ini_copia
                     sudo cp MMDVM.ini MMDVM.ini_copia2
@@ -82,7 +81,8 @@ clear
 
                     sudo cp MMDVMLIBRE.ini MMDVMLIBRE.ini_uno
                     sudo cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
-
+                    #=================================================
+                    
                     sudo chmod +x -R ~/MMDVMHost
                     
                     echo""
