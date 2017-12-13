@@ -37,7 +37,7 @@ clear
                     mkdir ~/.copias
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
-                    sudo mv MMDVMHost MMDVMHost_anterior
+                    sudo mv -f MMDVMHost MMDVMHost_anterior
                     #sudo rm -R MMDVMHost_old
                     #sudo mv -f MMDVMHost MMDVMHost_old
                     git clone https://github.com/g4klx/MMDVMHost
