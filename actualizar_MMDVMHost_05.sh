@@ -45,7 +45,7 @@ clear
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
                     make
-
+read a
                     # Crea los ejecutables para estas 4 aplicaciones  
                     sudo cp MMDVMHost MMDVMBM
                     sudo cp MMDVMHost MMDVMPLUS
