@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO>>>>>>>>"
+#En la próxima versión, hacer un 4000 para colocar el contenido de borrar logs
+cd /home/orangepi/SCRIPTS_ORANGE
+cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/pi/
+chmod +x /home/orangepi/Desktop
+
 sleep 10
 
 cd ~/SCRIPTS_ORANGE/
