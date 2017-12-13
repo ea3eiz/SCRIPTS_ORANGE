@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Borrar log
+Name=Borrar logs
 Comment=
 Exec=sh -c "sudo rm /var/log/MMDVM/*.log; sudo rm /var/log/irc*.log"
 Icon=/home/orangepi/SCRIPTS_ORANGE/papelera1.png
