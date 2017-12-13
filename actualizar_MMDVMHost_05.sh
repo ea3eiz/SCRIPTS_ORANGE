@@ -38,7 +38,7 @@ clear
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
                     #sudo chmod 777 -R MMDVMHost_anterior
-                    mv MMDVMHost MMDVMHost_anterior
+                    sudo cp -r MMDVMHost/ MMDVMHost_anterior
                     #sudo rm -R MMDVMHost_old
                     #sudo mv -f MMDVMHost MMDVMHost_old
                     read a
