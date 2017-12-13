@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Editar DMRPlus
+Comment=
+Icon=/home/orangepi/SCRIPTS_ORANGE/editar_bm.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+Name[es_ES]=Editar BM
+StartupNotify=false
+Exec=mate-terminal --geometry=80x47 -x sh editar_MMDVMBM_05.sh
