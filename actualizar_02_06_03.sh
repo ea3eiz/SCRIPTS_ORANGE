@@ -22,3 +22,4 @@ fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
 cd ~/.config
 sudo wget -post-data http://associacioader.com/ORANGEPI_02_06_03.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
 
+sudo rm -r associacioader.com
