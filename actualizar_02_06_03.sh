@@ -15,11 +15,10 @@ sudo ntpdate -u hora.roa.es
 # pone el altavoz en la barra superior
 pasystray &
 
-# PARA QUE MANDE UN MAIL CON LOS SISTEMAS dmrplus, brandmeister, solofusion o solodstar CONFIGURADOS
 bm=`sed -n '2p'  ~/MMDVMHost/MMDVMBM.ini`
 plus=`sed -n '2p'  ~/MMDVMHost/MMDVMPLUS.ini`
 dstar=`sed -n '2p'  ~/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
 cd ~/.config
-sudo wget -post-data http://associacioader.com/MAIL_ORANGEPI_02_06_03.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
+sudo wget -post-data http://associacioader.com/ORANGEPI_02_06_03.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
 
