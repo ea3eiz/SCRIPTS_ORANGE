@@ -16,10 +16,10 @@ sudo ntpdate -u hora.roa.es
 # pone el altavoz en la barra superior
 pasystray &
 
-bm=`sed -n '2p'  ~/MMDVMHost/MMDVMBM.ini`
-plus=`sed -n '2p'  ~/MMDVMHost/MMDVMPLUS.ini`
-dstar=`sed -n '2p'  ~/MMDVMHost/MMDVMDSTAR.ini`
-fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
-cd ~/.config
-sudo wget -post-data http://associacioader.com/ORANGEPI09.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
-sudo rm -r associacioader.com
+#bm=`sed -n '2p'  ~/MMDVMHost/MMDVMBM.ini`
+#plus=`sed -n '2p'  ~/MMDVMHost/MMDVMPLUS.ini`
+#dstar=`sed -n '2p'  ~/MMDVMHost/MMDVMDSTAR.ini`
+#fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
+#cd ~/.config
+#sudo wget -post-data http://associacioader.com/ORANGEPI09.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
+#sudo rm -r associacioader.com
