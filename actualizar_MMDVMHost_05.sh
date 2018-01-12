@@ -33,7 +33,7 @@ clear
                     [sS]* ) echo ""
                     echo "ok >>>>>"
             
-                    sudo rm -R ~/.copias
+                    #sudo rm -R ~/.copias
                     mkdir ~/.copias
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
