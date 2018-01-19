@@ -38,6 +38,8 @@ echo "\33[1;33m"
             sudo rm -r ~/bluedv
 			git clone https://github.com/ea3eiz/bluedv
 			
+			sudo chmod 777 -R bluedv
+			
 			cd cd ~/bluedv
 			sudo chmod 777 DExtra_Hosts.txt
 
