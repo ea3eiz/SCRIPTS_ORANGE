@@ -19,57 +19,10 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 	
+
+
+
 1) echo ""
-while true
-do
-clear
-echo " *********************************************************"
-echo " \33[1;31m* Si actualizas BlueDV, perderás toda la configuración  *"
-echo " * Anotate la configuración para poder volver a ponerla  *"
-echo " \33[1;32m*********************************************************"
-echo "\33[1;33m"
-
-	        read -p ' Quieres actualizar el BlueDV Si/No: ' ejecutar1
-		    case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "ok >>>>>"
-			
-			cd ~/
-  			mkdir bluedv_anterior
-            sudo cp bluedv/*.* bluedv_anterior/
-            sudo rm -r ~/bluedv
-			git clone https://github.com/ea3eiz/bluedv
-			
-			sudo chmod 777 -R bluedv
-			
-			cd cd ~/bluedv
-			sudo chmod 777 DExtra_Hosts.txt
-
-
-
-
-
-
-			#sudo rm -r ~/bluedv
-			#cd ~/
-			#git clone https://github.com/ea3eiz/bluedv
-			
-			#chmod -R ~/bluedv
-			#cd ~/bluedv
-			#chmod 777 *
-			
-			clear
-		    echo ""
-			echo "Ok, se ha ejecutado correctamente"
-			echo ""
-			break;;
-			[nN]* ) echo ""
-			break;;
-esac
-done;;
-
-
-10) echo ""
 while true
 do
 clear
@@ -121,7 +74,7 @@ exit;
 			break;;
 esac
 done;;
-20) echo ""
+2) echo ""
 while true
 do
 clear
