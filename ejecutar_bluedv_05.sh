@@ -14,4 +14,4 @@ sed -i "11c Name[es_ES]=Cerrar BlueDV" ~/Desktop/BlueDV.desktop
 
 
 cd ~/bluedv
-mono BlueDV.exe
+sudo mono BlueDV.exe
