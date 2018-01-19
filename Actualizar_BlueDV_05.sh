@@ -16,6 +16,7 @@ echo -n "\33[1;36m   Elige una opción del 0 al 1: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+	
 20000) echo ""
 while true
 do
