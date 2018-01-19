@@ -30,13 +30,28 @@ echo "\33[1;33m"
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-			sudo rm -r ~/bluedv
+			
 			cd ~/
+  			mkdir bluedv_anterior
+            sudo cp bluedv/*.* bluedv_anterior/
+            sudo rm -r ~/bluedv
 			git clone https://github.com/ea3eiz/bluedv
 			
-			chmod -R ~/bluedv
-			cd ~/bluedv
-			chmod 777 *
+			cd cd ~/bluedv
+			sudo chmod 777 DExtra_Hosts.txt
+
+
+
+
+
+
+			#sudo rm -r ~/bluedv
+			#cd ~/
+			#git clone https://github.com/ea3eiz/bluedv
+			
+			#chmod -R ~/bluedv
+			#cd ~/bluedv
+			#chmod 777 *
 			
 			clear
 		    echo ""
