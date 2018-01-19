@@ -16,7 +16,7 @@ echo -n "\33[1;36m   Elige una opción del 0 al 1: "
 read escoger_menu
 echo ""
 case $escoger_menu in
-1) echo ""
+10000) echo ""
 while true
 do
 clear
