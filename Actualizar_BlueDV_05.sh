@@ -17,7 +17,7 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 	
-20000) echo ""
+1) echo ""
 while true
 do
 clear
