@@ -47,8 +47,9 @@ clear
                     FIJA="const char* VERSION = "\"
                     PI=":Opi"\"
                     HOY=$HOY$PI
+                    PUNTO=";"
                     
-                    sed -i '22c $FIJA$HOY';'' ~/MMDVMHost/Version.h
+                    sed -i '22c $FIJA$HOY$PUNTO' ~/MMDVMHost/Version.h
                     read a
                     exit;
                     make
