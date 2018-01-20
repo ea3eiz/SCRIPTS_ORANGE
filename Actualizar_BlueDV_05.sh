@@ -9,11 +9,6 @@ echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                 
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 echo "\33[1;36m   2)\33[1;37m Volver a la versión anterior del BlueDV"
-#HOY=$(date +%Y%m%d)
-#PI="_Opi"
-#HOY=$HOY$PI
-#echo "$HOY"
-#echo "\33[1;36m   2)\33[1;37m Actualizar DV4mini Control Panel (Stick ID:8D-6E-8C V1,77)"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -21,10 +16,6 @@ echo -n "\33[1;36m   Elige una opción del 0 al 1: "
 read escoger_menu
 echo ""
 case $escoger_menu in
-	
-
-
-
 1) echo ""
 while true
 do
