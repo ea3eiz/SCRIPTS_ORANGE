@@ -45,13 +45,13 @@ clear
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI=":Opi"\"
+                    PI=":Orangepi"\"
                     HOY=$HOY$PI
                     PUNTO=";"
                     
                     sed -i "22c $FIJA$HOY$PUNTO" ~/MMDVMHost/Version.h
-                    read a
-                    exit;
+                  
+                  
                     make
 
                     # Crea los ejecutables para estas 4 aplicaciones  
