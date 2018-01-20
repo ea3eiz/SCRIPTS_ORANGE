@@ -143,7 +143,7 @@ clear
             read -p 'Introduce tu Ciudad sin espacios (Ej. Barcelona) : ' tu_ciudad
             read -p 'Introduce tu Página web (Ej. www.associacioader.com) : ' tu_url
             read -p 'Introduce valor para Timeout (Ej. 0) : ' timeou
-            read -p 'Introduce valor Duplex (Ej. 0-simple  1-Repetidor) : ' duplex
+            read -p 'Introduce valor Duplex (Ej. 0-simplex  1-Repetidor) : ' duplex
             read -p 'Introduce valor de la Baliza CW (Ej. 1-activada 0-desactivada) : ' baliza
             read -p 'Introduce valor del Módulo D-STAR (Ej. B) : ' module
             read -p 'Introduce valor de RFModeHang (Ej. 3) : ' rfmodehang
