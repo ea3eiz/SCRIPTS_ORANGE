@@ -6,4 +6,5 @@ sed -i "11c Name[es_ES]=Cerrar solo D-STAR" ~/Desktop/AbrirsoloDstar.desktop
 
 
 cd ~/MMDVMHost
+echo "\33[1;32m"
 sudo ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
