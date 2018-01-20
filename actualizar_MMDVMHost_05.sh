@@ -43,14 +43,11 @@ clear
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
-const char* VERSION = "20170719";
-
-
                     HOY=$(date +%Y%m%d)
                     PI=">Opi"
                     HOY=$HOY$PI
                     
-                    sed -i "22c const char* VERSION = $HOY" ~/MMDVMHost/Version.h
+                    sed -i "22c const char* VERSION = $HOY;" ~/MMDVMHost/Version.h
                     read a
                     exit;
                     make
