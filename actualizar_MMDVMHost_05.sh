@@ -45,7 +45,7 @@ clear
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI=":Opi"
+                    PI=":Opi";\"
                     HOY=$HOY$PI
                     
                     sed -i "22c $FIJA$HOY" ~/MMDVMHost/Version.h
