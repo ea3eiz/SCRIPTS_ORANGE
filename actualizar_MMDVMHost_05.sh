@@ -47,7 +47,7 @@ clear
                     PI=">Opi"
                     HOY=$HOY$PI
                     
-                    sed -i "22c const char* VERSION = "$HOY";" ~/MMDVMHost/Version.h
+                    sed -i '22c const char* VERSION = "$HOY";' ~/MMDVMHost/Version.h
                     read a
                     exit;
                     make
