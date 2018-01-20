@@ -10,6 +10,8 @@ echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 echo "\33[1;36m   2)\33[1;37m Volver a la versión anterior del BlueDV"
 HOY=$(date +%Y%m%d)
+PI="_Opi"
+HOY=$HOY$PI
 echo "$HOY"
 #echo "\33[1;36m   2)\33[1;37m Actualizar DV4mini Control Panel (Stick ID:8D-6E-8C V1,77)"
 echo ""
