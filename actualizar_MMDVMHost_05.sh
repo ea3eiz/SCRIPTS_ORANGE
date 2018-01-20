@@ -42,6 +42,15 @@ clear
                     sudo rm -r MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
+
+
+                    HOY=$(date +%Y%m%d)
+                    PI=">Opi"
+                    HOY=$HOY$PI
+                    
+                    sed -i "22c $HOY" ~/MMDVMHost/version.h
+                    read a
+                    exit;
                     make
 
                     # Crea los ejecutables para estas 4 aplicaciones  
