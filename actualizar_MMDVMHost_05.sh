@@ -44,11 +44,11 @@ clear
                     cd ~/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
-                    FIJA="const char* VERSION = "+""
+                    FIJA="const char* VERSION = "\"
                     PI=">Opi"
                     HOY=$HOY$PI
                     
-                    sed -i "22c $FIJA$HOY"+"" ~/MMDVMHost/Version.h
+                    sed -i "22c $FIJA$HOY" ~/MMDVMHost/Version.h
                     read a
                     exit;
                     make
