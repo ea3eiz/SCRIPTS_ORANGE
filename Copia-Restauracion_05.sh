@@ -5,7 +5,7 @@ clear
 
 echo "\33[1;32m   ***********************************************************************"
 echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.05\33[1;32m         *"
-echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                                  *"
+echo "   *                       \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                            *"
 echo "   ***********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Copiar BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK en .copias"
 echo "\33[1;36m   2)\33[1;37m Restaurar BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK de .copias"
