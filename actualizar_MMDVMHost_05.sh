@@ -45,10 +45,10 @@ clear
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI=">Opi"
-                    HOY=$HOY$PI
+                    PI=":Opi"
+                   
                     
-                    sed -i "22c $FIJA$HOY";\" ~/MMDVMHost/Version.h
+                    sed -i "22c $FIJA$HOY$PI";\" ~/MMDVMHost/Version.h
                     read a
                     exit;
                     make
