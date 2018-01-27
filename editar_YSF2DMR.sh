@@ -310,8 +310,8 @@ do
                           
 
                           echo "\33[1;32m   El Valor correcto es: 0 ó 1\33[1;37m" 
-                          echo "\33[1;32m   Si ponemos un "0", deberemos poner un talkgroup en StartupDstId para llamada a grupo\33[1;37m"
-                          echo "\33[1;32m   Si ponemos un "1", deberemos poner una Id en StartupDstId para llamada provada\33[1;37m"
+                          echo "\33[1;32m   Si ponemos un "0", pondremos un talkgroup en StartupDstId para llamada a grupo\33[1;37m"
+                          echo "\33[1;32m   Si ponemos un "1", deberemos poner una Id en StartupDstId para llamada privada\33[1;37m"
                           read -p '   Introduce StartupPC = ' lon
                           actualizar=S 
                           case $actualizar in
