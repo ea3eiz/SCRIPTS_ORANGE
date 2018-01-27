@@ -5,54 +5,54 @@ clear
 
 echo "\33[1;36m   **************************************************************************"
 #echo "   *                                                                        *"
-echo "   *             Script para Modificar YSF2DMR.ini             \33[1;31m by EA3EIZ\33[1;36m   *"
+echo "   *        Script para Modificar YSF2DMR.ini         \33[1;31m by EA3EIZ & EA4AOJ\33[1;36m   *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 
 echo -n "\33[1;36m   1)\33[0m Modificar RXFrequency - \33[1;33m"
-var1= sed -n 2p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var1= sed -n 2p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   2)\33[0m Modificar TXFrequency - \33[1;33m"
-var2= sed -n 3p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var2= sed -n 3p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   3)\33[0m Latitud               - \33[1;33m"
-var3= sed -n 5p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var3= sed -n 5p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   4)\33[0m Longitud              - \33[1;33m"
-var4= sed -n 6p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var4= sed -n 6p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   5)\33[0m Modificar Location    - \33[1;33m"
-var5= sed -n 8p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var5= sed -n 8p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   6)\33[0m Modificar URL         - \33[1;33m"
-var6= sed -n 10p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var6= sed -n 10p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   7)\33[0m Modificar indicativo  - \33[1;33m"
-var7= sed -n 13p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var7= sed -n 13p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   8)\33[0m DstPort               - \33[1;33m"
-var8= sed -n 15p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var8= sed -n 15p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   9)\33[0m LocalPort             - \33[1;33m"
-var9= sed -n 17p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var9= sed -n 17p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
-var10= sed -n 21p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var10= sed -n 21p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m  11)\33[0m StartupDsId           - \33[1;33m"
-var11= sed -n 22p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var11= sed -n 22p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
-var12= sed -n 24p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var12= sed -n 24p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m  13)\33[0m Address               - \33[1;33m"
-var13= sed -n 25p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var13= sed -n 25p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m  14)\33[0m Port                  - \33[1;33m"
-var14= sed -n 26p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var14= sed -n 26p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
-var15= sed -n 29p  /home/pi/YSF2DMR/YSF2DMR.ini;
+var15= sed -n 29p  ~/YSF2DMR/YSF2DMR.ini;
 
 
 echo ""
@@ -84,7 +84,7 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           case $actualizar in
 			              [sS]* ) echo ""
 			              indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                          sed -i "$linea Callsign=$indicativo" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea Callsign=$indicativo" ~/YSF2DMR/YSF2DMR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -93,7 +93,7 @@ done;;
 1) echo ""
 while true
 do
-                          rxf=`grep -n "RXFrequency" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          rxf=`grep -n "RXFrequency" ~/YSF2DMR/YSF2DMR.ini`
                           rxf1=`expr substr $rxf 15 9`
                           echo "   Valor de  RXFrequency =\33[1;33m $rxf1"
                           echo -n "\33[1;37m"
@@ -101,7 +101,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "2c RXFrequency=$rx" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "2c RXFrequency=$rx" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -112,7 +112,7 @@ while true
 do
                           
 
-                          txf=`grep -n "TXFrequency" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          txf=`grep -n "TXFrequency" ~/YSF2DMR/YSF2DMR.ini`
                           txf1=`expr substr $txf 15 9`
                           echo "   Valor de  TXFrequency =\33[1;33m $rxf1"
                           echo -n "\33[1;37m"
@@ -120,7 +120,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "3c TXFrequency=$tx" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "3c TXFrequency=$tx" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -131,7 +131,7 @@ while true
 do
                           
 
-                          lat=`grep -n "Latitude" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lat=`grep -n "Latitude" ~/YSF2DMR/YSF2DMR.ini`
                           lat1=`expr substr $lat 12 12`
                           echo "   Valor de  Latitud =\33[1;33m $lat1"
                           echo -n "\33[1;37m"
@@ -139,7 +139,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "5c Latitude=$lat" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "5c Latitude=$lat" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -150,7 +150,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "Longitude" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lonng=`grep -n "Longitude" ~/YSF2DMR/YSF2DMR.ini`
                           lonng1=`expr substr $lonng 13 12`
                           echo "   Valor de  Longitud =\33[1;33m $lonng1"
                           echo -n "\33[1;37m"
@@ -158,7 +158,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "6c Longitude=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "6c Longitude=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -169,7 +169,7 @@ while true
 do
                           
 
-                          lat=`grep -n "Location" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lat=`grep -n "Location" ~/YSF2DMR/YSF2DMR.ini`
                           lat1=`expr substr $lat 12 30`
                           echo "   Valor de  Ciudad =\33[1;33m $lat1"
                           echo -n "\33[1;37m"
@@ -180,7 +180,7 @@ do
 
                           #quita los espacios que se entren en el imput
                           loc1=`echo "$loc1" | tr -d '[[:space:]]'`
-                          sed -i "8c Location=$loc1" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "8c Location=$loc1" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -191,7 +191,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "URL" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lonng=`grep -n "URL" ~/YSF2DMR/YSF2DMR.ini`
                           lonng1=`expr substr $lonng 8 30`
                           echo "   Valor de  URL =\33[1;33m $lonng1"
                           echo -n "\33[1;37m"
@@ -199,7 +199,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "10c URL=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "10c URL=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -210,7 +210,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "Callsign" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lonng=`grep -n "Callsign" ~/YSF2DMR/YSF2DMR.ini`
                           lonng1=`expr substr $lonng 13 30`
                           echo "   Valor de  Indicativo =\33[1;33m $lonng1"
                           echo -n "\33[1;37m"
@@ -221,7 +221,7 @@ do
 
                           #Convierte indicativo si se introduce en minúsculas a Mayúsculas
                           lonM=`echo "$lon" | tr [:lower:] [:upper:]`
-                          sed -i "13c Callsign=$lonM" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "13c Callsign=$lonM" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -232,7 +232,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "DstPort" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lonng=`grep -n "DstPort" ~/YSF2DMR/YSF2DMR.ini`
                           lonng1=`expr substr $lonng 12 30`
                           echo "   Valor  de  DstPort  =\33[1;33m $lonng1"
                           echo -n "\33[1;32m"
@@ -242,7 +242,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "15c DstPort=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "15c DstPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -253,7 +253,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "LocalPort" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lonng=`grep -n "LocalPort" ~/YSF2DMR/YSF2DMR.ini`
                           lonng1=`expr substr $lonng 14 30`
                           echo "   Valor de LocalPort  =\33[1;33m $lonng1"
                           echo -n "\33[1;32m"
@@ -263,7 +263,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "17c LocalPort=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "17c LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -277,7 +277,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "21c Id=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "21c Id=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -288,7 +288,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "StartupDstId" /home/pi/YSF2DMR/YSF2DMR.ini`
+                          lonng=`grep -n "StartupDstId" ~/YSF2DMR/YSF2DMR.ini`
                           lonng1=`expr substr $lonng 17 30`
                           echo "   Valor de StartupDstId  =\33[1;33m $lonng1"
                           echo -n "\33[1;32m"
@@ -298,7 +298,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "22c StartupDstId=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "22c StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -314,7 +314,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "24c StartupPC=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "24c StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -328,7 +328,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "25c Address=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "25c Address=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -342,7 +342,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "26c Port=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "26c Port=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -356,7 +356,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "29c Password=$lon" /home/pi/YSF2DMR/YSF2DMR.ini
+                          sed -i "29c Password=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -368,7 +368,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany /home/pi/YSF2DMR/YSF2DMR.ini
+                              geany ~/YSF2DMR/YSF2DMR.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
