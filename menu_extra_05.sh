@@ -287,6 +287,29 @@ exit;
 break;;
 esac
 done;;
+8000) echo ""
+while true
+do
+clear
+
+                                                ejecutar1=S
+                                                case $ejecutar1 in
+                                                [sS]* ) echo ""
+                                                echo ">>>>>>>>> INSTALANDO YSF2DMR >>>>>>>>"
+                                                cd ~/
+                                                git clone http://github.com/juribeparada/YSF2DMR
+                                                cd ~/YSF2DMR
+                                                make clean
+                                                make
+                                                clear
+                                                exit;
+                                                break;;
+                                                [nN]* ) echo ""
+                                                clear
+                                                exit;
+                                                break;;
+esac
+done;;
 9000) echo ""
 while true
 do
@@ -307,6 +330,7 @@ clear
                         echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
                         echo "\33[1;36m       5000\33[1;33m ARREGLAR LA FECHA Y HORA"
                         echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
+                        echo "\33[1;36m       8000\33[1;33m INSTALA YSF2DMR"
                         echo ""
                         echo -n "\33[1;37m       Pulsa la tecla ENTER para salir"
                         read A
