@@ -292,7 +292,7 @@ do
                           lonng1=`expr substr $lonng 17 30`
                           echo "   Valor de StartupDstId  =\33[1;33m $lonng1"
                           echo -n "\33[1;32m"
-                          echo "   El  valor  correcto es:  9"
+                          echo "   Pondremos un talkgroup o una Id dependiendo del valor en StartuoPC"
                           echo -n "\33[1;37m"
                           read -p '   Introduce StartupDstId = ' lon
                           actualizar=S 
@@ -309,7 +309,8 @@ while true
 do
                           
 
-                          echo "\33[1;32m   El Valor correcto es: 0\33[1;37m" 
+                          echo "\33[1;32m   El Valor correcto es: 0 ó 1\33[1;37m" 
+                          echo "\33[1;32m   Si el valor es 0, pondremos un talkgroup StartupDstId, si es 1 pondremos una Id en StartupDstId\33[1;37m"
                           read -p '   Introduce StartupPC = ' lon
                           actualizar=S 
                           case $actualizar in
