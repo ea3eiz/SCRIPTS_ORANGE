@@ -368,7 +368,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany ~/YSF2DMR/YSF2DMR.ini
+                              sudo pluma ~/YSF2DMR/YSF2DMR.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
