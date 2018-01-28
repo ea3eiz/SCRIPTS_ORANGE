@@ -1,9 +1,9 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Editar DMRPlus
+Name=Editar YSF2DMR
 Comment=
-Icon=/home/orangepi/SCRIPTS_ORANGE/editar_bm.png
+Icon=/home/orangepi/SCRIPTS_ORANGE/YSF2DMR_EDIT.png
 Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
 Name[es_ES]=Editar YSF2DMR
