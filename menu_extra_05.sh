@@ -17,7 +17,7 @@ echo "\33[1;36m   7)\33[1;32m INSTALAR YSF2DMR"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 6: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 7: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
