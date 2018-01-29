@@ -8,5 +8,5 @@ sed -i "11c Name[es_ES]=Cerrar solo FUSION" ~/Desktop/AbrirsoloYSF.desktop
 cd ~/YSFClients/YSFGateway
 sudo mate-terminal -x ./YSFGateway YSFGateway.ini & cd ~/MMDVMHost
 sudo mate-terminal -x ./MMDVMFUSION MMDVMFUSION.ini
-
+#
 
