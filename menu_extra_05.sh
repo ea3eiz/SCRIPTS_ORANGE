@@ -13,6 +13,7 @@ echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
+echo "\33[1;36m   7)\33[1;32m INSTALAR YSF2DMR"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -287,7 +288,7 @@ exit;
 break;;
 esac
 done;;
-8000) echo ""
+7) echo ""
 while true
 do
 clear
@@ -302,6 +303,11 @@ clear
                                                 make clean
                                                 make
                                                 clear
+                                                cd ~/SCRIPTS_ORANGE
+                                                git pull
+                                                sleep 3
+                                                cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                                                chmod +x ~/Desktop
                                                 exit;
                                                 break;;
                                                 [nN]* ) echo ""
