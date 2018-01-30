@@ -54,7 +54,7 @@ var14= sed -n 26p  ~/YSF2DMR/YSF2DMR.ini;
 echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
 var15= sed -n 29p  ~/YSF2DMR/YSF2DMR.ini;
 
-
+echo ""
 echo "\33[1;36m  16)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
 echo -n "\33[1;36m  17)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
 reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_01`
