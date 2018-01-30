@@ -55,6 +55,12 @@ echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
 var15= sed -n 29p  ~/YSF2DMR/YSF2DMR.ini;
 
 
+echo "\33[1;36m  29)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
+echo -n "\33[1;36m  30)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
+reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_01`
+reflector=`expr substr $reflector 13 40`
+echo "$reflector"
+
 echo ""
 echo "\33[1;36m  16)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
 
@@ -377,7 +383,66 @@ do
 esac
 
 done;;
-
+29) echo ""
+while true
+do                
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Haciendo copia de seguridad de la M1 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini ~/YSF2DMR/YSF2DMR.ini_copia_01
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+30) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad de la M1 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini_copia_01 ~/YSF2DMR/YSF2DMR.ini
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+31) echo ""
+while true
+do                
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Haciendo copia de seguridad de la M2 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini ~/YSF2DMR/YSF2DMR.ini_copia_02
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+32) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad de la M2 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini_copia_02 ~/YSF2DMR/YSF2DMR.ini
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
