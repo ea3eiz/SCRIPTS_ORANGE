@@ -7,8 +7,11 @@ echo "\33[1;32m   **************************************************************
 echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.05\33[1;32m         *"
 echo "   *                       \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                            *"
 echo "   ***********************************************************************"
-echo "\33[1;36m   1)\33[1;37m Copiar BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK en .copias"
-echo "\33[1;36m   2)\33[1;37m Restaurar BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK de .copias"
+echo "\33[1;36m   1)\33[1;37m Copiar BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
+echo "      YSF2DMR, YSF, BlueDV y SVXLINK en Downloads"
+echo ""
+echo "\33[1;36m   2)\33[1;37m Restaurar BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
+echo "      YSF2DMR, YSF, BlueDV y SVXLINK de Downloads"
 echo ""
 echo "\33[1;36m   3)\33[1;32m Cambiar Indicativo, Id, Frecuencia, Latitud, Longitud"
 echo "\33[1;36m   \33[1;32m   Ciudad, Url, Timeout, Duplex, Baliza, Módulo D-STAR"
@@ -53,6 +56,9 @@ clear
             sudo cp -f MMDVMDSTAR.ini ~/.copias
             sudo cp -f MMDVMFUSION.ini ~/.copias
             #fin  Dstar y solo Fusion
+
+            cd  ~/YSF2DMR
+            cp -f YSF2DMR.ini ~/.copias
 
             cd  ~/YSFClients/YSFGateway/
             sudo cp -f YSFGateway.ini ~/.copias
@@ -109,7 +115,7 @@ clear
             sudo cp -f MMDVMFUSION.ini ~/MMDVMHost
             #fin  Dstar y solo Fusion
 
-
+            cp -f YSF2DMR.ini ~/YSF2DMR
 
             sudo cp -f YSFGateway.ini ~/YSFClients/YSFGateway/
 
