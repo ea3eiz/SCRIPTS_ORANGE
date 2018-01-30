@@ -55,19 +55,19 @@ echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
 var15= sed -n 29p  ~/YSF2DMR/YSF2DMR.ini;
 
 
-echo "\33[1;36m  29)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
-echo -n "\33[1;36m  30)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
+echo "\33[1;36m  16)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
+echo -n "\33[1;36m  17)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
 reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_01`
 reflector=`expr substr $reflector 13 40`
 echo "$reflector"
 
 echo ""
-echo "\33[1;36m  16)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
+echo "\33[1;36m  20)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
 
 echo ""
 echo "\33[1;36m   0)\33[1;32m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 16: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 20: " 
 read escoger_menu
 
 case $escoger_menu in
@@ -370,20 +370,8 @@ do
                           break;;
 esac
 done;;
-16) echo ""
-while true
-do
-                              actualizar=S 
-                              case $actualizar in
-			                        [sS]* ) echo ""
-                              sudo pluma ~/YSF2DMR/YSF2DMR.ini
-			                        break;;
-			                        [nN]* ) echo ""
-			                        break;;
-esac
 
-done;;
-29) echo ""
+16) echo ""
 while true
 do                
                         actualizar=S 
@@ -398,7 +386,7 @@ do
                         break;;
 esac
 done;;
-30) echo ""
+17) echo ""
 while true
 do
                         actualizar=S 
@@ -413,7 +401,7 @@ do
                         break;;
 esac
 done;;
-31) echo ""
+18) echo ""
 while true
 do                
                         actualizar=S 
@@ -428,7 +416,7 @@ do
                         break;;
 esac
 done;;
-32) echo ""
+19) echo ""
 while true
 do
                         actualizar=S 
@@ -442,6 +430,19 @@ do
                         [nN]* ) echo ""
                         break;;
 esac
+done;;
+20) echo ""
+while true
+do
+                              actualizar=S 
+                              case $actualizar in
+                              [sS]* ) echo ""
+                              sudo pluma ~/YSF2DMR/YSF2DMR.ini
+                              break;;
+                              [nN]* ) echo ""
+                              break;;
+esac
+
 done;;
 0) echo ""
 clear
