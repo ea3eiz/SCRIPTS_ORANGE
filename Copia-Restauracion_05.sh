@@ -28,12 +28,13 @@ case $escoger_menu in
 while true
 do
 clear
-		    ejecutar1=S
-		    case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK"
-			sleep 3
-			sudo chmod -R 777 ~/.copias
+		ejecutar1=S
+		case $ejecutar1 in
+		[sS]* ) echo ""
+		echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO"
+            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"   
+		sleep 3
+		sudo chmod -R 777 ~/.copias
             cd ~/MMDVMHost
             sudo cp -f MMDVM.ini ~/.copias
             sudo cp -f MMDVM.ini_copia ~/.copias
@@ -86,12 +87,13 @@ done;;
 while true
 do
 clear
-		    ejecutar1=S
-		    case $ejecutar1 in
-			[sS]* ) echo ""
-			echo "Restaurando copias editores BM, DMR+, LIBRE, RADIO, YSF, BlueDV y SVXLINK"
-			sleep 3
-			sudo chmod -R 777 ~/.copias
+		ejecutar1=S
+		case $ejecutar1 in
+		[sS]* ) echo ""
+		echo "Restaurando copias editores BM, DMR+, LIBRE, RADIO"
+            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"
+		sleep 3
+		sudo chmod -R 777 ~/.copias
             cd ~/.copias
             sudo cp -f MMDVM.ini ~/MMDVMHost
             sudo cp -f MMDVM.ini_copia ~/MMDVMHost
