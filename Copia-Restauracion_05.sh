@@ -60,6 +60,8 @@ clear
 
             cd  ~/YSF2DMR
             cp -f YSF2DMR.ini ~/.copias
+            cp -f YSF2DMR.ini_copia_01 ~/.copias
+            cp -f YSF2DMR.ini_copia_02 ~/.copias
 
             cd  ~/YSFClients/YSFGateway/
             sudo cp -f YSFGateway.ini ~/.copias
@@ -118,6 +120,8 @@ clear
             #fin  Dstar y solo Fusion
 
             cp -f YSF2DMR.ini ~/YSF2DMR
+            cp -f YSF2DMR.ini_copia_01 ~/YSF2DMR
+            cp -f YSF2DMR.ini_copia_02 ~/YSF2DMR
 
             sudo cp -f YSFGateway.ini ~/YSFClients/YSFGateway/
 
