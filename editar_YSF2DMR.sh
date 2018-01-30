@@ -62,7 +62,7 @@ reflector=`expr substr $reflector 12 40`
 echo "$reflector"
 
 echo ""
-echo "\33[1;36m  18)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
+echo "\33[1;36m  18)\33[1;37m Guardar  fichero de Configuración en M2 \33[1;36m"
 echo -n "\33[1;36m  19)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
 reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_02`
 reflector=`expr substr $reflector 12 40`
