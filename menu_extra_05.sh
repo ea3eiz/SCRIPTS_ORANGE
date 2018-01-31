@@ -304,6 +304,10 @@ clear
                                                 make clean
                                                 make
                                                 clear
+
+                                                cp YSF2DMR.ini YSF2DMR.ini_copia_01
+                                                cp YSF2DMR.ini YSF2DMR.ini_copia_02
+
                                                 cd ~/SCRIPTS_ORANGE
                                                 git pull
                                                 sleep 3
