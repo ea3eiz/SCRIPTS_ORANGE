@@ -298,6 +298,7 @@ clear
                                                 [sS]* ) echo ""
                                                 echo ">>>>>>>>> INSTALANDO YSF2DMR >>>>>>>>"
                                                 cd ~/
+                                                sudo rm -R YSF2DMR
                                                 git clone http://github.com/juribeparada/YSF2DMR
                                                 cd ~/YSF2DMR
                                                 make clean
