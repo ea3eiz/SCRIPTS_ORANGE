@@ -155,8 +155,8 @@ echo "$modu1"
 #var300port= sed -n $linea22port  ~/MMDVMHost/MMDVM.ini;
 
 echo -n "\33[1;36m  27)\33[0m Entra reflector DMR+  - \33[1;33m"
-OPCION=`expr substr $master 1 $largo1`
-OPCION=`expr $OPCION + 5`
+OPCION=`expr substr $pas 1 $largo1`
+OPCION=`expr $OPCION + 1`
 linea33port=$OPCION
 letra=p
 linea22port=$OPCION$letra
