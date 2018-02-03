@@ -13,7 +13,8 @@ echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
-echo "\33[1;36m   7)\33[1;32m INSTALAR YSF2DMR"
+echo "\33[1;36m   7)\33[1;33m RESTAURAR ICONOS DEL ESCRITORIO"
+echo "\33[1;36m   8)\33[1;32m INSTALAR YSF2DMR"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -150,6 +151,61 @@ exit;
 break;;
 esac
 done;;
+7) echo ""
+while true
+do
+clear
+                            ejecutar1=S
+                                case $ejecutar1 in
+                                    [sS]* ) echo ""
+                                    echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO>>>>>>>>"
+                                    cd ~/SCRIPTS_ORANGE
+                        git pull
+                        sleep 3
+                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        chmod +x ~/Desktop
+                        clear
+                        exit;
+                                break;;
+                                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+8) echo ""
+while true
+do
+clear
+
+                                                ejecutar1=S
+                                                case $ejecutar1 in
+                                                [sS]* ) echo ""
+                                                echo ">>>>>>>>> INSTALANDO YSF2DMR >>>>>>>>"
+                                                cd ~/
+                                                sudo rm -R YSF2DMR
+                                                git clone http://github.com/juribeparada/YSF2DMR
+                                                cd ~/YSF2DMR
+                                                make clean
+                                                make
+                                                clear
+
+                                                cp YSF2DMR.ini YSF2DMR.ini_copia_01
+                                                cp YSF2DMR.ini YSF2DMR.ini_copia_02
+
+                                                cd ~/SCRIPTS_ORANGE
+                                                git pull
+                                                sleep 3
+                                                cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                                                chmod +x ~/Desktop
+                                                exit;
+                                                break;;
+                                                [nN]* ) echo ""
+                                                clear
+                                                exit;
+                                                break;;
+esac
+done;;
 1000) echo ""
 while true
 do
@@ -205,28 +261,7 @@ exit;
 break;;
 esac
 done;;
-3000) echo ""
-while true
-do
-clear
-	                    ejecutar1=S
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO>>>>>>>>"
-			            cd ~/SCRIPTS_ORANGE
-                        git pull
-                        sleep 3
-                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                        chmod +x ~/Desktop
-                        clear
-                        exit;
-		                break;;
-		                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
+
 4000) echo ""
 while true
 do
@@ -292,39 +327,7 @@ exit;
 break;;
 esac
 done;;
-7) echo ""
-while true
-do
-clear
 
-                                                ejecutar1=S
-                                                case $ejecutar1 in
-                                                [sS]* ) echo ""
-                                                echo ">>>>>>>>> INSTALANDO YSF2DMR >>>>>>>>"
-                                                cd ~/
-                                                sudo rm -R YSF2DMR
-                                                git clone http://github.com/juribeparada/YSF2DMR
-                                                cd ~/YSF2DMR
-                                                make clean
-                                                make
-                                                clear
-
-                                                cp YSF2DMR.ini YSF2DMR.ini_copia_01
-                                                cp YSF2DMR.ini YSF2DMR.ini_copia_02
-
-                                                cd ~/SCRIPTS_ORANGE
-                                                git pull
-                                                sleep 3
-                                                cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                                chmod +x ~/Desktop
-                                                exit;
-                                                break;;
-                                                [nN]* ) echo ""
-                                                clear
-                                                exit;
-                                                break;;
-esac
-done;;
 9000) echo ""
 while true
 do
@@ -341,7 +344,7 @@ clear
                         echo ""
                         echo "\33[1;36m       1000\33[1;33m ESTO RESTAURA TODOS LOS GITHUB"
                         echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
-                        echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
+                        #echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
                         echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
                         echo "\33[1;36m       5000\33[1;33m ARREGLAR LA FECHA Y HORA"
                         echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
