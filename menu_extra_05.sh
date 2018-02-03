@@ -36,6 +36,10 @@ clear
                         cd ~/
                         sudo chmod 777 SCRIPTS_ORANGE
                         clear
+
+                        cd ~/AUTOSTART
+                        git pull
+
                         exit;
 		                break;;
 						[nN]* ) echo ""
