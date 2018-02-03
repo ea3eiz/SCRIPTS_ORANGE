@@ -9,7 +9,7 @@ echo "   ***********************************************************************
 echo ""
 echo "\33[1;36m   Gracias por descargar la imagen REM V.02.06"
 echo""
-echo "\33[1;36m   Imagen multi plataforma para RADIO-AFICIONADOS."
+echo "\33[1;36m   \33[1;32mImagen multi plataforma para RADIO-AFICIONADOS."
 # echo "   por el programa BlueDV en sus multi-sistemas." 
  echo ""
  echo "\33[1;37m   Tener presente las siguientes consideraciones:"
