@@ -165,7 +165,8 @@ clear
                                 chmod +x ~/Desktop
                                 echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO >>>>>>>>"
                                 sleep 3
-                                                                echo ">>>>>>>>> eres un poco tont.... >>>>>>>>"
+                                clear
+                                echo "\33[1;32m>>>>>>>>> PROCESO FINALIZADO >>>>>>>>"
                                 sleep 3
                                 break;;
                                 [nN]* ) echo ""
