@@ -557,6 +557,23 @@ clear
                                             break;;
 esac
 done;;
+13) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando YSF2DMR en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/.config/autostart
+                                            mv YSF2DMR.desktop ~/AUTOSTART
+                                            sed -i "15c F2DMR=OFF" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
 14) echo ""
 while true
 do
