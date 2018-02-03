@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=Autoarranque
 Comment=
-Exec=mate-terminal --geometry=80x40 -x sh menu_autoarranque_05.sh
+Exec=mate-terminal --geometry=80x43 -x sh menu_autoarranque_05.sh
 Icon=/home/orangepi/SCRIPTS_ORANGE/AUTOARRANQUE.png
 Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
