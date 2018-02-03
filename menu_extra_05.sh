@@ -231,7 +231,7 @@ done;;
 while true
 do
 clear
-	                    echo "\33[1;31m" #color rojo
+	                echo "\33[1;31m" #color rojo
                         echo " *****************************************************"
                         echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
                         echo " *****************************************************"

@@ -336,10 +336,10 @@ trans=`grep "F2DMR" ~/autoarranque.ini`
 
 
 echo "\33[0m "
+echo "\33[1;36m  27)\33[1;31m ***  REESTABLECER AUTOARRANQUES***"
+echo ""
 
-
-
-echo "\33[1;36m  27)\33[1;31m *** REINICIAR LA ORANGE PI ***"
+echo "\33[1;36m  28)\33[1;31m *** REINICIAR LA ORANGE PI ***"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -816,6 +816,30 @@ clear
 esac
 done;;
 27) echo ""
+while true
+do
+clear
+                        echo "\33[1;31m" #color rojo
+                        echo " *****************************************************"
+                        echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
+                        echo " *****************************************************"
+                        echo "\33[1;37m" #color
+                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> RESTABLECIENDO EL AUTOARRANQUE POR DEFECTO~/   >>>>>"
+                        cd ~/SCRIPTS_ORANGE
+                        git pull
+                        cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+                        exit;
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+28) echo ""
 while true
 do
 clear
