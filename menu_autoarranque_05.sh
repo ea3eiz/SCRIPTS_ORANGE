@@ -6,7 +6,7 @@ clear
 
 echo "\33[1;32m   ************************************************************"
 echo "   *                                                          *"
-echo "   * Script Modificar AUTOARRANQUE \33[1;33mV.02.05\33[1;31m by EA3EIZ & EA4AOJ\33[1;32m *"
+echo "   * Script Modificar AUTOARRANQUE \33[1;33mV.02.06\33[1;31m by EA3EIZ & EA4AOJ\33[1;32m *"
 echo "   *                                                          *"
 echo "   ************************************************************"
 echo -n "\33[1;36m   1)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
