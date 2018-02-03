@@ -328,11 +328,11 @@ echo "\33[0m "
 
 
 
-echo "\33[1;36m  25)\33[1;31m *** REINICIAR LA ORANGE PI ***"
+echo "\33[1;36m  27)\33[1;31m *** REINICIAR LA ORANGE PI ***"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo "\33[1;36m   Por favor, elige una opción del 0 al 23" 
+echo "\33[1;36m   Por favor, elige una opción del 0 al 27" 
 read escoger_menu
 echo ""
 
@@ -769,7 +769,25 @@ clear
                                             break;;
 esac
 done;;
-25) echo ""
+
+26) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo YSF2DMR en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv YSF2DMR.desktop ~/.config/autostart/
+                                            sed -i "15c F2DMR=ON" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+27) echo ""
 while true
 do
 clear
