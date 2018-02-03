@@ -879,7 +879,7 @@ do
 buscar=":"
 largo=`expr index $dup $buscar`
 echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
-           	          read -p 'Para un repetidor Duplex=1 Para un DVMEGA Duplex=0: ' duplex
+           	          read -p 'Para un Repetidor Duplex=1 Para un Hotspot Duplex=0: ' duplex
                           letra=c
                           if [ $largo = 3 ]
                           then
