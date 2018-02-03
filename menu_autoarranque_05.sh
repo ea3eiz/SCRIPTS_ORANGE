@@ -157,7 +157,18 @@ fi
 solof=`grep "DVRPTR" ~/autoarranque.ini`
 #=================================================================================
 
-
+#==================================================================================
+echo -n "\33[1;36m  13)\33[1;37m  Quitar YSF2DMR del autoarranque       - \33[1;32m"
+var1=`grep "F2DMR" ~/autoarranque.ini`
+var1=`expr substr $var1 7 3`
+if [ $var1 = "ON" ]
+then
+echo "\33[1;32m$var1"
+else
+echo "\33[1;31m"
+fi
+var2=`grep "F2DMR" ~/autoarranque.ini`
+#=================================================================================
 
 echo "\33[1;33m"
 
