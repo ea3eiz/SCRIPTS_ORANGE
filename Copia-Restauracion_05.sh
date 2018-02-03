@@ -156,6 +156,7 @@ clear
                   [sS]* ) echo ""
                   sh  editar_INIS.sh
                   echo ""
+                  exit;
                   break;;
                   [nN]* ) echo ""
                   break;;
