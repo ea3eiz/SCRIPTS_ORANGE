@@ -546,7 +546,7 @@ do
 buscar=":"
 largo=`expr index $ind $buscar`
 echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
-           	          read -p 'Introduce tu indicativo: ' indicativo
+           	          read -p 'Introduce tu indicativo: ' tu_indicativo
                           letra=c
                           if [ $largo = 3 ]
                           then
