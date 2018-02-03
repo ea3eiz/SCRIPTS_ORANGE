@@ -4,7 +4,7 @@ do
 clear
 
 echo "\33[1;32m   ***********************************************************************"
-echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.05\33[1;32m         *"
+echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.06\33[1;32m         *"
 echo "   *                       \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                            *"
 echo "   ***********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Copiar BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
@@ -155,7 +155,6 @@ clear
                   case $ejecutar1 in
                   [sS]* ) echo ""
                   sh  editar_INIS.sh
-                  echo "Ok,"
                   echo ""
                   break;;
                   [nN]* ) echo ""
