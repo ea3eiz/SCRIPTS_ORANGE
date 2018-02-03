@@ -584,7 +584,17 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_uno
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-
+                        #iNDICATIVO YSF
+                        sed -i "2c Callsign=$tu_indicativo" ~/YSFClients/YSFGateway/YSFGateway.ini
+                        #iNDICATIVO YSF2DMR
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        #iNDICATIVO SOLODSTAR
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDSTAR.ini
+                        #iNDICATIVO SOLOFUSION
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMFUSION.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
