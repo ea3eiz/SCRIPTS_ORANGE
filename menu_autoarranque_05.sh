@@ -314,13 +314,13 @@ solof=`grep "DVRPTR" ~/autoarranque.ini`
 echo -n "\33[1;36m  26)\33[1;33m  Poner YSF2DMR en el autoarranque       - "
 ysf_dmr=`grep "TRANSCODER" ~/autoarranque.ini`
 ysf_dmr=`expr substr $ysf_dmr 12 3`
-if [ $TRANSCODER = "OFF" ]
+if [ $ysf_dmr = "OFF" ]
 then
 echo "\33[1;31m$ysf_dmr"
 else
 echo "\33[1;31m"
 fi
-VAR=`grep "TRANSCODER" ~/autoarranque.ini`
+trans=`grep "TRANSCODER" ~/autoarranque.ini`
 #==================================================================================
 
 
