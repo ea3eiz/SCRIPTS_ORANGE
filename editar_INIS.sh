@@ -17,7 +17,7 @@ echo "\33[1;32m   **************************************************************
 echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN LOS EDITORES: *"
 echo "   *    Editar BM , Editar DMR+ Editar LIBRE, Editar Radio Editar YSFS      *"
 echo "   *    Editar solo D-STAR, Editar solo FUSION y Editar YSF2DMR             *"
-echo "   *               \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                                         *"
+echo "   *                         \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                             *"
 echo "   **************************************************************************"
 echo""
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
