@@ -336,7 +336,7 @@ trans=`grep "F2DMR" ~/autoarranque.ini`
 
 
 echo "\33[0m "
-echo "\33[1;36m  27)\33[1;31m ***  REESTABLECER AUTOARRANQUES***"
+echo "\33[1;36m  27)\33[1;32m ***  REESTABLECER AUTOARRANQUES  ***"
 echo ""
 
 echo "\33[1;36m  28)\33[1;31m *** REINICIAR LA ORANGE PI ***"
