@@ -13,8 +13,7 @@ echo "\33[1;36m   3)\33[1;37m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
-echo "\33[1;36m   7)\33[1;33m RESTAURAR ICONOS DEL ESCRITORIO"
-echo "\33[1;36m   8)\33[1;32m INSTALAR YSF2DMR"
+echo "\33[1;36m   7)\33[1;32m INSTALAR YSF2DMR"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -27,10 +26,10 @@ case $escoger_menu in
 while true
 do
 clear
-	                    ejecutar1=S
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+	                  ejecutar1=S
+		            case $ejecutar1 in
+			      [sS]* ) echo ""
+			      echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
                         git pull 
                         sleep 3
@@ -41,9 +40,13 @@ clear
                         cd ~/AUTOSTART
                         git pull
 
+                        echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO >>>>>>>>"
+                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        chmod +x ~/Desktop
+
                         exit;
-		                break;;
-						[nN]* ) echo ""
+		            break;;
+				[nN]* ) echo ""
 clear
 exit;
 break;;
@@ -152,28 +155,6 @@ break;;
 esac
 done;;
 7) echo ""
-while true
-do
-clear
-                            ejecutar1=S
-                                case $ejecutar1 in
-                                    [sS]* ) echo ""
-                                    echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO>>>>>>>>"
-                                    cd ~/SCRIPTS_ORANGE
-                        git pull
-                        sleep 3
-                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                        chmod +x ~/Desktop
-                        clear
-                        exit;
-                                break;;
-                                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-8) echo ""
 while true
 do
 clear
