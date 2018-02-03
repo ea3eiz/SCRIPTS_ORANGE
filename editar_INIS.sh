@@ -1120,7 +1120,7 @@ do
 buscar=":"
 largo=`expr index $lat $buscar`
 echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
-           	          read -p 'Introduce la Latitud ' lat1
+           	          read -p 'Introduce la Latitud ' tu_latitud
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -1132,7 +1132,36 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Latitude=$lat1" ~/MMDVMHost/TODOS_LOS_INIS.ini
+                          sed -i "$linea Latitude=$tu_latitud" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMFUSION.ini
+
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -1144,7 +1173,7 @@ do
 buscar=":"
 largo=`expr index $long $buscar`
 echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
-           	          read -p 'Introduce la Longitud ' long1
+           	          read -p 'Introduce la Longitud ' tu_longitud
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -1156,7 +1185,36 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Longitude=$long1" ~/MMDVMHost/TODOS_LOS_INIS.ini
+                          sed -i "$linea Longitude=$tu_longitud" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+            #DMR+
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION 
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMFUSION.ini   
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
