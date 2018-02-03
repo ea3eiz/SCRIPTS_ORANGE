@@ -44,7 +44,9 @@ echo ""
 echo "\33[1;31m   Prohibido modificar total o parcialmente el contenido de esta imagen."
 echo " "
 echo "\33[1;37m"
-						
+						echo ""
+						cat /proc/version
+						echo ""
                         echo -n "\33[1;37m   Pulsa la tecla ENTER para salir"
                         read A
 						exit;
