@@ -106,7 +106,7 @@ echo -n "\33[1;36m   Elige una opción del 0 al 14: "
 read escoger_menu
 
 case $escoger_menu in
-14) echo ""
+14BLOQUEADO) echo ""
 while true
 do
 clear
@@ -564,6 +564,14 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
 
 			        indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
                           sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+                        #iNDICATIVO
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+
+
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
