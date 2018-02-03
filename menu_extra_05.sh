@@ -162,11 +162,11 @@ clear
                                 [sS]* ) echo ""
                                 cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                                 chmod +x ~/Desktop
-                                echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO >>>>>>>>"
+                                echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO <<<<<<<<<"
                                 sleep 3
                                 clear
                                 echo ""
-                                echo "\33[1;32m>>>>>>>>> PROCESO FINALIZADO >>>>>>>>"
+                                echo "\33[1;32m<<<<<<<<< PROCESO FINALIZADO >>>>>>>>>"
                                 sleep 3
                                 break;;
                                 [nN]* ) echo ""
