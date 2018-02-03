@@ -160,9 +160,13 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
-                                echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO >>>>>>>>"
+                                
                                 cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                                 chmod +x ~/Desktop
+                                echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO >>>>>>>>"
+                                sleep 3
+                                                                echo ">>>>>>>>> eres un poco tont.... >>>>>>>>"
+                                sleep 3
                                 break;;
                                 [nN]* ) echo ""
 clear
