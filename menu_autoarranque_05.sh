@@ -6,7 +6,7 @@ clear
 
 echo "\33[1;32m   ************************************************************"
 echo "   *                                                          *"
-echo "   * Script Modificar AUTOARRANQUE \33[1;33mV.02.06\33[1;31m by EA3EIZ & EA4AOJ\33[1;32m *"
+echo "   * Script Modificar AUTOARRANQUE \33[1;33mV.02.05\33[1;31m by EA3EIZ & EA4AOJ\33[1;32m *"
 echo "   *                                                          *"
 echo "   ************************************************************"
 echo -n "\33[1;36m   1)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
@@ -310,18 +310,7 @@ fi
 solof=`grep "DVRPTR" ~/autoarranque.ini`
 #==================================================================================
 
-#==================================================================================
-#echo -n "\33[1;36m  26)\33[1;33m  Poner YSF2DMR en el autoarranque       - "
-#ysf_dmr=`grep '\<YSF2DMR\>' ~/autoarranque.ini`
-#ysf_dmr=`expr ysf_dmr $ysf_dmr 9 3`
-#if [ $ysf_dmr = "OFF" ]
-#then
-#echo "\33[1;31m$ysf_dmr"
-#else
-#echo "\33[1;31m"
-#fi
-#solof=`grep '\<YSF2DMR\>' ~/autoarranque.ini`
-#==================================================================================
+
 
 
 echo "\33[0m "
@@ -752,30 +741,24 @@ clear
             break;;
 esac
 done;;
-
-
-
-26) echo ""
+24) echo ""
 while true
 do
 clear
                                             actualizar=S
                                             case $actualizar in
                                             [sS]* ) echo ""
-                                            echo "Poniendo YSF2DMR en el autoarranque >>>>>"
+                                            echo "Poniendo DVRPTR en el autoarranque >>>>>"
                                             sleep 2
                                             cd ~/AUTOSTART
-                                            mv YSF2DMR.desktop ~/.config/autostart/
-                                            sed -i "15c YSF2DMR=ON" ~/autoarranque.ini
+                                            mv DVRPTR.desktop ~/.config/autostart/
+                                            sed -i "13c DVRPTR=ON" ~/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
 esac
 done;;
-
-
-
-27) echo ""
+25) echo ""
 while true
 do
 clear
