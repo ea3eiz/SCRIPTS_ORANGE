@@ -4,7 +4,7 @@ do
 clear
 
 echo "\33[1;32m   ********************************************************************"
-echo "   *      SCript para hacer actualizaciones y varios \33[1;33mV.02.06          *"
+echo "   *      SCript para hacer actualizaciones y varios \33[1;33mV.02.06\33[1;32m          *"
 echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar imagen"
