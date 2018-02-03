@@ -5,7 +5,8 @@ clear
                         #comprueba si el ficgero existe
                         if [ -f ~/MMDVMHost/TODOS_LOS_INIS.ini ];
                         then
-                        echo "El fichero ya existe"
+                        #El fichero ya existe
+                        echo ""
                         else
                         echo ">>>>>>>>> RESTAURANDO ICONO Editor General>>>>>>>>"
                         cd ~/V30
