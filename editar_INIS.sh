@@ -559,10 +559,9 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
 			        [sS]* ) echo ""
 
                           #Convierte indicativo si se introduce en minúsculas a Mayúsculas
-                          indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
+                          tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
 
-			        indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                          sed -i "$linea Callsign=$tu_indicativo" ~/MMDVMHost/TODOS_LOS_INIS.ini
+			        sed -i "$linea Callsign=$tu_indicativo" ~/MMDVMHost/TODOS_LOS_INIS.ini
 
                         #iNDICATIVO PLUS
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
@@ -939,6 +938,9 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
+
+                          #Convierte el module  de minúsculas a Mayúsculas
+                          module=`echo "$module" | tr [:lower:] [:upper:]`
                           sed -i "$linea Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
             #DMR+
             sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
