@@ -98,7 +98,7 @@ modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
 echo ""
-echo "\33[1;36m  14)\33[1;34m GRABAR Y Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
+echo "\33[1;36m  0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 
 echo ""
@@ -563,13 +563,19 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                           indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 
 			        indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                          sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/TODOS_LOS_INIS.ini
+                          sed -i "$linea Callsign=$tu_indicativo" ~/MMDVMHost/TODOS_LOS_INIS.ini
 
-                        #iNDICATIVO
-                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
-                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia
-                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+                          #iNDICATIVO PLUS
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+
+                          #iNDICATIVO BM
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia2
+                          sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia3
 
 
 			  break;;
