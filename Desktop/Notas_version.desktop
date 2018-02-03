@@ -8,4 +8,4 @@ Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
 Name[es_ES]=Notas de la version
 StartupNotify=false
-Exec=mate-terminal --geometry=100x30 -x sh nota_version_06.sh
+Exec=mate-terminal --geometry=93x25 -x sh nota_version_06.sh
