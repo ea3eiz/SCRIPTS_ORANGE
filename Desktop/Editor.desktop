@@ -8,4 +8,4 @@ Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
 Name[es_ES]=Editor GENERAL
 StartupNotify=false
-Exec=mate-terminal --geometry=80x47 -x sh  editar_INIS.sh
+Exec=mate-terminal --geometry=80x30 -x sh  editar_INIS.sh
