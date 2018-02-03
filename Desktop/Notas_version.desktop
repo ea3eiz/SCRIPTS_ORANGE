@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Notas de la version
+Comment=
+Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO-ADER.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+Name[es_ES]=Notas de la version
+StartupNotify=false
+Exec=mate-terminal --geometry=80x47 -x sh nota_version_06.sh
