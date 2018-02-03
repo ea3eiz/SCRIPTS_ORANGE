@@ -8,9 +8,7 @@ clear
                         #El fichero ya existe
                         echo ""
                         else
-                        echo ">>>>>>>>> RESTAURANDO ICONO Editor General>>>>>>>>"
-                        cd ~/V30
-                        cp -R ~/SCRIPTS_ORANGE/Desktop/Editor.desktop ~/Desktop
+                        echo ">>>>>>>>> COPIANDO FICHERO TODOS_LOS_INIS.ini >>>>>>>>"
                         cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
                         fi
 
