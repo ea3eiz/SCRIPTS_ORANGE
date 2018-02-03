@@ -2,6 +2,16 @@
 while true
 do
 clear
+                        #comprueba si el ficgero existe
+                        if [ -f ~/MMDVMHost/TODOS_LOS_INIS.ini ];
+                        then
+                        echo "El fichero ya existe"
+                        else
+                        echo ">>>>>>>>> RESTAURANDO ICONO Editor General>>>>>>>>"
+                        cd ~/V30
+                        cp -R ~/SCRIPTS_ORANGE/Desktop/Editor.desktop ~/Desktop
+                        cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
+                        fi
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
