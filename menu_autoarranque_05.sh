@@ -320,7 +320,7 @@ echo "\33[1;31m$ysf_dmr"
 else
 echo "\33[1;31m"
 fi
-ysf_dmr=`grep "TRANSCODER" ~/autoarranque.ini`
+VAR=`grep "TRANSCODER" ~/autoarranque.ini`
 #==================================================================================
 
 
