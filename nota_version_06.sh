@@ -47,8 +47,8 @@ echo "\33[1;37m"
 						echo -n "\33[1;32m   Temperatura de la CPU: \33[1;37m"
 						cat /sys/class/thermal/thermal_zone0/temp;
 						echo -n "\33[1;32m   Info del sistema: \33[1;37m"
-						mate-terminal -x cat /proc/version & sleep 10
-						
+						mate-terminal -x cat /proc/version │ sleep 10 
+										
 						echo ""
                         echo -n "\33[1;36m   Pulsa la tecla ENTER para salir"
                         read A
