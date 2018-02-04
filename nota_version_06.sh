@@ -50,7 +50,7 @@ echo "\33[1;37m"
 						echo -n "\33[1;32m   Info del sistema: \33[1;37m"
 						cat /proc/version
 						
-					
+						echo ""
                         echo -n "\33[1;36m   Pulsa la tecla ENTER para salir"
                         read A
 						exit;
