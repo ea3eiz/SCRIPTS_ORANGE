@@ -45,9 +45,9 @@ echo "\33[1;31m   Prohibido modificar total o parcialmente el contenido de esta 
 echo "\33[1;37m"
 						echo -n "\33[1;32m   Info del sistema: \33[1;37m"
 						cat /proc/version
-						echo -n "Temperatura de la CPU: "
+						echo -n "\33[1;32m   Temperatura de la CPU: \33[1;37m"
 						cat /sys/class/thermal/thermal_zone0/temp;
-						echo "Grados"
+						echo "                           Grados"
                         echo -n "\33[1;36m   Pulsa la tecla ENTER para salir"
                         read A
 						exit;
