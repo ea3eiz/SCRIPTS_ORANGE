@@ -15,5 +15,4 @@ echo "***********************************************"
 #sleep 2
 echo "\33[1;37m"
 sudo ./MMDVMPLUS MMDVMPLUS.ini
-#fi
-#fi 
+ 
