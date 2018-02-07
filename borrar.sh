@@ -69,16 +69,16 @@ reflector=`expr substr $reflector 12 40`
 echo "$reflector"
 
 echo ""
-echo "\33[1;36m  20)\33[1;37m Guardar  fichero de Configuración en M2 \33[1;36m"
-echo -n "\33[1;36m  21)\33[1;32m Utilizar fichero de Configuración de M2: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_02`
+echo "\33[1;36m  20)\33[1;37m Guardar  fichero de Configuración en M3 \33[1;36m"
+echo -n "\33[1;36m  21)\33[1;32m Utilizar fichero de Configuración de M3: \33[1;36m"
+reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_03`
 reflector=`expr substr $reflector 12 40`
 echo "$reflector"
 
 echo ""
-echo "\33[1;36m  22)\33[1;37m Guardar  fichero de Configuración en M2 \33[1;36m"
-echo -n "\33[1;36m  23)\33[1;32m Utilizar fichero de Configuración de M2: \33[1;36m"
-reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_02`
+echo "\33[1;36m  22)\33[1;37m Guardar  fichero de Configuración en M4 \33[1;36m"
+echo -n "\33[1;36m  23)\33[1;32m Utilizar fichero de Configuración de M4: \33[1;36m"
+reflector=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini_copia_04`
 reflector=`expr substr $reflector 12 40`
 echo "$reflector"
 
@@ -447,6 +447,66 @@ do
                         echo "<<<<<< Restaurando copia de seguridad de la M2 >>>>>"
                         sleep 3
                         sudo cp -f ~/YSF2DMR/YSF2DMR.ini_copia_02 ~/YSF2DMR/YSF2DMR.ini
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+20) echo ""
+while true
+do                
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Haciendo copia de seguridad de la M3 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini ~/YSF2DMR/YSF2DMR.ini_copia_03
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+21) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad de la M3 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini_copia_03 ~/YSF2DMR/YSF2DMR.ini
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+22) echo ""
+while true
+do                
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Haciendo copia de seguridad de la M4 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini ~/YSF2DMR/YSF2DMR.ini_copia_04
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+23) echo ""
+while true
+do
+                        actualizar=S 
+                        case $actualizar in
+                        [sS]* ) echo ""
+                        clear
+                        echo "<<<<<< Restaurando copia de seguridad de la M4 >>>>>"
+                        sleep 3
+                        sudo cp -f ~/YSF2DMR/YSF2DMR.ini_copia_04 ~/YSF2DMR/YSF2DMR.ini
                         break;;
                         [nN]* ) echo ""
                         break;;
