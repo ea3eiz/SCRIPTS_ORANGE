@@ -35,6 +35,25 @@ clear
             echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"   
 		sleep 3
 		sudo chmod -R 777 ~/.copias
+            
+
+            #Comprueba si existe el fichero info.ini
+            if [ -f /home/orangepi/Downloads/info.ini ];
+            then
+            echo ""
+            else
+            sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/pi/Downloads
+            fi
+            sudo chmod 777 /home/orangepi/Downloads/info.ini
+            #===============================================
+
+
+            match1=$(awk "NR==2" /home/orangepi/Downloads/info.ini)
+            sed -i "1c $match1" /home/orangepi/Downloads/info.ini
+
+
+
+
             cd ~/MMDVMHost
             sudo cp -f MMDVM.ini ~/.copias
             sudo cp -f MMDVM.ini_copia ~/.copias
@@ -92,9 +111,40 @@ clear
 		ejecutar1=S
 		case $ejecutar1 in
 		[sS]* ) echo ""
-		echo "Restaurando copias editores BM, DMR+, LIBRE, RADIO"
-            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"
-		sleep 3
+		
+
+            match1=$(awk "NR==1" /home/orangepi/Downloads/info.ini)
+match2=$(awk "NR==2" /home/orangepi/Downloads/info.ini)
+
+if [ $match1 = $match2 ];
+      then
+      clear
+echo "\33[1;32m" #color verde
+echo "***************************************************"
+echo "* ESTAS RESTAURANDO UNA COPIA DE LA MISMA VERSIÓN *"
+echo "*      DEL MMDVMHOST QUE TIENES INSTALADO         *"
+echo "***************************************************"
+
+      else
+clear
+echo "\33[1;31m" #color rojo
+echo "************************************************************"
+echo "* ESTAS RESTAURANDO UNA COPIA CON LOS INIS DE UNA VERSIÓN  *"
+echo "*      ANTERIOR DEL MMDVMHOST QUE ESTÁ INSTALADO           *"
+echo "*        PODRÍA SER QUE LOS INIS NO FUNCIONARAN            *"
+echo "************************************************************"
+fi
+echo "\33[1;36m" #color cian
+read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
+  case $sino in
+      s|S) 
+clear
+echo "\33[1;32m" #color verde
+echo "*********************************************"
+echo "*     SE ESTÁ REALIZANDO LA RESTAURACIÓN    *"
+echo "*********************************************"
+sleep 3
+
 		sudo chmod -R 777 ~/.copias
             cd ~/.copias
             sudo cp -f MMDVM.ini ~/MMDVMHost
@@ -130,6 +180,17 @@ clear
             sudo cp -f svxlink.conf /usr/local/etc/svxlink/
             
             sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
+;;
+      *)
+         clear
+echo "\33[1;31m" #color rojo
+echo "*********************************************"
+echo "*        NO SE HIZO LA RESTAURACIÓN         *"
+echo "*********************************************"
+sleep 3
+      ;;
+
+      esac
 
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
