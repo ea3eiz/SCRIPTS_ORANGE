@@ -21,10 +21,12 @@ echo "\33[1;31m   Prohibido modificar total o parcialmente el contenido de esta 
 echo " "					
 						
 						mmdvm=$(awk "NR==22" /home/orangepi/MMDVMHost/Version.h)
+						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
+						var10=`expr substr $var10 20 18`
 						echo "\33[1;32m" #color verde
 						echo -n "   Versión del MMDVMHOST: "
 						echo -n "\33[1;37m" #color blanco
-                        echo "$mmdvm"
+                        echo "$var10"
 
 						echo -n "\33[1;32m   Temperatura de la CPU: \33[1;37m"
 						tem=$(cat /sys/class/thermal/thermal_zone0/temp)
