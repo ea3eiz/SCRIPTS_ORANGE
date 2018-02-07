@@ -943,28 +943,28 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
                           module=`echo "$module" | tr [:lower:] [:upper:]`
                           sed -i "$linea Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
             #DMR+
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
             #BM
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
             #RADIO
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
             #LIBRE
-            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
             #SOLODSTAR
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION  
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
+            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
