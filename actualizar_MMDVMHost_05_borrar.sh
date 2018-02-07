@@ -56,7 +56,7 @@ clear
                     then
                     echo "El fichero ya existe"
                     else
-                    sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/pi/Downloads
+                    sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/orangepi/Downloads
                     fi
                     #===============================================
 
