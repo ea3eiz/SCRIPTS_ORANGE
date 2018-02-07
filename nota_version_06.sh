@@ -20,11 +20,11 @@ echo ""
 echo "\33[1;31m   Prohibido modificar total o parcialmente el contenido de esta imagen."
 echo " "					
 						
-						mmdvm=$(awk "NR==22" ~/MMDVMHost/Version.h)
-						echo "\33[1;32m" #color verde
-						echo -n "   Versión del MMDVMHOST: "
-						echo -n "\33[1;37m" #color blanco
-                        echo "$mmdvm
+						#mmdvm=$(awk "NR==22" ~/MMDVMHost/Version.h)
+						#echo "\33[1;32m" #color verde
+						#echo -n "   Versión del MMDVMHOST: "
+						#echo -n "\33[1;37m" #color blanco
+                        #echo "$mmdvm
 						echo -n "\33[1;32m   Temperatura de la CPU: \33[1;37m"
 						tem=$(cat /sys/class/thermal/thermal_zone0/temp)
 						tem=`expr substr $tem 1 2`
