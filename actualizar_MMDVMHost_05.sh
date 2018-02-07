@@ -33,7 +33,7 @@ clear
                     [sS]* ) echo ""
                     echo "ok >>>>>"
             
-                    #sudo rm -R ~/.copias
+                
                     mkdir ~/.copias
                     sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
@@ -46,11 +46,22 @@ clear
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
                     PI=":Opi"\"
-                    HOY=$HOY$PI
+                    HOY1=$HOY$PI
                     PUNTO=";"
                     
-                    sed -i "22c $FIJA$HOY$PUNTO" ~/MMDVMHost/Version.h
+                    sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
                   
+                    #Comprueba si existe el fichero info.ini
+                    if [ -f /home/orangepi/Downloads/info.ini ];
+                    then
+                    echo "El fichero ya existe"
+                    else
+                    sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/orangepi/Downloads
+                    fi
+                    #===============================================
+
+                    # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
+                    sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                   
                     make
 
