@@ -958,9 +958,9 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
             sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
             sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
             #LIBRE
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
             #SOLODSTAR
             sed -i "70c Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION  
