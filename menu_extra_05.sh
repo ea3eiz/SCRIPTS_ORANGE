@@ -197,6 +197,8 @@ clear
 
                                                 cp YSF2DMR.ini YSF2DMR.ini_copia_01
                                                 cp YSF2DMR.ini YSF2DMR.ini_copia_02
+                                                cp YSF2DMR.ini YSF2DMR.ini_copia_03
+                                                cp YSF2DMR.ini YSF2DMR.ini_copia_04
 
                                                 cd ~/SCRIPTS_ORANGE
                                                 git pull
