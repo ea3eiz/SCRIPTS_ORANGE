@@ -223,8 +223,6 @@ clear
                         git clone http://github.com/ea4aoj/AMBEServer
                         cd ~/AMBEServer
                         make 
-                        sleep 3
-                        read a
                         break;;
                         [nN]* ) echo ""
 clear
