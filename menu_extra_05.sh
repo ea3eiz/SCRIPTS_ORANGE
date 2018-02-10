@@ -219,6 +219,7 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INTALANDO AMBE SERVER >>>>>>>>"
+                        cd ~/
                         git clone http://github.com/ea4aoj/AMBEServer
                         cd ~/AMBEServer
                         make 
