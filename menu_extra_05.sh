@@ -2,7 +2,11 @@
 while true
 do
 clear
-RED="\033[0;31m"
+RED="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
 echo "\33[1;32m   ********************************************************************"
 echo "   *      SCript para hacer actualizaciones y varios \33[1;33mV.02.06\33[1;32m          *"
 echo "   *                      \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                          *"
@@ -15,7 +19,7 @@ echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
 echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
 echo "\33[1;36m   8)\33[1;32m INSTALAR YSF2DMR"
-echo "\33[1;36m   9)${RED} INSTALAR AMBE SERVER"
+echo "\33[1;36m   9)${AMARILLO} INSTALAR AMBE SERVER"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -40,6 +44,7 @@ clear
                         clear
                         cd ~/AUTOSTART
                         git pull
+                        exit;
                         break;;
 			[nN]* ) echo ""
 clear
