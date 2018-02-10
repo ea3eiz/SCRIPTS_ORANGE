@@ -29,23 +29,20 @@ case $escoger_menu in
 while true
 do
 clear
-	                  ejecutar1=S
-		            case $ejecutar1 in
-			      [sS]* ) echo ""
-			      echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+	                ejecutar1=S
+		        case $ejecutar1 in
+			[sS]* ) echo ""
+			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
                         git pull 
                         sleep 3
                         cd ~/
                         sudo chmod 777 SCRIPTS_ORANGE
                         clear
-
                         cd ~/AUTOSTART
                         git pull
-
-                        exit;
-		            break;;
-				[nN]* ) echo ""
+                        break;;
+			[nN]* ) echo ""
 clear
 exit;
 break;;
