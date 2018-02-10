@@ -15,10 +15,11 @@ echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
 echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
 echo "\33[1;36m   8)\33[1;32m INSTALAR YSF2DMR"
+echo "\33[1;36m   9)\33[1;32m INSTALAR AMBE SERVER"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 8: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 9: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -175,9 +176,6 @@ exit;
 break;;
 esac
 done;;
-
-
-
 8) echo ""
 while true
 do
@@ -211,6 +209,25 @@ clear
                                                 clear
                                                 exit;
                                                 break;;
+esac
+done;;
+9) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> INTALANDO AMBE SERVER >>>>>>>>"
+                        git clone http://github.com/ea4aoj/AMBEServer
+                        cd ~/AMBEServer
+                        make 
+                        sleep 3
+                        break;;
+                        [nN]* ) echo ""
+clear
+exit;
+break;;
 esac
 done;;
 1000) echo ""
