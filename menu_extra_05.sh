@@ -223,6 +223,7 @@ clear
                         cd ~/AMBEServer
                         make 
                         sleep 3
+                        read a
                         break;;
                         [nN]* ) echo ""
 clear
