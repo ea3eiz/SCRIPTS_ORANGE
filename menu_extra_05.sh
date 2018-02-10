@@ -47,8 +47,8 @@ clear
                         exit;
                         break;;
 			[nN]* ) echo ""
-clear
-exit;
+                        clear
+                        exit;
 break;;
 esac
 done;;
