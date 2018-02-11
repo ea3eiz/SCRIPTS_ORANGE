@@ -261,6 +261,9 @@ clear
                         git clone http://github.com/ea4aoj/AMBEServer
                         cd ~/AMBEServer
                         make 
+
+                        #Pone en el fichero autoarranque.ini el AMBE_SERVER a OFF
+                        sed -i "14c AMBE_SERVER=OFF" ~/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
 clear
