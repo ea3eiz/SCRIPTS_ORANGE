@@ -19,6 +19,8 @@ var1= sed -n '11p'  ~/status.ini
 echo -n "\33[1;36m   2)\33[0m Modificar puerto MODEM   - \33[1;33m"
 var1= sed -n '12p'  ~/status.ini
 
+echo ""
+
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 echo -n "\33[1;36m   Elige una opción del 0 al 2: " 
