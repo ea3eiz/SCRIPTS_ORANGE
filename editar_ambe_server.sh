@@ -3,13 +3,21 @@
 while true
 do
 clear
+RED="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
 echo "   *     Script para Editor AMBE SERVER\33[1;33m       \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
-echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
+echo -n "\33[1;36m   1)\33[0m Modificar puerto ROUTER  - \33[1;33m"
 var1= sed -n '11p'  ~/status.ini
+
+echo -n "\33[1;36m   2)\33[0m Modificar puerto MODEM   - \33[1;33m"
+var1= sed -n '12p'  ~/status.ini
 
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -20,16 +28,32 @@ case $escoger_menu in
 1) echo ""
 while true
 do
-                    echo -n "Valor actual del puerto router: \33[1;33m"
+                    echo -n "Valor actual del puerto ROUTER: \33[1;33m"
                     var1= sed -n '11p'  ~/status.ini
                     actualizar=S
                     case $actualizar in
                     [sS]* )
-           	     read -p 'Introduce puerto que abrirás en el router:          ' pruter
+           	     read -p 'Introduce puerto ROUTER:          ' pruter
                     sed -i "11c $pruter" ~/status.ini
 			     break;;
 			     [nN]* ) echo ""
 			     break;;
+esac
+done;;
+2) echo ""
+while true
+do
+                    echo -n "Valor actual del puerto MODEM: \33[1;33m"
+                    var1= sed -n '12p'  ~/status.ini
+                    echo "${AMARILLO}ejp. /dev/ttyUSB0"
+                    actualizar=S
+                    case $actualizar in
+                    [sS]* )
+                    read -p 'Introduce puerto MODEM:          ' pruter
+                    sed -i "11c $pruter" ~/status.ini
+                    break;;
+                    [nN]* ) echo ""
+                    break;;
 esac
 done;;
 200) echo ""
