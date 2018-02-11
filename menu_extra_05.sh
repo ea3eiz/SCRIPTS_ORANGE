@@ -211,7 +211,7 @@ clear
                                                 cd ~/SCRIPTS_ORANGE
                                                 cp ~/SCRIPTS_ORANGE/Desktop/Abrir_YSF2DMR.desktop ~/Desktop
                                                 cp ~/SCRIPTS_ORANGE/Desktop/Editar_YSF2DMR.desktop ~/Desktop
-                                                sudo chmod +x -R /Desktop
+                                                sudo chmod +x -R ~/Desktop
 
 
 
