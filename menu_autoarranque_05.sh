@@ -9,7 +9,7 @@ echo "   *                                                          *"
 echo "   * Script Modificar AUTOARRANQUE \33[1;33mV.02.06\33[1;31m by EA3EIZ & EA4AOJ\33[1;32m *"
 echo "   *                                                          *"
 echo "   ************************************************************"
-echo -n "\33[1;36m   1)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
+echo -n "\33[1;36m   101)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
 dstar=`grep "D-STAR" ~/autoarranque.ini`
 dstar=`expr substr $dstar 8 3`
 if [ $dstar = "ON" ]
@@ -20,7 +20,7 @@ echo "\33[1;31m"
 fi
 dstar=`grep "D-STAR" ~/autoarranque.ini`
 
-echo -n "\33[1;36m   2)\33[1;37m  Quitar BlueDV del autoarranque        - \33[1;32m"
+echo -n "\33[1;36m   102)\33[1;37m  Quitar BlueDV del autoarranque        - \33[1;32m"
 bluedv=`grep "BlueDV" ~/autoarranque.ini`
 bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "ON" ]
@@ -31,7 +31,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "BlueDV" ~/autoarranque.ini`
 
-echo -n "\33[1;36m   3)\33[1;37m  Quitar YSF del autoarranque           - "
+echo -n "\33[1;36m   103)\33[1;37m  Quitar YSF del autoarranque           - "
 YSF=`grep "YSF" ~/autoarranque.ini`
 YSF=`expr substr $YSF 5 3`
 if [ $YSF = "ON" ]
@@ -42,7 +42,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "YSF" ~/autoarranque.ini`
 
-echo -n "\33[1;36m   4)\33[1;37m  Quitar DV4mini del autoarranque       - "
+echo -n "\33[1;36m   104)\33[1;37m  Quitar DV4mini del autoarranque       - "
 DV4mini=`grep "DV4mini" ~/autoarranque.ini`
 DV4mini=`expr substr $DV4mini 9 3`
 if [ $DV4mini = "ON" ]
@@ -53,7 +53,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "DV4mini" ~/autoarranque.ini`
 
-echo -n "\33[1;36m   5)\33[1;37m  Quitar Radio del autoarranque         - "
+echo -n "\33[1;36m   105)\33[1;37m  Quitar Radio del autoarranque         - "
 MMDVMPLACA=`grep "MMDVMPLACA" ~/autoarranque.ini`
 MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
 if [ $MMDVMPLACA = "ON" ]
@@ -64,7 +64,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLACA" ~/autoarranque.ini`
 
-echo -n "\33[1;36m   6)\33[1;37m  Quitar DMR+ del autoarranque          - "
+echo -n "\33[1;36m   106)\33[1;37m  Quitar DMR+ del autoarranque          - "
 MMDVMPLUS=`grep "MMDVMPLUS" ~/autoarranque.ini`
 MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
 if [ $MMDVMPLUS = "ON" ]
@@ -79,7 +79,7 @@ bluedv=`grep "MMDVMPLUS" ~/autoarranque.ini`
 
 
 
-echo -n "\33[1;36m   7)\33[1;37m  Quitar LIBRE del autoarranque         - "
+echo -n "\33[1;36m   107)\33[1;37m  Quitar LIBRE del autoarranque         - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" ~/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "ON" ]
@@ -91,7 +91,7 @@ fi
 bluedv=`grep "MMDVMLIBRE" ~/autoarranque.ini`
 
 
-echo -n "\33[1;36m   8)\33[1;37m  Quitar BM del autoarranque            - "
+echo -n "\33[1;36m   108)\33[1;37m  Quitar BM del autoarranque            - "
 MMDVMBM=`grep "MMDVMBM" ~/autoarranque.ini`
 MMDVMBM=`expr substr $MMDVMBM 9 3`
 if [ $MMDVMBM = "ON" ]
@@ -104,7 +104,7 @@ bluedv=`grep "MMDVMBM" ~/autoarranque.ini`
 
 
 
-echo -n "\33[1;36m   9)\33[1;37m  Quitar SVXLINK del autoarranque       - "
+echo -n "\33[1;36m   109)\33[1;37m  Quitar SVXLINK del autoarranque       - "
 SVXLINK=`grep "SVXLINK" ~/autoarranque.ini`
 SVXLINK=`expr substr $SVXLINK 9 3`
 if [ $SVXLINK = "ON" ]
@@ -118,7 +118,7 @@ bluedv=`grep "SVXLINK" ~/autoarranque.ini`
 
 
 #==================================================================================
-echo -n "\33[1;36m  10)\33[1;37m  Quitar SOLO_DSTAR del autoarranque    - \33[1;32m"
+echo -n "\33[1;36m   110)\33[1;37m  Quitar SOLO_DSTAR del autoarranque    - \33[1;32m"
 solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 solod=`expr substr $solod 12 3`
 if [ $solod = "ON" ]
@@ -132,7 +132,7 @@ solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 
 
 #==================================================================================
-echo -n "\33[1;36m  11)\33[1;37m  Quitar SOLO_FUSION del autoarranque   - \33[1;32m"
+echo -n "\33[1;36m   111)\33[1;37m  Quitar SOLO_FUSION del autoarranque   - \33[1;32m"
 solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 solof=`expr substr $solof 13 3`
 if [ $solof = "ON" ]
@@ -145,7 +145,7 @@ solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m  12)\33[1;37m  Quitar DVRPTR del autoarranque        - \33[1;32m"
+echo -n "\33[1;36m   112)\33[1;37m  Quitar DVRPTR del autoarranque        - \33[1;32m"
 dvrptrq=`grep "DVRPTR" ~/autoarranque.ini`
 dvrptrq=`expr substr $dvrptrq 8 3`
 if [ $dvrptrq = "ON" ]
@@ -158,7 +158,7 @@ solof=`grep "DVRPTR" ~/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m  13)\33[1;37m  Quitar YSF2DMR del autoarranque       - \33[1;32m"
+echo -n "\33[1;36m   113)\33[1;37m  Quitar YSF2DMR del autoarranque       - \33[1;32m"
 var1=`grep "F2DMR" ~/autoarranque.ini`
 var1=`expr substr $var1 7 3`
 if [ $var1 = "ON" ]
@@ -170,9 +170,22 @@ fi
 var2=`grep "F2DMR" ~/autoarranque.ini`
 #=================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER d autoarranque - \33[1;32m"
+var1=`grep "dstarrepeater" ~/autoarranque.ini`
+var1=`expr substr $var1 15 3`
+if [ $var1 = "ON" ]
+then
+echo "\33[1;32m$var1"
+else
+echo "\33[1;31m"
+fi
+var2=`grep "dstarrepeater" ~/autoarranque.ini`
+#=================================================================================
+
 echo "\33[1;33m"
 
-echo -n "\33[1;36m  14)\33[1;33m  Poner ircDDB en el autoarranque       - "
+echo -n "\33[1;36m   201)\33[1;33m  Poner ircDDB en el autoarranque       - "
 dstar=`grep "D-STAR" ~/autoarranque.ini`
 dstar=`expr substr $dstar 8 3`
 if [ $dstar = "OFF" ]
@@ -183,7 +196,7 @@ echo "\33[1;31m"
 fi
 dstar=`grep "D-STAR" ~/autoarranque.ini`
 
-echo -n "\33[1;36m  15)\33[1;33m  Poner BlueDV en el autoarranque       - "
+echo -n "\33[1;36m   202)\33[1;33m  Poner BlueDV en el autoarranque       - "
 bluedv=`grep "BlueDV" ~/autoarranque.ini`
 bluedv=`expr substr $bluedv 8 3`
 if [ $bluedv = "OFF" ]
@@ -194,7 +207,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "BlueDV" ~/autoarranque.ini`
 
-echo -n "\33[1;36m  16)\33[1;33m  Poner YSF en el autoarranque          - "
+echo -n "\33[1;36m   203)\33[1;33m  Poner YSF en el autoarranque          - "
 YSF=`grep "YSF" ~/autoarranque.ini`
 YSF=`expr substr $YSF 5 3`
 if [ $YSF = "OFF" ]
@@ -205,7 +218,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "YSF" ~/autoarranque.ini`
 
-echo -n "\33[1;36m  17)\33[1;33m  Poner DV4mini en el autoarranque      - "
+echo -n "\33[1;36m   204)\33[1;33m  Poner DV4mini en el autoarranque      - "
 DV4mini=`grep "DV4mini" ~/autoarranque.ini`
 DV4mini=`expr substr $DV4mini 9 3`
 if [ $DV4mini = "OFF" ]
@@ -216,7 +229,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "DV4mini" ~/autoarranque.ini`
 
-echo -n "\33[1;36m  18)\33[1;33m  Poner Radio en el autoarranque        - "
+echo -n "\33[1;36m   205)\33[1;33m  Poner Radio en el autoarranque        - "
 MMDVMPLACA=`grep "MMDVMPLACA" ~/autoarranque.ini`
 MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
 if [ $MMDVMPLACA = "OFF" ]
@@ -227,7 +240,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLACA" ~/autoarranque.ini`
 
-echo -n "\33[1;36m  19)\33[1;33m  Poner DMR+ en autoarranque            - "
+echo -n "\33[1;36m   206)\33[1;33m  Poner DMR+ en autoarranque            - "
 MMDVMPLUS=`grep "MMDVMPLUS" ~/autoarranque.ini`
 MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
 if [ $MMDVMPLUS = "OFF" ]
@@ -238,11 +251,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMPLUS" ~/autoarranque.ini`
 
-
-
-
-
-echo -n "\33[1;36m  20)\33[1;33m  Poner LIBRE en autoarranque           - "
+echo -n "\33[1;36m   207)\33[1;33m  Poner LIBRE en autoarranque           - "
 MMDVMLIBRE=`grep "MMDVMLIBRE" ~/autoarranque.ini`
 MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
 if [ $MMDVMLIBRE = "OFF" ]
@@ -256,7 +265,7 @@ bluedv=`grep "MMDVMLIBRE" ~/autoarranque.ini`
 
 
 
-echo -n "\33[1;36m  21)\33[1;33m  Poner BM en el autoarranque           - "
+echo -n "\33[1;36m   208)\33[1;33m  Poner BM en el autoarranque           - "
 MMDVMBM=`grep "MMDVMBM" ~/autoarranque.ini`
 MMDVMBM=`expr substr $MMDVMBM 9 3`
 if [ $MMDVMBM = "OFF" ]
@@ -267,7 +276,7 @@ echo "\33[1;31m"
 fi
 bluedv=`grep "MMDVMBM" ~/autoarranque.ini`
 
-echo -n "\33[1;36m  22)\33[1;33m  Poner SVXLINK en el autoarranque      - "
+echo -n "\33[1;36m   209)\33[1;33m  Poner SVXLINK en el autoarranque      - "
 SVXLINK=`grep "SVXLINK" ~/autoarranque.ini`
 SVXLINK=`expr substr $SVXLINK 9 3`
 if [ $SVXLINK = "OFF" ]
@@ -281,7 +290,7 @@ bluedv=`grep "SVXLINK" ~/autoarranque.ini`
 
 
 #==================================================================================
-echo -n "\33[1;36m  23)\33[1;33m  Poner SOLO_DSTAR en el autoarranque   - "
+echo -n "\33[1;36m   210)\33[1;33m  Poner SOLO_DSTAR en el autoarranque   - "
 solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 solod=`expr substr $solod 12 3`
 if [ $solod = "OFF" ]
@@ -296,7 +305,7 @@ solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
 
 
 #==================================================================================
-echo -n "\33[1;36m  24)\33[1;33m  Poner SOLO_FUSION en el autoarranque  - "
+echo -n "\33[1;36m   211)\33[1;33m  Poner SOLO_FUSION en el autoarranque  - "
 solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 solof=`expr substr $solof 13 3`
 if [ $solof = "OFF" ]
@@ -309,7 +318,7 @@ solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
 #==================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m  25)\33[1;33m  Poner DVRPTR en el autoarranque       - "
+echo -n "\33[1;36m   212)\33[1;33m  Poner DVRPTR en el autoarranque       - "
 dvrptr=`grep "DVRPTR" ~/autoarranque.ini`
 dvrptr=`expr substr $dvrptr 8 3`
 if [ $dvrptr = "OFF" ]
@@ -322,7 +331,7 @@ solof=`grep "DVRPTR" ~/autoarranque.ini`
 #==================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m  26)\33[1;33m  Poner YSF2DMR en el autoarranque      - "
+echo -n "\33[1;36m   213)\33[1;33m  Poner YSF2DMR en el autoarranque      - "
 ysf_dmr=`grep "F2DMR" ~/autoarranque.ini`
 ysf_dmr=`expr substr $ysf_dmr 7 3`
 if [ $ysf_dmr = "OFF" ]
@@ -334,6 +343,18 @@ fi
 trans=`grep "F2DMR" ~/autoarranque.ini`
 #==================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m   214)\33[1;33m  Poner D-STAR REPEATER en autoarranque - "
+var1=`grep "dstarrepeater" ~/autoarranque.ini`
+var1=`expr substr $var1 15 3`
+if [ $var1 = "OFF" ]
+then
+echo "\33[1;31m$var1"
+else
+echo "\33[1;31m"
+fi
+trans=`grep "dstarrepeater" ~/autoarranque.ini`
+#==================================================================================
 
 echo "\33[0m "
 echo "\33[1;36m  27)\33[1;32m ***  REESTABLECER AUTOARRANQUES  ***"
@@ -348,7 +369,7 @@ read escoger_menu
 echo ""
 
 case $escoger_menu in
-1) echo ""
+101) echo ""
 while true
 do
 clear
@@ -366,7 +387,7 @@ clear
 esac
 done;;
 
-2) echo ""
+102) echo ""
 while true
 do
 clear
@@ -383,7 +404,7 @@ clear
 			                 break;;
 esac
 done;;
-3) echo ""
+103) echo ""
 while true
 do
 clear
@@ -401,7 +422,7 @@ clear
                        break;;
 esac
 done;;
-4) echo ""
+104) echo ""
 while true
 do
 clear            
@@ -418,7 +439,7 @@ clear
                         break;;
 esac
 done;;
-5) echo ""
+105) echo ""
 while true
 do
 clear              
@@ -435,7 +456,7 @@ clear
                         break;;
 esac
 done;;
-6) echo ""
+106) echo ""
 while true
 do
 clear              
@@ -455,7 +476,7 @@ clear
 
 esac
 done;;
-7) echo ""
+107) echo ""
 while true
 do
 clear              
@@ -472,7 +493,7 @@ clear
                         break;;
 esac
 done;;
-8) echo ""
+108) echo ""
 while true
 do
 clear              
@@ -489,7 +510,7 @@ clear
                         break;;
 esac
 done;;
-9) echo ""
+109) echo ""
 while true
 do
 clear	        
@@ -506,7 +527,7 @@ clear
 			break;;
 esac
 done;;
-10) echo ""
+110) echo ""
 while true
 do
 clear
@@ -523,7 +544,7 @@ clear
             break;;
 esac
 done;;
-11) echo ""
+111) echo ""
 while true
 do
 clear
@@ -540,7 +561,7 @@ clear
             break;;
 esac
 done;;
-12) echo ""
+112) echo ""
 while true
 do
 clear
@@ -557,7 +578,7 @@ clear
                                             break;;
 esac
 done;;
-13) echo ""
+113) echo ""
 while true
 do
 clear
@@ -574,7 +595,24 @@ clear
                                             break;;
 esac
 done;;
-14) echo ""
+114) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando D-STAR REPEATER del autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/.config/autostart
+                                            mv dstarrepeater.desktop ~/AUTOSTART
+                                            sed -i "9c dstarrepeater=OFF" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+201) echo ""
 while true
 do
 clear	        
@@ -600,7 +638,7 @@ clear
 			            break;;
 esac
 done;;
-15) echo ""
+202) echo ""
 while true
 do
 clear
@@ -617,7 +655,7 @@ clear
 			                                      break;;
 esac
 done;;
-16) echo ""
+203) echo ""
 while true
 do
 clear              
@@ -643,7 +681,7 @@ clear
                         break;;
 esac
 done;;
-17) echo ""
+204) echo ""
 while true
 do
 clear               
@@ -660,7 +698,7 @@ clear
                         break;;
 esac
 done;;
-18) echo ""
+205) echo ""
 while true
 do
 clear           
@@ -678,7 +716,7 @@ clear
                         break;;
 esac
 done;;
-19) echo ""
+206) echo ""
 while true
 do
 clear              
@@ -695,7 +733,7 @@ clear
                         break;;
 esac
 done;;
-20) echo ""
+207) echo ""
 while true
 do
 clear              
@@ -712,7 +750,7 @@ clear
                         break;;
 esac
 done;;
-21) echo ""
+208) echo ""
 while true
 do
 clear
@@ -729,7 +767,7 @@ clear
                         break;;
 esac
 done;;
-22) echo ""
+209) echo ""
 while true
 do
 clear
@@ -746,7 +784,7 @@ clear
 			            break;;
 esac
 done;;
-23) echo ""
+210) echo ""
 while true
 do
 clear
@@ -763,7 +801,7 @@ clear
             break;;
 esac
 done;;
-24) echo ""
+211) echo ""
 while true
 do
 clear
@@ -780,7 +818,7 @@ clear
             break;;
 esac
 done;;
-25) echo ""
+212) echo ""
 while true
 do
 clear
@@ -797,8 +835,7 @@ clear
                                             break;;
 esac
 done;;
-
-26) echo ""
+213) echo ""
 while true
 do
 clear
@@ -810,6 +847,23 @@ clear
                                             cd ~/AUTOSTART
                                             mv YSF2DMR.desktop ~/.config/autostart/
                                             sed -i "15c F2DMR=ON" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+214) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo D-STAR REPEATER en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv dstarrepeater.desktop ~/.config/autostart/
+                                            sed -i "9c dstarrepeater=ON" ~/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
