@@ -244,7 +244,7 @@ clear
                         echo ""
                         fi
                         #================================
-
+read a
                         cd ~/
                         git clone http://github.com/ea4aoj/AMBEServer
                         read A
