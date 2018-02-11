@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Editar AMBE SERVER
+Comment=
+Exec=mate-terminal -x sh editar_ambe_server.sh
+Icon=/home/orangepi/SCRIPTS_ORANGE/AMBE_SERVER.png
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Editar AMBE SERVER
+Path=/home/orangepi/SCRIPTS_ORANGE
+GenericName=Editar AMBE SERVER
