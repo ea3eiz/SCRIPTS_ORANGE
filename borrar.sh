@@ -170,6 +170,19 @@ fi
 var2=`grep "F2DMR" ~/autoarranque.ini`
 #=================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER de autoarranque - \33[1;32m"
+var1=`grep "dstarrepeater" ~/autoarranque.ini`
+var1=`expr substr $var1 15 3`
+if [ $var1 = "ON" ]
+then
+echo "\33[1;32m$var1"
+else
+echo "\33[1;31m"
+fi
+var2=`grep "dstarrepeater" ~/autoarranque.ini`
+#=================================================================================
+
 echo "\33[1;33m"
 
 echo -n "\33[1;36m   201)\33[1;33m  Poner ircDDB en el autoarranque       - "
@@ -330,6 +343,18 @@ fi
 trans=`grep "F2DMR" ~/autoarranque.ini`
 #==================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m   214)\33[1;33m  Poner D-STAR REPEATER en autoarranque - "
+var1=`grep "dstarrepeater" ~/autoarranque.ini`
+var1=`expr substr $var1 15 3`
+if [ $var1 = "OFF" ]
+then
+echo "\33[1;31m$var1"
+else
+echo "\33[1;31m"
+fi
+trans=`grep "dstarrepeater" ~/autoarranque.ini`
+#==================================================================================
 
 echo "\33[0m "
 echo "\33[1;36m  27)\33[1;32m ***  REESTABLECER AUTOARRANQUES  ***"
