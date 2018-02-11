@@ -230,9 +230,10 @@ clear
                         cp ~/SCRIPTS_ORANGE/status.ini ~/
                         fi
                         #================================
-                        
+
                         cd ~/
                         git clone http://github.com/ea4aoj/AMBEServer
+                        read A
                         cd ~/AMBEServer
                         make 
                         break;;
