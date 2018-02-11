@@ -45,11 +45,12 @@ while true
 do
                     echo -n "Valor actual del puerto MODEM: \33[1;33m"
                     var1= sed -n '12p'  ~/status.ini
-                    echo "${AMARILLO}ejp. /dev/ttyUSB0"
+                    echo "${VERDE}ejp. /dev/ttyUSB0"
                     actualizar=S
                     case $actualizar in
                     [sS]* )
-                    read -p 'Introduce puerto MODEM:          ' pruter
+                    echo "${CIAN}"
+                    read -p 'Introduce puerto MODEM:        ' pruter
                     sed -i "11c $pruter" ~/status.ini
                     break;;
                     [nN]* ) echo ""
