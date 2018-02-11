@@ -976,7 +976,7 @@ echo ""
                         break;;
 esac
 done;;
-0) echo ""
+0) echo "."
 clear
 sudo chmod +x -R /home/orangepi/.config/autostart/*.*
 echo "\33[1;33m   **************************************************"
