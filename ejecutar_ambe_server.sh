@@ -1,7 +1,8 @@
 #!/bin/bash
-PUERTO="3000"
+puerto_router=$(awk "NR==11" ~/status.ini) 
+puerto_modem=$(awk "NR==12" ~/status.ini)
 cd ~/AMBEServer
-./AMBEserver -p $PUERTO
+./AMBEserver -p $puerto_router -i $puerto_modem
 
 				
 						
