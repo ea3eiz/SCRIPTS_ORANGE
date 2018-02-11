@@ -224,7 +224,7 @@ clear
 
                         #Coloca icono Abrir AMBE SERVER en el escritorio
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                        chmod +x ~/Desktop
+                        sudo chmod +x ~/Desktop
                         #===============================================       
                         
                         #comprueba si el ficgero existe
