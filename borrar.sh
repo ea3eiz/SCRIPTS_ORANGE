@@ -184,7 +184,7 @@ var2=`grep "dstarrepeater" ~/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m   115)\33[1;37m  Quitar AMBE SERVER del  autoarranque - \33[1;32m"
+echo -n "\33[1;36m   115)\33[1;37m  Quitar AMBE SERVER del  autoarranque  - \33[1;32m"
 var1=`grep "AMBE_SERVER" ~/autoarranque.ini`
 var1=`expr substr $var1 13 3`
 if [ $var1 = "ON" ]
@@ -371,7 +371,7 @@ trans=`grep "dstarrepeater" ~/autoarranque.ini`
 #==================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m   214)\33[1;33m  Poner AMBE SERVER en el autoarranque - "
+echo -n "\33[1;36m   215)\33[1;33m  Poner AMBE SERVER en el autoarranque  - "
 var1=`grep "AMBE_SERVER" ~/autoarranque.ini`
 var1=`expr substr $var1 13 3`
 if [ $var1 = "OFF" ]
