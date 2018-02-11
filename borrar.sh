@@ -171,7 +171,7 @@ var2=`grep "F2DMR" ~/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER de autoarranqu - \33[1;32m"
+echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER d autoarranque - \33[1;32m"
 var1=`grep "dstarrepeater" ~/autoarranque.ini`
 var1=`expr substr $var1 15 3`
 if [ $var1 = "ON" ]
