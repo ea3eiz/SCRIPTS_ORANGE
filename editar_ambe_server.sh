@@ -51,7 +51,7 @@ do
                     [sS]* )
                     echo "${CIAN}"
                     read -p 'Introduce puerto MODEM:        ' pruter
-                    sed -i "11c $pruter" ~/status.ini
+                    sed -i "12c $pruter" ~/status.ini
                     break;;
                     [nN]* ) echo ""
                     break;;
