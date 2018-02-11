@@ -1,5 +1,5 @@
 #!/bin/bash
-PUERTO="24000"
+PUERTO="3000"
 cd ~/AMBEServer
 ./AMBEserver -p $PUERTO
 
