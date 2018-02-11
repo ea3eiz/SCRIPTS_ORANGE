@@ -232,7 +232,7 @@ clear
                         #================================
 
                         #comprueba si el ficgero existe
-                        if [ -d ~/status.ini ];
+                        if [ -d ~/AMBEServer ];
                         then
                         rm -R ~/AMBEServer
                         else
