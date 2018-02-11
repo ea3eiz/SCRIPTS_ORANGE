@@ -171,7 +171,7 @@ var2=`grep "F2DMR" ~/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER de autoarranque - \33[1;32m"
+echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER de autoarranqu - \33[1;32m"
 var1=`grep "dstarrepeater" ~/autoarranque.ini`
 var1=`expr substr $var1 15 3`
 if [ $var1 = "ON" ]
@@ -595,6 +595,23 @@ clear
                                             break;;
 esac
 done;;
+114) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando D-STAR REPEATER del autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/.config/autostart
+                                            mv dstarrepeater.desktop ~/AUTOSTART
+                                            sed -i "9c dstarrepeater=OFF" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
 201) echo ""
 while true
 do
@@ -818,7 +835,6 @@ clear
                                             break;;
 esac
 done;;
-
 213) echo ""
 while true
 do
@@ -831,6 +847,23 @@ clear
                                             cd ~/AUTOSTART
                                             mv YSF2DMR.desktop ~/.config/autostart/
                                             sed -i "15c F2DMR=ON" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+214) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo D-STAR REPEATER en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv dstarrepeater.desktop ~/.config/autostart/
+                                            sed -i "9c dstarrepeater=ON" ~/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
