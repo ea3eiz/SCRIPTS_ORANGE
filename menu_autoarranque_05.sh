@@ -183,6 +183,20 @@ fi
 var2=`grep "dstarrepeater" ~/autoarranque.ini`
 #=================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m   115)\33[1;37m  Quitar AMBE SERVER del  autoarranque  - \33[1;32m"
+var1=`grep "AMBE_SERVER" ~/autoarranque.ini`
+var1=`expr substr $var1 13 3`
+if [ $var1 = "ON" ]
+then
+echo "\33[1;32m$var1"
+else
+echo "\33[1;31m"
+fi
+var2=`grep "dstarrepeater" ~/autoarranque.ini`
+#=================================================================================
+
+
 echo "\33[1;33m"
 
 echo -n "\33[1;36m   201)\33[1;33m  Poner ircDDB en el autoarranque       - "
@@ -356,6 +370,18 @@ fi
 trans=`grep "dstarrepeater" ~/autoarranque.ini`
 #==================================================================================
 
+#==================================================================================
+echo -n "\33[1;36m   215)\33[1;33m  Poner AMBE SERVER en el autoarranque  - "
+var1=`grep "AMBE_SERVER" ~/autoarranque.ini`
+var1=`expr substr $var1 13 3`
+if [ $var1 = "OFF" ]
+then
+echo "\33[1;31m$var1"
+else
+echo "\33[1;31m"
+fi
+trans=`grep "dstarrepeater" ~/autoarranque.ini`
+#==================================================================================
 echo "\33[0m "
 echo "\33[1;36m  27)\33[1;32m ***  REESTABLECER AUTOARRANQUES  ***"
 echo ""
@@ -612,6 +638,23 @@ clear
                                             break;;
 esac
 done;;
+115) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando AMBE SERVER del autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/.config/autostart
+                                            mv AMBE_SERVER.desktop ~/AUTOSTART
+                                            sed -i "14c AMBE_SERVER=OFF" ~/autoarranque.ini
+                                            break;; 
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
 201) echo ""
 while true
 do
@@ -864,6 +907,23 @@ clear
                                             cd ~/AUTOSTART
                                             mv dstarrepeater.desktop ~/.config/autostart/
                                             sed -i "9c dstarrepeater=ON" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+215) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo AMBE SERVER en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv AMBE_SERVER.desktop ~/.config/autostart/
+                                            sed -i "14c AMBE_SERVER=ON" ~/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
