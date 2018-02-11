@@ -207,9 +207,17 @@ clear
                                                 git pull
                                                 sleep 3
 
-                                                #Coloca icono Abrir AMBE SERVER en el escritorio
-                                                cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                                sudo chmod +x -R ~/Desktop
+                                                #Restaura los 2 iconos Abrir YSF2DMR y Editar YSF2DMR y aparecen en el escritorio
+                                                cd ~/SCRIPTS_ORANGE
+                                                cp ~/SCRIPTS_ORANGE/Desktop/Abrir_YSF2DMR.desktop /home/pi/Desktop
+                                                cp ~/SCRIPTS_ORANGE/Desktop/Editar_YSF2DMR.desktop /home/pi/Desktop
+                                                sudo chmod +x -R /home/pi/Desktop
+
+
+
+                                                ##Coloca icono Abrir AMBE SERVER en el escritorio
+                                                #cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                                                #sudo chmod +x -R ~/Desktop
                       
                                                 exit;
                                                 break;;
