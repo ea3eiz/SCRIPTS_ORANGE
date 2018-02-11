@@ -220,7 +220,7 @@ clear
                         ejecutar1=S
                         case $ejecutar1 in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> INTALANDO AMBE SERVER >>>>>>>>"
+                        echo ">>>>>>>>> INSTALANDO AMBE SERVER >>>>>>>>"
 
                         #Coloca icono Abrir AMBE SERVER en el escritorio
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
