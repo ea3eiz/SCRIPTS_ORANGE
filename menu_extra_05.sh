@@ -231,6 +231,15 @@ clear
                         fi
                         #================================
 
+                        #comprueba si el ficgero existe
+                        if [ -d ~/status.ini ];
+                        then
+                        rm -R ~/AMBEServer
+                        else
+                        echo ""
+                        fi
+                        #================================
+
                         cd ~/
                         git clone http://github.com/ea4aoj/AMBEServer
                         read A
