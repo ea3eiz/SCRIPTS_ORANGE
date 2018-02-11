@@ -1,10 +1,9 @@
 #!/bin/bash
-puerto_router=$(awk "NR==11" /home/orangepi/status.ini) 
-puerto_modem=$(awk "NR==12" /home/orangepi/status.ini)
-cd ~/AMBEServer
+sed -i "6cExec=mate-terminal -x sh ejecutar_ambe_server.sh" ~/Desktop/Abrir_ambe_server.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/AMBER_SERVER.png" ~/Desktop/Abrir_ambe_server.desktop
+sed -i "10c Name[es_ES]=Abrir AMBE SERVER" ~/Desktop/Abrir_ambe_server.desktop
+
 sudo killall AMBEserver
-sleep 5
-./AMBEserver -p $puerto_router -i $puerto_modem
 
 				
 						
