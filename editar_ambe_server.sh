@@ -33,7 +33,7 @@ do
                     actualizar=S
                     case $actualizar in
                     [sS]* )
-           	     read -p 'Introduce puerto ROUTER:          ' pruter
+           	     read -p 'Introduce puerto ROUTER:        ' pruter
                     sed -i "11c $pruter" ~/status.ini
 			     break;;
 			     [nN]* ) echo ""
