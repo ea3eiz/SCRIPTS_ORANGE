@@ -163,8 +163,11 @@ clear
                                 ejecutar1=S
                                 case $ejecutar1 in
                                 [sS]* ) echo ""
+
+                                #Coloca icono Abrir AMBE SERVER en el escritorio
                                 cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                chmod +x ~/Desktop
+                                sudo chmod +x -R ~/Desktop
+                      
                                 echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO <<<<<<<<<"
                                 sleep 3
                                 clear
@@ -203,8 +206,11 @@ clear
                                                 cd ~/SCRIPTS_ORANGE
                                                 git pull
                                                 sleep 3
+                                                                                                
+                                                #Coloca icono Abrir AMBE SERVER en el escritorio
                                                 cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                                chmod +x ~/Desktop
+                                                sudo chmod +x -R ~/Desktop
+                      
                                                 exit;
                                                 break;;
                                                 [nN]* ) echo ""
