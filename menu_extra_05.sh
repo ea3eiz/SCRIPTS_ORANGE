@@ -234,7 +234,7 @@ clear
                         #comprueba si el ficgero existe
                         if [ -d ~/AMBEServer ];
                         then
-                        rm -R ~/AMBEServer
+                        sudo rm -R ~/AMBEServer
                         else
                         echo ""
                         fi
