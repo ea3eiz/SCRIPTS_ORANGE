@@ -221,6 +221,16 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INTALANDO AMBE SERVER >>>>>>>>"
+
+                        #comprueba si el ficgero existe
+                        if [ -f ~/status.ini ];
+                        then
+                        echo ""
+                        else
+                        cp ~/SCRIPTS_ORANGE/status.ini ~/
+                        fi
+                        #================================
+                        
                         cd ~/
                         git clone http://github.com/ea4aoj/AMBEServer
                         cd ~/AMBEServer
