@@ -241,8 +241,10 @@ clear
                         cd ~/AUTOSTART
                         git pull
 
-                        #Coloca icono Abrir AMBE SERVER en el escritorio
-                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        #Restaura los 2 iconos Abrir AMBE SERVER y Editar AMBE SERVER y aparecen en el escritorio
+                        cd ~/SCRIPTS_ORANGE
+                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_ambe_server.desktop ~/Desktop
+                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_ambe_server.desktop ~/Desktop
                         sudo chmod +x -R ~/Desktop
 
                         #comprueba si el ficgero existe
