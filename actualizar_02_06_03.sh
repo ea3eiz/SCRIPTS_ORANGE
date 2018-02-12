@@ -2,6 +2,15 @@
 
 sleep 10
 
+
+#Restaura los 2 iconos Notas de l aversión i Editoe General
+cp ~/SCRIPTS_ORANGE/Desktop/Notas_version.desktop ~/Desktop
+cp ~/SCRIPTS_ORANGE/Desktop/Editor.desktop ~/Desktop
+sudo chmod +x -R ~/Desktop
+
+
+
+
 cd ~/SCRIPTS_ORANGE/
 git pull
 
