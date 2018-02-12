@@ -978,7 +978,7 @@ esac
 done;;
 0) echo "."
 clear
-sudo chmod +x -R /home/orangepi/.config/autostart/*.*
+sudo chmod +x -R /home/orangepi/.config/autostart/
 echo "\33[1;33m   **************************************************"
 echo "   *                                                *"
 echo "   *     CERRANDO SCRIPT                            *"
