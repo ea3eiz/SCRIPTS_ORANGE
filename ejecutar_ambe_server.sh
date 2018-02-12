@@ -9,7 +9,3 @@ cd ~/AMBEServer
 sudo killall AMBEserver
 sleep 5
 mate-terminal -x ./AMBEserver -p $puerto_router -i $puerto_modem
-
-				
-						
-						
