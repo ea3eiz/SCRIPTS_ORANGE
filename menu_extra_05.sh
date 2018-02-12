@@ -236,6 +236,11 @@ clear
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INSTALANDO AMBE SERVER >>>>>>>>"
 
+
+                        # RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS
+                        cd ~/AUTOSTART
+                        git pull
+
                         #Coloca icono Abrir AMBE SERVER en el escritorio
                         cp -R ~/SCRIPTS_ORANGE/Desktop ~/
                         sudo chmod +x -R ~/Desktop
