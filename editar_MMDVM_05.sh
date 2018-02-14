@@ -39,10 +39,10 @@ echo "\33[1;36m   8)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (tty
 echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB1)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVM.ini`
+mode=`grep -n -m 1 '\<TXInvert\>' ~/MMDVMHost/MMDVM.ini`
 mode1=`expr substr $mode 4 30`
 linea=`expr substr $mode 1 2`
-linea=`expr $linea + 2`
+linea=`expr $linea - 1`
 linea33=$linea
 letra=p
 linea2=$linea$letra
