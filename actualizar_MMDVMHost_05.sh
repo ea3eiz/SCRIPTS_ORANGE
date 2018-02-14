@@ -19,7 +19,7 @@ read escoger_menu
 
 case $escoger_menu in
 
-1bloqueado) echo ""
+1000) echo ""
 while true
 do
 clear
