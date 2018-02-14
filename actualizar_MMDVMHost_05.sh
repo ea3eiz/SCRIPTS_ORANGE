@@ -7,8 +7,8 @@ echo "   *                                                                   *"
 echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m       *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
-echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
-#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
+#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
+echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Volver a la versión anterior de MMDVMHost \33[1;33m"
 echo  "\33[1;36m   3)\33[1;32m Recuperar solo los .INI de la versión anterior de MMDVMHost \33[1;33m"
 echo ""
@@ -19,7 +19,7 @@ read escoger_menu
 
 case $escoger_menu in
 
-1000) echo ""
+1) echo ""
 while true
 do
 clear
