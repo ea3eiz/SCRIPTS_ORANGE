@@ -288,8 +288,6 @@ echo "Valor actual: \33[1;33m$STARTUP"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           #Convierte de minúsculas a Mayúsculas
-                           Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            sed -i "$linea_sed_ST Startup=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
