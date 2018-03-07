@@ -1,43 +1,62 @@
-﻿#!/bin/bash
+#!/bin/bash
 while true
 do
 clear
-echo "\33[1;32m   *********************************************************************"
-echo "   *                                                                   *"
-echo "   *           Script para Actualizar YSFGateway         \33[1;31m by EA3EIZ\33[1;32m    *"
-echo "   *                                                                   *"
-echo "   *********************************************************************"
-echo  "\33[1;36m   1)\33[1;33m Actualizar YSFGateway   \33[1;33m"
+
+echo "\33[1;32m   ********************************************************************"
+echo "   *      Script para actualizar YSFClients \33[1;33mV.02.05          *"
+echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
+echo "   ********************************************************************"
+echo "\33[1;36m   1)\33[1;37m Actualizar YSFClients (YSFGateway, YSFReflector)"
+echo "\33[1;36m   2)\33[1;37m Actualizar YSFHosts.txt (listado de servidores)"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 1: " 
+echo -n "\33[1;36m   Elige una opción del 0 al 3: " 
 read escoger_menu
-
+echo ""
 case $escoger_menu in
-
-
-
 1) echo ""
-
 while true
 do
 clear
-
-	        read -p ' Quieres actualizar el YSF S/N ?' ejecutar1
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+                        cd ~/
+                        rm -R YSFClients
+                        sleep 3
+                        cd ~/
+                        git clone http://github.com/g4klx/YSFClients
+                        cd ~/YSFClients/YSFGateway
+                        make clean
+                        make
+                        clear
+                        exit;
+		                break;;
+						[nN]* ) echo ""
+						clear
+						exit;
+						break;;
+esac
+done;;
+2) echo ""
+while true
+do
+clear
+	        read -p ' Quieres actualizar el listado de reflectores YSF S/N ?' ejecutar1
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
 			cd ~/YSFClients/YSFGateway
 			sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
 			sleep 3
-
-		            echo ""
+		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
 			break;;
 			[nN]* ) echo ""
-
 			break;;
 esac
 done;;
