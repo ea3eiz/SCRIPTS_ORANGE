@@ -2,9 +2,12 @@
 while true
 do
 clear
-
-echo "\33[1;32m   ********************************************************************"
-echo "   *      Script para actualizar YSFClients \33[1;33mV.02.05          *"
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+echo "${VERDE}  ********************************************************************"
+echo "   *         Script para actualizar YSFClients             *"
 echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar YSFClients (YSFGateway, YSFReflector)"
