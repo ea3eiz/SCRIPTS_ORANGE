@@ -25,7 +25,7 @@ clear
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/
-                        rm -R YSFClients
+                        sudo rm -R YSFClients
                         sleep 3
                         cd ~/
                         git clone http://github.com/g4klx/YSFClients
