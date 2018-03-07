@@ -17,7 +17,7 @@ var1=`grep -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsig
 buscar=":"
 largo_linea=`expr index $var $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
-numero_linea=`expr substr $var 1 $largo_linea` # recoge numero linea (en este caso 2)
+numero_linea=`expr substr $var 1 $largo_linea` # recoge numero linea (en este caso 2
 INDICATIVO=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_INDICATIVO=$numero_linea$letra
