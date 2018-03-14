@@ -1,979 +1,1220 @@
 ﻿#!/bin/bash
-# script para instalar md380tools
 while true
 do
 clear
+                        #comprueba si el ficgero existe
+                        if [ -f ~/MMDVMHost/TODOS_LOS_INIS.ini ];
+                        then
+                        #El fichero ya existe
+                        echo ""
+                        else
+                        echo ">>>>>>>>> COPIANDO FICHERO TODOS_LOS_INIS.ini >>>>>>>>"
+                        cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
+                        fi
 
-echo "\33[1;32m   ************************************************************"
-echo "   *                                                          *"
-echo "   * Script Modificar AUTOARRANQUE \33[1;33mV.02.06\33[1;31m by EA3EIZ & EA4AOJ\33[1;32m *"
-echo "   *                                                          *"
-echo "   ************************************************************"
-echo -n "\33[1;36m   101)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
-dstar=`grep "D-STAR" ~/autoarranque.ini`
-dstar=`expr substr $dstar 8 3`
-if [ $dstar = "ON" ]
-then
-echo "\33[1;32m$dstar"
+echo "\33[1;32m   **************************************************************************"
+#echo "   *                                                                        *"
+echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN LOS EDITORES: *"
+echo "   *    Editar BM , Editar DMR+ Editar LIBRE, Editar Radio Editar YSFS      *"
+echo "   *    Editar solo D-STAR, Editar solo FUSION y Editar YSF2DMR             *"
+echo "   *                         \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                             *"
+echo "   **************************************************************************"
+echo""
+echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
+ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+ind1=`expr substr $ind 3 30`
+echo "$ind1"
+
+echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - \33[1;33m"
+rxf=`grep -n "RXFrequency" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+rxf1=`expr substr $rxf 4 30`
+echo "$rxf1"
+
+echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - \33[1;33m"
+txf=`grep -n "TXFrequency" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+txf1=`expr substr $txf 4 30`
+echo "$txf1"
+
+echo -n "\33[1;36m   4)\33[0m Modificar Location    - \33[1;33m"
+loca=`grep -n "Locatio" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+loca1=`expr substr $loca 4 30`
+echo "$loca1"
+
+echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
+url=`grep -n "URL" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+url1=`expr substr $url 4 30`
+echo "$url1"
+
+echo -n "\33[1;36m   6)\33[0m Modificar ID          - \33[1;33m"
+idd=`grep -n "Id=" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+idd1=`expr substr $idd 3 30`
+echo "$idd1"
+
+
+echo -n "\33[1;36m   7)\33[0m Baliza                - \33[1;33m"
+cw= sed -n "31p"  ~/MMDVMHost/TODOS_LOS_INIS.ini; #presenta el valor en pantalla
+
+
+echo -n "\33[1;36m   8)\33[0m RFModeHang            - \33[1;33m"
+modehang=`grep -n -m 1 -c '\<RFModeHang\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+if [ $modehang = 0 ]; then
+echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-echo "\33[1;31m"
+modehang=`grep -n -m 1 '\<RFModeHang\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+modehang1=`expr substr $modehang 3 30`
+echo "$modehang1"
 fi
-dstar=`grep "D-STAR" ~/autoarranque.ini`
 
-echo -n "\33[1;36m   102)\33[1;37m  Quitar BlueDV del autoarranque        - \33[1;32m"
-bluedv=`grep "BlueDV" ~/autoarranque.ini`
-bluedv=`expr substr $bluedv 8 3`
-if [ $bluedv = "ON" ]
-then
-echo "\33[1;32m$bluedv"
+echo -n "\33[1;36m   9)\33[0m Timeout               - \33[1;33m"
+timeo=`grep -n -m 1 -c '\<Timeout\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+if [ $timeo = 0 ]; then
+echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-echo "\33[1;31m"
+timeo=`grep -n -m 1 '\<Timeout\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+timeo1=`expr substr $timeo 3 30`
+echo "$timeo1"
 fi
-bluedv=`grep "BlueDV" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   103)\33[1;37m  Quitar YSF del autoarranque           - "
-YSF=`grep "YSF" ~/autoarranque.ini`
-YSF=`expr substr $YSF 5 3`
-if [ $YSF = "ON" ]
-then
-echo "\33[1;32m$YSF"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "YSF" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   104)\33[1;37m  Quitar DV4mini del autoarranque       - "
-DV4mini=`grep "DV4mini" ~/autoarranque.ini`
-DV4mini=`expr substr $DV4mini 9 3`
-if [ $DV4mini = "ON" ]
-then
-echo "\33[1;32m$DV4mini"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "DV4mini" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   105)\33[1;37m  Quitar Radio del autoarranque         - "
-MMDVMPLACA=`grep "MMDVMPLACA" ~/autoarranque.ini`
-MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
-if [ $MMDVMPLACA = "ON" ]
-then
-echo "\33[1;32m$MMDVMPLACA"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMPLACA" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   106)\33[1;37m  Quitar DMR+ del autoarranque          - "
-MMDVMPLUS=`grep "MMDVMPLUS" ~/autoarranque.ini`
-MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
-if [ $MMDVMPLUS = "ON" ]
-then
-echo "\33[1;32m$MMDVMPLUS"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMPLUS" ~/autoarranque.ini`
 
 
+echo -n "\33[1;36m  10)\33[0m Modificar Duplex      - \33[1;33m"
+dup=`grep -n -m 1 '\<Duplex\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+dup1=`expr substr $dup 3 30`
+echo "$dup1"
 
+echo -n "\33[1;36m  11)\33[0m Coordenada Latitud    - \33[1;33m"
+lat=`grep -n "Latitude" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+lat1=`expr substr $lat 4 30`
+echo "$lat1"
 
+echo -n "\33[1;36m  12)\33[0m Coordenada Longitud   - \33[1;33m"
+long=`grep -n "Longitude" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+long1=`expr substr $long 4 30`
+echo "$long1"
 
-echo -n "\33[1;36m   107)\33[1;37m  Quitar LIBRE del autoarranque         - "
-MMDVMLIBRE=`grep "MMDVMLIBRE" ~/autoarranque.ini`
-MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
-if [ $MMDVMLIBRE = "ON" ]
-then
-echo "\33[1;32m$MMDVMLIBRE"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMLIBRE" ~/autoarranque.ini`
+echo -n "\33[1;36m  13)\33[0m Modulo D-STAR         - \33[1;33m"
+var=`grep -n -m 1 "\[D-Star\]" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+var1=`grep -m 1 "\[D-Star\]" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
+MODULE=$(awk "NR==$numero_linea" ~/MMDVMHost/TODOS_LOS_INIS.ini)
+letra=c
+linea_sed_MODULE=$numero_linea$letra
+echo "$MODULE"
 
-
-echo -n "\33[1;36m   108)\33[1;37m  Quitar BM del autoarranque            - "
-MMDVMBM=`grep "MMDVMBM" ~/autoarranque.ini`
-MMDVMBM=`expr substr $MMDVMBM 9 3`
-if [ $MMDVMBM = "ON" ]
-then
-echo "\33[1;32m$MMDVMBM"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMBM" ~/autoarranque.ini`
-
-
-
-echo -n "\33[1;36m   109)\33[1;37m  Quitar SVXLINK del autoarranque       - "
-SVXLINK=`grep "SVXLINK" ~/autoarranque.ini`
-SVXLINK=`expr substr $SVXLINK 9 3`
-if [ $SVXLINK = "ON" ]
-then
-echo "\33[1;32m$SVXLINK"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "SVXLINK" ~/autoarranque.ini`
-
-
-
-#==================================================================================
-echo -n "\33[1;36m   110)\33[1;37m  Quitar SOLO_DSTAR del autoarranque    - \33[1;32m"
-solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
-solod=`expr substr $solod 12 3`
-if [ $solod = "ON" ]
-then
-echo "\33[1;32m$solod"
-else
-echo "\33[1;31m"
-fi
-solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
-#=================================================================================
-
-
-#==================================================================================
-echo -n "\33[1;36m   111)\33[1;37m  Quitar SOLO_FUSION del autoarranque   - \33[1;32m"
-solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
-solof=`expr substr $solof 13 3`
-if [ $solof = "ON" ]
-then
-echo "\33[1;32m$solof"
-else
-echo "\33[1;31m"
-fi
-solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
-#=================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   112)\33[1;37m  Quitar DVRPTR del autoarranque        - \33[1;32m"
-dvrptrq=`grep "DVRPTR" ~/autoarranque.ini`
-dvrptrq=`expr substr $dvrptrq 8 3`
-if [ $dvrptrq = "ON" ]
-then
-echo "\33[1;32m$dvrptrq"
-else
-echo "\33[1;31m"
-fi
-solof=`grep "DVRPTR" ~/autoarranque.ini`
-#=================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   113)\33[1;37m  Quitar YSF2DMR del autoarranque       - \33[1;32m"
-var1=`grep "F2DMR" ~/autoarranque.ini`
-var1=`expr substr $var1 7 3`
-if [ $var1 = "ON" ]
-then
-echo "\33[1;32m$var1"
-else
-echo "\33[1;31m"
-fi
-var2=`grep "F2DMR" ~/autoarranque.ini`
-#=================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   114)\33[1;37m  Quitar D-STAR REPEATER d autoarranque - \33[1;32m"
-var1=`grep "dstarrepeater" ~/autoarranque.ini`
-var1=`expr substr $var1 15 3`
-if [ $var1 = "ON" ]
-then
-echo "\33[1;32m$var1"
-else
-echo "\33[1;31m"
-fi
-var2=`grep "dstarrepeater" ~/autoarranque.ini`
-#=================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   115)\33[1;37m  Quitar AMBE SERVER del  autoarranque  - \33[1;32m"
-var1=`grep "AMBE_SERVER" ~/autoarranque.ini`
-var1=`expr substr $var1 13 3`
-if [ $var1 = "ON" ]
-then
-echo "\33[1;32m$var1"
-else
-echo "\33[1;31m"
-fi
-var2=`grep "dstarrepeater" ~/autoarranque.ini`
-#=================================================================================
-
-
-echo "\33[1;33m"
-
-echo -n "\33[1;36m   201)\33[1;33m  Poner ircDDB en el autoarranque       - "
-dstar=`grep "D-STAR" ~/autoarranque.ini`
-dstar=`expr substr $dstar 8 3`
-if [ $dstar = "OFF" ]
-then
-echo "\33[1;31m$dstar"
-else
-echo "\33[1;31m"
-fi
-dstar=`grep "D-STAR" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   202)\33[1;33m  Poner BlueDV en el autoarranque       - "
-bluedv=`grep "BlueDV" ~/autoarranque.ini`
-bluedv=`expr substr $bluedv 8 3`
-if [ $bluedv = "OFF" ]
-then
-echo "\33[1;31m$bluedv"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "BlueDV" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   203)\33[1;33m  Poner YSF en el autoarranque          - "
-YSF=`grep "YSF" ~/autoarranque.ini`
-YSF=`expr substr $YSF 5 3`
-if [ $YSF = "OFF" ]
-then
-echo "\33[1;31m$YSF"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "YSF" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   204)\33[1;33m  Poner DV4mini en el autoarranque      - "
-DV4mini=`grep "DV4mini" ~/autoarranque.ini`
-DV4mini=`expr substr $DV4mini 9 3`
-if [ $DV4mini = "OFF" ]
-then
-echo "\33[1;31m$DV4mini"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "DV4mini" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   205)\33[1;33m  Poner Radio en el autoarranque        - "
-MMDVMPLACA=`grep "MMDVMPLACA" ~/autoarranque.ini`
-MMDVMPLACA=`expr substr $MMDVMPLACA 12 3`
-if [ $MMDVMPLACA = "OFF" ]
-then
-echo "\33[1;31m$MMDVMPLACA"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMPLACA" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   206)\33[1;33m  Poner DMR+ en autoarranque            - "
-MMDVMPLUS=`grep "MMDVMPLUS" ~/autoarranque.ini`
-MMDVMPLUS=`expr substr $MMDVMPLUS 11 3`
-if [ $MMDVMPLUS = "OFF" ]
-then
-echo "\33[1;31m$MMDVMPLUS"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMPLUS" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   207)\33[1;33m  Poner LIBRE en autoarranque           - "
-MMDVMLIBRE=`grep "MMDVMLIBRE" ~/autoarranque.ini`
-MMDVMLIBRE=`expr substr $MMDVMLIBRE 12 3`
-if [ $MMDVMLIBRE = "OFF" ]
-then
-echo "\33[1;31m$MMDVMLIBRE"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMLIBRE" ~/autoarranque.ini`
-
-
-
-
-echo -n "\33[1;36m   208)\33[1;33m  Poner BM en el autoarranque           - "
-MMDVMBM=`grep "MMDVMBM" ~/autoarranque.ini`
-MMDVMBM=`expr substr $MMDVMBM 9 3`
-if [ $MMDVMBM = "OFF" ]
-then
-echo "\33[1;31m$MMDVMBM"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "MMDVMBM" ~/autoarranque.ini`
-
-echo -n "\33[1;36m   209)\33[1;33m  Poner SVXLINK en el autoarranque      - "
-SVXLINK=`grep "SVXLINK" ~/autoarranque.ini`
-SVXLINK=`expr substr $SVXLINK 9 3`
-if [ $SVXLINK = "OFF" ]
-then
-echo "\33[1;31m$SVXLINK"
-else
-echo "\33[1;31m"
-fi
-bluedv=`grep "SVXLINK" ~/autoarranque.ini`
-
-
-
-#==================================================================================
-echo -n "\33[1;36m   210)\33[1;33m  Poner SOLO_DSTAR en el autoarranque   - "
-solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
-solod=`expr substr $solod 12 3`
-if [ $solod = "OFF" ]
-then
-echo "\33[1;31m$solod"
-else
-echo "\33[1;31m"
-fi
-solod=`grep "SOLO_DSTAR" ~/autoarranque.ini`
-#==================================================================================
-
-
-
-#==================================================================================
-echo -n "\33[1;36m   211)\33[1;33m  Poner SOLO_FUSION en el autoarranque  - "
-solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
-solof=`expr substr $solof 13 3`
-if [ $solof = "OFF" ]
-then
-echo "\33[1;31m$solof"
-else
-echo "\33[1;31m"
-fi
-solof=`grep "SOLO_FUSION" ~/autoarranque.ini`
-#==================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   212)\33[1;33m  Poner DVRPTR en el autoarranque       - "
-dvrptr=`grep "DVRPTR" ~/autoarranque.ini`
-dvrptr=`expr substr $dvrptr 8 3`
-if [ $dvrptr = "OFF" ]
-then
-echo "\33[1;31m$dvrptr"
-else
-echo "\33[1;31m"
-fi
-solof=`grep "DVRPTR" ~/autoarranque.ini`
-#==================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   213)\33[1;33m  Poner YSF2DMR en el autoarranque      - "
-ysf_dmr=`grep "F2DMR" ~/autoarranque.ini`
-ysf_dmr=`expr substr $ysf_dmr 7 3`
-if [ $ysf_dmr = "OFF" ]
-then
-echo "\33[1;31m$ysf_dmr"
-else
-echo "\33[1;31m"
-fi
-trans=`grep "F2DMR" ~/autoarranque.ini`
-#==================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   214)\33[1;33m  Poner D-STAR REPEATER en autoarranque - "
-var1=`grep "dstarrepeater" ~/autoarranque.ini`
-var1=`expr substr $var1 15 3`
-if [ $var1 = "OFF" ]
-then
-echo "\33[1;31m$var1"
-else
-echo "\33[1;31m"
-fi
-trans=`grep "dstarrepeater" ~/autoarranque.ini`
-#==================================================================================
-
-#==================================================================================
-echo -n "\33[1;36m   215)\33[1;33m  Poner AMBE SERVER en el autoarranque  - "
-var1=`grep "AMBE_SERVER" ~/autoarranque.ini`
-var1=`expr substr $var1 13 3`
-if [ $var1 = "OFF" ]
-then
-echo "\33[1;31m$var1"
-else
-echo "\33[1;31m"
-fi
-trans=`grep "dstarrepeater" ~/autoarranque.ini`
-#==================================================================================
-echo "\33[0m "
-echo "\33[1;36m  27)\33[1;32m ***  REESTABLECER AUTOARRANQUES  ***"
+echo ""
+echo "\33[1;36m  0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 
-echo "\33[1;36m  28)\33[1;31m *** REINICIAR LA ORANGE PI ***"
 echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
-echo ""
-echo "\33[1;36m   Por favor, elige una opción del 0 al 27" 
+echo -n "\33[1;36m   Elige una opción del 0 al 14: " 
 read escoger_menu
-echo ""
 
 case $escoger_menu in
-101) echo ""
-while true
-do
-clear
-	                     actualizar=S
-		                   case $actualizar in
-			                 [sS]* ) echo ""
-			                 echo "Quitando D-STAR del autoarranque >>>>>"
-			                 sleep 2
-			                 cd ~/.config/autostart
-                       mv ircDDB.desktop ~/AUTOSTART
-			                 sed -i "1c D-STAR=OFF" ~/autoarranque.ini
-			                 break;;
-			                 [nN]* ) echo ""
-			                 break;;
-esac
-done;;
-
-102) echo ""
-while true
-do
-clear
-	                     actualizar=S
-		                   case $actualizar in
-			                 [sS]* ) echo ""
-			                 echo "Quitando BlueDV del autoarranque >>>>>"
-                       sleep 2
-                       cd ~/.config/autostart
-                       mv BLUEDV.desktop ~/AUTOSTART
-			                 sed -i "2c BlueDV=OFF" ~/autoarranque.ini
-			                 break;;
-			                 [nN]* ) echo ""
-			                 break;;
-esac
-done;;
-103) echo ""
+14BLOQUEADO) echo ""
 while true
 do
 clear
 
-                       actualizar=S
-		                   case $actualizar in
-			                 [sS]* ) echo ""
-			                 echo "Quitando YSF del autoarranque >>>>>"
-                       sleep 2
-                       cd ~/.config/autostart
-                       mv YSF.desktop ~/AUTOSTART
-                       sed -i "3c YSF=OFF" ~/autoarranque.ini
-                       break;;
-                       [nN]* ) echo ""
-                       break;;
-esac
-done;;
-104) echo ""
-while true
-do
-clear            
-                        actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Quitando DV4mini del autoarranque >>>>>"
-                        sleep 2
-                        cd ~/.config/autostart
-                        mv DV4mini.desktop ~/AUTOSTART
-                        sed -i "4c DV4mini=OFF" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-105) echo ""
-while true
-do
-clear              
-                        actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Quitando MMDVM del autoarranque >>>>>"
-                        sleep 2
-                        cd ~/.config/autostart
-                        mv RADIO.desktop ~/AUTOSTART
-                        sed -i "5c MMDVMPLACA=OFF" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-106) echo ""
-while true
-do
-clear              
-                        actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Quitando MMDVMPLUS del autoarranque >>>>>"
-                        sleep 2
-                        cd ~/.config/autostart
-                        mv DMRPLUS.desktop ~/AUTOSTART
-                        sed -i "6c MMDVMPLUS=OFF" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
+            tu_indicativo=`grep -n -m 1 '\Callsign\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            tu_indicativo=`expr substr $tu_indicativo 12 40`
+            echo "$tu_indicativo"
+           
+            frecuenciarx=`grep -n -m 1 '\RXFrequency\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            frecuenciarx=`expr substr $frecuenciarx 16 40`
+            echo "$frecuenciarx"
+
+            frecuenciatx=`grep -n -m 1 '\TXFrequency\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            frecuenciatx=`expr substr $frecuenciatx 16 40`
+            echo "$frecuenciatx"
+
+            tu_id=`grep -n -m 1 '\Id\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            tu_id=`expr substr $tu_id 6 40`
+            echo "$tu_id"
+
+            tu_ciudad=`grep -n -m 1 '\Location\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            tu_ciudad=`expr substr $tu_ciudad 13 40`
+            echo "$tu_ciudad"
+
+            tu_url=`grep -n -m 1 '\URL\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            tu_url=`expr substr $tu_url 8 40`
+            echo "$tu_url"
+            
+            #Guarda los datos de la linea 31 en la variable baliza
+            baliza=awk "NR==31{print;exit}" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+            rfmodehang=`grep -n -m 1 '\RFModeHang\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            rfmodehang=`expr substr $rfmodehang 14 40`
+            echo "$rfmodehang"
+
+            duplex=`grep -n -m 1 '\Duplex\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            duplex=`expr substr $duplex 10 40`
+            echo "$duplex"
+
+            timeou=`grep -n -m 1 '\<Timeout\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            timeou=`expr substr $timeou 11 40`
+            echo "$timeou"
+
+            tu_latitud=`grep -n -m 1 '\<Latitude\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            tu_latitud=`expr substr $tu_latitud 13 40`
+
+            tu_longitud=`grep -n -m 1 '\<Longitude\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            tu_longitud=`expr substr $tu_longitud 14 40`
+
+            module=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+            module=`expr substr $module 11 40`
+
+            ejecutar1=S
+            case $ejecutar1 in
+            [sS]* ) echo ""
+            clear
+            echo "\33[1;32m*****************************************"
+            echo "* \33[1;31mCAMBIANDO LOS DATOS A TODOS LOS .INI  \33[1;32m*"
+            echo "*****************************************"
+            sleep 3
+
+            #rutina para localizar el número de linea en el MMDVM.ini donde está el Module D-STAR
+            modulo=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVM.ini`
+            linea=`expr substr $modulo 1 2`
+            letra1=c
+            linea4=$linea$letra1
+            # ====================================================================
 
 
+            #rutina para localizar el número de linea en el MMDVMLIBRE.inil donde está el Module D-STAR
+            modulol=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMLIBRE.ini`
+            lineal=`expr substr $modulol 1 2`
+            letra1l=c
+            linea4l=$lineal$letra1l
+            # ====================================================================
 
+
+            #Radio
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia3
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia3
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia3
+            #ID
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia3
+            #LATITUD
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia3
+            #LONGITUD
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia3
+            #CIUDAD
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia3
+            #WEBId
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia3
+            #TIMEOUT
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia3
+            #DUPLEX
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia3
+            #BALIZA
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia3
+            #MODULE D-STAR
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
+            #RFMODEHANG
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia3
+
+
+#BM
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia3
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #ID
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #LATITUD
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #LONGITUD
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #CIUDAD
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #WEBId
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #TIMEOUT
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #DUPLEX
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #BALIZA
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #MODULE D-STAR
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RFMODEHANG
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia3
+
+
+#DMR+
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #ID
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #LATITUD
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #LONGITUD
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #CIUDAD
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #WEBId
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #TIMEOUT
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #DUPLEX
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BALIZA
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #MODULE D-STAR
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #RFMODEHANG
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+
+
+            
+#LIBRE+
+            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #ID
+            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #LATITUD
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #LONGITUD
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #CIUDAD
+            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #WEBId
+            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #TIMEOUT
+            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #DUPLEX
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #BALIZA
+            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #MODULE D-STAR
+            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            
+
+#SOLO DSTAR
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMDSTAR.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMDSTAR.ini           
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDSTAR.ini
+            #ID
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMDSTAR.ini
+            #LATITUD
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDSTAR.ini
+            #LONGITUD
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDSTAR.ini
+            #CIUDAD
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMDSTAR.ini
+            #WEBId
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMDSTAR.ini
+            #TIMEOUT
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMDSTAR.ini
+            #DUPLEX
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDSTAR.ini
+            #BALIZA
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDSTAR.ini
+            #MODULE D-STAR
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
+            #RFMODEHANG
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDSTAR.ini
+
+
+#SOLO FUSION
+            sed -i "13c RXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMFUSION.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMFUSION.ini           
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMFUSION.ini
+            #ID
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMFUSION.ini
+            #LATITUD
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMFUSION.ini
+            #LONGITUD
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMFUSION.ini
+            #CIUDAD
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMFUSION.ini
+            #WEBId
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMFUSION.ini
+            #TIMEOUT
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMFUSION.ini
+            #DUPLEX
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMFUSION.ini
+            #BALIZA
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMFUSION.ini
+            #MODULE D-STAR
+            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMFUSION.ini
+            #RFMODEHANG
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMFUSION.ini
+
+#YSF
+            sed -i "12c RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "13c TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
+            #iNDICATIVO
+            sed -i "2c Callsign=$tu_indicativo" ~/YSFClients/YSFGateway/YSFGateway.ini
+
+#YSF2DMR
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini            
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini      
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini            
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
+            #iNDICATIVO
+            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+            #ID
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            #LATITUD
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            #LONGITUD
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            #CIUDAD
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            #WEBId
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            
+                  echo ""
+                  echo "Ok, se ha ejecutado correctamente"
+                  echo ""
+                  exit;
+                  break;;
+                  [nN]* ) echo ""
+                  break;;
 esac
 done;;
-107) echo ""
+1) echo ""
 while true
 do
-clear              
-                        actualizar=S
-                        case $actualizar in
-                        [sS]* ) echo ""
-                        echo "Quitando LIBRE del autoarranque >>>>>"
-                        sleep 2
-                        cd ~/.config/autostart
-                        mv LIBRE.desktop ~/AUTOSTART
-                        sed -i "10c MMDVMLIBRE=OFF" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
+buscar=":"
+largo=`expr index $ind $buscar`
+echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
+           	          read -p 'Introduce tu indicativo: ' tu_indicativo
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $ind 1 1`
+                          else
+                          linea=`expr substr $ind 1 1`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			        [sS]* ) echo ""
+
+                          #Convierte indicativo si se introduce en minúsculas a Mayúsculas
+                          tu_indicativo=`echo "$tu_indicativo" | tr [:lower:] [:upper:]`
+
+			        sed -i "$linea Callsign=$tu_indicativo" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+                        #iNDICATIVO PLUS
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+                        #iNDICATIVO BM
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia2
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia3
+                        #iNDICATIVO RADIO
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia2
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia3
+                        #iNDICATIVO LIBRE
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+                        #iNDICATIVO YSF
+                        sed -i "2c Callsign=$tu_indicativo" ~/YSFClients/YSFGateway/YSFGateway.ini
+                        #iNDICATIVO YSF2DMR
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+                        #iNDICATIVO SOLODSTAR
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDSTAR.ini
+                        #iNDICATIVO SOLOFUSION
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMFUSION.ini
+                        
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-108) echo ""
+2) echo ""
 while true
 do
-clear              
-                        actualizar=S
-                        case $actualizar in
-                        [sS]* ) echo ""
-                        echo "Quitando BM del autoarranque >>>>>"
-                        sleep 2
-                        cd ~/.config/autostart
-                        mv BM.desktop ~/AUTOSTART
-                        sed -i "7c MMDVMBM=OFF" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-109) echo ""
-while true
-do
-clear	        
-		  actualizar=S
-		  case $actualizar in
-			[sS]* ) echo ""
-			echo "Quitando SVXLINK del autoarranque >>>>>"
-      sleep 2
-      cd ~/.config/autostart
-      mv SVXLINK.desktop ~/AUTOSTART
-			sed -i "8c SVXLINK=OFF" ~/autoarranque.ini
+buscar=":"
+largo=`expr index $rxf $buscar`
+echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
+
+           	          read -p 'Introduce RXFrequency:        ' frecuenciarx
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $rxf 1 2`
+                          else
+                          linea=`expr substr $rxf 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+                              sed -i "$linea RXFrequency=$frecuenciarx" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #Radio
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE+
+            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF
+            sed -i "12c RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
+            #YSF2DMR
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini            
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLO FUSION
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMFUSION.ini
 			break;;
 			[nN]* ) echo ""
 			break;;
 esac
 done;;
-110) echo ""
+3) echo ""
 while true
 do
-clear
-            actualizar=S
-            case $actualizar in
-            [sS]* ) echo ""
-            echo "Quitando SOLO_D-STAR del autoarranque >>>>>"
-            sleep 2
-            cd ~/.config/autostart
-            mv DSTARSOLO.desktop ~/AUTOSTART
-            sed -i "11c SOLO_DSTAR=OFF" ~/autoarranque.ini
-            break;;
-            [nN]* ) echo ""
-            break;;
+buscar=":"
+largo=`expr index $txf $buscar`
+echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
+
+           	          read -p 'Introduce TXFrequency:        ' frecuenciatx
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $txf 1 2`
+                          else
+                          linea=`expr substr $txf 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+                          sed -i "$linea TXFrequency=$frecuenciatx" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+            #DMR+
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #Radio
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia3
+            #libre
+            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF
+            sed -i "13c TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
+            #YSF2DMR
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini      
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini            
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMDSTAR.ini   
+            #SOLOFUSION
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMFUSION.ini
+
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-111) echo ""
+4) echo ""
 while true
 do
-clear
-            actualizar=S
-            case $actualizar in
-            [sS]* ) echo ""
-            echo "Quitando SOLO_FUSION del autoarranque >>>>>"
-            sleep 2
-            cd ~/.config/autostart
-            mv FUSIONSOLO.desktop ~/AUTOSTART
-            sed -i "12c SOLO_FUSION=OFF" ~/autoarranque.ini
-            break;;
-            [nN]* ) echo ""
-            break;;
+buscar=":"
+largo=`expr index $loca $buscar`
+echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
+           	          read -p 'Introduce tu Ciudad ' tu_ciudad
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $loca 1 2`
+                          else
+                          linea=`expr substr $loca 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+			  loc1=`echo "$loc1" | tr -d '[[:space:]]'`
+              sed -i "$linea Location=$tu_ciudad" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMFUSION.ini
+
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-112) echo ""
+5) echo ""
 while true
 do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""                   
-                                            echo "Quitando DVRPTR en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/.config/autostart
-                                            mv DVRPTR.desktop ~/AUTOSTART
-                                            sed -i "13c DVRPTR=OFF" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
+buscar=":"
+largo=`expr index $url $buscar`
+echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
+           	          read -p 'Introduce URL de tu Web: ' tu_url
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $url 1 2`
+                          else
+                          linea=`expr substr $url 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+			  ur1=`echo "$ur1" | tr -d '[[:space:]]'`
+                          sed -i "$linea URL=$tu_url" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMFUSION.ini
+            
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-113) echo ""
+
+
+6) echo ""
 while true
 do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""                   
-                                            echo "Quitando YSF2DMR en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/.config/autostart
-                                            mv YSF2DMR.desktop ~/AUTOSTART
-                                            sed -i "15c F2DMR=OFF" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
+buscar=":"
+largo=`expr index $idd $buscar`
+echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
+           	          read -p 'Introduce un ID válido ' tu_id
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $idd 1 1`
+                          else
+                          linea=`expr substr $idd 1 1`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+                          sed -i "$linea Id=$tu_id" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION  
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMFUSION.ini           
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-114) echo ""
+10) echo ""
 while true
 do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""                   
-                                            echo "Quitando D-STAR REPEATER del autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/.config/autostart
-                                            mv dstarrepeater.desktop ~/AUTOSTART
-                                            sed -i "9c dstarrepeater=OFF" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
+buscar=":"
+largo=`expr index $dup $buscar`
+echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
+           	          read -p 'Para un Repetidor Duplex=1 Para un Hotspot Duplex=0: ' duplex
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $dup 1 1`
+                          else
+                          linea=`expr substr $dup 1 1`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+                          sed -i "$linea Duplex=$duplex" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia3           
+            #LIBRE
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #SOLODSTAR
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION 
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMFUSION.ini            
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-115) echo ""
+13) echo ""
 while true
 do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""                   
-                                            echo "Quitando AMBE SERVER del autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/.config/autostart
-                                            mv AMBE_SERVER.desktop ~/AUTOSTART
-                                            sed -i "14c AMBE_SERVER=OFF" ~/autoarranque.ini
-                                            break;; 
-                                            [nN]* ) echo ""
-                                            break;;
+                          echo "Valor  actual  del  Module: $MODULE"
+                          read -p 'Valor óptimo para D-STAR=B: '  module
+                          actualizar=S 
+                          case $actualizar in
+                                      [sS]* ) echo ""
+                          #Convierte de minúsculas a Mayúsculas
+                          module=`echo "$module" | tr [:lower:] [:upper:]`
+                          sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
+            #SOLODSTAR
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION  
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-201) echo ""
+7) echo ""
 while true
 do
-clear	        
-		              actualizar=S
-		              case $actualizar in
-			            [sS]* ) echo ""
-			            echo "Poniendo DSTAR en el autoarranque >>>>>"
-                  sleep 2
-                  cd ~/AUTOSTART
-                  mv ircDDB.desktop ~/.config/autostart/
-			            sed -i "1c D-STAR=ON" ~/autoarranque.ini
-                  clear
-                  echo "\33[1;32m**********************************************************"
-                  echo "*                                                        *"
-                  echo "*  \33[1;31mDebes de tener BM ó DMR+ en el autoarranque \33[1;32m*"
-                  echo "*               \33[1;31m para que funcione D-STAR                \33[1;32m*"
-                  echo "*                                                        *"
-                  echo "**********************************************************"
-                  echo ""
-                  echo ""
-			            break;;
-			            [nN]* ) echo ""
-			            break;;
+                      read -p 'Introduce el valor de la Baliza (Ej. 1-activada 0-desactivada) : ' baliza
+                      actualizar=S 
+                      case $actualizar in
+                      [sS]* ) echo ""
+                      sed -i "31c Enable=$baliza" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+            #DMR+
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #SOLODSTAR
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMFUSION.ini                      
+                      break;;
+                      [nN]* ) echo ""
+                      break;;
 esac
 done;;
-202) echo ""
+8) echo ""
 while true
 do
-clear
-	                                          actualizar=S
-		                                        case $actualizar in
-			                                      [sS]* ) echo ""                          
-                                            echo "Poniendo BlueDV en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/AUTOSTART
-                                            mv BLUEDV.desktop ~/.config/autostart/
-                                            sed -i "2c BlueDV=ON" ~/autoarranque.ini
-			                                      break;;
-			                                      [nN]* ) echo ""
-			                                      break;;
+modehang=`grep -n -m 1 -c '\<RFModeHang\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+if [ $modehang = 0 ]; then
+echo "no existe este comando"
+else
+modehang=`grep -n -m 1 '\<RFModeHang\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+modehang1=`expr substr $modehang 5 30`
+fi
+buscar=":"
+largo=`expr index $modehang $buscar`
+echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
+                      read -p 'Introcuce el valor para RFModeHang (optimo=3): ' rfmodehang
+                          letra=c
+                          if [ $largo = 2 ]
+                          then
+                          linea=`expr substr $modehang 1 1`
+                          else
+                          linea=`expr substr $modehang 1 2`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in                                            
+                    [sS]* ) echo ""
+                    V=`echo "$V" | tr -d '[[:space:]]'`       
+                          sed -i "$linea RFModeHang=$rfmodehang" ~/MMDVMHost/TODOS_LOS_INIS.ini 
+            #DMR+
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia3            
+            #SOLODSTAR
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION 
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMFUSION.ini                         
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
-203) echo ""
+9) echo ""
 while true
 do
-clear              
-                        actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Poniendo YSF en el autoarranque >>>>>"
-                        sleep 2
-                        cd ~/AUTOSTART
-                        mv YSF.desktop ~/.config/autostart/
-                        sed -i "3c YSF=ON" ~/autoarranque.ini
-                        clear
-                        echo "\33[1;32m**********************************************************"
-                        echo "*                                                        *"
-                        echo "*  \33[1;31mDebes de tener BM ó DMR+ en el autoarranque \33[1;32m*"
-                        echo "*               \33[1;31m para que funcione YSF                   \33[1;32m*"
-                        echo "*                                                        *"
-                        echo "**********************************************************"
-                        echo ""
-                        echo ""                            
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
+timeo=`grep -n -m 1 -c '\<Timeout\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+if [ $timeo = 0 ]; then
+echo "no existe este comando"
+else
+timeo=`grep -n -m 1 '\<Timeout\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+timeo1=`expr substr $timeo 5 30`
+fi
+buscar=":"
+largo=`expr index $timeo $buscar`
+echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
+                      read -p 'Introcuce el valor para Timeout (valor optimo=0): ' timeou
+                          letra=c
+                          if [ $largo = 2 ]
+                          then
+                          linea=`expr substr $timeo 1 1`
+                          else
+                          linea=`expr substr $timeo 1 2`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in                                            
+                    [sS]* ) echo ""
+                    V=`echo "$V" | tr -d '[[:space:]]'`       
+                          sed -i "$linea Timeout=$timeou" ~/MMDVMHost/TODOS_LOS_INIS.ini 
+            #DMR+
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #SOLODSTAR
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMFUSION.ini
+
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
-204) echo ""
+11) echo ""
 while true
 do
-clear               
-                        actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Poniendo DV4mini en el autoarranque >>>>>"
-                        sleep 2
-                        cd ~/AUTOSTART
-                        mv DV4mini.desktop ~/.config/autostart/
-                        sed -i "4c DV4mini=ON" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
+buscar=":"
+largo=`expr index $lat $buscar`
+echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
+           	          read -p 'Introduce la Latitud ' tu_latitud
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $lat 1 2`
+                          else
+                          linea=`expr substr $lat 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+                          sed -i "$linea Latitude=$tu_latitud" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMFUSION.ini
+
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
-205) echo ""
+12) echo ""
 while true
 do
-clear           
-                        actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Poniendo Radio en el autoarranque >>>>>"
-                        sleep 2
-                        cd ~/AUTOSTART
-                        mv RADIO.desktop ~/.config/autostart/
-                        sed -i "5c MMDVMPLACA=ON" ~/autoarranque.ini		            			            
-                        sleep 5                
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-206) echo ""
-while true
-do
-clear              
-                        actualizar=S
-	                      case $actualizar in
-	                      [sS]* ) echo ""
-                        echo "Poniendo DMR+ en el autoarranque >>>>>"
-                        sleep 2
-                        cd ~/AUTOSTART
-                        mv DMRPLUS.desktop ~/.config/autostart/
-                        sed -i "6c MMDVMPLUS=ON" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-207) echo ""
-while true
-do
-clear              
-                        actualizar=S
-                        case $actualizar in
-                        [sS]* ) echo ""
-                        echo "Poniendo LIBRE en el autoarranque >>>>>"
-                        sleep 2
-                        cd ~/AUTOSTART
-                        mv LIBRE.desktop ~/.config/autostart/
-                        sed -i "10c MMDVMLIBRE=ON" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-208) echo ""
-while true
-do
-clear
-                        actualizar=S
-                        case $actualizar in
-                        [sS]* ) echo ""
-                        echo "Poniendo BM en el autoarranque >>>>>"
-                        sleep 2
-                        cd ~/AUTOSTART
-                        mv BM.desktop ~/.config/autostart/
-                        sed -i "7c MMDVMBM=ON" ~/autoarranque.ini
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-209) echo ""
-while true
-do
-clear
-		              actualizar=S
-		              case $actualizar in
-			            [sS]* ) echo ""
-			            echo "Poniendo SVXLINK en el autoarranque >>>>>"
-                  sleep 2
-                  cd ~/AUTOSTART
-                  mv SVXLINK.desktop ~/.config/autostart/
-			            sed -i "8c SVXLINK=ON" ~/autoarranque.ini
-			            break;;
-			            [nN]* ) echo ""
-			            break;;
-esac
-done;;
-210) echo ""
-while true
-do
-clear
-            actualizar=S
-            case $actualizar in
-            [sS]* ) echo ""
-            echo "Poniendo SOLO_D-STAR en el autoarranque >>>>>"
-            sleep 2
-            cd ~/AUTOSTART
-            mv DSTARSOLO.desktop ~/.config/autostart/
-            sed -i "11c SOLO_DSTAR=ON" ~/autoarranque.ini
-            break;;
-            [nN]* ) echo ""
-            break;;
-esac
-done;;
-211) echo ""
-while true
-do
-clear
-            actualizar=S
-            case $actualizar in
-            [sS]* ) echo ""
-            echo "Poniendo solo FUSION en el autoarranque >>>>>"
-            sleep 2
-            cd ~/AUTOSTART
-            mv FUSIONSOLO.desktop ~/.config/autostart/
-            sed -i "12c SOLO_FUSION=ON" ~/autoarranque.ini
-            break;;
-            [nN]* ) echo ""
-            break;;
-esac
-done;;
-212) echo ""
-while true
-do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""
-                                            echo "Poniendo DVRPTR en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/AUTOSTART
-                                            mv DVRPTR.desktop ~/.config/autostart/
-                                            sed -i "13c DVRPTR=ON" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
-esac
-done;;
-213) echo ""
-while true
-do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""
-                                            echo "Poniendo YSF2DMR en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/AUTOSTART
-                                            mv YSF2DMR.desktop ~/.config/autostart/
-                                            sed -i "15c F2DMR=ON" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
-esac
-done;;
-214) echo ""
-while true
-do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""
-                                            echo "Poniendo D-STAR REPEATER en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/AUTOSTART
-                                            mv dstarrepeater.desktop ~/.config/autostart/
-                                            sed -i "9c dstarrepeater=ON" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
-esac
-done;;
-215) echo ""
-while true
-do
-clear
-                                            actualizar=S
-                                            case $actualizar in
-                                            [sS]* ) echo ""
-                                            echo "Poniendo AMBE SERVER en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd ~/AUTOSTART
-                                            mv AMBE_SERVER.desktop ~/.config/autostart/
-                                            sed -i "14c AMBE_SERVER=ON" ~/autoarranque.ini
-                                            break;;
-                                            [nN]* ) echo ""
-                                            break;;
-esac
-done;;
-27) echo ""
-while true
-do
-clear
-                        echo "\33[1;31m" #color rojo
-                        echo " *****************************************************"
-                        echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
-                        echo " *****************************************************"
-                        echo "\33[1;37m" #color
-                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
-                        case $ejecutar1 in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> RESTABLECIENDO EL AUTOARRANQUE POR DEFECTO~/   >>>>>"
-                        cd ~/SCRIPTS_ORANGE
-                        git pull
-                        cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
-                        exit;
-                        break;;
-                        [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-28) echo ""
-while true
-do
-clear
-echo " \33[1;31m  ************************************************************"
-echo "   *                                                          *"
-echo "   *     OJO!!   SE VA A REINICIAR LA ORANGE PI               *"
-echo "   *                                                          *"
-echo "   ************************************************************"
-echo ""
-                read -p '   Estás seguro de querer reiniciar ? Si/No: ' ejecutar13
-                    case $ejecutar13 in
-                        [sS]* ) echo ""
-                        echo "ok >>>>>"
-                        sudo reboot
-                        echo ""
-                        echo "Ok, se ha ejecutado correctamente"
-                        echo ""
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
+buscar=":"
+largo=`expr index $long $buscar`
+echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
+           	          read -p 'Introduce la Longitud ' tu_longitud
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $long 1 2`
+                          else
+                          linea=`expr substr $long 1 3`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+			  [sS]* ) echo ""
+                          sed -i "$linea Longitude=$tu_longitud" ~/MMDVMHost/TODOS_LOS_INIS.ini
+
+            #DMR+
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            #YSF2DMR
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+            #SOLODSTAR
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION 
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMFUSION.ini   
+			  break;;
+			  [nN]* ) echo ""
+			  break;;
 esac
 done;;
 0) echo ""
@@ -983,7 +1224,7 @@ echo "   *                                                *"
 echo "   *     CERRANDO SCRIPT                            *"
 echo "   *                                                *"
 echo "   **************************************************"
-sleep 2
+sleep 1
 clear
 exit;;	
 esac
