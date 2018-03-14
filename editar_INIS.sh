@@ -92,9 +92,16 @@ long1=`expr substr $long 4 30`
 echo "$long1"
 
 echo -n "\33[1;36m  13)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-modu1=`expr substr $modu 4 30`
-echo "$modu1"
+var=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVM.ini`
+var1=`grep -m 1 '\<Module\>' ~/MMDVMHost/MMDVM.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+MODULE=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini)
+letra=c
+linea_sed_MODULE=$numero_linea$letra
+echo "$MODULE"
 
 echo ""
 echo "\33[1;36m  0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -105,440 +112,7 @@ echo -n "\33[1;36m   Elige una opción del 0 al 14: "
 read escoger_menu
 
 case $escoger_menu in
-14BLOQUEADO) echo ""
-while true
-do
-clear
 
-            tu_indicativo=`grep -n -m 1 '\Callsign\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            tu_indicativo=`expr substr $tu_indicativo 12 40`
-            echo "$tu_indicativo"
-           
-            frecuenciarx=`grep -n -m 1 '\RXFrequency\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            frecuenciarx=`expr substr $frecuenciarx 16 40`
-            echo "$frecuenciarx"
-
-            frecuenciatx=`grep -n -m 1 '\TXFrequency\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            frecuenciatx=`expr substr $frecuenciatx 16 40`
-            echo "$frecuenciatx"
-
-            tu_id=`grep -n -m 1 '\Id\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            tu_id=`expr substr $tu_id 6 40`
-            echo "$tu_id"
-
-            tu_ciudad=`grep -n -m 1 '\Location\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            tu_ciudad=`expr substr $tu_ciudad 13 40`
-            echo "$tu_ciudad"
-
-            tu_url=`grep -n -m 1 '\URL\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            tu_url=`expr substr $tu_url 8 40`
-            echo "$tu_url"
-            
-            #Guarda los datos de la linea 31 en la variable baliza
-            baliza=awk "NR==31{print;exit}" ~/MMDVMHost/TODOS_LOS_INIS.ini
-
-            rfmodehang=`grep -n -m 1 '\RFModeHang\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            rfmodehang=`expr substr $rfmodehang 14 40`
-            echo "$rfmodehang"
-
-            duplex=`grep -n -m 1 '\Duplex\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            duplex=`expr substr $duplex 10 40`
-            echo "$duplex"
-
-            timeou=`grep -n -m 1 '\<Timeout\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            timeou=`expr substr $timeou 11 40`
-            echo "$timeou"
-
-            tu_latitud=`grep -n -m 1 '\<Latitude\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            tu_latitud=`expr substr $tu_latitud 13 40`
-
-            tu_longitud=`grep -n -m 1 '\<Longitude\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            tu_longitud=`expr substr $tu_longitud 14 40`
-
-            module=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
-            module=`expr substr $module 11 40`
-
-            ejecutar1=S
-            case $ejecutar1 in
-            [sS]* ) echo ""
-            clear
-            echo "\33[1;32m*****************************************"
-            echo "* \33[1;31mCAMBIANDO LOS DATOS A TODOS LOS .INI  \33[1;32m*"
-            echo "*****************************************"
-            sleep 3
-
-            #rutina para localizar el número de linea en el MMDVM.ini donde está el Module D-STAR
-            modulo=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVM.ini`
-            linea=`expr substr $modulo 1 2`
-            letra1=c
-            linea4=$linea$letra1
-            # ====================================================================
-
-
-            #rutina para localizar el número de linea en el MMDVMLIBRE.inil donde está el Module D-STAR
-            modulol=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMLIBRE.ini`
-            lineal=`expr substr $modulol 1 2`
-            letra1l=c
-            linea4l=$lineal$letra1l
-            # ====================================================================
-
-
-            #Radio
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVM.ini_copia3
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVM.ini_copia3
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVM.ini_copia3
-            #ID
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVM.ini_copia3
-            #LATITUD
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVM.ini_copia3
-            #LONGITUD
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVM.ini_copia3
-            #CIUDAD
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVM.ini_copia3
-            #WEBId
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVM.ini_copia3
-            #TIMEOUT
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVM.ini_copia3
-            #DUPLEX
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia3
-            #BALIZA
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVM.ini_copia3
-            #MODULE D-STAR
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
-            #RFMODEHANG
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia3
-
-
-#BM
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMBM.ini_copia3
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #ID
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #LATITUD
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #LONGITUD
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #CIUDAD
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #WEBId
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #TIMEOUT
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #DUPLEX
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #BALIZA
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #MODULE D-STAR
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #RFMODEHANG
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMBM.ini_copia3
-
-
-#DMR+
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #ID
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #LATITUD
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #LONGITUD
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #CIUDAD
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #WEBId
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #TIMEOUT
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #DUPLEX
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #BALIZA
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #MODULE D-STAR
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #RFMODEHANG
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-
-
-            
-#LIBRE+
-            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #ID
-            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #LATITUD
-            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #LONGITUD
-            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #CIUDAD
-            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #WEBId
-            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "20c URL=$tu_url" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #TIMEOUT
-            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #DUPLEX
-            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #BALIZA
-            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #MODULE D-STAR
-            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "$linea4l Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            
-
-#SOLO DSTAR
-            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMDSTAR.ini
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMDSTAR.ini           
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDSTAR.ini
-            #ID
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMDSTAR.ini
-            #LATITUD
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDSTAR.ini
-            #LONGITUD
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDSTAR.ini
-            #CIUDAD
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMDSTAR.ini
-            #WEBId
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMDSTAR.ini
-            #TIMEOUT
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMDSTAR.ini
-            #DUPLEX
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDSTAR.ini
-            #BALIZA
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDSTAR.ini
-            #MODULE D-STAR
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
-            #RFMODEHANG
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDSTAR.ini
-
-
-#SOLO FUSION
-            sed -i "13c RXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMFUSION.ini
-            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMFUSION.ini           
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMFUSION.ini
-            #ID
-            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMFUSION.ini
-            #LATITUD
-            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMFUSION.ini
-            #LONGITUD
-            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMFUSION.ini
-            #CIUDAD
-            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMFUSION.ini
-            #WEBId
-            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMFUSION.ini
-            #TIMEOUT
-            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMFUSION.ini
-            #DUPLEX
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMFUSION.ini
-            #BALIZA
-            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMFUSION.ini
-            #MODULE D-STAR
-            sed -i "$linea4 Module=$module" ~/MMDVMHost/MMDVMFUSION.ini
-            #RFMODEHANG
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMFUSION.ini
-
-#YSF
-            sed -i "12c RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
-            sed -i "13c TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
-            #iNDICATIVO
-            sed -i "2c Callsign=$tu_indicativo" ~/YSFClients/YSFGateway/YSFGateway.ini
-
-#YSF2DMR
-            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini            
-            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini      
-            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini            
-            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
-            #iNDICATIVO
-            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
-            #ID
-            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
-            #LATITUD
-            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
-            #LONGITUD
-            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
-            #CIUDAD
-            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
-            #WEBId
-            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
-            sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
-            
-                  echo ""
-                  echo "Ok, se ha ejecutado correctamente"
-                  echo ""
-                  exit;
-                  break;;
-                  [nN]* ) echo ""
-                  break;;
-esac
-done;;
 1) echo ""
 while true
 do
@@ -923,48 +497,37 @@ done;;
 13) echo ""
 while true
 do
-buscar=":"
-largo=`expr index $modu $buscar`
-echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
-           	          read -p 'Valor óptimo para D-STAR=B: '  module
-                          letra=c
-                         if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $modu 1 2`
-                          else
-                          linea=`expr substr $modu 1 3`
-                          fi
-                          linea=$linea$letra
+                          echo "Valor  actual  del  Module: $MODULE"
+                          read -p 'Valor óptimo para D-STAR=B: '  module
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
-
-                          #Convierte el module  de minúsculas a Mayúsculas
+                                      [sS]* ) echo ""
+                          #Convierte de minúsculas a Mayúsculas
                           module=`echo "$module" | tr [:lower:] [:upper:]`
-                          sed -i "$linea Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
+                          sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
             #DMR+
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
             #BM
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
             #RADIO
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
             #LIBRE
             sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
             #SOLODSTAR
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION  
-            sed -i "70c Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
