@@ -144,16 +144,6 @@ modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMBM.ini`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
-
-
-#echo -n "\33[1;36m  26)\33[0m Entra reflector DMR+  - \33[1;33m"
-#OPCION=`expr substr $master 1 $largo1`
-#OPCION=`expr $OPCION + 5`
-#linea33port=$OPCION
-#letra=p
-#linea22port=$OPCION$letra
-#var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMBM.ini;
-
 echo -n "\33[1;36m  27)\33[0m Modificar RXInvert    - \33[1;33m"
 rxinv=`grep -n '\<RXInvert\>' ~/MMDVMHost/MMDVMBM.ini`
 rxinv1=`expr substr $rxinv 4 30`
