@@ -92,14 +92,14 @@ long1=`expr substr $long 4 30`
 echo "$long1"
 
 echo -n "\33[1;36m  13)\33[0m Modulo D-STAR         - \33[1;33m"
-var=`grep -n -m 1 "\[D-Star\]" ~/MMDVMHost/TODOS_LOS_INIS.ini`
-var1=`grep -m 1 "\[D-Star\]" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+var=`grep -n -m 1 "\[D-Star\]" ~/MMDVMHost/MMDVM.ini`
+var1=`grep -m 1 "\[D-Star\]" ~/MMDVMHost/MMDVM.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
-MODULE=$(awk "NR==$numero_linea" ~/MMDVMHost/TODOS_LOS_INIS.ini)
+MODULE=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini)
 letra=c
 linea_sed_MODULE=$numero_linea$letra
 echo "$MODULE"
