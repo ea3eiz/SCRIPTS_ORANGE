@@ -350,11 +350,7 @@ done;;
 9) echo ""
 while true
 do
-                          
-
-                          lonng=`grep -n "LocalPort" ~/YSF2DMR/YSF2DMR.ini`
-                          lonng1=`expr substr $lonng 14 30`
-                          echo "   Valor de LocalPort  =\33[1;33m $lonng1"
+                          echo "   Valor de LocalPort  =\33[1;33m $LocalPort"
                           echo -n "\33[1;32m"
                           echo "   El valor correcto es: 4200"
                           echo -n "\33[1;37m"
@@ -362,7 +358,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "17c LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_9 LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -376,7 +372,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "21c Id=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_10 Id=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -385,11 +381,7 @@ done;;
 11) echo ""
 while true
 do
-                          
-
-                          lonng=`grep -n "StartupDstId" ~/YSF2DMR/YSF2DMR.ini`
-                          lonng1=`expr substr $lonng 17 30`
-                          echo "   Valor de StartupDstId  =\33[1;33m $lonng1"
+                          echo "   Valor de StartupDstId  =\33[1;33m $StartupDstId"
                           echo -n "\33[1;32m"
                           echo "   Pondremos un talkgroup o una Id dependiendo del valor en StartuoPC"
                           echo -n "\33[1;37m"
@@ -397,7 +389,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "22c StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_11 StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -415,7 +407,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "24c StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_12 StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -429,7 +421,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "25c Address=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_13 Address=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -443,7 +435,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "26c Port=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_14 Port=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -457,7 +449,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "29c Password=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "linea_sed_15 Password=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
