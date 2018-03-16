@@ -78,10 +78,6 @@ letra=c
 linea_sed_STID=$numero_linea$letra
 echo "$var1"
 
-
-echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
-var12= sed -n 24p  ~/YSF2DMR/YSF2DMR.ini;
-
 echo -n "\33[1;36m  11)\33[0m StartupPC             - \33[1;33m"
 var=`grep -n -m 1 '\<StartupPC\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<StartupPC\>' ~/YSF2DMR/YSF2DMR.ini`
