@@ -41,7 +41,7 @@ letra=c
 linea_sed_DS=$numero_linea$letra
 echo "$var1"
 
-echo -n "\33[1;36m   9)\33[0m DstPort               - \33[1;33m"
+echo -n "\33[1;36m   9)\33[0m LocalPort             - \33[1;33m"
 var=`grep -n -m 1 '\<LocalPort\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<LocalPort\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
