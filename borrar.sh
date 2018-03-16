@@ -29,7 +29,7 @@ var6= sed -n 10p  ~/YSF2DMR/YSF2DMR.ini;
 echo -n "\33[1;36m   7)\33[0m Modificar indicativo  - \33[1;33m"
 var7= sed -n 13p  ~/YSF2DMR/YSF2DMR.ini;
 
-
+echo "\33[1;36m   8)\33[0m DstPort               - \33[1;33m"
 var=`grep -n -m 1 '\<DstPort\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<DstPort\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
