@@ -60,13 +60,13 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea - 1` # y le suma uno qudando coomo: (75)
+numero_linea=`expr $numero_linea - 1`
 ID=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
 linea_sed_ID=$numero_linea$letra
 echo "$ID"
 
-echo -n "\33[1;36m  11)\33[0m StartupDstId           - \33[1;33m"
+echo -n "\33[1;36m  11)\33[0m StartupDstId          - \33[1;33m"
 var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
@@ -78,14 +78,14 @@ letra=c
 linea_sed_STID=$numero_linea$letra
 echo "$var1"
 
-echo -n "\33[1;36m  11)\33[0m StartupPC             - \33[1;33m"
+echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
 var=`grep -n -m 1 '\<StartupPC\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<StartupPC\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-STPC=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+StartupPC=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
 linea_sed_STPC=$numero_linea$letra
 echo "$var1"
