@@ -116,7 +116,7 @@ letra=c
 linea_sed_13=$numero_linea$letra
 echo "$Port"
 
-echo -n "\33[1;36m  11)\33[0m Password              - \33[1;33m"
+echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
 var=`grep -n -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
@@ -125,7 +125,7 @@ largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 Password=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_11=$numero_linea$letra
+linea_sed_15=$numero_linea$letra
 echo "$var1"
 
 echo ""
@@ -333,9 +333,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "DstPort" ~/YSF2DMR/YSF2DMR.ini`
-                          lonng1=`expr substr $lonng 12 30`
-                          echo "   Valor  de  DstPort  =\33[1;33m $lonng1"
+                          echo "   Valor  de  DstPort  =\33[1;33m $DstPort"
                           echo -n "\33[1;32m"
                           echo "   El valor correcto es: 3200"
                           echo -n "\33[1;37m"
@@ -343,7 +341,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "15c DstPort=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_8 DstPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
