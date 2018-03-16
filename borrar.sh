@@ -64,7 +64,7 @@ numero_linea=`expr $numero_linea - 1`
 Id=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
 linea_sed_10=$numero_linea$letra
-echo "$ID"
+echo "$Id"
 
 echo -n "\33[1;36m  11)\33[0m StartupDstId          - \33[1;33m"
 var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
@@ -114,9 +114,9 @@ numero_linea=`expr $numero_linea + 1`
 Port=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
 linea_sed_13=$numero_linea$letra
-echo "$var1"
+echo "$Port"
 
-echo -n "\33[1;36m  11)\33[0m Password             - \33[1;33m"
+echo -n "\33[1;36m  11)\33[0m Password              - \33[1;33m"
 var=`grep -n -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
