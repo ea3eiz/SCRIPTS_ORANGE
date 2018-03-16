@@ -53,12 +53,23 @@ letra=c
 linea_sed_LP=$numero_linea$letra
 echo "$var1"
 
+echo -n "\33[1;36m   10)\33[0m Id                   - \33[1;33m"
+var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea - 1` # y le suma uno qudando coomo: (75)
+ID=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_ID=$numero_linea$letra
+echo "$ID"
 
-#echo -n "\33[1;36m   8)\33[0m DstPort               - \33[1;33m"
-#var8= sed -n 15p  ~/YSF2DMR/YSF2DMR.ini;
 
-echo -n "\33[1;36m   9)\33[0m LocalPort             - \33[1;33m"
-var9= sed -n 17p  ~/YSF2DMR/YSF2DMR.ini;
+
+StartupDstId
+
 
 echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
 var10= sed -n 21p  ~/YSF2DMR/YSF2DMR.ini;
