@@ -2,7 +2,6 @@
 while true
 do
 clear
-
 echo "\33[1;36m   **************************************************************************"
 #echo "   *                                                                        *"
 echo "   *        Script para Modificar YSF2DMR.ini         \33[1;31m by EA3EIZ & EA4AOJ\33[1;36m   *"
@@ -31,28 +30,103 @@ echo -n "\33[1;36m   7)\33[0m Modificar indicativo  - \33[1;33m"
 var7= sed -n 13p  ~/YSF2DMR/YSF2DMR.ini;
 
 echo -n "\33[1;36m   8)\33[0m DstPort               - \33[1;33m"
-var8= sed -n 15p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<DstPort\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<DstPort\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+DstPort=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_8=$numero_linea$letra
+echo "$var1"
 
 echo -n "\33[1;36m   9)\33[0m LocalPort             - \33[1;33m"
-var9= sed -n 17p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<LocalPort\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<LocalPort\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+LocalPort=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_9=$numero_linea$letra
+echo "$var1"
 
 echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
-var10= sed -n 21p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea - 1`
+Id=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_10=$numero_linea$letra
+echo "$Id"
 
-echo -n "\33[1;36m  11)\33[0m StartupDsId           - \33[1;33m"
-var11= sed -n 22p  ~/YSF2DMR/YSF2DMR.ini;
+echo -n "\33[1;36m  11)\33[0m StartupDstId          - \33[1;33m"
+var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+StartupDstId=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_11=$numero_linea$letra
+echo "$var1"
 
 echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
-var12= sed -n 24p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 2`
+StartupPC=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_12=$numero_linea$letra
+echo "$StartupPC"
 
 echo -n "\33[1;36m  13)\33[0m Address               - \33[1;33m"
-var13= sed -n 25p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+Address=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_13=$numero_linea$letra
+echo "$var1"
 
 echo -n "\33[1;36m  14)\33[0m Port                  - \33[1;33m"
-var14= sed -n 26p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+Port=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_14=$numero_linea$letra
+echo "$Port"
 
 echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
-var15= sed -n 29p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+Password=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_15=$numero_linea$letra
+echo "$var1"
 
 echo ""
 echo "\33[1;36m  16)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
@@ -259,9 +333,7 @@ while true
 do
                           
 
-                          lonng=`grep -n "DstPort" ~/YSF2DMR/YSF2DMR.ini`
-                          lonng1=`expr substr $lonng 12 30`
-                          echo "   Valor  de  DstPort  =\33[1;33m $lonng1"
+                          echo "   Valor  de  DstPort  =\33[1;33m $DstPort"
                           echo -n "\33[1;32m"
                           echo "   El valor correcto es: 3200"
                           echo -n "\33[1;37m"
@@ -269,7 +341,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "15c DstPort=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_8 DstPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -278,11 +350,7 @@ done;;
 9) echo ""
 while true
 do
-                          
-
-                          lonng=`grep -n "LocalPort" ~/YSF2DMR/YSF2DMR.ini`
-                          lonng1=`expr substr $lonng 14 30`
-                          echo "   Valor de LocalPort  =\33[1;33m $lonng1"
+                          echo "   Valor de LocalPort  =\33[1;33m $LocalPort"
                           echo -n "\33[1;32m"
                           echo "   El valor correcto es: 4200"
                           echo -n "\33[1;37m"
@@ -290,7 +358,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "17c LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_9 LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -304,7 +372,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "21c Id=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_10 Id=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -313,11 +381,7 @@ done;;
 11) echo ""
 while true
 do
-                          
-
-                          lonng=`grep -n "StartupDstId" ~/YSF2DMR/YSF2DMR.ini`
-                          lonng1=`expr substr $lonng 17 30`
-                          echo "   Valor de StartupDstId  =\33[1;33m $lonng1"
+                          echo "   Valor de StartupDstId  =\33[1;33m $StartupDstId"
                           echo -n "\33[1;32m"
                           echo "   Pondremos un talkgroup o una Id dependiendo del valor en StartuoPC"
                           echo -n "\33[1;37m"
@@ -325,7 +389,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "22c StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_11 StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -343,7 +407,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "24c StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_12 StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -357,7 +421,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "25c Address=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_13 Address=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -371,7 +435,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "26c Port=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_14 Port=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -385,7 +449,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "29c Password=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_15 Password=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
