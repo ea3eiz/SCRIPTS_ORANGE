@@ -36,9 +36,9 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-DSTPORT=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+DstPort=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_DS=$numero_linea$letra
+linea_sed_8=$numero_linea$letra
 echo "$var1"
 
 echo -n "\33[1;36m   9)\33[0m LocalPort             - \33[1;33m"
@@ -48,9 +48,9 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-LOCALPORT=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+LocalPort=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_LP=$numero_linea$letra
+linea_sed_9=$numero_linea$letra
 echo "$var1"
 
 echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
@@ -61,9 +61,9 @@ largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea - 1`
-ID=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+Id=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_ID=$numero_linea$letra
+linea_sed_10=$numero_linea$letra
 echo "$ID"
 
 echo -n "\33[1;36m  11)\33[0m StartupDstId          - \33[1;33m"
@@ -73,9 +73,9 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-STID=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+StartupDstId=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_STID=$numero_linea$letra
+linea_sed_11=$numero_linea$letra
 echo "$var1"
 
 echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
@@ -85,22 +85,49 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
 StartupPC=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_STPC=$numero_linea$letra
+linea_sed_12=$numero_linea$letra
 echo "$var1"
 
-
-
-
 echo -n "\33[1;36m  13)\33[0m Address               - \33[1;33m"
-var13= sed -n 25p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+Address=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_13=$numero_linea$letra
+echo "$var1"
 
 echo -n "\33[1;36m  14)\33[0m Port                  - \33[1;33m"
-var14= sed -n 26p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<Address\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1`
+Port=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_13=$numero_linea$letra
+echo "$var1"
 
-echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
-var15= sed -n 29p  ~/YSF2DMR/YSF2DMR.ini;
+echo -n "\33[1;36m  11)\33[0m Password          - \33[1;33m"
+var=`grep -n -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<Password\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+Password=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_11=$numero_linea$letra
+echo "$var1"
 
 echo ""
 echo "\33[1;36m  16)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
