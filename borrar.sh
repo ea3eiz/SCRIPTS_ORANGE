@@ -66,9 +66,9 @@ letra=c
 linea_sed_ID=$numero_linea$letra
 echo "$ID"
 
-echo -n "\33[1;36m  11)\33[0m StartupDsId           - \33[1;33m"
-var=`grep -n -m 1 '\<StartupDsId\>' ~/YSF2DMR/YSF2DMR.ini`
-var1=`grep -m 1 '\<StartupDsId\>' ~/YSF2DMR/YSF2DMR.ini`
+echo -n "\33[1;36m  11)\33[0m StartupDstId           - \33[1;33m"
+var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
