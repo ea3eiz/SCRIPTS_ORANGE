@@ -66,14 +66,6 @@ letra=c
 linea_sed_ID=$numero_linea$letra
 echo "$ID"
 
-
-
-StartupDstId
-
-
-echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
-var10= sed -n 21p  ~/YSF2DMR/YSF2DMR.ini;
-
 echo -n "\33[1;36m  11)\33[0m StartupDsId           - \33[1;33m"
 var11= sed -n 22p  ~/YSF2DMR/YSF2DMR.ini;
 
