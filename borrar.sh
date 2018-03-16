@@ -113,7 +113,7 @@ numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1`
 Port=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_13=$numero_linea$letra
+linea_sed_14=$numero_linea$letra
 echo "$Port"
 
 echo -n "\33[1;36m  15)\33[0m Password              - \33[1;33m"
