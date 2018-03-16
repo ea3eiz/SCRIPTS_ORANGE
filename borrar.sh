@@ -82,6 +82,21 @@ echo "$var1"
 echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
 var12= sed -n 24p  ~/YSF2DMR/YSF2DMR.ini;
 
+echo -n "\33[1;36m  11)\33[0m StartupPC             - \33[1;33m"
+var=`grep -n -m 1 '\<StartupPC\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupPC\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+STPC=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_STPC=$numero_linea$letra
+echo "$var1"
+
+
+
+
 echo -n "\33[1;36m  13)\33[0m Address               - \33[1;33m"
 var13= sed -n 25p  ~/YSF2DMR/YSF2DMR.ini;
 
