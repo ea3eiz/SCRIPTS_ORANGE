@@ -53,7 +53,7 @@ letra=c
 linea_sed_LP=$numero_linea$letra
 echo "$var1"
 
-echo -n "\33[1;36m   10)\33[0m Id                   - \33[1;33m"
+echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
 var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
 var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
@@ -67,7 +67,17 @@ linea_sed_ID=$numero_linea$letra
 echo "$ID"
 
 echo -n "\33[1;36m  11)\33[0m StartupDsId           - \33[1;33m"
-var11= sed -n 22p  ~/YSF2DMR/YSF2DMR.ini;
+var=`grep -n -m 1 '\<StartupDsId\>' ~/YSF2DMR/YSF2DMR.ini`
+var1=`grep -m 1 '\<StartupDsId\>' ~/YSF2DMR/YSF2DMR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+STID=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+letra=c
+linea_sed_STID=$numero_linea$letra
+echo "$var1"
+
 
 echo -n "\33[1;36m  12)\33[0m StartupPC             - \33[1;33m"
 var12= sed -n 24p  ~/YSF2DMR/YSF2DMR.ini;
