@@ -358,7 +358,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_9 LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_9 LocalPort=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -372,7 +372,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_10 Id=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_10 Id=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -389,7 +389,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_11 StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_11 StartupDstId=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -407,7 +407,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_12 StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_12 StartupPC=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -421,7 +421,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_13 Address=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_13 Address=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -435,7 +435,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_14 Port=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_14 Port=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -449,7 +449,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "linea_sed_15 Password=$lon" ~/YSF2DMR/YSF2DMR.ini
+                          sed -i "$linea_sed_15 Password=$lon" ~/YSF2DMR/YSF2DMR.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
