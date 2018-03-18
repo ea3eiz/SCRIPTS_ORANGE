@@ -327,11 +327,11 @@ while true
 do
                               actualizar=S 
                               case $actualizar in
-			                        [sS]* ) echo ""
-                              geany ~/YSFClients/YSFGateway/YSFGateway.ini
-			                        break;;
-			                        [nN]* ) echo ""
-			                        break;;
+			                     [sS]* ) echo ""
+                              sudo pluma ~/YSFClients/YSFGateway/YSFGateway.ini
+			                     break;;
+			                     [nN]* ) echo ""
+			                     break;;
 esac
 done;;
 0) echo ""
