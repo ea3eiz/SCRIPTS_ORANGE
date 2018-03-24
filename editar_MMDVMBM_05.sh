@@ -8,7 +8,6 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-
 echo "\33[1;32m   *${ROJO} V.02.06.03 ${VERDE}*************************************************************"
 #echo "   *                                                                        *"
 echo "   *           Script para Modificar MMDVMBM.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
@@ -1120,7 +1119,7 @@ do
                               actualizar=S 
                               case $actualizar in
                               [sS]* ) echo ""
-                              geany ~/MMDVMHost/MMDVMBM.ini
+                              sudo pluma ~/MMDVMHost/MMDVMBM.ini
                               break;;
                               [nN]* ) echo ""
                               break;;
