@@ -1060,7 +1060,7 @@ do
                               actualizar=S 
                               case $actualizar in
                               [sS]* ) echo ""
-                              geany ~/MMDVMHost/MMDVMDSTAR.ini
+                              sudo pluma ~/MMDVMHost/MMDVMDSTAR.ini
                               break;;
                               [nN]* ) echo ""
                               break;;
