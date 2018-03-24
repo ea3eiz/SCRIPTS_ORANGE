@@ -213,7 +213,7 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
             #YSF
-            sed -i "12c RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
             #YSF2DMR
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini            
@@ -269,7 +269,7 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
             sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
             #YSF
-            sed -i "13c TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
             #YSF2DMR
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini      
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini            
