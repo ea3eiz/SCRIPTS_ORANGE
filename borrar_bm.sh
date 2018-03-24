@@ -2,15 +2,6 @@
 while true
 do
 clear
-                  # Datos para el panel de control
-                  indi=$(awk "NR==2" ~/MMDVMHost/MMDVMBM.ini)
-                  sed -i "1c $indi" ~/info_panel_control.ini
-                  frec=$(awk "NR==13" ~/MMDVMHost/MMDVMBM.ini)
-                  sed -i "3c $frec" ~/info_panel_control.ini
-                  ide=$(awk "NR==3" ~/MMDVMHost/MMDVMBM.ini)
-                  sed -i "2c $ide" ~/info_panel_control.ini
-                  master=$(awk "NR==133" ~/MMDVMHost/MMDVMBM.ini)
-                  sed -i "4c $master" ~/info_panel_control.ini
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -322,10 +313,6 @@ indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 
                     indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
                           sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/MMDVMBM.ini
-
-indi=$(awk "NR==2" ~/MMDVMHost/MMDVMBM.ini)
-sed -i "1c $indi" ~/info_panel_control.ini
-
         break;;
         [nN]* ) echo ""
         break;;
@@ -351,11 +338,6 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           case $actualizar in
         [sS]* ) echo ""
                               sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/MMDVMBM.ini
-
-frec=$(awk "NR==13" ~/MMDVMHost/MMDVMBM.ini)
-sed -i "3c $frec" ~/info_panel_control.ini
-
-
       break;;
       [nN]* ) echo ""
       break;;
@@ -514,10 +496,6 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
         [sS]* ) echo ""
                           sed -i "$linea Id=$miid" ~/MMDVMHost/MMDVMBM.ini
 
-
-ide=$(awk "NR==3" ~/MMDVMHost/MMDVMBM.ini)
-sed -i "2c $ide" ~/info_panel_control.ini
-                        
         break;;
         [nN]* ) echo ""
         break;;
@@ -540,10 +518,6 @@ echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
 master1=`echo "$master1" | tr [:upper:] [:lower:]`
 
                           sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMBM.ini
-
-master=$(awk "NR==133" ~/MMDVMHost/MMDVMBM.ini)
-sed -i "4c $master" ~/info_panel_control.ini
-
         break;;
         [nN]* ) echo ""
         break;;
