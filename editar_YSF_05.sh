@@ -6,12 +6,11 @@ ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
-echo "\33[1;32m   *${ROJO} V.02.07.02 ${VERDE}*************************************************************"
+echo "\33[1;32m   *${ROJO} V.02.06.03 ${VERDE}*************************************************************"
 #echo "   *                                                                        *"
-echo "   *            Script para Modificar YSFGateway.ini           \33[1;31m by EA3EIZ\33[1;36m   *"
+echo "   *       Script para Modificar YSFGateway.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
-
 var=`grep -n -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
 var1=`grep -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
 buscar=":"
