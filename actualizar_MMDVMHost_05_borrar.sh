@@ -31,7 +31,7 @@ clear
             [sS]* ) echo ""
             echo "ok >>>>>"
             
-                    cd /home/pi
+                    cd ~/
 
 
 #comprueba si el ficgero existe
@@ -67,7 +67,7 @@ fi
                     then
                     echo "El fichero ya existe"
                     else
-                    sudo cp ~/V30/info.ini /home/pi
+                    sudo cp ~/SCRIPTS_ORANGE/info.ini ~/
                     fi
                     #===============================================
 
@@ -81,7 +81,7 @@ fi
                     sudo cp MMDVMHost MMDVMFUSION
                     #===============================================
                     # Rutina solo para el LIBRE ======================
-                    cd ~/V30
+                    cd ~/SCRIPTS_ORANGE
                     sudo cp MMDVMHostLIBRE ~/MMDVMHost
                     sudo cp MMDVMLIBRE.ini ~/MMDVMHost
                     cd ~/MMDVMHost
@@ -6986,7 +6986,7 @@ clear
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                    cd /home/pi
+                    cd ~/
                     sudo rm -r MMDVMHost
                     sudo mv MMDVMHost_anterior MMDVMHost
                     echo""
