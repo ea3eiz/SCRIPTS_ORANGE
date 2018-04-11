@@ -12,10 +12,6 @@ clear
                         cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
                         fi
 
-sudo chmod +x -R ~/MMDVMHost/TODOS_LOS_INIS.ini 
-
-
-
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
 echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN LOS EDITORES: *"
