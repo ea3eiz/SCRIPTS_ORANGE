@@ -77,8 +77,8 @@ fi
                     make
 
 
-                    sudo chmod +x -R ~/MMDVMHost
-                    sudo chmod +x -R ~/Downloads
+                    sudo chmod 777 -R ~/MMDVMHost
+                    sudo chmod 777 -R ~/Downloads
 
 
 
