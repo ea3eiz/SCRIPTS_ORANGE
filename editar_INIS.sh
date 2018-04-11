@@ -11,7 +11,10 @@ clear
                         echo ">>>>>>>>> COPIANDO FICHERO TODOS_LOS_INIS.ini >>>>>>>>"
                         cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
                         fi
-                        sudo chmod 777 -R ~/MMDVMHost/TODOS_LOS_INIS.ini 
+
+sudo chmod +x -R ~/MMDVMHost/TODOS_LOS_INIS.ini 
+
+
 
 echo "\33[1;32m   **************************************************************************"
 #echo "   *                                                                        *"
