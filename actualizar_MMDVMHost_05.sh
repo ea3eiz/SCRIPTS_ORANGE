@@ -43,9 +43,15 @@ clear
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
-                    HOY=$(date +%Y%m%d)
+                    # HOY=$(date +%Y%m%d)
+                    # FIJA="const char* VERSION = "\"
+                    # PI=":Opi"\"
+                    # HOY1=$HOY$PI
+                    # PUNTO=";"
+
+                    HOY=$(date +%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI=":Opi"\"
+                    PI=":REM-04"\"
                     HOY1=$HOY$PI
                     PUNTO=";"
                     
