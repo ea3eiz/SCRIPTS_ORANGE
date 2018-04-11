@@ -112,7 +112,7 @@ fi
                     cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
 
                     cp MMDVM.ini TODOS_LOS_INIS.ini
-
+sudo chmod +x TODOS_LOS_INIS.ini
                     sudo chmod +x -R ~/MMDVMHost
                     sudo chmod +x -R ~/Downloads
 
