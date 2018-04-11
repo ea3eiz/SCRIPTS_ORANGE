@@ -23,14 +23,15 @@ case $escoger_menu in
 while true
 do
 clear
-                    # echo " ****************************************************************"
-                    # echo " \33[1;31m* Si actualizas MMDVMhost, perderás todas las configuraciones  *"
-                    # echo " * Tendrás que volver a configurar todos los MMDVM    *"
-                    # echo " \33[1;32m****************************************************************"
-                    echo "\33[1;33m"
-                    read -p '  Quieres actualizar MMDVMHost ? Si/No: ' ejecutar1                    case $ejecutar1 in
-                    [sS]* ) echo ""
-                    echo "ok >>>>>"
+            #echo " ****************************************************************"
+            #echo " \33[1;31m* Si actualizas MMDVMhost, perderás todas las configuraciones  *"
+            #echo " * Tendrás que volver a configurar todos los MMDVM    *"
+            #echo " \33[1;32m****************************************************************"
+            echo "\33[1;33m"
+            read -p '  Quieres actualizar MMDVMHost ? Si/No: ' ejecutar1
+            case $ejecutar1 in
+            [sS]* ) echo ""
+            echo "ok >>>>>"
 
                     cd ~/
 #comprueba si el ficgero existe
