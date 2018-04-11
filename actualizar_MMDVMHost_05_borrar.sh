@@ -45,7 +45,6 @@ fi
 
                     cp MMDVMHost/*.* MMDVMHost_anterior/
                     sudo rm -r MMDVMHost
-                    sudo rm -r MMDVMCal
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
@@ -79,9 +78,10 @@ fi
 
                     sudo chmod 777 -R ~/MMDVMHost
                     sudo chmod 777 -R ~/Downloads
-
-
-
+ clear                   
+echo "***************************************************"
+echo "* RESTAURANDO LOS DATOS DE LA COPIA DE SEGURIDAD  *"
+echo "***************************************************"
                     # Crea los ejecutables para estas 4 aplicaciones  
                     cp MMDVMHost MMDVMBM
                     cp MMDVMHost MMDVMPLUS
