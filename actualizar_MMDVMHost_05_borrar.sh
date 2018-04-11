@@ -75,40 +75,40 @@ fi
                     sed -i "2c $HOY" ~/info.ini
                     make
                     # Crea los ejecutables para estas 4 aplicaciones  
-                    sudo cp MMDVMHost MMDVMBM
-                    sudo cp MMDVMHost MMDVMPLUS
-                    sudo cp MMDVMHost MMDVMDSTAR
-                    sudo cp MMDVMHost MMDVMFUSION
+                    cp MMDVMHost MMDVMBM
+                    cp MMDVMHost MMDVMPLUS
+                    cp MMDVMHost MMDVMDSTAR
+                    cp MMDVMHost MMDVMFUSION
                     #===============================================
                     # Rutina solo para el LIBRE ======================
                     cd ~/SCRIPTS_ORANGE
-                    sudo cp MMDVMHostLIBRE ~/MMDVMHost
-                    sudo cp MMDVMLIBRE.ini ~/MMDVMHost
+                    cp MMDVMHostLIBRE ~/MMDVMHost
+                    cp MMDVMLIBRE.ini ~/MMDVMHost
                     cd ~/MMDVMHost
                     sudo chmod +x MMDVMHostLIBRE
                     #=================================================          
-                    sudo cp MMDVM.ini MMDVM.ini_original
-                    sudo cp MMDVM.ini MMDVM.ini_copia
-                    sudo cp MMDVM.ini MMDVM.ini_copia2
-                    sudo cp MMDVM.ini MMDVM.ini_copia3
+                    cp MMDVM.ini MMDVM.ini_original
+                    cp MMDVM.ini MMDVM.ini_copia
+                    cp MMDVM.ini MMDVM.ini_copia2
+                    cp MMDVM.ini MMDVM.ini_copia3
 
-                    sudo cp MMDVM.ini MMDVMBM.ini
-                    sudo cp MMDVM.ini MMDVMBM.ini_copia
-                    sudo cp MMDVM.ini MMDVMBM.ini_copia2
-                    sudo cp MMDVM.ini MMDVMBM.ini_copia3
+                    cp MMDVM.ini MMDVMBM.ini
+                    cp MMDVM.ini MMDVMBM.ini_copia
+                    cp MMDVM.ini MMDVMBM.ini_copia2
+                    cp MMDVM.ini MMDVMBM.ini_copia3
 
-                    sudo cp MMDVM.ini MMDVMPLUS.ini
-                    sudo cp MMDVM.ini MMDVMPLUS.ini_copia
-                    sudo cp MMDVM.ini MMDVMPLUS.ini_copia2
-                    sudo cp MMDVM.ini MMDVMPLUS.ini_copia3
+                    cp MMDVM.ini MMDVMPLUS.ini
+                    cp MMDVM.ini MMDVMPLUS.ini_copia
+                    cp MMDVM.ini MMDVMPLUS.ini_copia2
+                    cp MMDVM.ini MMDVMPLUS.ini_copia3
 
-                    sudo cp MMDVM.ini MMDVMDSTAR.ini
-                    sudo cp MMDVM.ini MMDVMFUSION.ini
+                    cp MMDVM.ini MMDVMDSTAR.ini
+                    cp MMDVM.ini MMDVMFUSION.ini
 
-                    sudo cp MMDVMLIBRE.ini MMDVMLIBRE.ini_uno
-                    sudo cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
+                    cp MMDVMLIBRE.ini MMDVMLIBRE.ini_uno
+                    cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
 
-                    sudo cp MMDVM.ini TODOS_LOS_INIS.ini
+                    cp MMDVM.ini TODOS_LOS_INIS.ini
 
                     sudo chmod +x -R ~/MMDVMHost
 
