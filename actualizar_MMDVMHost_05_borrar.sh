@@ -75,6 +75,13 @@ fi
                     # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                     make
+
+
+                    sudo chmod +x -R ~/MMDVMHost
+                    sudo chmod +x -R ~/Downloads
+
+
+
                     # Crea los ejecutables para estas 4 aplicaciones  
                     cp MMDVMHost MMDVMBM
                     cp MMDVMHost MMDVMPLUS
@@ -112,9 +119,8 @@ fi
                     cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
 
                     cp MMDVM.ini TODOS_LOS_INIS.ini
-sudo chmod +x TODOS_LOS_INIS.ini
-                    sudo chmod +x -R ~/MMDVMHost
-                    sudo chmod +x -R ~/Downloads
+
+                    
 
 #*** restaura todos los datos de l aversión anterior ***************************************************************
 
