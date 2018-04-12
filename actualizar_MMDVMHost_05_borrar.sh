@@ -48,9 +48,9 @@ fi
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
-                    HOY=$(date +%m%d)
+                    HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI=":REM-Opi"\"
+                    PI=":REM"\"
                     HOY1=$HOY$PI
                     PUNTO=";"
 
