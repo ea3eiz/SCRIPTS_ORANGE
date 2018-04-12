@@ -120,7 +120,7 @@ echo "***************************************************"
 
                     cp MMDVM.ini TODOS_LOS_INIS.ini
 
-                    
+                     sudo chmod 777 -R ~/MMDVMHost
 
 #*** restaura todos los datos de l aversión anterior ***************************************************************
 
