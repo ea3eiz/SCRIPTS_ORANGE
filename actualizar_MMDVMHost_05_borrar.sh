@@ -107,6 +107,9 @@ echo "***************************************************"
                     cp MMDVM.ini MMDVMBM.ini_copia2
                     cp MMDVM.ini MMDVMBM.ini_copia3
 
+                    sudo chmod 777 -R ~/MMDVMHost/MMDVMBM.ini
+                    sudo chmod 777 -R ~/MMDVMHost/MMDVMBM
+
                     cp MMDVM.ini MMDVMPLUS.ini
                     cp MMDVM.ini MMDVMPLUS.ini_copia
                     cp MMDVM.ini MMDVMPLUS.ini_copia2
