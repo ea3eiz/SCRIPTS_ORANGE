@@ -35,7 +35,7 @@ clear
             
                 
                     mkdir ~/.copias
-                    #sudo rm -R ~/Downloads/MMDVM*.*
+                    sudo rm -R ~/Downloads/MMDVM*.*
                     cd ~/
                     mkdir MMDVMHost_anterior
                     cp MMDVMHost/*.* MMDVMHost_anterior/
