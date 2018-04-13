@@ -2,6 +2,26 @@
 
 sleep 10
 
+
+#pone todos los status de inicio en OFF
+sed -i "1c D-STAR=OFF" ~/status.ini
+sed -i "2c BlueDV=OFF" ~/status.ini
+sed -i "3c YSF=OFF" ~/status.ini
+sed -i "4c DV4mini=OFF" ~/status.ini
+sed -i "5c MMDVM=OFF" ~/status.ini
+sed -i "6c MMDVMPLUS=OFF" ~/status.ini
+sed -i "7c MMDVMBM=OFF" ~/status.ini
+sed -i "8c SVXLINK=OFF" ~/status.ini
+sed -i "9c dstarrepeater=OFF" ~/status.ini
+sed -i "10c MMDVMLIBRE=OFF" ~/status.ini
+#sed -i "11c AMBE_SERVER=OFF" ~/status.ini
+#sed -i "12c SOLOFUSION=OFF" ~/status.ini
+#sed -i "13c SOLODSTAR=OFF" ~/status.ini
+#sed -i "14c YSF2DMR=OFF" ~/status.ini
+
+
+
+
 cd ~/SCRIPTS_ORANGE/
 git pull
 
