@@ -27,9 +27,7 @@ clear
 		[sS]* ) echo ""
 		echo "Haciendo copias de seguridad de todos los .ini"
 		sleep 3
-		sudo chmod -R 777 ~/.copias
-            
-
+           
             #Comprueba si existe el fichero info.ini
             if [ -f /home/orangepi/Downloads/info.ini ];
             then
@@ -97,15 +95,6 @@ done;;
 while true
 do
 clear
-
-            
-            
-           
-            
-
-
-
-
 
             ejecutar1=S
             case $ejecutar1 in
