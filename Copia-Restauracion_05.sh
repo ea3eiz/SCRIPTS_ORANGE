@@ -7,19 +7,13 @@ echo "\33[1;32m   **************************************************************
 echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.06\33[1;32m         *"
 echo "   *                       \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                            *"
 echo "   ***********************************************************************"
-echo "\33[1;36m   1)\33[1;37m Copiar BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
-echo "      YSF2DMR, YSF, BlueDV y SVXLINK en Downloads"
+echo "\33[1;36m   1)\33[1;37m Hacer copia de seguridad de todos los .ini"
 echo ""
-echo "\33[1;36m   2)\33[1;37m Restaurar BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
-echo "      YSF2DMR, YSF, BlueDV y SVXLINK de Downloads"
+echo "\33[1;36m   2)\33[1;37m Restaurar copia de seguridad de todos los .ini"
 echo ""
-# echo "\33[1;36m   3)\33[1;32m Cambiar Indicativo, Id, Frecuencia, Latitud, Longitud"
-# echo "\33[1;36m   \33[1;32m   Ciudad, Url, Timeout, Duplex, Baliza, Módulo D-STAR"
-# echo "\33[1;36m   \33[1;32m   y RFModeHang a todos los .INI"
-# echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 2: " 
+echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -31,8 +25,7 @@ clear
 		ejecutar1=S
 		case $ejecutar1 in
 		[sS]* ) echo ""
-		echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO"
-            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"   
+		echo "Haciendo copias de seguridad de todos los .ini"
 		sleep 3
 		sudo chmod -R 777 ~/.copias
             
