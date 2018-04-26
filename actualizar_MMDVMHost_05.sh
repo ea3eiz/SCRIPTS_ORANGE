@@ -10,7 +10,6 @@ echo "   *********************************************************************"
 #echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
 echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Volver a la versión anterior de MMDVMHost \33[1;33m"
-#echo  "\33[1;36m   3)\33[1;32m Recuperar solo los .INI de la versión anterior de MMDVMHost \33[1;33m"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -7010,46 +7009,6 @@ clear
                     clear
                     exit;
                     break;;
-esac
-done;;
-3) echo ""
-while true
-do
-clear
-            ejecutar1=S
-            case $ejecutar1 in
-            [sS]* ) echo ""
-            echo "Restaurando todos los .INI de la version anterior"
-            sleep 3
-            cd ~/MMDVMHost_anterior
-            cp -f MMDVM.ini ~/MMDVMHost
-            cp -f MMDVM.ini_copia ~/MMDVMHost
-            cp -f MMDVM.ini_copia2 ~/MMDVMHost
-            cp -f MMDVM.ini_copia3 ~/MMDVMHost
-            cp -f MMDVM.ini_original ~/MMDVMHost
-            cp -f MMDVMBM.ini ~/MMDVMHost
-            cp -f MMDVMBM.ini_copia ~/MMDVMHost
-            cp -f MMDVMBM.ini_copia2 ~/MMDVMHost
-            cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
-            cp -f MMDVMLIBRE.ini ~/MMDVMHost
-            cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
-            cp -f MMDVMLIBRE.ini_dos ~/DoMMDVMHost     
-            cp -f MMDVMPLUS.ini ~/MMDVMHost
-            cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
-            cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
-            cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
-
-            #solo Dstar y solo Fusion
-            cp -f MMDVMDSTAR.ini ~/MMDVMHost
-            cp -f MMDVMFUSION.ini ~/MMDVMHost
-            #fin  Dstar y solo Fusion
-
-            echo ""
-            echo "Ok, se ha ejecutado correctamente"
-            echo ""
-            break;;
-            [nN]* ) echo ""
-            break;;
 esac
 done;;
 0) echo ""
