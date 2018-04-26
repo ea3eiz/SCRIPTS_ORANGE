@@ -3,12 +3,12 @@ while true
 do
 clear
                     # Datos para el panel de control
-                    #frec=$(awk "NR==2" ~/YSF2DMR/YSF2DMR.ini)
-                    #sed -i "24c $frec" ~/info_panel_control.ini
-                    #tg=$(awk "NR==23" ~/YSF2DMR/YSF2DMR.ini)
-                    #sed -i "26c $tg" ~/info_panel_control.ini
-                    #master=$(awk "NR==26" ~/YSF2DMR/YSF2DMR.ini)
-                    #sed -i "25c $master" ~/info_panel_control.ini
+                    frec=$(awk "NR==2" ~/YSF2DMR/YSF2DMR.ini)
+                    sed -i "24c $frec" ~/info_panel_control.ini
+                    tg=$(awk "NR==23" ~/YSF2DMR/YSF2DMR.ini)
+                    sed -i "26c $tg" ~/info_panel_control.ini
+                    master=$(awk "NR==26" ~/YSF2DMR/YSF2DMR.ini)
+                    sed -i "25c $master" ~/info_panel_control.ini
 
 
 echo "\33[1;36m   **************************************************************************"

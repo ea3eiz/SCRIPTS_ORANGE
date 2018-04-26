@@ -4,14 +4,14 @@ do
 clear
 
                   # Datos para el panel de control
-                  #indi=$(awk "NR==2" ~/MMDVMHost/MMDVM.ini)
-                  #sed -i "6c $indi" ~/info_panel_control.ini
-                  #ide=$(awk "NR==3" ~/MMDVMHost/MMDVM.ini)
-                  #sed -i "7c $ide" ~/info_panel_control.ini
-                  #frec=$(awk "NR==13" ~/MMDVMHost/MMDVM.ini)
-                  #sed -i "8c $frec" ~/info_panel_control.ini
-                  #master=$(awk "NR==139" ~/MMDVMHost/MMDVM.ini)
-                  #sed -i "9c $master" ~/info_panel_control.ini
+                  indi=$(awk "NR==2" ~/MMDVMHost/MMDVM.ini)
+                  sed -i "6c $indi" ~/info_panel_control.ini
+                  ide=$(awk "NR==3" ~/MMDVMHost/MMDVM.ini)
+                  sed -i "7c $ide" ~/info_panel_control.ini
+                  frec=$(awk "NR==13" ~/MMDVMHost/MMDVM.ini)
+                  sed -i "8c $frec" ~/info_panel_control.ini
+                  master=$(awk "NR==139" ~/MMDVMHost/MMDVM.ini)
+                  sed -i "9c $master" ~/info_panel_control.ini
 
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
