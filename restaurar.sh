@@ -3,7 +3,8 @@ cd /var/www/html/upload/files
 cp copia.tar.gz /home/orangepi/Downloads
 cd /home/orangepi/Downloads
 tar -xvzf copia.tar.gz
-sudo cp -r Downloads /home/orangepi
+cp -r Downloads /home/orangepi
+
 echo "\33[1;32m" #color verde
 echo "***************************************************"
 echo "* ESTAS RESTAURANDO UNA COPIA DE LA MISMA VERSIÓN *"
