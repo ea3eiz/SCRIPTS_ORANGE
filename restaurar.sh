@@ -4,7 +4,8 @@ cp copia.tar.gz /home/orangepi/Downloads
 cd /home/orangepi/Downloads
 tar -xvzf copia.tar.gz
 cp -r Downloads /home/orangepi
-
+rm -r /home/orangepi/Downloads/Downloads
+rm /home/orangepi/Downloads/copia.tar.gz
 echo "\33[1;32m" #color verde
 echo "***************************************************"
 echo "* ESTAS RESTAURANDO UNA COPIA DE LA MISMA VERSIÓN *"
