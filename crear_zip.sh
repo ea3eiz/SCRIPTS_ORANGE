@@ -45,3 +45,4 @@ cd /home/orangepi/MMDVMHost
 #cd /var/www/html/upload/files
 cd /home/orangepi/
 tar -zcvf copia.tar.gz /home/orangepi/Downloads
+cp  copia.tar.gz /var/www/html/upload/files
