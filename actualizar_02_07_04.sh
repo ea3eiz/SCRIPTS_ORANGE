@@ -73,7 +73,7 @@ sed -i "8c $frec" ~/info_panel_control.ini
 sed -i "9c $master" ~/info_panel_control.ini
 
 #YSF
-master=$(awk "NR==42" ~/YSFClients/YSFGateway/YSFGateway.ini)
+master=$(awk "NR==38" ~/YSFClients/YSFGateway/YSFGateway.ini)
 sed -i "21c $master" ~/info_panel_control.ini
 
 #SVXLINK
@@ -87,4 +87,4 @@ tg=$(awk "NR==22" ~/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" ~/info_panel_control.ini
 sed -i "25c $master" ~/info_panel_control.ini
 sed -i "26c $tg" ~/info_panel_control.ini
-#=================================================================================
+#================================================================================= 
