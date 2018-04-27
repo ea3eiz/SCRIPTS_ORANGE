@@ -1,46 +1,46 @@
 ﻿#!/bin/bash
 
-cd ~/MMDVMHost
-            sudo cp -f MMDVM.ini ~/Downloads
-            sudo cp -f MMDVM.ini_copia ~/Downloads
-            sudo cp -f MMDVM.ini_copia2 ~/Downloads
-            sudo cp -f MMDVM.ini_copia3 ~/Downloads
-            sudo cp -f MMDVM.ini_original ~/Downloads
-            sudo cp -f MMDVMBM.ini ~/Downloads
-            sudo cp -f MMDVMBM.ini_copia ~/Downloads
-            sudo cp -f MMDVMBM.ini_copia2 ~/Downloads
-            sudo cp -f MMDVMBM.ini_copia3 ~/Downloads
-            sudo cp -f MMDVMLIBRE.ini ~/Downloads
-            sudo cp -f MMDVMLIBRE.ini_uno ~/Downloads
-            sudo cp -f MMDVMLIBRE.ini_dos ~/Downloads      
-            sudo cp -f MMDVMPLUS.ini ~/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
+cd /home/orangepi/MMDVMHost
+            sudo cp -f MMDVM.ini /home/orangepi/Downloads
+            sudo cp -f MMDVM.ini_copia /home/orangepi/Downloads
+            sudo cp -f MMDVM.ini_copia2 /home/orangepi/Downloads
+            sudo cp -f MMDVM.ini_copia3 /home/orangepi/Downloads
+            sudo cp -f MMDVM.ini_original /home/orangepi/Downloads
+            sudo cp -f MMDVMBM.ini /home/orangepi/Downloads
+            sudo cp -f MMDVMBM.ini_copia /home/orangepi/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 /home/orangepi/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 /home/orangepi/Downloads
+            sudo cp -f MMDVMLIBRE.ini /home/orangepi/Downloads
+            sudo cp -f MMDVMLIBRE.ini_uno /home/orangepi/Downloads
+            sudo cp -f MMDVMLIBRE.ini_dos /home/orangepi/Downloads      
+            sudo cp -f MMDVMPLUS.ini /home/orangepi/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia /home/orangepi/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 /home/orangepi/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 /home/orangepi/Downloads
 
             #solo Dstar y solo Fusion
-            cp -f MMDVMDSTAR.ini ~/Downloads
-            cp -f MMDVMFUSION.ini ~/Downloads
+            cp -f MMDVMDSTAR.ini /home/orangepi/Downloads
+            cp -f MMDVMFUSION.ini /home/orangepi/Downloads
             #fin  Dstar y solo Fusion
 
-            cd  ~/YSF2DMR
-            cp -f YSF2DMR.ini ~/Downloads
-            cp -f YSF2DMR.ini_copia_01 ~/Downloads
-            cp -f YSF2DMR.ini_copia_02 ~/Downloads
-            cp -f YSF2DMR.ini_copia_03 ~/Downloads
-            cp -f YSF2DMR.ini_copia_04 ~/Downloads
+            cd  /home/orangepi/YSF2DMR
+            cp -f YSF2DMR.ini /home/orangepi/Downloads
+            cp -f YSF2DMR.ini_copia_01 /home/orangepi/Downloads
+            cp -f YSF2DMR.ini_copia_02 /home/orangepi/Downloads
+            cp -f YSF2DMR.ini_copia_03 /home/orangepi/Downloads
+            cp -f YSF2DMR.ini_copia_04 /home/orangepi/Downloads
 
-            cd  ~/YSFClients/YSFGateway/
-            sudo cp -f YSFGateway.ini ~/Downloads
+            cd  /home/orangepi/YSFClients/YSFGateway/
+            sudo cp -f YSFGateway.ini /home/orangepi/Downloads
             
-            cd ~/bluedv/
-            sudo cp -f BlueDVconfig.ini ~/Downloads
+            cd /home/orangepi/bluedv/
+            sudo cp -f BlueDVconfig.ini /home/orangepi/Downloads
 
             cd /usr/local/etc/svxlink/
-            sudo cp -f svxlink.conf ~/Downloads
+            sudo cp -f svxlink.conf /home/orangepi/Downloads
 
             cd /usr/local/etc/svxlink/svxlink.d/
-            sudo cp -f ModuleEchoLink.conf ~/Downloads
+            sudo cp -f ModuleEchoLink.conf /home/orangepi/Downloads
 
 cd /var/www/html/upload/files
-tar -zcvf copia.tar.gz ~/Downloads
+tar -zcvf copia.tar.gz /home/orangepi/Downloads
