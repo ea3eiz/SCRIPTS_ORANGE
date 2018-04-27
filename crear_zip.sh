@@ -42,5 +42,6 @@ cd /home/orangepi/MMDVMHost
             cd /usr/local/etc/svxlink/svxlink.d/
             sudo cp -f ModuleEchoLink.conf /home/orangepi/Downloads
 
-cd /var/www/html/upload/files
+#cd /var/www/html/upload/files
+cd /home/orangepi/
 tar -zcvf copia.tar.gz /home/orangepi/Downloads
