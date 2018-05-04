@@ -83,6 +83,7 @@ clear
 
             cd /usr/local/etc/svxlink/svxlink.d/
             sudo cp -f ModuleEchoLink.conf ~/Downloads
+
                   echo ""
                   echo "Ok, se ha ejecutado correctamente"
                   echo ""
@@ -127,7 +128,6 @@ echo "***************************************************"
             sudo cp -f svxlink.conf /usr/local/etc/svxlink/
             
             sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
-
 
 #*** restaura todos los datos de l aversión anterior ***************************************************************
 
