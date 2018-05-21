@@ -232,8 +232,19 @@ echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
 ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMPLUS.ini`
 ScreenLayout1=`expr substr $ScreenLayout 5 30`
-echo "$ScreenLayout1"
+echo -n "$ScreenLayout1"
 fi
+
+var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMPLUS.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
+NXDN=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMPLUS.ini)
+letra=c
+linea_sed_NXDN=$numero_linea$letra
+echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
 Brightness=`grep -n -m 1 -c '\<Brightness\>' ~/MMDVMHost/MMDVMPLUS.ini`
@@ -1025,6 +1036,20 @@ echo "Valor del Port: \33[1;33m$MODEMNEXTION"
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_MN Port=$lat1" ~/MMDVMHost/MMDVMPLUS.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+i) echo ""
+while true
+do
+echo "Valor actual NXDN: \33[1;33m$NXDN"
+                          read -p 'Desactivado=0 Activado=1: '   NXDN1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_NXDN Enable=$NXDN1" ~/MMDVMHost/MMDVMPLUS.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
