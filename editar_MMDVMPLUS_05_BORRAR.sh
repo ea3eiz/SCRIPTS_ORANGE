@@ -248,7 +248,7 @@ numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
 NXDN=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMPLUS.ini)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
-echo " ${CIAN}h) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
+echo "  ${CIAN}h) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 
 
