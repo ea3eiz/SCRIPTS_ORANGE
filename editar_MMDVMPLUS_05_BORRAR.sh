@@ -235,10 +235,6 @@ ScreenLayout1=`expr substr $ScreenLayout 5 30`
 echo -n "$ScreenLayout1"
 fi
 
-
-
-
-
 var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMPLUS.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
@@ -249,13 +245,6 @@ NXDN=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMPLUS.ini)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
 echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
-
-
-
-
-
-
-
 
 echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
 Brightness=`grep -n -m 1 -c '\<Brightness\>' ~/MMDVMHost/MMDVMPLUS.ini`
