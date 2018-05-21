@@ -1055,7 +1055,7 @@ done;;
 i) echo ""
 while true
 do
-echo "Valor actual el NXDN: \33[1;33m$NXDN"
+echo "Valor actual NXDN: \33[1;33m$NXDN"
                           read -p 'Desactivado=0 Activado=1: '   NXDN1
                           actualizar=S 
                           case $actualizar in
