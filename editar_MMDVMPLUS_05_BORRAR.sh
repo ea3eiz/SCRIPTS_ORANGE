@@ -248,7 +248,7 @@ numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
 NXDN=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMPLUS.ini)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
-echo "  ${CIAN}h) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
+echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 
 
@@ -1047,6 +1047,20 @@ echo "Valor del Port: \33[1;33m$MODEMNEXTION"
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_MN Port=$lat1" ~/MMDVMHost/MMDVMPLUS.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+i) echo ""
+while true
+do
+echo "Valor actual el NXDN: \33[1;33m$NXDN"
+                          read -p 'Desactivado=0 Activado=1: '   NXDN1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_NXDN Enable=$NXDN1" ~/MMDVMHost/MMDVMPLUS.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
