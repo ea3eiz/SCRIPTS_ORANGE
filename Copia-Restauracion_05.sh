@@ -129,7 +129,7 @@ echo "***************************************************"
             
             sudo cp -f ModuleEchoLink.conf /usr/local/etc/svxlink/svxlink.d/
 
-#*** restaura todos los datos de l aversión anterior ***************************************************************
+#*** restaura solo los datos de las copias en Downloads************
 
 #======================= MMDVM.ini   ============================
 #******************************************************************
@@ -4493,6 +4493,31 @@ P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMPLUS.ini)
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMPLUS.ini
+
+
+
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMPLUS.ini` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMPLUS.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMPLUS.ini)
+
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMPLUS.ini` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMPLUS.ini`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMPLUS.ini
+
+
 
 #FUSION
 var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMPLUS.ini`
