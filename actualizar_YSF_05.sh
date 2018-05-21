@@ -53,6 +53,7 @@ clear
 			[sS]* ) echo ""
 			echo "ok >>>>>"
 			cd ~/YSFClients/YSFGateway
+			sudo rm YSFHosts.txt
 			sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
 			sleep 3
 		    echo ""
