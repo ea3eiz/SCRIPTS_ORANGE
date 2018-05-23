@@ -2076,8 +2076,9 @@ P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVM.ini_copia3)
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVM.ini_copia3
+
 #======================= MMDVMBM.ini   ============================
-#******************************************************************
+
 # Callsign 
 var=`grep -n -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini` # 2:Callsign=EA3EIZ
 var1=`grep -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini` # Callsign=EA3EIZ
@@ -2526,6 +2527,26 @@ P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini
 
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini)
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini
+
 #FUSION
 var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini`
 var2=`echo "$var1" | tr -d '[[:space:]]'`
@@ -2565,8 +2586,9 @@ P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini)
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini
+
 #======================= MMDVMBM.ini_copia   ============================
-#******************************************************************
+
 # Callsign 
 var=`grep -n -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini_copia` # 2:Callsign=EA3EIZ
 var1=`grep -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini_copia` # Callsign=EA3EIZ
@@ -3015,6 +3037,26 @@ P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia
 
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini_copia` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini_copia`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini_copia)
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini_copia` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini_copia`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia
+
 #FUSION
 var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini_copia`
 var2=`echo "$var1" | tr -d '[[:space:]]'`
@@ -3054,8 +3096,9 @@ P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini_copia)
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia
+
 #======================= MMDVMBM.ini_copia2   ============================
-#******************************************************************
+
 # Callsign 
 var=`grep -n -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini_copia2` # 2:Callsign=EA3EIZ
 var1=`grep -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini_copia2` # Callsign=EA3EIZ
@@ -3504,6 +3547,26 @@ P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia2
 
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini_copia2` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini_copia2`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini_copia2)
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini_copia2` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini_copia2`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia2
+
 #FUSION
 var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini_copia2`
 var2=`echo "$var1" | tr -d '[[:space:]]'`
@@ -3543,8 +3606,9 @@ P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini_copia2)
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia2
+
 #======================= MMDVMBM.ini_copia3   ============================
-#******************************************************************
+
 # Callsign 
 var=`grep -n -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini_copia3` # 2:Callsign=EA3EIZ
 var1=`grep -m 1 '\<Callsign\>' ~/Downloads/MMDVMBM.ini_copia3` # Callsign=EA3EIZ
@@ -3989,6 +4053,26 @@ P2largo_linea=`expr $P2largo_linea - 1`
 P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
 P2numero_linea_p25=`expr $P2numero_linea + 1` 
 P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini_copia3)
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia3
+
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini_copia3` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMBM.ini_copia3`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMBM.ini_copia3)
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini_copia3` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMBM.ini_copia3`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia3
@@ -4492,7 +4576,6 @@ largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea` 
 numero_linea_p25=`expr $numero_linea + 1`
 P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMPLUS.ini)
-
 P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMPLUS.ini` 
 P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMPLUS.ini`
 buscar=":"
