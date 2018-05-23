@@ -39,6 +39,8 @@ fi
 
 
                     cp MMDVMHost/*.* MMDVMHost_anterior/
+
+                    read a
                     sudo rm -r MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
@@ -60,9 +62,11 @@ fi
                     #Comprueba si existe el fichero info.ini
                     if [ -f /home/orangepi/Downloads/info.ini ];
                     then
+                    read a
                     echo "El fichero ya existe"
                     else
                     sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/orangepi/Downloads
+                    read a
                     fi
                     #===============================================
 
