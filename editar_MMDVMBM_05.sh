@@ -12,7 +12,7 @@ clear
                   sed -i "2c $ide" ~/info_panel_control.ini
                   frec=$(awk "NR==13" ~/MMDVMHost/MMDVMBM.ini)
                   sed -i "3c $frec" ~/info_panel_control.ini
-                  master=$(awk "NR==139" ~/MMDVMHost/MMDVMBM.ini)
+                  master=$(awk "NR==140" ~/MMDVMHost/MMDVMBM.ini)
                   sed -i "4c $master" ~/info_panel_control.ini
             else
             echo ""
