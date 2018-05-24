@@ -4,6 +4,8 @@ sed -i "6c Exec=mate-terminal -x sh cerrar_mmdvmLIBRE_05.sh" ~/Desktop/Libre.des
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/LIBRE_ON.png" ~/Desktop/Libre.desktop
 sed -i "10c Name[es_ES]=Cerrar LIBRE" ~/Desktop/Libre.desktop
 
+sed -i "10c MMDVMLIBRE=ON" ~/status.ini
+
 cd ~/MMDVMHost
 echo "\33[1;32m"
 clear
