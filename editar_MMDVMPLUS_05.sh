@@ -2,15 +2,21 @@
 while true
 do
 clear
+            #comprueba si el fichero existe
+            if [ -f ~/info_panel_control.ini ];
+            then
                   # Datos para el panel de control
-                  #indi=$(awk "NR==2" ~/MMDVMHost/MMDVMPLUS.ini)
-                  #sed -i "11c $indi" ~/info_panel_control.ini
-                  #ide=$(awk "NR==3" ~/MMDVMHost/MMDVMPLUS.ini)
-                  #sed -i "12c $ide" ~/info_panel_control.ini
-                  #frec=$(awk "NR==13" ~/MMDVMHost/MMDVMPLUS.ini)
-                  #sed -i "13c $frec" ~/info_panel_control.ini
-                  #master=$(awk "NR==139" ~/MMDVMHost/MMDVMPLUS.ini)
-                  #sed -i "14c $master" ~/info_panel_control.ini
+                  indi=$(awk "NR==2" ~/MMDVMHost/MMDVMPLUS.ini)
+                  sed -i "11c $indi" ~/info_panel_control.ini
+                  ide=$(awk "NR==3" ~/MMDVMHost/MMDVMPLUS.ini)
+                  sed -i "12c $ide" ~/info_panel_control.ini
+                  frec=$(awk "NR==13" ~/MMDVMHost/MMDVMPLUS.ini)
+                  sed -i "13c $frec" ~/info_panel_control.ini
+                  master=$(awk "NR==139" ~/MMDVMHost/MMDVMPLUS.ini)
+                  sed -i "14c $master" ~/info_panel_control.ini
+            else
+            echo ""
+            fi
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
