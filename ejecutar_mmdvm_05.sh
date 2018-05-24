@@ -15,3 +15,4 @@ echo "***********************************************"
 #sleep 3
 echo "\33[1;36m"
 sudo ./MMDVMHost MMDVM.ini
+#
