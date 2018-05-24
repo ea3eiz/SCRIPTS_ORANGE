@@ -31,12 +31,12 @@ case $escoger_menu in
 while true
 do
                     echo -n "Valor actual del puerto ROUTER: \33[1;33m"
-                    var1= sed -n '11p'  ~/status.ini
+                    var1= sed -n '1p'  ~/ambe_server.ini
                     actualizar=S
                     case $actualizar in
                     [sS]* )
            	     read -p 'Introduce puerto ROUTER:        ' pruter
-                    sed -i "11c $pruter" ~/status.ini
+                    sed -i "1c $pruter" ~/ambe_server.ini
 			     break;;
 			     [nN]* ) echo ""
 			     break;;
@@ -46,14 +46,14 @@ done;;
 while true
 do
                     echo -n "Valor actual del puerto MODEM: \33[1;33m"
-                    var1= sed -n '12p'  ~/status.ini
+                    var1= sed -n '2p'  ~/ambe_server.ini
                     echo "${VERDE}ejp. /dev/ttyUSB0"
                     actualizar=S
                     case $actualizar in
                     [sS]* )
                     echo "${CIAN}"
                     read -p 'Introduce puerto MODEM:        ' pruter
-                    sed -i "12c $pruter" ~/status.ini
+                    sed -i "2c $pruter" ~/ambe_server.ini
                     break;;
                     [nN]* ) echo ""
                     break;;
