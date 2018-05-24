@@ -5,6 +5,8 @@ sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/YSF2DMR_ON.png" ~/Desktop/Abrir_YS
 sed -i "10c Name[es_ES]=Cerrar YSF2DMR" ~/Desktop/Abrir_YSF2DMR.desktop
 
 
+sed -i "14c YSF2DMR=ON" ~/status.ini
+
 cd ~/YSF2DMR
 
 
