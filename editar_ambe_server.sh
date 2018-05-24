@@ -14,10 +14,10 @@ echo "   *     Script para Editor AMBE SERVER\33[1;33m       \33[1;31m by EA3EIZ
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar puerto ROUTER  - \33[1;33m"
-var1= sed -n '11p'  ~/status.ini
+var1= sed -n '11p'  ~/ambe_server.ini
 
 echo -n "\33[1;36m   2)\33[0m Modificar puerto MODEM   - \33[1;33m"
-var1= sed -n '12p'  ~/status.ini
+var1= sed -n '12p'  ~/ambe_server.ini
 
 echo ""
 
