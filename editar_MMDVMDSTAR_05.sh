@@ -222,7 +222,7 @@ echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
 ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 ScreenLayout1=`expr substr $ScreenLayout 5 30`
-echo "$ScreenLayout1"
+echo -n "$ScreenLayout1"
 fi
 
 var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMDSTAR.ini`
