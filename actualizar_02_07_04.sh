@@ -46,7 +46,7 @@ pasystray &
 indi=$(awk "NR==2" ~/MMDVMHost/MMDVMBM.ini)
 ide=$(awk "NR==3" ~/MMDVMHost/MMDVMBM.ini)
 frec=$(awk "NR==13" ~/MMDVMHost/MMDVMBM.ini)
-master=$(awk "NR==139" ~/MMDVMHost/MMDVMBM.ini)
+master=$(awk "NR==140" ~/MMDVMHost/MMDVMBM.ini)
 sed -i "1c $indi" ~/info_panel_control.ini
 sed -i "2c $ide" ~/info_panel_control.ini
 sed -i "3c $frec" ~/info_panel_control.ini
@@ -56,7 +56,7 @@ sed -i "4c $master" ~/info_panel_control.ini
 indi=$(awk "NR==2" ~/MMDVMHost/MMDVMPLUS.ini)
 ide=$(awk "NR==3" ~/MMDVMHost/MMDVMPLUS.ini)
 frec=$(awk "NR==13" ~/MMDVMHost/MMDVMPLUS.ini)
-master=$(awk "NR==139" ~/MMDVMHost/MMDVMPLUS.ini)
+master=$(awk "NR==140" ~/MMDVMHost/MMDVMPLUS.ini)
 sed -i "11c $indi" ~/info_panel_control.ini
 sed -i "12c $ide" ~/info_panel_control.ini
 sed -i "13c $frec" ~/info_panel_control.ini
@@ -66,7 +66,7 @@ sed -i "14c $master" ~/info_panel_control.ini
 indi=$(awk "NR==2" ~/MMDVMHost/MMDVM.ini)
 ide=$(awk "NR==3" ~/MMDVMHost/MMDVM.ini)
 frec=$(awk "NR==13" ~/MMDVMHost/MMDVM.ini)
-master=$(awk "NR==139" ~/MMDVMHost/MMDVM.ini)
+master=$(awk "NR==140" ~/MMDVMHost/MMDVM.ini)
 sed -i "6c $indi" ~/info_panel_control.ini
 sed -i "7c $ide" ~/info_panel_control.ini
 sed -i "8c $frec" ~/info_panel_control.ini
