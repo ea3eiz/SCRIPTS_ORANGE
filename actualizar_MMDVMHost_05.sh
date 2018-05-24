@@ -68,7 +68,6 @@ fi
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                     make
 
-
                     sudo chmod 777 -R ~/MMDVMHost
                     sudo chmod 777 -R ~/Downloads
  clear                   
@@ -6687,6 +6686,26 @@ P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMDSTAR.ini
 
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMDSTAR.ini` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMDSTAR.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMDSTAR.ini)
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMDSTAR.ini` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMDSTAR.ini`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMDSTAR.ini
+
 #FUSION
 var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMDSTAR.ini`
 var2=`echo "$var1" | tr -d '[[:space:]]'`
@@ -7172,6 +7191,26 @@ P2largo_linea=`expr $P2largo_linea - 1`
 P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
 P2numero_linea_p25=`expr $P2numero_linea + 1` 
 P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMFUSION.ini)
+P2letrac=c
+P2linea_sed=$P2numero_linea_p25$P2letrac
+sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMFUSION.ini
+
+#NXDN
+var=`grep -n -m 1 "\[NXDN\]" ~/Downloads/MMDVMFUSION.ini` 
+var1=`grep -m 1 "\[NXDN\]" ~/Downloads/MMDVMFUSION.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar` 
+largo_linea=`expr $largo_linea - 1` 
+numero_linea=`expr substr $var 1 $largo_linea` 
+numero_linea_p25=`expr $numero_linea + 1`
+P2P2=$(awk "NR==$numero_linea_p25" ~/Downloads/MMDVMFUSION.ini)
+P2var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMFUSION.ini` 
+P2var1=`grep -n "\[NXDN\]" ~/MMDVMHost/MMDVMFUSION.ini`
+buscar=":"
+P2largo_linea=`expr index $P2var $buscar` 
+P2largo_linea=`expr $P2largo_linea - 1` 
+P2numero_linea=`expr substr $P2var 1 $P2largo_linea` 
+P2numero_linea_p25=`expr $P2numero_linea + 1` 
 P2letrac=c
 P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMFUSION.ini
