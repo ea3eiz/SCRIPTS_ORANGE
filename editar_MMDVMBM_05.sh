@@ -2,7 +2,9 @@
 while true
 do
 clear
-
+            #comprueba si el fichero existe
+            if [ -f ~/info_panel_control.ini ];
+            then            
                   # Datos para el panel de control
                   indi=$(awk "NR==2" ~/MMDVMHost/MMDVMBM.ini)
                   sed -i "1c $indi" ~/info_panel_control.ini
@@ -12,7 +14,9 @@ clear
                   sed -i "3c $frec" ~/info_panel_control.ini
                   master=$(awk "NR==139" ~/MMDVMHost/MMDVMBM.ini)
                   sed -i "4c $master" ~/info_panel_control.ini
-
+            else
+            echo ""
+            fi
 
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
