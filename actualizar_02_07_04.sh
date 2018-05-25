@@ -2,7 +2,6 @@
 
 sleep 10
 
-
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" ~/status.ini
 sed -i "2c BlueDV=OFF" ~/status.ini
@@ -27,7 +26,6 @@ sudo ntpdate -u hora.roa.es
 
 # pone el altavoz en la barra superior
 pasystray &
-
 
 #Quita todos los iconos verdes que se quedan al cerrar la imagen
 sed -i "4cExec=sh -c 'cd ~/V30; sudo sh ejecutar_dv4_30.sh'" ~/Desktop/Abrir_dv4mini
@@ -91,14 +89,6 @@ sed -i "5c Icon=~/V30/repeater.png" ~/Desktop/Abrir_D-STARRepeater
 sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" ~/Desktop/Abrir_D-STARRepeater
 
 sleep 10
-
-#bm=`sed -n '2p'  ~/MMDVMHost/MMDVMBM.ini`
-#plus=`sed -n '2p'  ~/MMDVMHost/MMDVMPLUS.ini`
-#dstar=`sed -n '2p'  ~/MMDVMHost/MMDVMDSTAR.ini`
-#fusion=`sed -n '2p'  ~/MMDVMHost/MMDVMFUSION.ini`
-#cd ~/.config
-#sudo wget -post-data http://associacioader.com/ORANGEPI_02_06_03.php?plus=$plus'<DMR PLUS   '$bm'<BRANDMEISTER   '$dstar'<SOLODSTAR   '$fusion'<SOLOFUSION'
-#sudo rm -r associacioader.com
 
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
