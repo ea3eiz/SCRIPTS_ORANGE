@@ -28,7 +28,6 @@ clear
             [sS]* ) echo ""
             echo "ok >>>>>"
 
-                    cd ~/
 #comprueba si el ficgero existe
  if [ -d ~/MMDVMHost_anterior ];
 then
