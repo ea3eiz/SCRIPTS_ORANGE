@@ -81,6 +81,11 @@ fi
 
 
 
+read a
+
+
+
+
                     cp MMDVMHost/*.* MMDVMHost_anterior/
                     sudo rm -r MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
