@@ -4,7 +4,7 @@ do
 clear
 
 echo "\33[1;32m   ***********************************************************************"
-echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.06\33[1;32m         *"
+echo "   *     Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.07.04\33[1;32m       *"
 echo "   *                       \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                            *"
 echo "   ***********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Hacer copia de seguridad de todos los .ini"
