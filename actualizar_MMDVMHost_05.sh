@@ -34,15 +34,12 @@ then
 echo ""
 else
 mkdir MMDVMHost_anterior
-fi
+fi 
+#===============================
 
+            sudo chmod 777 -R ~/Downloads
 
-                
-                    sudo chmod 777 -R ~/Downloads
-
-
-
-
+            #copia todos los inis en Dowloads antes de actualizar
             cd ~/MMDVMHost
             sudo cp -f MMDVM.ini ~/Downloads
             sudo cp -f MMDVM.ini_copia ~/Downloads
@@ -83,12 +80,7 @@ fi
             cd /usr/local/etc/svxlink/svxlink.d/
             sudo cp -f ModuleEchoLink.conf ~/Downloads
 
-
-
- cd ~/
-
-
-
+                    cd ~/
                     cp MMDVMHost/*.* MMDVMHost_anterior/
                     sudo rm -r MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
@@ -96,15 +88,16 @@ fi
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI=":Opi"\"
+                    PI=":REM-V.02.07.04"\"
                     HOY1=$HOY$PI
                     PUNTO=";"
 
-                    # HOY=$(date +%m%d)
-                    # FIJA="const char* VERSION = "\"
-                    # PI=":REM-04"\"
-                    # HOY1=$HOY$PI
-                    # PUNTO=";"
+
+                    #HOY=$(date +%Y%m%d)
+                    #FIJA="const char* VERSION = "\"
+                    #PI=":Opi"\"
+                    #HOY1=$HOY$PI
+                    #PUNTO=";"
                     
                     sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
                   
