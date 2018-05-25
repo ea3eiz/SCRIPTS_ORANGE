@@ -28,65 +28,10 @@ sudo ntpdate -u hora.roa.es
 pasystray &
 
 #Quita todos los iconos verdes que se quedan al cerrar la imagen
-sed -i "4cExec=sh -c 'cd ~/V30; sudo sh ejecutar_dv4_30.sh'" ~/Desktop/Abrir_dv4mini
-sed -i "5c Icon=~/V30/dv4k.png" ~/Desktop/Abrir_dv4mini
-sed -i "10c Name[es_ES]=Abrir DV4mini" ~/Desktop/Abrir_dv4mini
 
-sed -i "4c Exec=sh -c 'cd ~/V30;lxterminal --geometry=60x15 -e sudo sh ejecutar_ysf_30.sh'" ~/Desktop/YSFGateway
-sed -i "5c Icon=~/V30/C4FM.png" ~/Desktop/YSFGateway
-sed -i "10c Name[es_ES]=Abrir YSF" ~/Desktop/YSFGateway
-
-sed -i "4cExec=sh -c 'cd ~/V30; lxterminal --geometry=72x15 -e sudo sh ejecutar_mmdvm_30.sh'" ~/Desktop/Abrir_Radio
-sed -i "5c Icon=~/V30/MMDVM.png" ~/Desktop/Abrir_Radio
-sed -i "10c Name[es_ES]=Abrir Radio" ~/Desktop/Abrir_Radio
-
-sed -i "4cExec=sh -c 'cd ~/V30; sudo sh ejecutar_bluedv_05.sh'" ~/Desktop/Abrir_BlueDV
-sed -i "5c Icon=~/V30/BLUEDV.png" ~/Desktop/Abrir_BlueDV
-sed -i "10c Name[es_ES]=Abrir BlueDV" ~/Desktop/Abrir_BlueDV
-
-sed -i "4cExec=sh -c 'cd ~/V30; lxterminal --geometry=72x15 -e sudo sh ejecutar_bm_30.sh'" ~/Desktop/Abrir_MMDVMBM
-sed -i "5c Icon=~/V30/DMR.png" ~/Desktop/Abrir_MMDVMBM
+sed -i "6c Exec=mate-terminal -x sh ejecutar_bm_05.sh'" ~/Desktop/Abrir_MMDVMBM
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/DMR.png" ~/Desktop/Abrir_MMDVMBM
 sed -i "10c Name[es_ES]=Abrir BM" ~/Desktop/Abrir_MMDVMBM
-
-sed -i "4c Exec=sh -c 'cd ~/V30; lxterminal --geometry=72x15 -e sudo sh ejecutar_mmdvm_30.sh'" ~/Desktop/Abrir_Radio
-sed -i "5c Icon=~/V30/MMDVM.png" ~/Desktop/Abrir_Radio
-sed -i "10c Name[es_ES]=Abrir Radio" ~/Desktop/Abrir_Radio
-
-sed -i "4c Exec=sh -c 'cd ~/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_mmdvmLIBRE_30.sh'" ~/Desktop/Abrir_LIBRE
-sed -i "5c Icon=~/V30/LIBRE.png" ~/Desktop/Abrir_LIBRE
-sed -i "10c Name[es_ES]=Abrir LIBRE" ~/Desktop/Abrir_LIBRE
-
-sed -i "4c Exec=sh -c 'cd ~/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_plus_30.sh'" ~/Desktop/Abrir_MMDVMPLUS
-sed -i "5c Icon=~/V30/ICONO_DMRPLUS.png" ~/Desktop/Abrir_MMDVMPLUS
-sed -i "10c Name[es_ES]=Abrir DMR+" ~/Desktop/Abrir_MMDVMPLUS
-
-sed -i "4c Exec=sh -c 'cd ~/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_svxlink_30.sh'" ~/Desktop/svxlink
-sed -i "5c Icon=~/V30/ECHOLINK.png" ~/Desktop/svxlink
-sed -i "10c Name[es_ES]=Abrir SVXLINK" ~/Desktop/svxlink
-
-sed -i "6c Exec=sh -c 'cd ~/V30/;lxterminal --geometry=80x20 -e sudo sh ejecutar_solodstar.sh'" ~/Desktop/AbrirsoloDstar.desktop
-sed -i "7c Icon=~/V30/SOLO_D-STAR.png" ~/Desktop/AbrirsoloDstar.desktop
-sed -i "11c Name[es_ES]=Abrir solo D-STAR" ~/Desktop/AbrirsoloDstar.desktop
-
-sed -i "6c Exec=sh -c 'cd ~/V30/;lxterminal --geometry=80x20 -e sudo sh ejecutar_solofusion.sh'" ~/Desktop/AbrirsoloYSF.desktop
-sed -i "7c Icon=~/V30/SOLO_YSF.png" ~/Desktop/AbrirsoloYSF.desktop
-sed -i "11c Name[es_ES]=Abrir solo FUSION" ~/Desktop/AbrirsoloYSF.desktop
-
-sed -i "4c Exec=sh -c 'cd ~/V30; sudo sh ejecutar_d-star_30.sh'" ~/Desktop/ircDDBGateway
-sed -i "5c Icon=~/V30/DSTAR.png" ~/Desktop/ircDDBGateway
-sed -i "10c Name[es_ES]=Abrir ircDDB" ~/Desktop/ircDDBGateway
-
-sed -i "4c Exec=sh -c 'cd ~/V30/;lxterminal --geometry=80x20 -e sudo sh ejecutar_YSF2DMR.sh'" ~/Desktop/Abrir_YSF2DMR.desktop
-sed -i "5c Icon=~/V30/YSF2DMR.png" ~/Desktop/Abrir_YSF2DMR.desktop
-sed -i "10c Name[es_ES]=Abrir YSF2DMR" ~/Desktop/Abrir_YSF2DMR.desktop
-
-sed -i "4c Exec=sh -c 'cd ~/V30;lxterminal --geometry=72x15 -e sudo sh ejecutar_ambe_server.sh'" ~/Desktop/abrir_ambe_server.desktop
-sed -i "5c Icon=~/V30/AMBER_SERVER.png" ~/Desktop/abrir_ambe_server.desktop
-sed -i "10c Name[es_ES]=Abrir AMBE SERVER" ~/Desktop/abrir_ambe_server.desktop
-
-sed -i "4c Exec=sh -c 'cd ~/V30; sudo sh ejecutar_solodstar_04.sh'" ~/Desktop/Abrir_D-STARRepeater
-sed -i "5c Icon=~/V30/repeater.png" ~/Desktop/Abrir_D-STARRepeater
-sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" ~/Desktop/Abrir_D-STARRepeater
 
 sleep 10
 
