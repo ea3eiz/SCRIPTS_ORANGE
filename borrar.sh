@@ -28,7 +28,7 @@ clear
 		echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO"
             echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"   
 		sleep 3
-		sudo chmod -R 777 ~/.copias        
+		sudo chmod -R 777 ~/Downloads        
 
             #Comprueba si existe el fichero info.ini
             if [ -f /home/orangepi/Downloads/info.ini ];
@@ -48,47 +48,47 @@ clear
 
 
             cd ~/MMDVMHost
-            sudo cp -f MMDVM.ini ~/.copias
-            sudo cp -f MMDVM.ini_copia ~/.copias
-            sudo cp -f MMDVM.ini_copia2 ~/.copias
-            sudo cp -f MMDVM.ini_copia3 ~/.copias
-            sudo cp -f MMDVM.ini_original ~/.copias
-            sudo cp -f MMDVMBM.ini ~/.copias
-            sudo cp -f MMDVMBM.ini_copia ~/.copias
-            sudo cp -f MMDVMBM.ini_copia2 ~/.copias
-            sudo cp -f MMDVMBM.ini_copia3 ~/.copias
-            sudo cp -f MMDVMLIBRE.ini ~/.copias
-            sudo cp -f MMDVMLIBRE.ini_uno ~/.copias
-            sudo cp -f MMDVMLIBRE.ini_dos ~/.copias       
-            sudo cp -f MMDVMPLUS.ini ~/.copias
-            sudo cp -f MMDVMPLUS.ini_copia ~/.copias
-            sudo cp -f MMDVMPLUS.ini_copia2 ~/.copias
-            sudo cp -f MMDVMPLUS.ini_copia3 ~/.copias
+            sudo cp -f MMDVM.ini ~/Downloads
+            sudo cp -f MMDVM.ini_copia ~/Downloads
+            sudo cp -f MMDVM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVM.ini_original ~/Downloads
+            sudo cp -f MMDVMBM.ini ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMBM.ini_copia3 ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_uno ~/Downloads
+            sudo cp -f MMDVMLIBRE.ini_dos ~/Downloads       
+            sudo cp -f MMDVMPLUS.ini ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
+            sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
 
             #solo Dstar y solo Fusion
-            sudo cp -f MMDVMDSTAR.ini ~/.copias
-            sudo cp -f MMDVMFUSION.ini ~/.copias
+            sudo cp -f MMDVMDSTAR.ini ~/Downloads
+            sudo cp -f MMDVMFUSION.ini ~/Downloads
             #fin  Dstar y solo Fusion
 
             cd  ~/YSF2DMR
-            cp -f YSF2DMR.ini ~/.copias
-            cp -f YSF2DMR.ini_copia_01 ~/.copias
-            cp -f YSF2DMR.ini_copia_02 ~/.copias
+            cp -f YSF2DMR.ini ~/Downloads
+            cp -f YSF2DMR.ini_copia_01 ~/Downloads
+            cp -f YSF2DMR.ini_copia_02 ~/Downloads
 
             cd  ~/YSFClients/YSFGateway/
-            sudo cp -f YSFGateway.ini ~/.copias
+            sudo cp -f YSFGateway.ini ~/Downloads
             
             cd ~/bluedv/
-            sudo cp -f BlueDVconfig.ini ~/.copias
+            sudo cp -f BlueDVconfig.ini ~/Downloads
 
             cd /usr/local/etc/svxlink/
-            sudo cp -f svxlink.conf ~/.copias
+            sudo cp -f svxlink.conf ~/Downloads
 
             cd /usr/local/etc/svxlink/svxlink.d/
-            sudo cp -f ModuleEchoLink.conf ~/.copias
+            sudo cp -f ModuleEchoLink.conf ~/Downloads
 
             sudo rm -R ~/Downloads/copias
-            sudo cp -R ~/.copias ~/Downloads/copias
+            sudo cp -R ~/Downloads ~/Downloads/copias
 
             read a
 			echo ""
