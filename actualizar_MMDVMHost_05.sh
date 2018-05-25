@@ -160,8 +160,6 @@ echo "***************************************************"
 
                      sudo chmod 777 -R ~/MMDVMHost
 
-
-read a
 #*** restaura solo los datos de las copias en Downloads************
 
 #======================= MMDVM.ini   ============================
