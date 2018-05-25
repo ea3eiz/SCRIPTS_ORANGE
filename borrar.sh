@@ -89,6 +89,8 @@ clear
 
             sudo rm -R ~/Downloads/copias
             sudo cp -R ~/.copias ~/Downloads/copias
+
+            read a
 			echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
