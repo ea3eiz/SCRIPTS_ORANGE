@@ -14,13 +14,10 @@ sed -i "7c MMDVMBM=OFF" ~/status.ini
 sed -i "8c SVXLINK=OFF" ~/status.ini
 sed -i "9c dstarrepeater=OFF" ~/status.ini
 sed -i "10c MMDVMLIBRE=OFF" ~/status.ini
-#sed -i "11c AMBE_SERVER=OFF" ~/status.ini
-#sed -i "12c SOLOFUSION=OFF" ~/status.ini
-#sed -i "13c SOLODSTAR=OFF" ~/status.ini
-#sed -i "14c YSF2DMR=OFF" ~/status.ini
-
-
-
+sed -i "11c AMBE_SERVER=OFF" ~/status.ini
+sed -i "12c SOLOFUSION=OFF" ~/status.ini
+sed -i "13c SOLODSTAR=OFF" ~/status.ini
+sed -i "14c YSF2DMR=OFF" ~/status.ini
 
 cd ~/SCRIPTS_ORANGE/
 git pull
