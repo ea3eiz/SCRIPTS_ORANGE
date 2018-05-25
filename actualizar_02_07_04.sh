@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #Quita todos los iconos verdes que se quedan al cerrar la imagen
-
 sed -i "6c Exec=mate-terminal -x sh ejecutar_bm_05.sh" ~/Desktop/BM.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/DMR.png" ~/Desktop/BM.desktop
 sed -i "10c Name[es_ES]=Abrir BM" ~/Desktop/BM.desktop
@@ -22,9 +21,7 @@ sed -i "12c SOLOFUSION=OFF" ~/status.ini
 sed -i "13c SOLODSTAR=OFF" ~/status.ini
 sed -i "14c YSF2DMR=OFF" ~/status.ini
 
-
 sleep 10
-
 
 cd ~/SCRIPTS_ORANGE/
 git pull
@@ -35,11 +32,7 @@ sudo ntpdate -u hora.roa.es
 # pone el altavoz en la barra superior
 pasystray &
 
-
-
-#=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
-
 #BM
 indi=$(awk "NR==2" ~/MMDVMHost/MMDVMBM.ini)
 ide=$(awk "NR==3" ~/MMDVMHost/MMDVMBM.ini)
@@ -85,4 +78,3 @@ tg=$(awk "NR==22" ~/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" ~/info_panel_control.ini
 sed -i "25c $master" ~/info_panel_control.ini
 sed -i "26c $tg" ~/info_panel_control.ini
-#================================================================================= 
