@@ -36,56 +36,6 @@ echo ""
 else
 mkdir MMDVMHost_anterior
 fi
-
-
-            #hace copia de seguridad de todos los inis previa a la actualización
-            cd ~/MMDVMHost
-            sudo cp -f MMDVM.ini ~/Downloads
-            sudo cp -f MMDVM.ini_copia ~/Downloads
-            sudo cp -f MMDVM.ini_copia2 ~/Downloads
-            sudo cp -f MMDVM.ini_copia3 ~/Downloads
-            sudo cp -f MMDVM.ini_original ~/Downloads
-            sudo cp -f MMDVMBM.ini ~/Downloads
-            sudo cp -f MMDVMBM.ini_copia ~/Downloads
-            sudo cp -f MMDVMBM.ini_copia2 ~/Downloads
-            sudo cp -f MMDVMBM.ini_copia3 ~/Downloads
-            sudo cp -f MMDVMLIBRE.ini ~/Downloads
-            sudo cp -f MMDVMLIBRE.ini_uno ~/Downloads
-            sudo cp -f MMDVMLIBRE.ini_dos ~/Downloads       
-            sudo cp -f MMDVMPLUS.ini ~/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia ~/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
-            sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
-
-            #solo Dstar y solo Fusion
-            sudo cp -f MMDVMDSTAR.ini ~/Downloads
-            sudo cp -f MMDVMFUSION.ini ~/Downloads
-            #fin  Dstar y solo Fusion
-
-            cd  ~/YSF2DMR
-            cp -f YSF2DMR.ini ~/Downloads
-            cp -f YSF2DMR.ini_copia_01 ~/Downloads
-            cp -f YSF2DMR.ini_copia_02 ~/Downloads
-
-            cd  ~/YSFClients/YSFGateway/
-            sudo cp -f YSFGateway.ini ~/Downloads
-            
-            cd ~/bluedv/
-            sudo cp -f BlueDVconfig.ini ~/Downloads
-
-            cd /usr/local/etc/svxlink/
-            sudo cp -f svxlink.conf ~/Downloads
-
-            cd /usr/local/etc/svxlink/svxlink.d/
-            sudo cp -f ModuleEchoLink.conf ~/Downloads
-
-
-
-read a
-
-
-
-
                     cp MMDVMHost/*.* MMDVMHost_anterior/
                     sudo rm -r MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
@@ -120,24 +70,6 @@ read a
 
                     sudo chmod 777 -R ~/MMDVMHost
                     sudo chmod 777 -R ~/Downloads
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  clear                   
 echo "***************************************************"
 echo "* RESTAURANDO LOS DATOS DE LA COPIA DE SEGURIDAD  *"
@@ -181,6 +113,8 @@ echo "***************************************************"
                     cp MMDVM.ini TODOS_LOS_INIS.ini
 
                      sudo chmod 777 -R ~/MMDVMHost
+
+
 read a
 #*** restaura solo los datos de las copias en Downloads************
 
