@@ -11,8 +11,8 @@ sudo chmod +x -R ~/Desktop
 
 
 
-#cd ~/SCRIPTS_ORANGE/
-#git pull
+cd ~/SCRIPTS_ORANGE/
+git pull
 
 # RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS
 #cd ~/AUTOSTART
