@@ -10,6 +10,7 @@ echo "   *********************************************************************"
 #echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
 echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Volver a la versión anterior de MMDVMHost \33[1;33m"
+echo  "\33[1;36m   3)\33[1;33m Instalación limpia de MMDVMHost\33[1;33m"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -7345,11 +7346,11 @@ while true
 do
 clear
                     echo " *******************************************************************************"
-                    echo " \33[1;31m* Si instalas MMDVMhost desde esta opción, perderás todas las configuraciones  *"
-                    echo " * Tendrás que volver a configurar todos los MMDVM    *"
-                    echo " \33[1;32m**************************************************************************"
+                    echo " \33[1;31m* Si instalas MMDVMhost desde esta opción, perderás todas las configuraciones *"
+                    echo " * Tendrás que volver a configurar todos los MMDVM                       *"
+                    echo " \33[1;32m*******************************************************************************"
                     echo "\33[1;33m"
-                    read -p '  Quieres instalar MMDVMHost? Si/No: ' ejecutar1
+                    read -p '  Quieres hacer una instalación limpia de MMDVMHost? S/N: ' ejecutar1
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
