@@ -7354,7 +7354,7 @@ clear
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                       
+                    cd ~/  
                     sudo rm -r ~/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
