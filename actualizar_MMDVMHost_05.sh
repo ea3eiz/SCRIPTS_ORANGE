@@ -7355,7 +7355,7 @@ clear
                     [sS]* ) echo ""
                     echo "ok >>>>>"
                        
-                    sudo rm -r MMDVMHost
+                    sudo rm -r ~/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
