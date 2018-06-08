@@ -7378,7 +7378,8 @@ clear
 
                     # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
-                  read a
+          
+                    make clean
                     make
 
                     # Crea los ejecutables para estas 4 aplicaciones  
