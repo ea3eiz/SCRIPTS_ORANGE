@@ -7,7 +7,7 @@ clear
 echo "\33[1;32m   ********************************************************************"
 echo "   *                                                                  *"
 echo "   *      Script para Instalar firmware experimental md380tools       *"
-echo "   *\33[1;31m                          by EA3EIZ\33[1;32m                               *"
+echo "   *\33[1;31m                 by EA4AOJ & EA3EIZ\33[1;32m                               *"
 echo "   *                                                                  *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;31m  Actualizar la Orange Pi (si ha pasado tiempo sin actualizarla)"
