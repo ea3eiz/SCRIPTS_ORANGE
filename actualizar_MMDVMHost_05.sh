@@ -7347,7 +7347,7 @@ do
 clear
                     echo " *******************************************************************************"
                     echo " \33[1;31m* Si instalas MMDVMhost desde esta opción, perderás todas las configuraciones *"
-                    echo " * Tendrás que volver a configurar todos los MMDVM                       *"
+                    echo " * Tendrás que volver a configurar todos los MMDVM                             *"
                     echo " \33[1;32m*******************************************************************************"
                     echo "\33[1;33m"
                     read -p '  Quieres hacer una instalación limpia de MMDVMHost? S/N: ' ejecutar1
@@ -7370,7 +7370,7 @@ clear
                     #Comprueba si existe el fichero info.ini
                     if [ -f /home/orangepi/Downloads/info.ini ];
                     then
-                    echo "El fichero ya existe"
+                    echo ""
                     else
                     sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/orangepi/Downloads
                     fi
