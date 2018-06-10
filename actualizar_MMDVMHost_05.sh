@@ -88,6 +88,9 @@ fi
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
+
+                    sudo cp MMDVM.ini GATEWAY_DMR2YSF.ini
+
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
                     PI=":REM-V.02.07.04"\"
@@ -112,7 +115,7 @@ fi
                     fi
                     #===============================================
 
-                    cp MMDVM.ini GATEWAY_DMR2YSF.ini
+                    
 
 
                     # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
@@ -7365,6 +7368,8 @@ clear
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
+                    sudo cp MMDVM.ini GATEWAY_DMR2YSF.ini
+
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
                     PI=":Opi"\"
@@ -7382,8 +7387,8 @@ clear
                     fi
                     #===============================================
 
-                    cp MMDVM.ini GATEWAY_DMR2YSF.ini
-                    
+                   
+
                     # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                     make clean
