@@ -5,6 +5,6 @@ sed -i "10c Name[es_ES]=Abrir DMR2YSF" ~/Desktop/Abrir_DMR2YSF.desktop
 
 #sed -i "14c DMR2YSF=OFF" ~/status.ini
 
-sudo killall MMDVMFUSION
+sudo killall MMDVMHost
 sudo killall DMR2YSF
 sudo killall YSFGateway
