@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Abrir DMR2YSF
+Comment=
+Exec=sudo sh -c "cd ~/SCRIPTS_ORANGE/;sh ejecutar_DMR2YSF.sh"
+Icon=/home/orangepi/SCRIPTS_ORANGE/DMR2YSF.png
+Terminal=false
+StartupNotify=false
+Name[es_ES]=Abrir DMR2YSF
+Path=/home/orangepi/SCRIPTS_ORANGE
+GenericName=Abrir_DMR2YSF

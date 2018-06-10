@@ -20,10 +20,11 @@ echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
 echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
 echo "\33[1;36m   8)\33[1;32m INSTALAR YSF2DMR"
 echo "\33[1;36m   9)${AMARILLO} INSTALAR AMBE SERVER"
+echo "\33[1;36m  10)\33[1;32m INSTALAR DMR2YSF"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 9: " 
+echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
 case $escoger_menu in
@@ -277,6 +278,56 @@ exit;
 break;;
 esac
 done;;
+10) echo ""
+while true
+do
+clear
+
+                                                ejecutar1=S
+                                                case $ejecutar1 in
+                                                [sS]* ) echo ""
+                                                echo ">>>>>>>>> INSTALANDO DMR2YSF >>>>>>>>"
+                                                cd ~/
+                                                sudo rm -R DMR2YSF
+                                                git clone http://github.com/juribeparada/DMR2YSF
+                                                cd DMR2YSF
+                                                make clean
+                                                make
+                                                clear
+
+                                                cp DMR2YSF.ini DMR2YSF.ini_copia_01
+                                                cp DMR2YSF.ini DMR2YSF.ini_copia_02
+                                                cp DMR2YSF.ini DMR2YSF.ini_copia_03
+                                                cp DMR2YSF.ini DMR2YSF.ini_copia_04
+
+                                                cd ~/SCRIPTS_ORANGE
+                                                git pull
+                                                sleep 3
+
+                                                #Restaura los 2 iconos Abrir Abrir_DMR2YSF y Editar Editar_DMR2YSF y aparecen en el escritorio
+                                                cd ~/SCRIPTS_ORANGE
+                                                cp ~/SCRIPTS_ORANGE/Desktop/Abrir_DMR2YSF.desktop ~/Desktop
+                                                cp ~/SCRIPTS_ORANGE/Desktop/Editar_DMR2YSF.desktop ~/Desktop
+                                                sudo chmod +x -R ~/Desktop
+
+
+
+                                                ##Coloca icono Abrir AMBE SERVER en el escritorio
+                                                #cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                                                #sudo chmod +x -R ~/Desktop
+                      
+                                                exit;
+                                                break;;
+                                                [nN]* ) echo ""
+                                                clear
+                                                exit;
+                                                break;;
+esac
+done;;
+
+
+
+
 1000) echo ""
 while true
 do

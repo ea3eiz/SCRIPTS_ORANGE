@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Editar DMR2YSF
+Comment=
+Icon=/home/orangepi/SCRIPTS_ORANGE/EDITAR_DMR2YSF.png
+Path=/home/orangepi/SCRIPTS_ORANGE
+Terminal=false
+Name[es_ES]=Editar DMR2YSF
+StartupNotify=false
+Exec=mate-terminal --geometry=80x47 -x sh editar_DMR2YSF.sh
