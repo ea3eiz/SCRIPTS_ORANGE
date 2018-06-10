@@ -287,6 +287,11 @@ clear
                                                 case $ejecutar1 in
                                                 [sS]* ) echo ""
                                                 echo ">>>>>>>>> INSTALANDO DMR2YSF >>>>>>>>"
+
+                                                cd ~/MMDVMHost
+                                                cp MMDVM.ini GATEWAY_DMR2YSF.ini
+
+
                                                 cd ~/
                                                 sudo rm -R DMR2YSF
                                                 git clone http://github.com/juribeparada/DMR2YSF
@@ -301,7 +306,7 @@ clear
                                                 cp DMR2YSF.ini DMR2YSF.ini_copia_04
 
 
-                                                cp ~/MMDVMHost/MMDVM.ini GATEWAY_DMR2YSF.ini
+                                            
 
                                                 cd ~/SCRIPTS_ORANGE
                                                 git pull
