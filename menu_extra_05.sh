@@ -289,7 +289,7 @@ clear
                                                 echo ">>>>>>>>> INSTALANDO DMR2YSF >>>>>>>>"
 
                                                 cd ~/MMDVMHost
-                                                cp MMDVM.ini GATEWAY_DMR2YSF.ini
+                                                cp MMDVM.ini MMDVMDMR2YSF.ini
 
 
                                                 cd ~/
