@@ -7,3 +7,4 @@ sed -i "10c Name[es_ES]=Abrir DMR2YSF" ~/Desktop/Abrir_DMR2YSF.desktop
 
 sudo killall MMDVMFUSION
 sudo killall DMR2YSF
+sudo killall YSFGateway
