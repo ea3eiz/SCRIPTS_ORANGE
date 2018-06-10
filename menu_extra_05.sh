@@ -300,6 +300,9 @@ clear
                                                 cp DMR2YSF.ini DMR2YSF.ini_copia_03
                                                 cp DMR2YSF.ini DMR2YSF.ini_copia_04
 
+
+                                                cp ~/MMDVMHost/MMDVM.ini GATEWAY_DMR2YSF.ini
+
                                                 cd ~/SCRIPTS_ORANGE
                                                 git pull
                                                 sleep 3
