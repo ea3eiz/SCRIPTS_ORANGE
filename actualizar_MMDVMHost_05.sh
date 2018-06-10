@@ -42,6 +42,7 @@ fi
 
             #copia todos los inis en Dowloads antes de actualizar
             cd ~/MMDVMHost
+            
             sudo cp -f MMDVM.ini ~/Downloads
             sudo cp -f MMDVM.ini_copia ~/Downloads
             sudo cp -f MMDVM.ini_copia2 ~/Downloads
@@ -111,9 +112,14 @@ fi
                     fi
                     #===============================================
 
+                    cp MMDVM.ini GATEWAY_DMR2YSF.ini
+
+
                     # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                     make
+
+
 
                     sudo chmod 777 -R ~/MMDVMHost
                     sudo chmod 777 -R ~/Downloads
@@ -7376,6 +7382,8 @@ clear
                     fi
                     #===============================================
 
+                    cp MMDVM.ini GATEWAY_DMR2YSF.ini
+                    
                     # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                     make clean
