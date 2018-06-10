@@ -89,7 +89,7 @@ fi
                     cd ~/MMDVMHost
 
 
-                    sudo cp MMDVM.ini GATEWAY_DMR2YSF.ini
+                    sudo cp MMDVM.ini MMDVMDMR2YSF.ini
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
@@ -7368,7 +7368,7 @@ clear
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
 
-                    sudo cp MMDVM.ini GATEWAY_DMR2YSF.ini
+                    sudo cp MMDVM.ini MMDVMDMR2YSF.ini
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
