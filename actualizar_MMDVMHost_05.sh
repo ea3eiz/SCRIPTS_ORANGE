@@ -91,18 +91,18 @@ fi
 
                     sudo cp MMDVM.ini MMDVMDMR2YSF.ini
 
-                    HOY=$(date +%Y%m%d)
-                    FIJA="const char* VERSION = "\"
-                    PI=":REM-V.02.07.04"\"
-                    HOY1=$HOY$PI
-                    PUNTO=";"
-
-
                     #HOY=$(date +%Y%m%d)
                     #FIJA="const char* VERSION = "\"
-                    #PI=":Opi"\"
+                    #PI=":REM-V.02.07.04"\"
                     #HOY1=$HOY$PI
                     #PUNTO=";"
+
+
+                    HOY=$(date +%Y%m%d)
+                    FIJA="const char* VERSION = "\"
+                    PI=":Opi"\"
+                    HOY1=$HOY$PI
+                    PUNTO=";"
                     
                     sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
                   
