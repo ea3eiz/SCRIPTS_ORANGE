@@ -305,7 +305,7 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
                             
 			  [sS]* ) echo ""
 			  tu_ciudad=`echo "$tu_ciudad" | tr -d '[[:space:]]'`
-              sed -i "$linea Location=$loc1" ~/MMDVMHost/TODOS_LOS_INIS.ini
+              sed -i "$linea Location=$tu_ciudad" ~/MMDVMHost/TODOS_LOS_INIS.ini
             #DMR+
             sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini
             sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini_copia
