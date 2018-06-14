@@ -291,7 +291,7 @@ do
 buscar=":"
 largo=`expr index $loca $buscar`
 echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
-           	          read -p 'Introduce tu Ciudad ' loc1
+           	          read -p 'Introduce tu Ciudad ' tu_ciudad
                           letra=c
                           if [ $largo = 3 ]
                           then
@@ -304,7 +304,7 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
                           case $actualizar in
                             
 			  [sS]* ) echo ""
-			  loc1=`echo "$loc1" | tr -d '[[:space:]]'`
+			  tu_ciudad=`echo "$tu_ciudad" | tr -d '[[:space:]]'`
               sed -i "$linea Location=$loc1" ~/MMDVMHost/TODOS_LOS_INIS.ini
             #DMR+
             sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMPLUS.ini
