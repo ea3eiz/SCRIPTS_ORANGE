@@ -13,7 +13,7 @@ sudo mate-terminal -x ./DMR2NXDN DMR2NXDN.ini &
 cd ~/MMDVMHost
 sudo mate-terminal -x ./MMDVMHost MMDVMDMR2NXDN.ini &
 cd ~/NXDNClients/NXDNGateway
-sudo ./NXDNGateway NXDNGateway.ini
+sudo mate-terminal -x ./NXDNGateway NXDNGateway.ini
 
 
 
