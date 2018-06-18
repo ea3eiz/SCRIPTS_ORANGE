@@ -21,6 +21,7 @@ echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
 #echo "\33[1;36m   8)${BLANCO} INSTALAR YSF2DMR"
 echo "\33[1;36m   9)${BLANCO} INSTALAR AMBE SERVER"
 echo "\33[1;36m  10)${AMARILLO} INSTALAR DMR2YSF"
+echo "\33[1;36m  11)${AMARILLO} INSTALAR DMR2NXDN"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -283,58 +284,140 @@ while true
 do
 clear
 
-                                                ejecutar1=S
-                                                case $ejecutar1 in
+                        #comprueba si el fichero existe
+                        if [ -d ~/DMR2YSF ];
+                        then
+                        clear
+                        echo "${BLANCO}"
+                        echo "*******************************************"
+                        echo "*       YA TIENES INSTALADO DMR2YSF       *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${AMARILLO}"
+                        echo "*******************************************"
+                        echo "*       YA TIENES INSTALADO DMR2YSF       *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*       YA TIENES INSTALADO DMR2YSF       *"
+                        echo "*******************************************"
+                        sleep 5
+                        instalarsi=N
+                       
+                        else
+                        instalarsi=S
+                        fi
+                        #================================
+
+                                        case $instalarsi in
                                                 [sS]* ) echo ""
-                                                echo ">>>>>>>>> INSTALANDO DMR2YSF >>>>>>>>"
+                                                echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*         INSTALANDO DMR2YSF             *"
+                        echo "*******************************************"
+                        sleep 2
+                                                echo "${CIAN}"
 
                                                 cd ~/MMDVMHost
-                                                cp MMDVM.ini MMDVMDMR2YSF.ini
+                        cp MMDVM.ini MMDVMDMR2YSF.ini
 
-
-                                                cd ~/
-                                                sudo rm -R DMR2YSF
-                                                git clone http://github.com/juribeparada/DMR2YSF
-                                                cd DMR2YSF
+                        cd ~/
+                        git clone http://github.com/juribeparada/DMR2YSF
+                        cd DMR2YSF
                                                 make clean
                                                 make
-                                                clear
+                        clear
 
-                                                cp DMR2YSF.ini DMR2YSF.ini_copia_01
-                                                cp DMR2YSF.ini DMR2YSF.ini_copia_02
-                                                cp DMR2YSF.ini DMR2YSF.ini_copia_03
-                                                cp DMR2YSF.ini DMR2YSF.ini_copia_04
-
-
-                                            
-
-                                                cd ~/SCRIPTS_ORANGE
-                                                git pull
-                                                sleep 3
-
-                                                #Restaura los 2 iconos Abrir Abrir_DMR2YSF y Editar Editar_DMR2YSF y aparecen en el escritorio
-                                                cd ~/SCRIPTS_ORANGE
-                                                cp ~/SCRIPTS_ORANGE/Desktop/Abrir_DMR2YSF.desktop ~/Desktop
-                                                cp ~/SCRIPTS_ORANGE/Desktop/Editar_DMR2YSF.desktop ~/Desktop
-                                                sudo chmod +x -R ~/Desktop
-
-
-
-                                                ##Coloca icono Abrir AMBE SERVER en el escritorio
-                                                #cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                                #sudo chmod +x -R ~/Desktop
-                      
-                                                exit;
-                                                break;;
-                                                [nN]* ) echo ""
-                                                clear
-                                                exit;
-                                                break;;
+                        #Restaura los 2 iconos Abrir Abrir_DMR2YSF y Editar Editar_DMR2YSF y aparecen en el escritorio
+                        cd ~/SCRIPTS_ORANGE
+                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_DMR2YSF.desktop ~/Desktop
+                        cp ~/SCRIPTS_ORANGE/Desktop/Editar_MMDVMDMR2YSF.desktop ~/Desktop
+                        
+                        sudo chmod +x -R ~/Desktop
+                     
+                                break;;
+                                [nN]* ) echo ""
+                                clear
+                                exit;
+                                break;;
 esac
 done;;
+11) echo ""
+while true
+do
+clear
 
+                        #comprueba si el directorio existe
+                        if [ -d ~/DMR2NXDN ];
+                        then
+                        clear
+                        echo "${BLANCO}"
+                        echo "*******************************************"
+                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${AMARILLO}"
+                        echo "*******************************************"
+                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
+                        echo "*******************************************"
+                        sleep 5
 
+                        instalarsi=N
+                       
+                        else
+                        instalarsi=S
+                        fi
+                        #================================
 
+                                case $instalarsi in
+                                [sS]* ) echo ""
+                                echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*         INSTALANDO DMR2NXDN             *"
+                        echo "*******************************************"
+                        sleep 2
+                                echo "${CIAN}"
+
+                                cd ~/MMDVMHost
+                        cp MMDVM.ini MMDVMDMR2NXDN.ini
+
+                        cd ~/
+                        git clone http://github.com/juribeparada/DMR2NXDN
+                        cd DMR2NXDN
+                                make clean
+                                make
+
+                        cd ~/
+                        git clone https://github.com/g4klx/NXDNClients
+                        cd ~/NXDNClients/NXDNGateway
+                        make clean
+                        make
+                        clear
+
+                        #Restaura los 2 iconos Abrir Abrir_DMR2NXDN y Editar Editar_DMR2NXDN y aparecen en el escritorio
+                        cd ~/SCRIPTS_ORANGE
+                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_DMR2NXDN.desktop ~/Desktop
+                        cp ~/SCRIPTS_ORANGE/Desktop/Editar_MMDVMDMR2NXDN.desktop ~/Desktop
+                        
+                        sudo chmod +x -R ~/Desktop
+                     
+                                break;;
+                                [nN]* ) echo ""
+                                clear
+                                exit;
+                                break;;
+esac
+done;;
 
 1000) echo ""
 while true
