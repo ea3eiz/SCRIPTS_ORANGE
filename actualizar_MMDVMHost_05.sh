@@ -91,7 +91,7 @@ fi
 
                     sudo cp MMDVM.ini MMDVMDMR2YSF.ini
                     sudo cp MMDVM.ini MMDVMDMR2NXDN.ini
-                    
+
                     #HOY=$(date +%Y%m%d)
                     #FIJA="const char* VERSION = "\"
                     #PI=":REM-V.02.07.04"\"
@@ -7394,6 +7394,9 @@ clear
                     sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
                     make clean
                     make
+
+                    sudo cp MMDVM.ini MMDVMDMR2YSF.ini
+                    sudo cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                     # Crea los ejecutables para estas 4 aplicaciones  
                     cp MMDVMHost MMDVMBM
