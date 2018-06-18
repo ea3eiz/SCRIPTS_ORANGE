@@ -18,7 +18,7 @@ echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
 echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
-echo "\33[1;36m   8)${BLANCO} INSTALAR YSF2DMR"
+#echo "\33[1;36m   8)${BLANCO} INSTALAR YSF2DMR"
 echo "\33[1;36m   9)${BLANCO} INSTALAR AMBE SERVER"
 echo "\33[1;36m  10)${AMARILLO} INSTALAR DMR2YSF"
 echo ""
@@ -182,7 +182,7 @@ exit;
 break;;
 esac
 done;;
-8) echo ""
+8bloqueado) echo ""
 while true
 do
 clear
