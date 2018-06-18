@@ -90,7 +90,8 @@ fi
 
 
                     sudo cp MMDVM.ini MMDVMDMR2YSF.ini
-
+                    sudo cp MMDVM.ini MMDVMDMR2NXDN.ini
+                    
                     #HOY=$(date +%Y%m%d)
                     #FIJA="const char* VERSION = "\"
                     #PI=":REM-V.02.07.04"\"
