@@ -1215,7 +1215,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "50c Startup=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          sed -i "51c Startup=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1229,7 +1229,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "51c InactivityTimeout=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          sed -i "52c InactivityTimeout=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
