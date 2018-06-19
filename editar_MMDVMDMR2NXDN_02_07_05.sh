@@ -203,7 +203,7 @@ Display=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMDMR2NXDN.ini`
 Display1=`expr substr $Display 3 30`
 echo -n "$Display1"
 fi
-
+ 
 var=`grep -n -m 1 "\[Nextion\]" ~/MMDVMHost/MMDVMDMR2NXDN.ini`
 #var1=`grep -m 1 "\[Nextion\]" ~/MMDVMHost/MMDVMDMR2NXDN.ini`
 buscar=":"
@@ -308,14 +308,14 @@ txf=$(awk "NR==12" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$txf ${GRIS}Cambialo con la opción ${CIAN}3)"
 
 
-echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
+echo -n " ${CIAN} 32)${GRIS} Sala NXDN a conectar  - ${VERDE}"
 sala=$(awk "NR==50" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$sala"
 
 
 
 echo -n " ${CIAN} 32)${GRIS} InactivityTimeout     - ${VERDE}"
-Inactiv=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+Inactiv=$(awk "NR==52" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$Inactiv ${CIAN}<Este valor ha de ser 0"
 
 
