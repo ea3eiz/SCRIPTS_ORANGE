@@ -6,9 +6,9 @@ echo "   * \33[1;31m                         NOTAS DE LA VERSIÓN 02.06\33[1;32m
 echo "   *                                                                                  *"
 echo "   ************************************************************************************"
 echo ""
-echo "\33[1;36m   Gracias por descargar la imagen REM V.02.06"
+echo "\33[1;36m   Gracias por descargar la imagen REM V.02.07.04"
 echo ""
-echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIOAFICIONADOS."
+echo "\33[1;32m   Imagen multi-plataforma para \33[1;33mRADIOAFICIONADOS."
 echo ""
 echo "\33[1;37m   Tener presente las siguientes consideraciones:"
 echo""
@@ -22,7 +22,7 @@ echo " "
 						
 						mmdvm=$(awk "NR==22" /home/orangepi/MMDVMHost/Version.h)
 						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
-						var10=`expr substr $var10 20 23`
+						var10=`expr substr $var10 20 21`
 						echo "\33[1;32m" #color verde
 						echo -n "   Versión del MMDVMHOST: "
 						echo -n "\33[1;37m" #color blanco
