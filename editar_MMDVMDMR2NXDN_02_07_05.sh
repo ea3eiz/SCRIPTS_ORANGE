@@ -309,13 +309,13 @@ echo "$txf ${GRIS}Cambialo con la opción ${CIAN}3)"
 
 
 echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
-sala=$(awk "NR==52" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+sala=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$sala"
 
 
 
 echo -n " ${CIAN} 32)${GRIS} InactivityTimeout     - ${VERDE}"
-Inactiv=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+Inactiv=$(awk "NR==52" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$Inactiv ${CIAN}<Este valor ha de ser 0"
 
 
