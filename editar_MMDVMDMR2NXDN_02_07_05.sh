@@ -308,8 +308,8 @@ txf=$(awk "NR==12" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$txf ${GRIS}Cambialo con la opción ${CIAN}3)"
 
 
-echo -n " ${CIAN} 32)${GRIS} Sala NXDN a conectar  - ${VERDE}"
-sala=$(awk "NR==50" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
+sala=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$sala"
 
 
