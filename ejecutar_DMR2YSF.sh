@@ -13,4 +13,4 @@ sudo mate-terminal -x ./DMR2YSF DMR2YSF.ini &
 cd ~/MMDVMHost
 sudo mate-terminal -x ./MMDVMHost MMDVMDMR2YSF.ini &
 cd ~/YSFClients/YSFGateway
-sudo ./YSFGateway YSFGateway.ini
+sudo mate-terminal -x ./YSFGateway YSFGateway.ini
