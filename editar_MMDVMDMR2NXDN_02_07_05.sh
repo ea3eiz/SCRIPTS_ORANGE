@@ -312,6 +312,15 @@ echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
 sala=$(awk "NR==50" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$sala"
 
+
+
+echo -n " ${CIAN} 32)${GRIS} InactivityTimeout     - ${VERDE}"
+Inactiv=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+echo "$Inactiv"
+
+
+
+
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
