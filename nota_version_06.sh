@@ -22,7 +22,7 @@ echo " "
 						
 						mmdvm=$(awk "NR==22" /home/orangepi/MMDVMHost/Version.h)
 						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
-						var10=`expr substr $var10 20 21`
+						var10=`expr substr $var10 20 12`
 						echo "\33[1;32m" #color verde
 						echo -n "   Versión del MMDVMHOST: "
 						echo -n "\33[1;37m" #color blanco
