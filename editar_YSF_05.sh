@@ -115,6 +115,19 @@ FCS=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_FCS=$numero_linea$letra
 
+
+
+var=`grep -n -m 1 '\<InactivityTimeout\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+Inactiv=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
+letra=c
+linea_sed_Inactiv=$numero_linea$letra
+
+
+
 echo -n "\33[1;36m   1)\33[0m Modificar Indicativo  - \33[1;33m"
 echo "$INDICATIVO"
 
@@ -145,6 +158,10 @@ echo "$YSF"
 echo -n "\33[1;36m  10)\33[0m Habilitar FCS         - \33[1;33m"
 echo "$FCS"
 
+echo -n "\33[1;36m  11)\33[0m InactivityTimeout     - "
+echo -n "${AMARILLO}$Inactiv ${CIAN}<Este valor ha de ser 0"
+
+echo ""
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSFGateway.ini para hacer cualquier cambio\33[1;33m"
 
@@ -320,6 +337,20 @@ echo "Valor actual:   \33[1;33m$FCS"
                            case $actualizar in
                            [sS]* ) echo ""
                            sed -i "$linea_sed_FCS Enable=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           break;;
+                           [nN]* ) echo ""
+                           break;;
+esac
+done;;
+11) echo ""
+while true
+do
+echo "Valor actual:   \33[1;33m$Inactiv"
+                           read -p 'Introduce Valor 0: ' Valor                     
+                           actualizar=S 
+                           case $actualizar in
+                           [sS]* ) echo ""
+                           sed -i "$linea_sed_Inactiv InactivityTimeout=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
