@@ -307,16 +307,32 @@ echo -n " ${GRIS}                           - ${VERDE}"
 txf=$(awk "NR==12" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "$txf ${GRIS}Cambialo con la opción ${CIAN}3)"
 
-
 echo -n " ${CIAN} 31)${GRIS} Sala NXDN a conectar  - ${VERDE}"
-sala=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+var=`grep -n -m 1 '\<Startup\>' ~/NXDNClients/NXDNGateway/NXDNGateway.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+sala=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+letra=c
+linea_sed_31=$numero_linea$letra
 echo "$sala"
 
-
-
 echo -n " ${CIAN} 32)${GRIS} InactivityTimeout     - ${VERDE}"
-Inactiv=$(awk "NR==52" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "$Inactiv ${CIAN}<Este valor ha de ser 0"
+var=`grep -n -m 1 '\<InactivityTimeout\>' ~/NXDNClients/NXDNGateway/NXDNGateway.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+Inact=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+letra=c
+linea_sed_32=$numero_linea$letra
+echo "$Inact"
+
+
+
+
+
 
 
 
@@ -1215,7 +1231,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "51c Startup=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          sed -i "$linea_sed_31 Startup=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1229,7 +1245,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "52c InactivityTimeout=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          sed -i "$linea_sed_32 InactivityTimeout=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
