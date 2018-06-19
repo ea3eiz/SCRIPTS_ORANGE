@@ -327,7 +327,7 @@ numero_linea=`expr substr $var 1 $largo_linea`
 Inact=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 letra=c
 linea_sed_32=$numero_linea$letra
-echo "$Inact ${CIAN} <Este valor debe ser 0"
+echo "$Inact ${CIAN} < Este valor debe ser 0"
 
 
 
