@@ -316,7 +316,7 @@ echo "$sala"
 
 echo -n " ${CIAN} 32)${GRIS} InactivityTimeout     - ${VERDE}"
 Inactiv=$(awk "NR==51" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
-echo "$Inactiv"
+echo "$Inactiv ${CIAN}<Este valor ha de ser 0"
 
 
 
@@ -1216,6 +1216,20 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "50c Startup=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+32) echo ""
+while true
+do
+                          echo  "Valor actual $Inactiv"
+                          read -p 'Introduce valor 0  '   dmrac1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "51c InactivityTimeout=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
