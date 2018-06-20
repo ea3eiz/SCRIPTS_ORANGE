@@ -39,6 +39,7 @@ clear
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         cd ~/SCRIPTS_ORANGE
+                        cp NXDNHosts.txt ~/NXDNClients/NXDNGateway
                         git pull 
                         sleep 3
                         cd ~/
@@ -46,6 +47,10 @@ clear
                         clear
                         cd ~/AUTOSTART
                         git pull
+
+
+                      
+
                         exit;
                         break;;
 			[nN]* ) echo ""
