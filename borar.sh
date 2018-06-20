@@ -284,7 +284,7 @@ largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 5`
-Local=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+Local=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMDMR2NXDN.ini)
 letra=c
 linea_sed_29=$numero_linea$letra
 echo "$Local"
@@ -1202,8 +1202,8 @@ done;;
 29) echo ""
 while true
 do
-                          echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2NXDN.ini; #presenta el valor en pantalla
+                          echo -n "Valor actual Local \33[1;33m${Local#*=}\33[1;37m"
+                         # presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2NXDN.ini; #presenta el valor en pantalla
                           read -p 'Introducir el puerto: 62032  '   dmrac1
                           actualizar=S 
                           case $actualizar in
