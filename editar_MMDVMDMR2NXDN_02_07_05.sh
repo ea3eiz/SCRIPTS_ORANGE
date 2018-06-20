@@ -1254,6 +1254,12 @@ done;;
 33) echo ""
 while true
 do
+                          
+                        
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                         
                           cd ~/NXDNClients/NXDNGateway/
                           mkdir private
                           cd ~/SCRIPTS_ORANGE
@@ -1261,7 +1267,10 @@ do
                           cd ~/NXDNClients/NXDNGateway/
                           rm NXDNHosts.txt
                           wget https://github.com/g4klx/NXDNClients/blob/master/NXDNGateway/NXDNHosts.txt
-                          exit;
+
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 0) echo ""
