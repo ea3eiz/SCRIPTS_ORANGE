@@ -1258,6 +1258,9 @@ do
                           mkdir private
                           cd ~/SCRIPTS_ORANGE
                           cp NXDNHosts.txt ~/NXDNClients/NXDNGateway/private
+                          cd ~/NXDNClients/NXDNGateway/
+                          rm NXDNHosts.txt
+                          wget https://github.com/g4klx/NXDNClients/blob/master/NXDNGateway/NXDNHosts.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
