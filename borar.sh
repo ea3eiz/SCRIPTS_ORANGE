@@ -1210,7 +1210,7 @@ do
                           [sS]* ) echo ""
                           letrac=c
                           linea=$numero_linea$letrac
-                          sed -i "$linea Local=$dmrac1" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+                          sed -i "$linea_sed_29 Local=$dmrac1" ~/MMDVMHost/MMDVMDMR2NXDN.ini
 
                           break;;
                           [nN]* ) echo ""
