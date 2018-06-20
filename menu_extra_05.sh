@@ -38,7 +38,7 @@ clear
 		        case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        cd ~/MXDNClients/NXDNGateway/
+                        cd ~/NXDNClients/NXDNGateway/
                         mkdir private
                         cd ~/SCRIPTS_ORANGE
                         cp NXDNHosts.txt /MXDNClients/NXDNGateway/private
