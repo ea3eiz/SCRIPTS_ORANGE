@@ -1202,7 +1202,7 @@ done;;
 29) echo ""
 while true
 do
-                          echo -n "Valor actual Local \33[1;33m${Local#*=}\33[1;37m"
+                          echo "Valor actual Local \33[1;33m${Local#*=}\33[1;37m"
                          # presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2NXDN.ini; #presenta el valor en pantalla
                           read -p 'Introducir el puerto: 62032  '   dmrac1
                           actualizar=S 
