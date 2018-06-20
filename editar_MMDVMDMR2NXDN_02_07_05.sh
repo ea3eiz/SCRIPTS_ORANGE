@@ -1261,9 +1261,7 @@ do
                           cd ~/NXDNClients/NXDNGateway/
                           rm NXDNHosts.txt
                           wget https://github.com/g4klx/NXDNClients/blob/master/NXDNGateway/NXDNHosts.txt
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
+                          exit;
 esac
 done;;
 0) echo ""
