@@ -38,8 +38,10 @@ clear
 		        case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+                        cd ~/MXDNClients/NXDNGateway/
+                        mkdir private
                         cd ~/SCRIPTS_ORANGE
-                        cp NXDNHosts.txt ~/NXDNClients/NXDNGateway
+                        cp NXDNHosts.txt /MXDNClients/NXDNGateway/private
                         git pull 
                         sleep 3
                         cd ~/
