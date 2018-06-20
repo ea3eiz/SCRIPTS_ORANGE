@@ -285,7 +285,7 @@ letra=c
 linea_sed_29=$numero_linea$letra
 echo "$Local"
 
-echo -n "\33[1;36m  33)${GRIS} Actualizar listado NXDNHosts.txt"
+echo "\33[1;36m  33)${GRIS} Actualizar listado NXDNHosts.txt"
 idd=$(awk "NR==9" ~/DMR2NXDN/DMR2NXDN.ini)
 echo "  ${ROJO}PARAMETROS DMR2NXDN.ini "
 echo "  ${VERDE}                          - $idd        ${GRIS}    Cambialo con la opción ${CIAN}10)"
