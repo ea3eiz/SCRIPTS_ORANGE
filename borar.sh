@@ -287,7 +287,7 @@ numero_linea=`expr $numero_linea + 5`
 Local=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 letra=c
 linea_sed_29=$numero_linea$letra
-echo "$local"
+echo "$Local"
 
 
 
