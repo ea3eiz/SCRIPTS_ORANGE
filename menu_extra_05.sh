@@ -41,7 +41,7 @@ clear
                         cd ~/NXDNClients/NXDNGateway/
                         mkdir private
                         cd ~/SCRIPTS_ORANGE
-                        cp NXDNHosts.txt /MXDNClients/NXDNGateway/private
+                        cp NXDNHosts.txt ~/NXDNClients/NXDNGateway/private
                         git pull 
                         sleep 3
                         cd ~/
