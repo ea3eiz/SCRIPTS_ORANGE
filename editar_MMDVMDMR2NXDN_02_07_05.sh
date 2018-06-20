@@ -285,7 +285,7 @@ letra=c
 linea_sed_29=$numero_linea$letra
 echo "$Local"
 
-echo ""
+echo -n "\33[1;36m  33)${GRIS} Actualizar listado NXDNHosts.txt"
 idd=$(awk "NR==9" ~/DMR2NXDN/DMR2NXDN.ini)
 echo "  ${ROJO}PARAMETROS DMR2NXDN.ini "
 echo "  ${VERDE}                          - $idd        ${GRIS}    Cambialo con la opción ${CIAN}10)"
@@ -1246,6 +1246,18 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_32 InactivityTimeout=$dmrac1" ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+33) echo ""
+while true
+do
+                          cd ~/NXDNClients/NXDNGateway/
+                          mkdir private
+                          cd ~/SCRIPTS_ORANGE
+                          cp NXDNHosts.txt ~/NXDNClients/NXDNGateway/private
                           break;;
                           [nN]* ) echo ""
                           break;;
