@@ -1261,12 +1261,15 @@ do
                           [sS]* ) echo ""
                          
                           cd ~/NXDNClients/NXDNGateway/
+                          rm -R private
                           mkdir private
                           cd ~/SCRIPTS_ORANGE
                           cp NXDNHosts.txt ~/NXDNClients/NXDNGateway/private
                           cd ~/NXDNClients/NXDNGateway/
                           rm NXDNHosts.txt
-                          wget https://github.com/g4klx/NXDNClients/blob/master/NXDNGateway/NXDNHosts.txt
+
+
+                          wget https://raw.githubusercontent.com/g4klx/NXDNClients/master/NXDNGateway/NXDNHosts.txt
 
                           break;;
                           [nN]* ) echo ""
