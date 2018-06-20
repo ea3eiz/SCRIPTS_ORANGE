@@ -272,17 +272,18 @@ var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMDMR2NXDN.ini;
 
 echo "\33[1;36m  28)${BLANCO} Abrir fichero MMDVMDMR2NXDN.ini para hacer cualquier cambio\33[1;33m"
 
-var1=`grep -n "\[DMR Network\]" ~/MMDVMHost/MMDVMDMR2NXDN.ini` # devuelve ejem: 138:Enable=1
-var2=`echo "$var1" | tr -d '[[:space:]]'`
-buscar=":"
-largo_linea=`expr index $var2 $buscar` #comprueba el largo incluyendo los dos puntos (:)
-largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
-numero_linea=`expr substr $var2 1 $largo_linea` # recoge el numero de linea (138)
-numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
-letra=p
-numero_linea_p=$numero_linea$letra #crea 143p
 echo -n "\33[1;36m  29)${GRIS} Local port            - ${VERDE}"
-presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2NXDN.ini; #presenta el valor en pantalla
+var1=`grep -n "\[DMR Network\]" ~/MMDVMHost/MMDVMDMR2NXDN.ini` # devuelve ejem: 138:Enable=1
+var=`echo "$var1" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 5`
+Local=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMDMR2NXDN.ini)
+letra=c
+linea_sed_29=$numero_linea$letra
+echo "$Local"
 
 echo ""
 idd=$(awk "NR==9" ~/DMR2NXDN/DMR2NXDN.ini)
@@ -1194,15 +1195,14 @@ done;;
 29) echo ""
 while true
 do
-                          echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2NXDN.ini; #presenta el valor en pantalla
+                          echo "Valor actual Local \33[1;33m${Local#*=}\33[1;37m"
                           read -p 'Introducir el puerto: 62032  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
                           letrac=c
                           linea=$numero_linea$letrac
-                          sed -i "$linea Local=$dmrac1" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+                          sed -i "$linea_sed_29 Local=$dmrac1" ~/MMDVMHost/MMDVMDMR2NXDN.ini
 
                           break;;
                           [nN]* ) echo ""
