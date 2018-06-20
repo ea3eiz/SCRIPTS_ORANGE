@@ -285,9 +285,10 @@ letra=c
 linea_sed_29=$numero_linea$letra
 echo "$Local"
 
-echo "\33[1;36m  33)${GRIS} Actualizar listado NXDNHosts.txt"
+
 idd=$(awk "NR==9" ~/DMR2NXDN/DMR2NXDN.ini)
 echo "  ${ROJO}PARAMETROS DMR2NXDN.ini "
+echo "\33[1;36m  33)${GRIS} Actualizar listado NXDNHosts.txt"
 echo "  ${VERDE}                          - $idd        ${GRIS}    Cambialo con la opción ${CIAN}10)"
 
 indi=$(awk "NR==2" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
@@ -1267,10 +1268,7 @@ do
                           cp NXDNHosts.txt ~/NXDNClients/NXDNGateway/private
                           cd ~/NXDNClients/NXDNGateway/
                           rm NXDNHosts.txt
-
-
                           wget https://raw.githubusercontent.com/g4klx/NXDNClients/master/NXDNGateway/NXDNHosts.txt
-
                           break;;
                           [nN]* ) echo ""
                           break;;
