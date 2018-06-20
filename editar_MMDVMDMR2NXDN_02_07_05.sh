@@ -288,7 +288,7 @@ echo "$Local"
 
 idd=$(awk "NR==9" ~/DMR2NXDN/DMR2NXDN.ini)
 echo "  ${ROJO}PARAMETROS DMR2NXDN.ini "
-echo "\33[1;36m  33)${GRIS} Actualizar listado NXDNHosts.txt"
+
 echo "  ${VERDE}                          - $idd        ${GRIS}    Cambialo con la opción ${CIAN}10)"
 
 indi=$(awk "NR==2" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
@@ -332,7 +332,7 @@ linea_sed_32=$numero_linea$letra
 echo "$Inact ${CIAN} < Este valor debe ser 0"
 
 
-
+echo "\33[1;36m  33)${AMARILLO} Actualizar listado NXDNHosts.txt"
 
 
 
