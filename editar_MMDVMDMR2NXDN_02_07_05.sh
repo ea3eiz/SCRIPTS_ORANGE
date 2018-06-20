@@ -331,7 +331,7 @@ letra=c
 linea_sed_32=$numero_linea$letra
 echo "$Inact ${CIAN} < Este valor debe ser 0"
 
-
+echo ""
 echo "\33[1;36m  33)${AMARILLO} Actualizar listado NXDNHosts.txt"
 
 
