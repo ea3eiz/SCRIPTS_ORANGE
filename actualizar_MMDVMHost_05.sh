@@ -132,6 +132,7 @@ echo "***************************************************"
 echo "* RESTAURANDO LOS DATOS DE LA COPIA DE SEGURIDAD  *"
 echo "***************************************************"
                     # Crea los ejecutables para estas 4 aplicaciones  
+                    cp MMDVMHost MMDVMRADIO
                     cp MMDVMHost MMDVMBM
                     cp MMDVMHost MMDVMPLUS
                     cp MMDVMHost MMDVMDSTAR
@@ -7398,7 +7399,8 @@ clear
                     sudo cp MMDVM.ini MMDVMDMR2YSF.ini
                     sudo cp MMDVM.ini MMDVMDMR2NXDN.ini
 
-                    # Crea los ejecutables para estas 4 aplicaciones  
+                    # Crea los ejecutables para estas 4 aplicaciones 
+                    cp MMDVMHost MMDVMRADIO 
                     cp MMDVMHost MMDVMBM
                     cp MMDVMHost MMDVMPLUS
                     cp MMDVMHost MMDVMDSTAR
