@@ -65,6 +65,9 @@ clear
             sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
 
+            cp -f MMDVMDMR2NXDN.ini ~/Downloads
+            cp -f MMDVMDMR2YSF.ini ~/Downloads
+
             #solo Dstar y solo Fusion
             sudo cp -f MMDVMDSTAR.ini ~/Downloads
             sudo cp -f MMDVMFUSION.ini ~/Downloads
@@ -74,6 +77,8 @@ clear
             cp -f YSF2DMR.ini ~/Downloads
             cp -f YSF2DMR.ini_copia_01 ~/Downloads
             cp -f YSF2DMR.ini_copia_02 ~/Downloads
+            cp -f YSF2DMR.ini_copia_03 ~/Downloads
+            cp -f YSF2DMR.ini_copia_04 ~/Downloads
 
             cd  ~/YSFClients/YSFGateway/
             sudo cp -f YSFGateway.ini ~/Downloads
@@ -140,6 +145,9 @@ sleep 3
             cp -f YSF2DMR.ini ~/YSF2DMR
             cp -f YSF2DMR.ini_copia_01 ~/YSF2DMR
             cp -f YSF2DMR.ini_copia_02 ~/YSF2DMR
+
+            cp -f MMDVMDMR2NXDN.ini ~/MMDVMHost
+            cp -f MMDVMDMR2YSF.ini ~/MMDVMHost
 
             sudo cp -f YSFGateway.ini ~/YSFClients/YSFGateway/
 
