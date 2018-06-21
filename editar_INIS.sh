@@ -163,6 +163,14 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
                         sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
                         sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
+
+                        #MMDVMDMR2YSF.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+                        #MMDVMDMR2NXDN.ini
+                        sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
+
                         #iNDICATIVO SOLODSTAR
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMDSTAR.ini
                         #iNDICATIVO SOLOFUSION
@@ -219,6 +227,13 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini            
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "13c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLO FUSION
@@ -275,6 +290,13 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini            
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "14c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMDSTAR.ini   
             #SOLOFUSION
@@ -330,6 +352,13 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
             sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
             sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
             sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "19c Location=$tu_ciudad" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
@@ -384,6 +413,13 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
             sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
             sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
             sed -i "10c URL=$tu_url" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "21c URL=$tu_url" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
@@ -439,96 +475,17 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
             sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
             sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
             sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION  
             sed -i "3c Id=$tu_id" ~/MMDVMHost/MMDVMFUSION.ini           
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
-esac
-done;;
-10) echo ""
-while true
-do
-buscar=":"
-largo=`expr index $dup $buscar`
-echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
-           	          read -p 'Para un Repetidor Duplex=1 Para un Hotspot Duplex=0: ' duplex
-                          letra=c
-                          if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $dup 1 1`
-                          else
-                          linea=`expr substr $dup 1 1`
-                          fi
-                          linea=$linea$letra
-                          actualizar=S 
-                          case $actualizar in
-			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$duplex" ~/MMDVMHost/TODOS_LOS_INIS.ini
-            #DMR+
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #BM
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #RADIO
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia3           
-            #LIBRE
-            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #SOLODSTAR
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDSTAR.ini
-            #SOLOFUSION 
-            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMFUSION.ini            
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
-esac
-done;;
-13) echo ""
-while true
-do
-                          echo "Valor  actual  del  Module: $MODULE"
-                          read -p 'Valor óptimo para D-STAR=B: '  module
-                          actualizar=S 
-                          case $actualizar in
-                                      [sS]* ) echo ""
-                          #Convierte de minúsculas a Mayúsculas
-                          module=`echo "$module" | tr [:lower:] [:upper:]`
-                          sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
-            #DMR+
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
-            #BM
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
-            #RADIO
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
-            #LIBRE
-            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
-            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
-            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos           
-            #SOLODSTAR
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
-            #SOLOFUSION  
-            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -562,6 +519,13 @@ do
             sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "30c Enable=$baliza" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+
+            #MMDVMDMR2YSF
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
@@ -571,6 +535,9 @@ do
                       break;;
 esac
 done;;
+
+
+
 8) echo ""
 while true
 do
@@ -612,7 +579,15 @@ echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia2
-            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia3            
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia3  
+
+
+            #MMDVMDMR2YSF
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDMR2YSF.ini 
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION 
@@ -668,11 +643,73 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
             sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "3c Timeout=$timeou" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+
+            #MMDVMDMR2YSF
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+            
             #SOLODSTAR
             sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
             sed -i "4c Timeout=$timeou" ~/MMDVMHost/MMDVMFUSION.ini
 
+        break;;
+        [nN]* ) echo ""
+        break;;
+esac
+done;;
+10) echo ""
+while true
+do
+buscar=":"
+largo=`expr index $dup $buscar`
+echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
+                      read -p 'Para un Repetidor Duplex=1 Para un Hotspot Duplex=0: ' duplex
+                          letra=c
+                          if [ $largo = 3 ]
+                          then
+                          linea=`expr substr $dup 1 1`
+                          else
+                          linea=`expr substr $dup 1 1`
+                          fi
+                          linea=$linea$letra
+                          actualizar=S 
+                          case $actualizar in
+        [sS]* ) echo ""
+                          sed -i "$linea Duplex=$duplex" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVM.ini_copia3           
+            #LIBRE
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "4c Duplex=$duplex" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+
+            #MMDVMDMR2YSF
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
+
+            #SOLODSTAR
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION 
+            sed -i "5c Duplex=$duplex" ~/MMDVMHost/MMDVMFUSION.ini            
         break;;
         [nN]* ) echo ""
         break;;
@@ -721,6 +758,13 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
             sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
             sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
             sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDMR2NXDN.ini
+
             #SOLODSTAR
             sed -i "16c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
@@ -775,6 +819,13 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
             sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
             sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
             sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
+
+            #MMDVMDMR2YSF         
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            #MMDVMDMR2NXDN.ini
+            sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDMR2NXDN.ini  
+
             #SOLODSTAR
             sed -i "17c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION 
@@ -784,6 +835,54 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
 			  break;;
 esac
 done;;
+13) echo ""
+while true
+do
+                          echo "Valor  actual  del  Module: $MODULE"
+                          read -p 'Valor óptimo para D-STAR=B: '  module
+                          actualizar=S 
+                          case $actualizar in
+                                      [sS]* ) echo ""
+                          #Convierte de minúsculas a Mayúsculas
+                          module=`echo "$module" | tr [:lower:] [:upper:]`
+                          sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/TODOS_LOS_INIS.ini
+            #DMR+
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+            #BM
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMBM.ini_copia3
+            #RADIO
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia2
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVM.ini_copia3
+            #LIBRE
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_uno
+            sed -i "48c Module=$module" ~/MMDVMHost/MMDVMLIBRE.ini_dos  
+
+            #MMDVMDMR2YSF
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMDMR2YSF.ini
+
+            
+            #MMDVMDMR2NXDN.ini
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMDMR2NXDN.ini 
+
+            #SOLODSTAR
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMDSTAR.ini
+            #SOLOFUSION  
+            sed -i "$linea_sed_MODULE Module=$module" ~/MMDVMHost/MMDVMFUSION.ini                        
+        break;;
+        [nN]* ) echo ""
+        break;;
+esac
+done;;
+
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
