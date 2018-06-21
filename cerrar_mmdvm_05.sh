@@ -6,4 +6,4 @@ sed -i "4c Name[es_ES]=Abrir Radio" ~/Desktop/MMDVM.desktop
 
 sed -i "5c MMDVM=OFF" ~/status.ini
 
-sudo killall MMDVMHost
+sudo killall MMDVMRADIO
