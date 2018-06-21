@@ -60,6 +60,19 @@ fi
             sudo cp -f MMDVMPLUS.ini_copia2 ~/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 ~/Downloads
 
+
+
+
+
+
+
+
+
+
+
+            cp -f MMDVMDMR2NXDN.ini ~/Downloads
+            cp -f MMDVMDMR2YSF.ini ~/Downloads
+
             #solo Dstar y solo Fusion
             sudo cp -f MMDVMDSTAR.ini ~/Downloads
             sudo cp -f MMDVMFUSION.ini ~/Downloads
@@ -124,7 +137,6 @@ fi
                     make
 
 
-
                     sudo chmod 777 -R ~/MMDVMHost
                     sudo chmod 777 -R ~/Downloads
  clear                   
@@ -145,7 +157,6 @@ echo "***************************************************"
                     cd ~/MMDVMHost
                     sudo chmod +x MMDVMHostLIBRE
                     #=================================================
-
                     # Crea los ficheros de Memorias ==================
                     cp MMDVM.ini MMDVM.ini_original
                     cp MMDVM.ini MMDVM.ini_copia
@@ -170,8 +181,13 @@ echo "***************************************************"
 
                     cp MMDVM.ini TODOS_LOS_INIS.ini
 
-                     sudo chmod 777 -R ~/MMDVMHost
+                    cd /home/pi/Downloads
+                    cp -f MMDVMDMR2NXDN.ini ~/MMDVMHost
+                    cp -f MMDVMDMR2YSF.ini ~/MMDVMHost
 
+                    sudo chmod 777 -R ~/MMDVMHost
+
+                    sudo chmod 777 -R ~/Downloads
 #*** restaura solo los datos de las copias en Downloads************
 
 #======================= MMDVM.ini   ============================
@@ -7369,8 +7385,6 @@ clear
                     sudo rm -r ~/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     cd ~/MMDVMHost
-
-                    sudo cp MMDVM.ini MMDVMDMR2YSF.ini
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
