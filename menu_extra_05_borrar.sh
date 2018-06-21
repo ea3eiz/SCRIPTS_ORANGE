@@ -364,13 +364,11 @@ largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 HostsFile2=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
-letra=c
-linea_sed_HostsFile2=$numero_linea$letra
-echo "$HostsFile2 ${CIAN} < Este valor debe ser 0"
+comprueba="HostsFile2=./private/NXDNHosts.txt"
 
 
 
-read a
+
 
 
 
@@ -378,7 +376,8 @@ read a
 
 
                         #comprueba si el directorio existe 
-                        if [ -d ~/DMR2NXDN ];
+                        if [ $HostsFile2 = $comprueba ]
+                        #if [ -d ~/DMR2NXDN ];
                         then
                         clear
                         echo "${BLANCO}"
