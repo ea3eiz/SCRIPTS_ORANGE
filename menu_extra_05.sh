@@ -352,12 +352,7 @@ done;;
 while true
 do
 clear
-
-                 
-
-
-
-
+# Comprueba si tienes la versión con la linea HostsFile2=./private/NXDNHosts.txt
 var=`grep -n -m 1 '\<HostsFile2\>' ~/NXDNClients/NXDNGateway/NXDNGateway.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
@@ -365,20 +360,9 @@ largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 HostsFile2=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
 comprueba="HostsFile2=./private/NXDNHosts.txt"
-
-
-
-
-
-
-
-
-
-
-                        #comprueba si el directorio existe 
-                        if [ $HostsFile2 = $comprueba ]
-                        #if [ -d ~/DMR2NXDN ];
-                        then
+if [ $HostsFile2 = $comprueba ]
+                  
+                        then # YA TIENES INSTALADA LA ÚLTIMA VERSIÓN
                         clear
                         echo "${BLANCO}"
                         echo "*************************************************"
@@ -400,7 +384,8 @@ comprueba="HostsFile2=./private/NXDNHosts.txt"
 
                         instalarsi=N
                        
-                        else
+                        else # INSTALA DE NUEVO EL DMR2NXDN
+
                         instalarsi=S
                         fi
                         #================================
