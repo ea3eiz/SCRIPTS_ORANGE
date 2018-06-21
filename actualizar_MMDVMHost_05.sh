@@ -7434,6 +7434,9 @@ clear
 
                     cp MMDVMLIBRE.ini MMDVMLIBRE.ini_uno
                     cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
+
+                    cp MMDVM.ini TODOS_LOS_INIS.ini
+                    
                     #=================================================
 
                     sudo chmod +x -R ~/MMDVMHost
