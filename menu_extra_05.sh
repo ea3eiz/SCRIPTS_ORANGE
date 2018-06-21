@@ -353,26 +353,49 @@ while true
 do
 clear
 
-                        #comprueba si el directorio existe
-                        if [ -d ~/DMR2NXDN ];
+                 
+
+
+
+
+var=`grep -n -m 1 '\<HostsFile2\>' ~/NXDNClients/NXDNGateway/NXDNGateway.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+HostsFile2=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+comprueba="HostsFile2=./private/NXDNHosts.txt"
+
+
+
+
+
+
+
+
+
+
+                        #comprueba si el directorio existe 
+                        if [ $HostsFile2 = $comprueba ]
+                        #if [ -d ~/DMR2NXDN ];
                         then
                         clear
                         echo "${BLANCO}"
-                        echo "*******************************************"
-                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
-                        echo "*******************************************"
+                        echo "*************************************************"
+                        echo "*       YA TIENES INSTALADA LA ÚLTIMA VERSIÓN    *"
+                        echo "**************************************************"
                         sleep 2
                         clear
                         echo "${AMARILLO}"
-                        echo "*******************************************"
-                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
-                        echo "*******************************************"
+                        echo "*************************************************"
+                        echo "*       YA TIENES INSTALADA LA ÚLTIMA VERSIÓN    *"
+                        echo "**************************************************"
                         sleep 2
                         clear
                         echo "${VERDE}"
-                        echo "*******************************************"
-                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
-                        echo "*******************************************"
+                        echo "*************************************************"
+                        echo "*       YA TIENES INSTALADA LA ÚLTIMA VERSIÓN    *"
+                        echo "**************************************************"
                         sleep 5
 
                         instalarsi=N
