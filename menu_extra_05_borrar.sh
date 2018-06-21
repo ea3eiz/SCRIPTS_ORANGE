@@ -381,21 +381,21 @@ comprueba="HostsFile2=./private/NXDNHosts.txt"
                         then
                         clear
                         echo "${BLANCO}"
-                        echo "*******************************************"
-                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
-                        echo "*******************************************"
+                        echo "*************************************************"
+                        echo "*       YA TIENES INSTALADA LA ÚLTIMA VERSIÓN    *"
+                        echo "**************************************************"
                         sleep 2
                         clear
                         echo "${AMARILLO}"
-                        echo "*******************************************"
-                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
-                        echo "*******************************************"
+                        echo "*************************************************"
+                        echo "*       YA TIENES INSTALADA LA ÚLTIMA VERSIÓN    *"
+                        echo "**************************************************"
                         sleep 2
                         clear
                         echo "${VERDE}"
-                        echo "*******************************************"
-                        echo "*       YA TIENES INSTALADO DMR2NXDN      *"
-                        echo "*******************************************"
+                        echo "*************************************************"
+                        echo "*       YA TIENES INSTALADA LA ÚLTIMA VERSIÓN    *"
+                        echo "**************************************************"
                         sleep 5
 
                         instalarsi=N
