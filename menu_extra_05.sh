@@ -249,6 +249,9 @@ clear
                         #Restaura los 2 iconos Abrir AMBE SERVER y Editar AMBE SERVER y aparecen en el escritorio
                         cp ~/SCRIPTS_ORANGE/Desktop/Abrir_ambe_server.desktop ~/Desktop
                         cp ~/SCRIPTS_ORANGE/Desktop/Editar_ambe_server.desktop ~/Desktop
+
+                        cp ~/SCRIPTS_ORANGE/ambe_server.ini ~/
+
                         sudo chmod +x -R ~/Desktop
 
                         #comprueba si el ficgero existe
