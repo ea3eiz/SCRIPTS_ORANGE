@@ -181,7 +181,7 @@ echo "***************************************************"
 
                     cp MMDVM.ini TODOS_LOS_INIS.ini
 
-                    cd /home/pi/Downloads
+                    cd ~/Downloads
                     cp -f MMDVMDMR2NXDN.ini ~/MMDVMHost
                     cp -f MMDVMDMR2YSF.ini ~/MMDVMHost
 
