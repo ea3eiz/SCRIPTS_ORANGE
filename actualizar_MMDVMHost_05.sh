@@ -102,8 +102,8 @@ fi
                     cd ~/MMDVMHost
 
 
-                    sudo cp MMDVM.ini MMDVMDMR2YSF.ini
-                    sudo cp MMDVM.ini MMDVMDMR2NXDN.ini
+                    cp MMDVM.ini MMDVMDMR2YSF.ini
+                    cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                     #HOY=$(date +%Y%m%d)
                     #FIJA="const char* VERSION = "\"
@@ -7410,8 +7410,8 @@ clear
                     make clean
                     make
 
-                    sudo cp MMDVM.ini MMDVMDMR2YSF.ini
-                    sudo cp MMDVM.ini MMDVMDMR2NXDN.ini
+                    cp MMDVM.ini MMDVMDMR2YSF.ini
+                    cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                     # Crea los ejecutables para estas 4 aplicaciones 
                     cp MMDVMHost MMDVMRADIO 
