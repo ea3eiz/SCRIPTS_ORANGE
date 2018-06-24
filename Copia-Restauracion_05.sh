@@ -68,6 +68,13 @@ clear
             cp -f MMDVMDMR2NXDN.ini ~/Downloads
             cp -f MMDVMDMR2YSF.ini ~/Downloads
 
+
+
+            cp -f ~/NXDNClients/NXDNGateway/NXDNGateway.ini
+            cp -f ~/DMR2YSF/DMR2YSF.ini
+
+
+
             #solo Dstar y solo Fusion
             sudo cp -f MMDVMDSTAR.ini ~/Downloads
             sudo cp -f MMDVMFUSION.ini ~/Downloads
@@ -148,6 +155,12 @@ sleep 3
 
             cp -f MMDVMDMR2NXDN.ini ~/MMDVMHost
             cp -f MMDVMDMR2YSF.ini ~/MMDVMHost
+
+
+            cp -f NXDNGateway.ini ~/NXDNClients/NXDNGateway
+            cp -f DMR2YSF.ini ~/pi/DMR2YSF
+
+
 
             sudo cp -f YSFGateway.ini ~/YSFClients/YSFGateway/
 
