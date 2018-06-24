@@ -26,7 +26,7 @@ clear
 		case $ejecutar1 in
 		[sS]* ) echo ""
 		echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO"
-            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, BlueDV y SVXLINK"   
+            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, DMR2YSFF, DMR2NXDN, BlueDV y SVXLINK"
 		sleep 3
 		sudo chmod -R 777 ~/Downloads        
 
@@ -40,12 +40,8 @@ clear
             sudo chmod 777 /home/orangepi/Downloads/info.ini
             #===============================================
 
-
             match1=$(awk "NR==2" /home/orangepi/Downloads/info.ini)
             sed -i "1c $match1" /home/orangepi/Downloads/info.ini
-
-
-
 
             cd ~/MMDVMHost
             sudo cp -f MMDVM.ini ~/Downloads
@@ -68,12 +64,8 @@ clear
             cp -f MMDVMDMR2NXDN.ini ~/Downloads
             cp -f MMDVMDMR2YSF.ini ~/Downloads
 
-
-
             cp -f ~/NXDNClients/NXDNGateway/NXDNGateway.ini  ~/Downloads
             cp -f ~/DMR2YSF/DMR2YSF.ini  ~/Downloads
-
-read a
 
             #solo Dstar y solo Fusion
             sudo cp -f MMDVMDSTAR.ini ~/Downloads
