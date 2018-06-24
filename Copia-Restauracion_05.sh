@@ -64,6 +64,7 @@ clear
             cp -f MMDVMDMR2NXDN.ini ~/Downloads
             cp -f MMDVMDMR2YSF.ini ~/Downloads
 
+            cp -f ~/DMR2NXDN/DMR2NXDN.ini  ~/Downloads
             cp -f ~/NXDNClients/NXDNGateway/NXDNGateway.ini  ~/Downloads
             cp -f ~/DMR2YSF/DMR2YSF.ini  ~/Downloads
 
@@ -148,7 +149,7 @@ sleep 3
             cp -f MMDVMDMR2NXDN.ini ~/MMDVMHost
             cp -f MMDVMDMR2YSF.ini ~/MMDVMHost
 
-
+            cp -f DMR2NXDN.ini  ~/DMR2NXDN
             cp -f NXDNGateway.ini ~/NXDNClients/NXDNGateway
             cp -f DMR2YSF.ini ~/DMR2YSF
 
