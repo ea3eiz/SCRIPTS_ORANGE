@@ -73,7 +73,7 @@ clear
             cp -f ~/NXDNClients/NXDNGateway/NXDNGateway.ini
             cp -f ~/DMR2YSF/DMR2YSF.ini
 
-
+read a
 
             #solo Dstar y solo Fusion
             sudo cp -f MMDVMDSTAR.ini ~/Downloads
