@@ -406,16 +406,20 @@ if [ $HostsFile2 = $comprueba ]
                         cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                         cd ~/
+
                         git clone http://github.com/juribeparada/DMR2NXDN
                         cd DMR2NXDN
                                 make clean
                                 make
+
+                        sudo chmod 777 -R ~/DMR2NXDN   
 
                         cd ~/
                         git clone https://github.com/g4klx/NXDNClients
                         cd ~/NXDNClients/NXDNGateway
                         make clean
                         make
+                        sudo chmod 777 -R ~/NXDNClients/NXDNGateway
                         clear
 
                         #Restaura los 2 iconos Abrir Abrir_DMR2NXDN y Editar Editar_DMR2NXDN y aparecen en el escritorio
