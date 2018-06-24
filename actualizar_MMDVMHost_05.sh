@@ -29,11 +29,12 @@ clear
             [sS]* ) echo ""
             echo "ok >>>>>"
 
-#comprueba si el ficgero existe
+#comprueba si el fichero existe
  if [ -d ~/MMDVMHost_anterior ];
 then
 echo ""
 else
+cd ~/
 mkdir MMDVMHost_anterior
 fi 
 #===============================
