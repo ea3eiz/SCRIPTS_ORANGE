@@ -1,0 +1,1229 @@
+﻿# ==============================================================================================================
+# Information for Translators:
+# -----------------------------------------
+# DO NOT change the {xx} numbers
+# your language starts with n>  (n ... number of your language)
+# keep lines with same length or shorter (but NOT much longer)
+# do not change signs like : , . 
+# do NOT use special characters of your language, use only characters available in English (A..Z and a..z)
+# ==============================================================================================================
+{999}
+0>English
+1>Deutsch
+2>Italiano
+3>Nederlands
+4>Francais
+5>Espanol
+6>Portuguese
+7>Polski
+8>Japanese
+9>Niederbayrisch
+10>Svenska
+{0}
+0>Send APRS to Server
+1>Sende zum APRS Server
+2>Invia ad un server APRS
+3>Zend APRS naar Server
+4>Envoie l'APRS au Serveur
+5>Enviar datos APRS al servidor
+6>Envia ao servidor APRS
+7>Wyślij do serwera APRS
+8>APRSをサーバーに送る
+9>zum APRS Server schicka
+{1}
+0>PC running DVRPTR-DPRS Monitor:
+1>PC mit dem DVRPTR-DPRS Monitor:
+2>Monitor del PC con in esecuzione DVRPTR-DPRS:
+3>PC met DVRPTR-DPRS Monitor:
+4>PC qui supervise le moniteur DVRPTR-DPRS:
+5>PC con DVRPTR-DPRS Monitor:
+6>PC exec. DVRPTR-DPRS Monitor:
+7>PC z uruchomionym DVRPTR-DPRS monitorem:
+8>PCにDVRPTR-DPRSを起動させる
+{2}
+0>ON/OFF
+1>EIN/AUS
+2>ON/OFF
+3>AAN/UIT
+4>ON/OFF
+5>ON/OFF
+6>Lig/Desl
+7>WŁ/WYŁ
+8>スイッチを　入れる/切る
+{3}
+0>IRCDDB not connected
+1>IRCDDB nicht verbunden
+2>IRCDBB non connesso
+3>IRCDDB niet geconnect
+4>IRCDDB non connecter
+5>IRCDDB no conectado
+6>IRCDDB desconectado
+7>IRCDDB nie podłączony
+8>IRCDDBは接続されていない
+{4}
+0>Password:
+1>Passwort:
+2>Password:
+3>Wachtwoord:
+4>Mots de Passe:
+5>Password:
+6>Password:
+7>Hasło
+8>パスワード:
+{5}
+0>Operating Mode
+1>Betriebsart
+2>Modo Operativo
+3>Functies
+4>Mode d'Operation
+5>Modo de Operacion
+6>Modo operacao
+7>Tryb pracy
+8>作動モード
+{6}
+0>Stand Alone (no Network)
+1>kein Internetzugang
+2>Stand Alone (senza Network)
+3>Geen Internet toegang (Geen Netwerk)
+4>Local (Sans Reseaux)
+5>Stand Alone (sin red)
+6>Sem rede
+7>Samodzielny (bez sieci)
+8>単独状態（ネットワーク接続なし）
+{7}
+0>Roger Beep
+1>Roger Piep
+2>Roger Beep
+3>Roger Beep
+4>Roger Beep
+5>Roger Beep
+6>Roger Beep
+7>Roger Beep
+8>発信音
+{8}
+0>Repeater (real duplex repeater)
+1>Relais (Vollduplex)
+2>Ripetitore
+3>Repeater (Echte duplex repeater)
+4>Repetitrice (Full Duplex)
+5>Repetidor (repetidor full-duplex)
+6>Repetidor (repetidor com duplex)
+7>Przemiennik (pełny duplex)
+8>リピーター
+{9}
+0>Hot Spot (registered Repeater Callsign)
+1>Hot Spot (mit offiziellem Rufzeichen)
+2>Hot Spot
+3>Hot Spot (Met officiele Roepnaam)
+4>Hot Spot (indicatif enregistre de repetitrice)
+5>Hot Spot (Indicativo registrado Repetidor)
+6>Hot Spot (registado por Associacoes)
+7>Hot Spot (zarejestrowany znak przemiennika)
+8>ホットスポット (登録されたリピーターのコールサイン）
+{10}
+0>Hot Spot (private Callsign, red dongle mode)
+1>Hot Spot (Privates Rufzeichen)
+2>Hot Spot (nominativo personale, modalita' Dongle)
+3>Hot Spot (prive roepnaam, Dongle mode)
+4>Hot Spot (Indicatif Prive, Mode Dongle)
+5>Hot Spot (indicativo personal, modo Dongle)
+6>Hot Spot (indicativo privado, modo Dongle)
+7>Hot Spot (prywatny znak, tryb Dongle)
+8>ホットスポット（プライベートのコールサイン、ドングルモード）
+{11}
+0>Gateway Link (RF Gateway to a distant stand alone repeater)
+1>Gateway Link (Gateway zu einem entfernten Relais ohne Internet)
+2>Link con Gateway (Gateway RF che alimenta un ripetitore stand alone)
+3>Gateway Link (RF Gateway naar een repeater op afstand zonder internet)
+4>Liens Passerelle (Passerelle RF vers une repetitrice distante)
+5>Enlace Gateway (Gateway RF a un repetidor en modo stand alone)
+6>Link de Gateway (ligacao a um repetidor sem gateway)
+7>Link do Gatewaya (Link do odległego samodzielnego przemiennika)
+8>ゲートウェイリンク
+{12}
+0>Callsign and Module
+1>Rufzeichen und Modul
+2>Nominativo e Modulo
+3>Roepnaam en Module
+4>Indicatif et Module
+5>Indicativo y Modulo
+6>Indicativo e Modulo
+7>Znak i moduł
+8>コールサインとモジュール
+{13}
+0>Range:
+1>Reichweite
+2>Copertura r.:
+3>Bereik:
+4>Couverture:
+5>Cobertura:
+6>Cobertura:
+7>Zakres:
+8>範囲:
+{14}
+0>City Name:
+1>Stadt:
+2>Citta':
+3>Stad:
+4>Ville:
+5>Ciudad:
+6>Cidade:
+7>Miasto:
+8>市町村名
+{15}
+0>Callsign:
+1>Rufzeichen:
+2>Nominativo:
+3>Roepnaam:
+4>Indicatif:
+5>Indicativo:
+6>Indicativo:
+7>Znak:
+8>コールサイン:
+{16}
+0>AUTO detection:
+1>Autom. Erkennung:
+2>Ricerca automatica:
+3>AUTO detecteren:
+4>Detection Automatique:
+5>AUTODETECCION:
+6>Detecao automatica:
+7>AUTO detekcja:
+8>自動探知
+{17}
+0>DV-RPTR Board Settings
+1>DV-RPTR Einstellungen
+2>Settaggi della scheda DV-RPTR
+3>DV-RPTR Instellingen
+4>Parametre Circuit DV-RPTR
+5>Configuracion Tarjeta DV-RPTR
+6>Configuracao do DVRPTR
+7>Ustawienia płytki DV-RPTR
+8>DV-RPTRボードセッティング
+{18}
+0>Apply
+1>Zuweisen
+2>Applica
+3>Toevoegen
+4>Applique
+5>Aplicar
+6>Aplicar
+7>Akceptuj
+8>適用
+{19}
+0>TX Level:
+1>TX Pegel:
+2>Livello di TX:
+3>TX Niveau:
+4>Niveau d'Emission:
+5>Nivel TX:
+6>Nivel TX:
+7>Poziom TX:
+8>TXレベル
+{20}
+0>TX-Delay:
+1>TX-Verzoeg.:
+2>Ritardo di TX:
+3>TX-Verzoek:
+4>Delais d'Emission:
+5>TX-Delay:
+6>Atraso TX:
+7>Opóźnie TX:
+8>TX遅滞
+{21}
+0>Connect to Reflector
+1>Verbinde zu Reflector
+2>Connesso al Reflector
+3>Connect naar Reflector
+4>Conection au Reflecteur
+5>Conectar al Reflector
+6>Ligar ao Reflector
+7>Podłącz do Reflektora
+8>反射板に接続
+{22}
+0>Callsigns
+1>Rufzeichen
+2>Nominativo
+3>Roeptekens
+4>Indicatifs
+5>Indicativos
+6>Ind.Repetidores
+7>Znaki
+8>コールサイン
+{23}
+0>Home Reflector
+1>Heimatreflector
+2>Reflector preferito
+3>Thuis Reflector
+4>Reflecteur prefere
+5>Reflector Preferido
+6>Reflector por defeito
+7>Domowy Reflektor
+8>本部の反射板
+{24}
+0>Reconnect after
+1>Verbinde nach
+2>Riconnetti dopo
+3>Herverbinden na
+4>Reconn. apres
+5>Reconectar en
+6>Religar apos
+7>Podłącz po
+8>後に再接続
+{25}
+0>Switch refl by User
+1>Ref Umschaltung via HF
+2>Commutato dall'utente
+3>Schakelen door gebruiker
+4>Permutable par L'Usager
+5>Conmutar por el Usuario
+6>Permissao ao utilizador
+7>Przełączony przez użytkownika
+8>利用者が切り替える
+{26}
+0>Announce (Talk)
+1>Ansage
+2>Annuncio (Talk)
+3>Melding (Spraak)
+4>Annoncement (parler)
+5>Anuncio (Talk)
+6>Anuncio (Voz)
+7>Ogłoś (mowa)
+8>告知（会話）
+{27}
+0>Auto Reconnect
+1>autom. Verbindung
+2>Riconnessione automatica
+3>Autom. Verbinding
+4>Reconnection Automatique
+5>Reconexion Automatica
+6>Autolinkagem
+7>Auto połączenie
+8>自動再接続
+{28}
+0>Connect
+1>Verbinden
+2>Connesso
+3>Verbinden
+4>Connection
+5>Conectar
+6>Ligar
+7>Połącz
+8>接続
+{29}
+0>Disconnect
+1>Trennen
+2>Disconnesso
+3>Disconnect
+4>Deconnection
+5>Desconectar
+6>Desligar
+7>Rozłącz
+8>切断
+{30}
+0>QSO
+1>QSO
+2>QSO
+3>QSO
+4>QSO
+5>QSO
+6>QSO
+7>QSO
+8>QSO
+{31}
+0>Messages and GPS Information
+1>Nachrichten und GPS Infos
+2>Messaggi e informazioni GPS
+3>Berichten en GPS Informatie
+4>Message et Information du GPS
+5>Mensajes e Informacion GPS
+6>Mensagens e informacao do GPS
+7>Wiadomości i dane GPS
+8>メッセージとGPSインフォメーション
+{32}
+0>Show GPS Data
+1>Zeige GPS Daten
+2>Mostra i dati GPS
+3>GPS Data
+4>Affiche Data GPS
+5>Mostrar Datos GPS
+6>Ver dados GPS
+7>Pokaż dane GPS
+8>GPSデータの証明
+{33}
+0>QSO History
+1>QSO Historie
+2>Storico dei QSO
+3>QSO Historie
+4>Historique des QSO
+5>Historico QSO
+6>Historico QSO
+7>Historia QSO
+8>QSO履歴
+{34}
+0>SOURCE
+1>Quelle
+2>Sorgente
+3>Bron
+4>Source
+5>ORIGEN
+6>Origem
+7>Źródło
+8>始め
+{35}
+0>DATE
+1>DATUM
+2>DATA
+3>Datum
+4>Date
+5>FECHA
+6>Data
+7>Data
+8>日付
+{36}
+0>Friends
+1>Freunde
+2>Amici
+3>Vrienden
+4>Amis
+5>Amigos
+6>Amigos
+7>Kumple
+8>友人
+{37}
+0>Enter your friends callsigns here to get information when they are on frequency
+1>Gebe die Rufzeichen deiner Freunde hier ein um informiert zu werden wenn sie QRV sind
+2>Inserisci i nominativi dei tuoi amici per essere avvisato quando saranno in frequenza
+3>Zet hier je vriends roepnaam om informatie te krijgen als deze aan de frequentie is
+4>Entre les indicatifs de tes amis ici pour savoir quand ils sont en frequence
+5>Escriba aqui los indicativos amigos para obtener informacion cuando se encuentren activos
+6>Escreva os indicativos dos seus amigos para obter informacao de quando estao em frequencia
+7>Wprowadź tutaj znaki swoich kolegów by wiedzieć kiedy pracują na paśmie
+8>周波数がない時、情報を得るには友人のコールサインを入力する
+{38}
+0>not heard
+1>nicht gehoert
+2>non ascoltato
+3>niet gehoort
+4>Silencieux
+5>no escuchado
+6>Nao escutado
+7>Nie słyszany
+8>聞こえない
+{39}
+0>Friend Callsign:
+1>Rufzeichen der Freunde
+2>Nominativo dell'amico:
+3>Vriends Roepnaam:
+4>Indicatif Amis:
+5>Indicativo Amigo:
+6>Indicatvo Amigo:
+7>Znak Kolegi:
+8>友人のコールサイン
+{40}
+0>Messages
+1>Nachrichten
+2>Messaggi
+3>Berichten
+4>Message
+5>Mensajes
+6>Mensagens
+7>Wiadomości
+8>メッセージ
+{41}
+0>Record Voice
+1>Sprachaufnahme
+2>Messaggio vocale registrato
+3>Spraak opname
+4>Enregistrement de la voix
+5>Grabar Voz
+6>Gravar a Voz
+7>Nagraj głos
+{42}
+0>Speak Time
+1>Zeitansage
+2>Segnale orario
+3>Spraak Tijd
+4>Announce de l'Heure
+5>Decir Hora
+6>Anuncio Horario
+7>Czas rozmowy
+8>音声を録音
+{43}
+0>voice files are located here:
+1>Sprachdateien befinden sich hier:
+2>I files vocali sono presenti qui:
+3>Spraak files staan op deze locatie:
+4>Fichiers Audio se retrouve ici:
+5>los archivos de voz estan ubicados aqui:
+6>Os ficheiros de voz estao aqui:
+7>Pliki dźwiękowe zlokalizowane są tutaj:
+8>音声ファイルはここにあります
+{44}
+0>identify the sound file:
+1>Sprachdatei:
+2>identifica il file audio:
+3>Indentificeer de spraak file:
+4>Identifier le Fichiers Audio:
+5>identificar el archivo de sonido:
+6>Identifique os ficheiros de audio:
+7>Zidentyfikuj plik dźwiękowy:
+8>識別音声ファイル:
+{45}
+0>Enter any name to
+1>Gebe beliebigen Namen ein
+2>Inserisci qualunque nome per
+3>Geef een naam in
+4>Entrer le noms pour
+5>Escriba un nombre para
+6>Escreva qualquer nome para
+7>Wprowadź imię
+8>名前を入力
+{46}
+0>PLAY
+1>WIEDERGABE
+2>RIPRODUCI
+3>Afspelen
+4>ECOUTE
+5>REPRODUCIR
+6>Reproduzir
+7>ODTWÓRZ
+8>動作
+{47}
+0>RECORD
+1>AUFNAHME
+2>REGISTRA
+3>Opname
+4>ENREGISTRE
+5>GRABAR
+6>Gravar
+7>NAGRAJ
+8>記録
+{48}
+0>Record Messages
+1>Nachrichtenaufnahme
+2>Registra un messaggio
+3>Bericht Opname
+4>Enregistrement des Messages
+5>Grabar Mensajes
+6>Gravar Mensagem
+7>Nagraj Wiadomości
+8>メッセージの記録
+{49}
+0>Play MSG
+1>WIEDERGABE
+2>Riproduci un messaggio
+3>Speel Bericht
+4>Lecture Msg
+5>Reproducir MSG
+6>Reprod.MSG
+7>Odtwórz wiadomość
+8>MSGを作動
+{50}
+0>REC MSG
+1>AUFNAHME
+2>Registra un messaggio
+3>Opname Bericht
+4>ENR. MSG
+5>Grabar MSG
+6>Gravar MSG
+7>Nagraj wiadomoś
+8>REC MSG
+{51}
+0>History
+1>Historie
+2>Storico
+3>Historie
+4>Historique
+5>Historico
+6>Historico
+7>Historia
+8>履歴
+{52}
+0>Statistics
+1>Statistik
+2>Statistiche
+3>Statistieken
+4>Statistique
+5>Estadisticas
+6>Estatisticas
+7>Statystyki
+8>統計
+{53}
+0>Sequence Errors:
+1>Sequenzfehler:
+2>Sequenza di errori:
+3>Fouten volgorde:
+4>Erreur de Sequence
+5>Secuencias erroneas:
+6>Erros da Sequencia:
+7>Sekwencja błędów:
+8>連続エラー
+{54}
+0>kByte to Netw:
+1>kB zum Netzwerk:
+2>kByte verso Netw:
+3>kByte naar het Netw:
+4>kByte vers Net:
+5>kByte salientes LAN:
+6>kByte para a rede:
+7>kB wysłane do sieci:
+8>キロバイトをNetwへ
+{55}
+0>kByte from Netw:
+1>kB vom Netzwerk:
+2>kByte da Netw:
+3>kByte van het Netw:
+4>kByte recu du Net:
+5>kByte entrantes LAN:
+6>kByte da rede:
+7>kB odebrane z sieci:
+8>Netwからキロバイトへ
+{56}
+0>Voicefrm. to Netw:
+1>Sprache zum Netzw:
+2>Frame voce verso Netw:
+3>spraak naar het Netw:
+4>Trame Vocal du Net:
+5>Tramas de voz salientes:
+6>Frames voz para rede:
+7>Ramki głosowe do sieci:
+8>音声からNetwへ
+{57}
+0>Headers to Netw:
+1>Headers zum Netzw:
+2>Headers verso Netw:
+3>Koptekst naar het Netw:
+4>En-Tetes vers Net:
+5>Cabeceras salientes:
+6>Cabecalhos para a rede:
+7>Nagłówki do sieci:
+8>ヘッダーからNetwへ
+{58}
+0>Voicefrm. frm Netw:
+1>Sprache vom Netzwerk:
+2>Frame voce da Netw:
+3>Spraak. van het Netw:
+4>Trame Vocal recu du Net:
+5>Tramas de voz salientes:
+6>Frames de voz da rede:
+7>Nagłówki z sieci:
+8>音声、Netwから
+{59}
+0>Repaired Headers:
+1>Korrigierte Header:
+2>Headers ricostruiti:
+3>Gerepareerde koptekst:
+4>En-Tetes Corriger:
+5>Cabeceras Reparadas:
+6>Cabecalhos reparados:
+7>Naprawione nagłówki:
+8>復旧したヘッダー
+{60}
+0>Headers from Netw:
+1>Header vom Netzwerk:
+2>Headers da Netw:
+3>Koptekst van het Netw:
+4>En-Tetes recu du Net:
+5>Cabeceras entrantes:
+6>Cabecalhos da rede:
+7>Nagłówki z sieci:
+8>Netwからヘッダーへ
+{61}
+0>Slow Data Channel
+1>Datenkanal
+2>Canale dati a bassa velocita'
+3>Langzaam Data kanaal
+4>Flux de Data Lente
+5>Canal de Baja Velocidad
+6>Dados a baixa vel.
+7>Kanał danych:
+8>周波数帯データの速度を落とす
+{62}
+0>CRC errors:
+1>CRC Fehler:
+2>Errori di CRC:
+3>CRC Fouten:
+4>Erreur de Parit:
+5>Errores de CRC:
+6>Erros de CRC:
+7>Błędy CRC
+8>CRCエラー
+{63}
+0>GPS Data:
+1>GPS Daten:
+2>Dati GPS:
+3>GPS Data:
+4>Donner GPS:
+5>Datos GPS:
+6>Dados GPS:
+7>Dane GPS:
+8>GPSデータ
+{64}
+0>Text Messages:
+1>Textnachrichten:
+2>Messaggi di testo:
+3>Text Berichten:
+4>Message texte:
+5>Mensajes de Texto:
+6>Mensag.de Texto:
+7>Wiadomości tekstowe:
+8>次のメッセージ
+{65}
+0>Ser.Port Errors:
+1>Ser.Port Fehler:
+2>Errori sulla porta seriale:
+3>Ser.Poort Fouten:
+4>Err. Port Serie:
+5>Errores Puerto Serie:
+6>Erros porta Serie:
+7>Błędy portu RS232
+8>サーポートエラー
+{66}
+0>Modem Buffer [%]:
+1>Modem Puffer [%]:
+2>Buffer del Modem [%]:
+3>Modem Buffer [%]:
+4>[%] Tampon Modem:
+5>Buffer del Modem [%]:
+6>Buffer do modem [%]:
+7>Bufor modemu [%]:
+8>モデムバッファー
+{67}
+0>RX bad headers:
+1>RX defekte Header:
+2>Headers errati ricevuti:
+3>RX slechte kopteksten:
+4>RX Erreur En-Tetes:
+5>Cabeceras erroneas RX:
+6>Maus identificadores RX:
+7>Odebrane uszk. nagłówki:
+8>不正なRXヘッダー
+{68}
+0>TX Voiceframes:
+1>TX Sprachdaten:
+2>Frame voce trasmesse
+3>TX spraak data:
+4>TX Trame Vocal:
+5>Tramas de voz TX:
+6>Frames voz TX:
+7>Nadane ramki głosowe:
+8>TX音声フレーム
+{69}
+0>RX Voiceframes:
+1>RX Sprachdaten:
+2>Frame voce ricevute
+3>RX spraak data:
+4>RX Trame Vocal:
+5>Tramas de voz RX:
+6>Frames voz RX:
+7>Odebrane ramki głosowe:
+8>RX音声フレーム
+{70}
+0>RX valid Headers:
+1>RX gueltige Header:
+2>Headers validi ricevuti:
+3>RX verkeerde kopteksten:
+4>RX En-Tetes Valides:
+5>Cabeceras validas RX:
+6>Identific. validos RX:
+7>Poprawne ramki głosowe:
+8>有効なRXヘッダー
+{71}
+0>Not connected
+1>Nicht verbunden
+2>Non connesso
+3>Niet geconnect
+5>No conectado
+6>Desligado
+7>Nie podłączony
+8>切断
+{72}
+0>Connecting to
+1>Verbinde zu
+2>In connessione verso
+3>Connecten met
+5>Conectando con
+6>Ligando a
+7>Podłączam do:
+8>～へ接続
+{73}
+0>Connected to
+1>Verbunden mit
+2>Connesso a
+5>Conectado con
+6>Ligado a
+7>Podłączony do:
+8>～へ接続
+{74}
+0>Last heard
+1>letzte Station
+2>Ultimi ascolti
+3>Laatst gehoord station
+5>Ultimo escuchado
+6>Ultimo escutado
+7>Ostatnio słyszane
+8>最近の聴聞
+{75}
+0>no activity for
+1>keine Aktivitaet fuer
+2>Nessuna attivitÃ ' per
+3>Geen aktiviteit voor
+5>Sin actividad durante
+6>Sem actividade durante
+7>Brak aktywności dla
+8>動作なし
+{76}
+0>connect default reflector
+1>Verbinde Standardreflector
+2>Connessione verso il reflector predefinito
+3>Connect standaard Reflector
+5>conexion al reflector por defecto
+6>Reflector por defeito
+7>Podłącz domyślny reflektor
+8>デフォルトリフレクターに接続
+{77}
+0>minutes
+1>Minuten
+2>Minuti
+3>Minuten
+5>minutos
+6>minutos
+7>Minuty
+8>議事録
+{78}
+0>min to reconnect
+1>Min. zur Verbindung
+2>Min. prima di riconnettere
+3>Min voor Herconnect
+5>min. reconexion
+6>Min.Religar
+7>Min. do połaczenia
+8>議事録を切断
+{79}
+0>Reflector did not answer, disconnected
+1>Reflektor antwortet nicht, getrennt
+2>Reflector non ha risposto, disconnesso
+3>Refector antwoord niet , disconnect
+5>El reflector no responde, desconectado
+6>Reflector nao responde, desligado
+7>Reflektor nie odpowiedział, nie połączony
+8>リフレクター応答なし、切断
+{80}
+0>automatic Reconnection to
+1>automat. Verbindung zu
+2>Riconnessione automatica verso
+3>automat . Verbinden naar
+5>Reconexion automatica a
+6>Ligacao automatica a
+7>Automatyczne łączenie do
+8>自動再接続
+{81}
+0>searching DVRPTR at Port
+1>suche DVRPTR auf Port
+2>Cerco il DVRPTR sulla porta
+3>Zoeken naar DVRPTR op Poort
+5>buscando DVRPTR en Puerto
+6>Procurando DVRPTR na porta
+7>Szukam DVRPTR na porcie
+8>ポートでDVRPTRを検索
+{82}
+0>found DVRPTR at Port
+1>DVRPTR gefunden auf
+2>DVRPTR trovato sulla porta
+3>DVRPTR gevonden op Poort
+5>encontrado DVRPTR en Puerto
+6>DVRPTR encontrado na porta
+7>Znaleziono DVRPTR na porcie
+8>8>ポートでDVRPTRを調べる
+{83}
+0>Initialized and operational
+1>Initialisiert und gestartet
+2>Inizializzato ed operativo
+3>Geinitialiseerd en gestart
+5>Inicializado y operativo
+6>Inicializado e operativo
+7>Zainicjowany i działający
+8>初期設定と操作
+{84}
+0>heard on RF
+1>gehoert auf HF
+2>Ascoltato in HF
+3>Gehoord op HF
+5>escuchado en RF
+6>escutado em RF
+7>słyszany na RF
+8>RFで聞く
+{85}
+0>QRV at
+1>QRV um
+2>QRV su
+3>QRV om
+5>QRV en
+6>QRV em
+7>QRV na
+8>QRV
+{86}
+0>local time
+1>Lokalzeit
+2>Orario locale
+3>Locale tijd
+5>hora local
+6>hora legal
+7>czas lokalny
+8>ローカル時刻
+{87}
+0>heard on Reflector
+1>gehoert auf Reflektor
+2>Ascoltato sul reflector
+3>Gehoord op de reflector
+5>escuchado en Reflector
+6>escutado no Reflector
+7>słyszany na Reflektorze
+8>リフレクターで聞く
+{88}
+0>Configuration successfully loaded
+1>Konfiguration erfolgreich geladen
+2>Configurazione caricata
+3>Configuratie succesvol geladen
+5>Configuracion cargada correctamente
+6>Config.carregada correctamente
+7>Konfiguracja pomyślnie załadowana
+8>構成が読み込みされた
+{89}
+0>Reset all pictures to default. Are you sure ?
+1>Lade Standardbilder, sind sie sicher ?
+2>Resetto tutte le immagini al default. Sei sicuro ?
+3>laad Locatie , weet je het zeker ?
+5>Resetear todas las imagenes por defecto. Seguro?
+6>Repor imagens por defeito. Tem a certeza?
+7>Ustawić domyślne obrazy. Jesteś pewien?
+8>全ての画像をリセットしますがよろしいですか？
+{90}
+0>Location (Degrees , Minutes)
+1>Standort (Grad, Minuten)
+2>Ubicazione (Gradi , Minuti)
+3>Locatie (Graden, Minuten)
+5>Localizacion (Grados, Minutos)
+6>Localizacao (Graus, Minutos)
+7>Położenie (Stopnie, Minuty)
+8>位置（度数）
+{91}
+0>Format of Longitude and Latitude
+1>Format der Laengen- und Breitegrade
+2>Formato per Longitudine e Latitudine
+3>Ingave van Longitude and Latitude
+5>Formato de Longitud y Latitud
+6>Formato de longitude e latitude
+7>Format długości i szerokości
+8>経度と緯度のフォーマット　
+{92}
+0>degrees
+1>Grad
+2>Gradi
+3>Graden
+5>Grados
+6>Graus
+7>Stopnie
+8>度数
+{93}
+0>minutes
+1>Minuten
+2>Minuti
+3>Minuten
+5>Minutos
+6>Minutos
+7>Minuty
+8>分
+{94}
+0>Examples
+1>Beispiel
+2>Esempi
+3>voorbeeld
+5>Ejemplos
+6>Exemplos
+7>Przykłady
+8>例
+{95}
+0>Longitude
+1>Laenge
+2>Longitudine
+3>Lontitude
+5>Longitud
+6>Longitude
+7>Długość
+8>経度
+{96}
+0>Latitude
+1>Breite
+2>Latitudine
+3>Latitude
+5>Latitud
+6>Latitude
+7>Szerokość
+8>緯度
+{97}
+0>Enter Location
+1>Standorteingabe
+2>Inserisci l'ubicazione
+3>Ingave Locatie
+5>Escriba su ubicacion
+6>Entre a localizacao
+7>Wprowadź położenie
+8>位置を入力
+{98}
+0>User Defined Pictures
+1>Eigene Bilder
+2>Immagine predefinita dall'utente
+3>Eigen plaatjes
+5>Imagenes definidas por el usuario
+6>Imagens definidas pelo utilizador
+7>Obrazki zdefiniowane przez usera
+8>ユーザー確定画面
+{99}
+0>Default
+1>Standard
+2>Predefinito
+3>Standaard
+5>Por defecto
+6>Por defeito
+7>Domyślne
+8>デフォルト
+{100}
+0>Message
+1>Nachricht
+2>Messaggio
+3>Bericht
+5>Mensaje
+6>Mensagem
+7>Wiadomość
+8>メッセージ
+{101}
+0>Language
+1>Sprache
+2>Lingua
+3>Spraak
+5>Idioma
+6>Idioma
+7>Język
+8>言語
+{102}
+0>To record a system message: Highlight the message then: Click REC MSG, Push PTT and talk your message.  Release PTT and click STOP.
+1>zur Aufnahme einer Systemnachricht: Nachricht auswaehlen und AUFNAHME klicken, PTT druecken und sprechen. Dann PTT loslassen und "STOP" klicken.
+2>Per registrare un messaggio: Seleziona il messaggio: Clicca REC MSG, premi il PTT e parla. Rilascia il PTT e clicca su STOP.
+3>Om een systeem bericht op te nemen, bericht uitkiezen en op opname drukken, Na de opname PTT loslaten en op stop drukken.
+5>Para grabar un mensaje del sistema: Seleccione el mensaje, luego pulse GRABAR MSG, a continuacion pulse el PTT y diga su mensaje. Finalmente suelte el PTT y pulse STOP.
+6>Para gravar uma mensagem do sistema: Selecione a mensagem, prima Gravar MSG de seguida prima o PTT, no fim da mensagem liberte o PTT e prima STOP.
+8>システムメッセージを記録するには:メッセ字を強調する:REC MSGをクリック、PTTと打ちメッセージを告げる。PTTを解除し、STOPをクリック。
+{103}
+0>To record a private message: Enter any name to identify your message then: Click RECORD, Push PTT and talk your message.  Release PTT and click STOP.
+1>Zur Aufnahme einer privaten Nachricht: Beliebigen Namen eingeben und AUFNAHME klicken. PTT druecken und sprechen. Dann PTT loslassen und STOP klicken.
+2>Per registrare un messaggio privato: Assegna un nome al messaggio: Clicca RECORD, premi il PTT e parla. Rilascia il PTT e clicca STOP.
+3>Om een prive op te nemen: geef een naam in en druk op opname. Daarna op PTT drukken en spreken. Dan PTT los laten en op stop drukken.
+5>Para grabar un mensaje privado: Escriba un nombre para identificar su mensaje, luego pulse GRABAR, despues pulse el PTT y diga su mensaje. Finalmente suelte el PTT y pulse STOP.
+6>Para gravar uma mensagem pessoal: Escreva um nome para identificar a mensagem, e seguida prima Gravar e depois o PTT, diga a mensagem e apos terminar e libertar o PTT prima o STOP.
+7>By nagrać wiadomość systemową: podświetl wiadomość i wciśnij REC MSG, naciśnij PTT i powiedz
+wiadomość. Puść PTT i wciśnij STOP.
+8>プライベートメッセージを記録するには:名前を入力:RECORDをクリック、PTTと打ちメッセージを告げる。PTTを解除し、STOPをクリック。
+{104}
+0>System initialized
+1>System initialisiert
+2>Sistema inizializzato
+3>Systeem geinitialiseert
+5>Sistema inicializado
+6>Sistema inicializado
+7>System zainicjowany
+8>システム初期設定
+{105}
+0>Beacon
+1>Bake
+2>Beacon
+3>Baken
+5>Baliza
+6>Beacon
+7>Beacon
+8>ビーコン
+{106}
+0>HamQTH.com Registration
+1>HamQTH.com Registrierung
+2>HamQTH.com Registration
+3>HamQTH.com Registration
+4>HamQTH.com enregistre
+5>HamQTH.com registrado
+6>HamQTH.com registado
+7>HamQTH.com rejestracja
+8>HamQTH.comに登録
+{107}
+0>REGISTER at www.HamQTH.com ! (and enter in Admin Window)
+1>Registriere dich bei www.HamQTH.com und trage Login im Admin Fenster ein !
+2>REGISTER at www.HamQTH.com ! (and enter in Admin Window)
+3>REGISTER at www.HamQTH.com ! (and enter in Admin Window)
+4>REGISTER at www.HamQTH.com ! (and enter in Admin Window)
+5>REGISTER at www.HamQTH.com ! (and enter in Admin Window)
+6>REGISTE-SE em www.HamQTH.com ! (e entre na janela Admin)
+7>ZAREJESTRUJ na www.HamQTH.com ! (i wprowadź w oknie Admina)
+8>www.HamQTH.com !に登録する
+{108}
+0>HamQTH.com Password errors
+1>HamQTH.com Passwort Fehler
+2>HamQTH.com Errori di password
+3>HamQTH.com Wachtwoord Fouten
+4>HamQTH.com Erreur de mots de passe
+5>HamQTH.com Errores de password
+6>HamQTH.com Erros de password
+7>HamQTH.com błędne hasło
+8>HamQTH.com パスワードエラー
+{109}
+0>not found
+1>nicht gefunden
+2>non trovato
+3>niet gevonden
+4>pas trouve
+5>no se ha encontrado
+6>nao encontrado
+7>nie znaleziony
+8>見つかりません
+{110}
+0>DV-Transceiver with external FM-TRX
+1>DV-Transceiver mit externem FM-TRX
+6>DV-Para um transceptor externo FM
+{111}
+0>DV-Transceiver with external FM-TRX mobile mode (no PC) .........
+1>DV-Transceiver mit externem FM-TRX. Mobilbetrieb (kein PC) .........
+6>DV-Transceptor externo FM modo movel (sem PC)....................
+{112}
+0>DV-Dongle (talk to Internet)
+1>DV-Dongle (spreche zum Internet)
+6>DV-Dongle (falar via Internet)
+{113}
+0>DV-Transceiver
+1>DV-Transceiver
+6>DV-Transceptor
+{114}
+0>DV-Transceiver mobile mode (no PC) ............................................
+1>DV-Transceiver Mobilbetrieb (kein PC) ............................................
+6>DV-Transceptor modo movel (sem PC).............................................
+{115}
+0>wireless Dongle
+1>Drahtloser Dongle
+6>Dongle Wireless
+{116}
+0>Store Settings into DV-RPTR EEPROM
+1>Speichere Einstellungen ins DV-RPTR EEPROM
+6>Guardar configuracao na EEPROM DV-RPTR
+{117}
+0>Set iTRX
+1>Setze iTRX
+6>Conf. iTRX
+{118}
+0>Exclusive Dongle Mode
+1>Dongle Mode nur für eigenes Rufzeichen
+6>Modo Dongle exclusivo
+{119}
+0>Playback Settings
+1>Wiedergabeeinstellungen
+6>Definicoes audio
+{120}
+0>Messages (20 chars max)
+1>Nachrichten (max. 20 Zeichen)
+6>Mensagens (20 caract max.)
+{121}
+0>Old Reflectors: better to use DCS instead
+1>Alte Reflektoren: benutzt lieber das neue DCS System
+2>Vecchi riflettori: piuttosto utilizzare il nuovo sistema DCS
+3>Oude reflectoren: in plaats van gebruik maken van de nieuwe DCS-systeem
+4>Réflecteurs Vieux: plutôt utiliser le nouveau système DCS
+5>Reflectores de edad: en lugar utilizar el nuevo sistema DCS
+6>Refletores antigos: em vez usar o sistema DCS novo
+7>Stare reflektory: raczej korzystania z nowego systemu DCS
+8>古いリフレクター：むしろ新しいDCSシステムを使用して
+{122}
+0>Settings are stored in DV-RPTR board. Disconnect power, disconnect USB. Now the DV-RPTR runs also without PC !
+1>Einstellungen wurden gespeichert. Stromversorgung trennen, USB abstecken. Ab jetzt läuft der DV-RPTR auch ohne PC !
+6>Configuracao guardada na placa DV-RPTR. Desligue a alimentacao e depois o USB. Agora a placa funcina sem PC !
+{123}
+0>Use old XREF and REF Linking
+1>Zeige alte XREF und REF Links
+{124}
+0>FLASH programming mode
+1>FLASH Programmieren
+2>FLASH programmazione
+3>FLASH programmeren
+4>FLASH programme
+5>FLASH Programación
+6>FLASH programação
+7>FLASH Programowanie
+{125}
+0>ATTENTION: If you click YES then a new firmware MUST be flashed (in the console using dfu-util), the DV-RPTR board will not work without flashing a firmware. If you are not sure, press NO
+1>ACHTUNG: Wenn Sie jetzt JA klicken, dann MUSS eine Firmware geflasht werden (in der Konsole mit dfu-util), die Platine wird ohne Flashen nicht mehr arbeiten. Wenn Sie das nicht möchten, klicken Sie jetzt NEIN
+2>NOTA: Se si sceglie Sì, poi un firmware deve essere balenato il lavoro è (nella console con dfu-util), la scheda non è più senza lampeggiare. Se non si vuole, si fa clic su NO
+3>OPMERKING: Als u op Ja klikt, dan is een firmware moet worden geflitst is (in de console met dfu-util), is de raad niet meer werken zonder te knipperen. Als u niet wilt, klikt u op NO
+4>REMARQUE: Si vous cliquez sur OUI, puis un firmware doit être flashé travail est (dans la console avec dfu-util), le conseil n'est plus sans clignoter. Si vous ne voulez pas, vous cliquez sur NO
+5>NOTA: Si hace clic en Sí y, a continuación un firmware debe ser flasheado es el trabajo (en la consola con el dfu-util), la junta no sin parpadear. Si usted no desea, haga clic en NO
+6>NOTA: Se clicar em SIM, então um novo firmware será "flashado" (na consola usando o dfu-util), a placa não trabalha sem flashar o firmware. Se não tem a certeza desta operação diga NAO
+7>UWAGA: Jeśli klikniesz przycisk Tak, a następnie firmware MUSI być błysnął jest (w konsoli z DFU-util), płyta nie dłuższą pracę bez migać. Jeśli nie chcesz, kliknij NIE
+{126}
+0>last warning: Are you really sure ? Disconnect and reconnect power supply after flashing
+1>sind sie wirklich sicher ? das ist die letzte Warnung. Nach dem Flashen muss die Spannungsversorgung vom DV-RPTR getrennt und neu angeschlossen werden.
+2>sono davvero sicuri? questo è l'ultimo avvertimento. Essere separati dopo aver lampeggiato, l'alimentazione dal DV-RPTR e ricollegato.
+3>laatste waarschuwing: Weet je het echt zeker? Koppel en de voeding weer na het flashen
+4>sont-ils vraiment sûrs? c'est le dernier avertissement. Être séparés après le flashage, l'alimentation de la DV-RPTR et reconnecté.
+5>última advertencia: ¿Estás realmente seguro? Desconecte y vuelva a conectar la fuente de alimentación después de parpadear
+6>último aviso: Você tem certeza? Desconete e conete novamente a fonte de alimentação depois de piscar.
+7>ostatnie ostrzeżenie: Czy na pewno? Odłącz i podłącz ponownie zasilacz po flashowaniu
+{127}
+0>noise supression:
+1>Rauschunterdrückung:
+6>Supressão de ruído:
+{128}
+0>Exit Control Center, cycle power of DV-RPTR board to activate the new filter setting
+1>Beende das Control Center, schalte DV-RPTR aus und wieder ein um die neue Filtereinstellung zu aktivieren
+6>Saia do Control Center, reinicie a alimentação do DV-RPTR para activar o novo filtro
+{129}
+0>Conference Mode (Mic/LS + Hotspot + Inet)
+1>Konferenzschaltung (Mic/LS + Hotspot + Inet)
+6>Modo de Conferência (Mic/Alt + Hotspot + Inet)
+{130}
+0>CCS ... Connection Call Service§&§&CCS is a new service for direct§&Repeater <-> Repeater and§&User <-> Repeater or§&User <-> User§&connection.§&§&It integrates Callsign-Routing, IrcDDB, D-Plus and StarNET into one simple §&and efficient routing system.§&§&Usage:§&§&* select the call/repeater you want to talk to§&* speak§&thats it, the easy way.§&§&The connection will be disconnected automatically after some time of inactivity, or by pressing "Disconnect".
+1>CCS ... Connection Call Service§&§&CCS ist ein neuer Dienst zur direkten§&Relais<>Relais§&Benutzer<>Relais§&Benutzer<>Benutzer§&Verbindung.§&§&Es vereinigt Callsign-Routing, IrcDDB, D-Plus und StarNET in einem einzigen und sehr einfach benutzbaren System.§&§&CCS Bedienung:§&§&* wähle in der Liste das gewünschte Rufzeichen aus§&*Drücke die PTT und spreche,§&so einfach gehts.§&§&Die Verbindung wird nach einiger Ruhezeit automatisch getrennt, oder durch Drücken von "Disconnect".
+6>CCS ... Connection Call Service§&§&é um novo serviço para Repetidor <-> Repetidor e Utilizador <-> Repetidor ou Utilizador <-> Ligação de Utilizador.§&§&Isto integra Callsign-Routing, IrcDDB, D-Plus e StarNet num simples e eficiente sistema de roteamento.§&§&Utilização:§&§&Selecione o indicativo/repetidor para o qual pretende falar, esta é a maneira fácil.§&§&A ligação desfaz-se automaticamente após um periodo de inactividade, ou primindo "Disconnect".
+{131}
+0>Accept incoming CCS calls
+1>Akzeptiere eingehende CCS Anrufe
+6>Repetidor (repetidor com duplex + AMBE Monitor)
+{132}
+0>Talking with
+1>spricht mit
+6>Falar para
+{133}
+0>wait
+1>warten
+6>espere
+{134}
+0>is calling
+1>ruft an
+6>está a chamar
+{135}
+0>BUSY
+1>BELEGT
+6>OCUPADO
+{136}
+0>Click OK to start the firmware update or CANCEL to exit this process.
+1>Klicke OK um den Firmware Update zu starten oder ABBRECHEN um den Vorgang zu beenden.
+6>Prima o PTT até que o processo do Bootloader se inicie ! Liberte o PTT durante o Bootloader.
+{137}
+0>Sselect the Firmware file
+1>Bitte die Firmware Datei auswählen
+6>Selecione o ficheiro de Firmware
+{138}
+0>simul. CCS+Ref Operation if outgoing CCS call
+1>gleichzeit. CCS+Ref. Betrieb bei ausgeh. CCS Rufen
+6>Simulcast CCS+REF se a saída for por CCS
+{139}
+0>simul. CCS+Ref Operation if incoming CCS call
+1>gleichzeit. CCS+Ref. Betrieb bei eingeh. CCS Rufen
+6>Simulcast CCS+REF se a entrada for por CCS
+{140}
+0>/qso.log§&§&DELETE Log File: Press YES§&DO NOT DELETE LogFile: Press NO
+1>/qso.log§&§&LOESCHE Log Datei: Druecke JA§&sonst druecke NEIN
+9>/qso.log§&§&LOESCHE Log Datei: Druecke JA§&sonst druecke NEIN
