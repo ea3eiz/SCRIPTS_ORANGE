@@ -70,8 +70,8 @@ clear
 
 
 
-            cp -f ~/NXDNClients/NXDNGateway/NXDNGateway.ini
-            cp -f ~/DMR2YSF/DMR2YSF.ini
+            cp -f ~/NXDNClients/NXDNGateway/NXDNGateway.ini  ~/Downloads
+            cp -f ~/DMR2YSF/DMR2YSF.ini  ~/Downloads
 
 read a
 
@@ -158,7 +158,7 @@ sleep 3
 
 
             cp -f NXDNGateway.ini ~/NXDNClients/NXDNGateway
-            cp -f DMR2YSF.ini ~/pi/DMR2YSF
+            cp -f DMR2YSF.ini ~/DMR2YSF
 
 
 
