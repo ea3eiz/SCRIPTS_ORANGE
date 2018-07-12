@@ -46,7 +46,8 @@ clear
                         cd ~/AUTOSTART
                         git pull
 
-
+                        sudo usermod -a -G dialout orangepi
+                        sudo usermod -a -G uucp orangepi
                       
 
                         exit;
@@ -186,7 +187,7 @@ exit;
 break;;
 esac
 done;;
-8bloqueado) echo ""
+8000) echo ""
 while true
 do
 clear
