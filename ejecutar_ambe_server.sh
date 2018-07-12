@@ -6,8 +6,8 @@ sed -i "10c Name[es_ES]=Cerrar AMBE SERVER" ~/Desktop/Abrir_ambe_server.desktop
 
 sed -i "11c AMBE_SERVER=ON" ~/status.ini
 
-puerto_router=$(awk "NR==11" /home/orangepi/status.ini) 
-puerto_modem=$(awk "NR==12" /home/orangepi/status.ini)
+puerto_router=$(awk "NR==11" /home/orangepi/ambe_server.ini) 
+puerto_modem=$(awk "NR==12" /home/orangepi/ambe_server.ini) 
 cd ~/AMBEServer
 sudo killall AMBEserver
 sleep 5
