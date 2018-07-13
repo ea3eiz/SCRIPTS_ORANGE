@@ -171,7 +171,7 @@ clear
                         cd ~/md380tools
                         sudo rm user.bin
                         echo "Introduciendo USER.BIN"
-                        sudo wget https://kg5rki.com/MD380_AIO/user.bin
+                        sudo wget https://kg5rki.com/MD380_AIO/user.bin --no-check-certificate
                         sudo ./md380-tool spiflashwrite user.bin 0x100000
                         break;;
                         [nN]* ) echo ""
