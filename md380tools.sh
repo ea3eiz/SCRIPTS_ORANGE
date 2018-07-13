@@ -184,7 +184,7 @@ clear
                         break;;
 esac
 done;;
-6)      echo ""
+6bloqueado)      echo ""
 while true
 do
 clear
