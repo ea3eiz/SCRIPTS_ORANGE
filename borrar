@@ -2193,7 +2193,7 @@ largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var1 1 $largo_linea`
 numero_linea_fusion=`expr $numero_linea - 1`
 fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVM.ini_copia3)
-fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVM.ini_copi3`
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVM.ini_copia3`
 buscar=":"
 fCWlargo_linea=`expr index $fCWvar2 $buscar`
 fCWlargo_linea=`expr $fCWlargo_linea - 1`
