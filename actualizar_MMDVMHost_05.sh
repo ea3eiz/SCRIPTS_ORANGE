@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 while true
 do
 clear
@@ -662,24 +662,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVM.ini
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVM.ini`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVM.ini`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVM.ini`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVM.ini)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVM.ini`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVM.ini)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVM.ini
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVM.ini
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVM.ini` 
@@ -1172,24 +1170,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVM.ini_copia
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVM.ini_copia`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVM.ini_copia`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVM.ini_copia`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVM.ini_copia)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVM.ini_copia`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVM.ini_copia)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVM.ini_copia
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVM.ini_copia
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVM.ini_copia` 
@@ -1682,24 +1678,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVM.ini_copia2
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVM.ini_copia2`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVM.ini_copia2`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVM.ini_copia2`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVM.ini_copia2)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVM.ini_copia2`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVM.ini_copia2)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVM.ini_copia2
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVM.ini_copia2
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVM.ini_copia2` 
@@ -2192,24 +2186,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVM.ini_copia3
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVM.ini_copia3`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVM.ini_copia3`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVM.ini_copia3`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVM.ini_copia3)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVM.ini_copia3`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVM.ini_copia3)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVM.ini_copia3
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVM.ini_copia3
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVM.ini_copia3` 
@@ -2702,24 +2694,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMBM.ini`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMBM.ini`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMBM.ini)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMBM.ini`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMBM.ini)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMBM.ini
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMBM.ini
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMBM.ini` 
@@ -3212,24 +3202,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini_copia`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMBM.ini_copia`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMBM.ini_copia`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMBM.ini_copia)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMBM.ini_copia`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMBM.ini_copia)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMBM.ini_copia
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMBM.ini_copia
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMBM.ini_copia` 
@@ -3722,24 +3710,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia2
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini_copia2`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMBM.ini_copia2`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMBM.ini_copia2`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMBM.ini_copia2)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMBM.ini_copia2`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMBM.ini_copia2)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMBM.ini_copia2
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMBM.ini_copia2
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMBM.ini_copia2` 
@@ -4232,24 +4218,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMBM.ini_copia3
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMBM.ini_copia3`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMBM.ini_copia3`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMBM.ini_copia3`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMBM.ini_copia3)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMBM.ini_copia3`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMBM.ini_copia3)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMBM.ini_copia3
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMBM.ini_copia3
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMBM.ini_copia3` 
@@ -4742,24 +4726,23 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMPLUS.ini
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMPLUS.ini`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMPLUS.ini`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMPLUS.ini`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMPLUS.ini)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMPLUS.ini`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMPLUS.ini)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMPLUS.ini
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMPLUS.ini
+
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMPLUS.ini` 
@@ -5252,24 +5235,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMPLUS.ini_copia
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMPLUS.ini_copia`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMPLUS.ini_copia`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMPLUS.ini_copia`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMPLUS.ini_copia)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMPLUS.ini_copia`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMPLUS.ini_copia)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMPLUS.ini_copia
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMPLUS.ini_copia
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMPLUS.ini_copia` 
@@ -5762,24 +5743,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMPLUS.ini_copia2
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMPLUS.ini_copia2`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMPLUS.ini_copia2`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMPLUS.ini_copia2`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMPLUS.ini_copia2)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMPLUS.ini_copia2`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMPLUS.ini_copia2)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMPLUS.ini_copia2
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMPLUS.ini_copia2
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMPLUS.ini_copia2` 
@@ -6272,24 +6251,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMPLUS.ini_copia3
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMPLUS.ini_copia3`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMPLUS.ini_copia3`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMPLUS.ini_copia3`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMPLUS.ini_copia3)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMPLUS.ini_copia3`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMPLUS.ini_copia3)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMPLUS.ini_copia3
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMPLUS.ini_copia3
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMPLUS.ini_copia3` 
@@ -6782,24 +6759,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMDSTAR.ini
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMDSTAR.ini`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMDSTAR.ini`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMDSTAR.ini`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMDSTAR.ini)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMDSTAR.ini)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMDSTAR.ini
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMDSTAR.ini
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMDSTAR.ini` 
@@ -7291,24 +7266,22 @@ P2linea_sed=$P2numero_linea_p25$P2letrac
 sed -i "$P2linea_sed $P2P2" ~/MMDVMHost/MMDVMFUSION.ini
 
 #FUSION
-var1=`grep -n -m 1 "\[System Fusion\]" ~/Downloads/MMDVMFUSION.ini`
-var2=`echo "$var1" | tr -d '[[:space:]]'`
+var1=`grep -n -m 1 '\<LowDeviation\>' ~/Downloads/MMDVMFUSION.ini`
 buscar=":"
-largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr index $var1 $buscar`
 largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var2 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1`
-CWvar1=`grep -n -m 1 "\[System Fusion\]" ~/MMDVMHost/MMDVMFUSION.ini`
-CWvar2=`echo "$CWvar1" | tr -d '[[:space:]]'`
+numero_linea=`expr substr $var1 1 $largo_linea`
+numero_linea_fusion=`expr $numero_linea - 1`
+fCWCW=$(awk "NR==$numero_linea_fusion" ~/Downloads/MMDVMFUSION.ini)
+fCWvar2=`grep -n -m 1 '\<LowDeviation\>' ~/MMDVMHost/MMDVMFUSION.ini`
 buscar=":"
-CWlargo_linea=`expr index $CWvar2 $buscar`
-CWlargo_linea=`expr $CWlargo_linea - 1`
-CWnumero_linea=`expr substr $CWvar2 1 $CWlargo_linea`
-CWnumero_linea=`expr $CWnumero_linea + 1`
-CWCW=$(awk "NR==$CWnumero_linea" ~/Downloads/MMDVMFUSION.ini)
-CWletra=c
-CWlinea_sed=$CWnumero_linea$CWletra
-sed -i "$CWlinea_sed $CWCW" ~/MMDVMHost/MMDVMFUSION.ini
+fCWlargo_linea=`expr index $fCWvar2 $buscar`
+fCWlargo_linea=`expr $fCWlargo_linea - 1`
+fCWnumero_linea=`expr substr $fCWvar2 1 $fCWlargo_linea`
+fCWnumero_linea=`expr $fCWnumero_linea - 1`
+fCWletra=c
+fCWlinea_sed=$fCWnumero_linea$fCWletra
+sed -i "$fCWlinea_sed $fCWCW" ~/MMDVMHost/MMDVMFUSION.ini
 
 #Nextion
 var=`grep -n -m 1 "\[Nextion\]" ~/Downloads/MMDVMFUSION.ini` 
@@ -7481,7 +7454,7 @@ echo "   *                            *"
 echo "   ******************************"
 sleep 1
 clear
-exit;;	
+exit;;  
 esac
 done
 
