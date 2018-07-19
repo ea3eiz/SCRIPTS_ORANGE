@@ -8,10 +8,9 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-echo "\33[1;32m   *${ROJO} V.02.07.05 ${VERDE}*************************************************************"
-#echo "   *                                                                        *"
+echo "${VERDE}"
+echo "   **************************************************************************"
 echo "   *       Script para Modificar MMDVMDMR2YSF.ini     \33[1;31m by EA4AOJ & EA3EIZ\33[1;32m   *"
-#echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -38,10 +37,10 @@ url=`grep -n "URL" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "\33[1;36m   6)\33[0m Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)\33[1;33m"
-echo "\33[1;36m   7)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM0)\33[1;33m"
-echo "\33[1;36m   8)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM1)\33[1;33m"
-echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)\33[1;33m"
+echo "\33[1;36m   6)\33[0m Puerto para DVMEGA pinchado en GPIO (ttyAMA0)\33[1;33m"
+echo "\33[1;36m   7)\33[0m Puerto para Pincho Low Cost y DMO (ttyACM0)\33[1;33m"
+echo "\33[1;36m   8)\33[0m Puerto para Pincho Low Cost y DMO (ttyACM1)\33[1;33m"
+echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
 mode=`grep -n -m 1 '\<TXInvert\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -289,10 +288,10 @@ echo ""
 
 indicativo=$(awk "NR==2" ~/DMR2YSF/DMR2YSF.ini)
 idd=$(awk "NR==10" ~/DMR2YSF/DMR2YSF.ini)
-echo "  PARAMETROS DMR2YSF.ini ${BLANCO}(se cambiaran cuando edites las opciones 1) y 10)"
+echo "  PARAMETROS DMR2YSF.ini ${BLANCO}"
 echo "  ${VERDE}======================"
-echo "  ${BLANCO}$indicativo"
-echo "  ${BLANCO}$idd"
+echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
+echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd"
 
 
 echo ""
