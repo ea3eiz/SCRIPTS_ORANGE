@@ -196,8 +196,6 @@ clear
                                 [sS]* ) echo ""
                                 sh flash_mmdvm_hs.sh
                                 echo ""
-                                echo "\33[1;32m<<<<<<<<< PROCESO FINALIZADO >>>>>>>>>"
-                                sleep 3
                                 break;;
                                 [nN]* ) echo ""
 clear
