@@ -19,7 +19,7 @@ echo "\33[1;36m   2)\33[1;33m Editar parámetros Config.h"
 echo "\33[1;36m   3)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
 echo "\33[1;36m   4)\33[1;37m Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
-tac $(ls -1rt /var/log/pi-star/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
+tac $(ls -1rt ~/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
