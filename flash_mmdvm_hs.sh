@@ -23,7 +23,7 @@ echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
 echo -n "${BLANCO}   "
 tac $(ls -1rt ~/MMDVMHost/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
-echo "   Esta info se actualiza al abrir de nuevo MMMDVMHost"
+echo "   La versión se actualiza al abrir de nuevo MMMDVMHost"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
