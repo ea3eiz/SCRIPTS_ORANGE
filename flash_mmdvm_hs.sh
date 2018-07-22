@@ -2,7 +2,7 @@
 while true
 do
 clear
-SCRIPTS_version=$(awk "NR==1" ~/.config/autostart/version)
+#SCRIPTS_version=$(awk "NR==1" ~/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
