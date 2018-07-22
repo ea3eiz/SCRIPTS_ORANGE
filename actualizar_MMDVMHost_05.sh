@@ -7,10 +7,10 @@ echo "   *                                                                   *"
 echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m       *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
-echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
-#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
+#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
+echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Volver a la versión anterior de MMDVMHost \33[1;33m"
-echo  "\33[1;36m   3)\33[1;33m Instalación limpia de MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE ***\33[1;33m"
+#echo  "\33[1;36m   3)\33[1;33m Instalación limpia de MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE ***\33[1;33m"
 #echo  "\33[1;36m   3)\33[1;33m Instalación limpia de MMDVMHost\33[1;33m"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -20,7 +20,7 @@ read escoger_menu
 
 case $escoger_menu in
 
-1bloqueado) echo ""
+1) echo ""
 while true
 do
 clear
