@@ -2,7 +2,7 @@
 while true
 do
 clear
-SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+SCRIPTS_version=$(awk "NR==1" ~/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -12,7 +12,7 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   ********************************************************************"
 echo "   *      Script para actualizar MMVDM_HS (Pincho Low Cost)   \33[1;33m    \33[1;32m    *"
-echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                               *"
+echo "   *                 \33[1;31mby EA4AOJ & EA3EIZ\33[1;32m                               *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;32m Descargar firmware MMDVM_HS actualizado"
 echo "\33[1;36m   2)\33[1;33m Editar parámetros Config.h"
@@ -55,7 +55,7 @@ clear
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
-                        geany /home/pi/MMDVM_HS/Config.h
+                        pluma ~/MMDVM_HS/Config.h
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -70,11 +70,11 @@ clear
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
-                        cd /home/pi/MMDVM_HS/
+                        cd ~/MMDVM_HS/
                         make clean
                         make bl
-                        cp /home/pi/V6/install_fw_librekit.sh /home/pi/MMDVM_HS/bin/
-                        cd /home/pi/MMDVM_HS/bin
+                        cp ~/SCRIPTS_ORANGE/install_fw_librekit.sh ~/MMDVM_HS/bin/
+                        cd ~/MMDVM_HS/bin
                         sleep 2
                         sudo chmod 777 install_fw_librekit.sh
                         ./install_fw_librekit.sh
@@ -92,7 +92,7 @@ clear
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
-                        cd /home/pi/MMDVM_HS/
+                        cd ~/MMDVM_HS/
                         make clean
                         make bl
                         sudo make serial-bl devser=/dev/ttyUSB0

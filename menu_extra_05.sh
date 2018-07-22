@@ -18,7 +18,7 @@ echo "\33[1;36m   4)\33[1;37m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;37m INSTALAR ANYDESK (Aplicación escritorio remoto)"
 echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
-#echo "\33[1;36m   8)${BLANCO} INSTALAR YSF2DMR"
+echo "\33[1;36m   8)${BLANCO} MENÚ ACTUALIZAR MMDVM_HS (Pincho Low Cost)"
 echo "\33[1;36m   9)${BLANCO} INSTALAR AMBE SERVER"
 echo "\33[1;36m  10)${AMARILLO} INSTALAR DMR2YSF"
 echo "\33[1;36m  11)${AMARILLO} INSTALAR DMR2NXDN"
@@ -177,6 +177,24 @@ clear
                                 echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO <<<<<<<<<"
                                 sleep 3
                                 clear
+                                echo ""
+                                echo "\33[1;32m<<<<<<<<< PROCESO FINALIZADO >>>>>>>>>"
+                                sleep 3
+                                break;;
+                                [nN]* ) echo ""
+clear
+exit;
+break;;
+esac
+done;;
+8) echo ""
+while true
+do
+clear
+                                ejecutar1=S
+                                case $ejecutar1 in
+                                [sS]* ) echo ""
+                                sh flash_mmdvm_hs.sh
                                 echo ""
                                 echo "\33[1;32m<<<<<<<<< PROCESO FINALIZADO >>>>>>>>>"
                                 sleep 3
