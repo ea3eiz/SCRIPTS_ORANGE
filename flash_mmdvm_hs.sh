@@ -107,6 +107,37 @@ clear
                         break;;
 esac
 done;;
+1001) echo ""
+while true
+do
+clear
+                        read -p 'Quieres descargar el firmware S/N: ' continuar
+                        case $continuar in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DESCARGANDO FIRMWARE "
+                        
+                        cd ~
+                        git clone https://git.code.sf.net/p/stm32flash/code stm32flash
+                        cd stm32flash
+                        make
+                        sudo make install
+
+                        sudo apt-get update
+                        sudo apt-get install gcc-arm-none-eabi gdb-arm-none-eabi libstdc++-arm-none-eabi-newlib libnewlib-arm-none-eabi
+
+                        cd ~
+                        sudo rm -R MMDVM_HS 
+                        git clone https://github.com/juribeparada/MMDVM_HS
+                        cd MMDVM_HS/
+                        git submodule init
+                        git submodule update
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
