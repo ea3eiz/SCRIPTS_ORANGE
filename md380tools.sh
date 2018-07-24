@@ -15,7 +15,6 @@ echo "\33[1;36m   2)\33[1;37m  Instalar md380tools"
 echo "\33[1;36m   3)\33[1;33m  Introducir firmware experimental en Walki MD380 sin GPS"
 echo "\33[1;36m   4)\33[1;33m  Introducir firmware experimental en Walki MD380 y MD390 con GPS"
 echo "\33[1;36m   5)\33[1;37m  Introducir la base de datos de indicativos"
-#echo "\33[1;36m   6)\33[1;37m  Introducir la base de datos de indicativos solo Europa users.csv"
 echo ""
 echo "\33[1;32m   ********************************************************************"
 echo "   *  Cuando creamos que puede haber una nueva versión de md380tools  *"
@@ -171,7 +170,7 @@ clear
                         cd ~/md380tools
                         sudo rm user.bin
                         echo "Introduciendo USER.BIN"
-                        sudo wget https://kg5rki.com/MD380_AIO/user.bin --no-check-certificate
+                        sudo wget http://42561.noip.us/user.bin
                         sudo ./md380-tool spiflashwrite user.bin 0x100000
                         break;;
                         [nN]* ) echo ""
