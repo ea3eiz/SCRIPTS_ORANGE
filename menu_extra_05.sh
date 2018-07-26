@@ -342,16 +342,19 @@ clear
                         echo "*         INSTALANDO DMR2YSF             *"
                         echo "*******************************************"
                         sleep 2
-                                                echo "${CIAN}"
-
-                                                cd ~/MMDVMHost
+                        echo "${CIAN}"
+                        cd ~/MMDVMHost
                         cp MMDVM.ini MMDVMDMR2YSF.ini
 
                         cd ~/
-                        git clone http://github.com/juribeparada/DMR2YSF
-                        cd DMR2YSF
-                                                make clean
-                                                make
+                        sudo rm -R ~/MMDVM_CM
+                        sudo rm -R ~/DMR2YSF
+                        git clone http://github.com/juribeparada/MMDVM_CM
+                        mkdir DMR2YSF
+                        cp ~/MMDVM_CM/DMR2YSF/* ~/DMR2YSF/
+                        cd ~/DMR2YSF/    
+                        make clean
+                        make
                         clear
 
                         #Restaura los 2 iconos Abrir Abrir_DMR2YSF y Editar Editar_DMR2YSF y aparecen en el escritorio
