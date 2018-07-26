@@ -2,11 +2,11 @@
 
 echo "\33[1;32m   ************************************************************************************"
 echo "   *                                                                                  *"
-echo "   * \33[1;31m                      NOTAS DE LA VERSIÓN 02.07.04\33[1;32m                               *"
+echo "   * \33[1;31m                      NOTAS DE LA VERSIÓN 02.07.05\33[1;32m                               *"
 echo "   *                                                                                  *"
 echo "   ************************************************************************************"
 echo ""
-echo "\33[1;36m   Gracias por descargar la imagen REM V.02.07.04"
+echo "\33[1;36m   Gracias por descargar la imagen REM V.02.07.05"
 echo ""
 echo "\33[1;32m   Imagen multi-plataforma para \33[1;33mRADIOAFICIONADOS."
 echo ""
