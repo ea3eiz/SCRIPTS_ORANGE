@@ -426,19 +426,15 @@ if [ $HostsFile2 = $comprueba ]
                         cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                         cd ~/
-
-                        git clone http://github.com/juribeparada/DMR2NXDN
-                        cd DMR2NXDN
-                                make clean
-                                make
-
-                        sudo chmod 777 -R ~/DMR2NXDN   
-
-                        cd ~/
-                        git clone https://github.com/g4klx/NXDNClients
-                        cd ~/NXDNClients/NXDNGateway
+                        sudo rm -R ~/MMDVM_CM
+                        sudo rm -R ~/DMR2NXDN
+                        git clone http://github.com/juribeparada/MMDVM_CM
+                        mkdir DMR2NXDN
+                        cp ~/MMDVM_CM/DMR2NXDN/* ~/DMR2NXDN/
+                        cd ~/DMR2NXDN/    
                         make clean
                         make
+                        clear
                         sudo chmod 777 -R ~/NXDNClients/NXDNGateway
                         clear
 
