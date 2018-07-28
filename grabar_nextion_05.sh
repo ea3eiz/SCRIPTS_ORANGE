@@ -2,7 +2,6 @@
 while true
 do
 clear
-
 echo "\33[1;32m   ********************************************************************"
 echo "   *      Script para Grabar pantallas Nextion \33[1;33mV.02.05                \33[1;32m*"
 echo "   *                     \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                           *"
@@ -11,6 +10,8 @@ echo "\33[1;36m   1)\33[1;37m Grabar pantalla Nextion 2.4 Pulgadas MMDVM"
 echo "\33[1;36m   2)\33[1;37m Grabar pantalla Nextion 2.8 Pulgadas MMDVM"
 echo "\33[1;36m   3)\33[1;37m Grabar pantalla Nextion 3.2 Pulgadas MMDVM"
 echo "\33[1;36m   4)\33[1;37m Grabar pantalla Nextion 4.3 Pulgadas MMDVM"
+echo ""
+echo '\33[1;36m   5)\33[1;37m Grabar pantalla Nextion 2.4" con Logo ADER SIN FRECUENCIA'
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -86,6 +87,27 @@ clear
 			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
                         cd ~/MMDVMHost/Nextion_DB2OE
                         sudo python nextion.py NX3224T043.tft /dev/ttyUSB0
+                        sleep 10
+		                break;;
+		                [nN]* ) echo ""
+						clear
+						exit;
+						break;;
+esac
+done;;
+5) echo ""
+while true
+do
+clear
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> SIN_FRECUENCIA_REM_24.tft >>>>>>>>"
+			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
+			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
+			            cd ~/MMDVMHost/Nextion_DB2OE
+			            wget http://associacioader.com/SIN_FRECUENCIA_REM_24.tft
+                        sudo python nextion.py SIN_FRECUENCIA_REM_24.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
