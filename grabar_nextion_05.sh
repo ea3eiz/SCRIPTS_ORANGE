@@ -106,6 +106,7 @@ clear
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
 			            cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo rm SIN_FRECUENCIA_REM*.*
 			            wget http://associacioader.com/SIN_FRECUENCIA_REM_24.tft
                         sudo python nextion.py SIN_FRECUENCIA_REM_24.tft /dev/ttyUSB0
                         sleep 10
