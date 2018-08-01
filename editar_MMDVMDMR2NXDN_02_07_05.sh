@@ -603,7 +603,7 @@ while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
                           var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDMR2NXDN.ini;
-                      read -p 'Puerto para Brandmeister=62031 puerto para DMR+=55555 : ' miid
+                      read -p 'Introducir el puerto: 62031 62031 : ' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
