@@ -70,7 +70,7 @@ letra=c
 linea=$largo$letra
 echo "${VERDE}$master1"
 
-echo -n "\33[1;36m  12)\33[0m Modificar Puerto      - \33[1;33m"
+echo -n "\33[1;36m  12)\33[0m Modificar Puerto      - \033[1;32m"
 lineaport=`expr substr $master 1 $largo1`
 lineaport=`expr $lineaport + 1`
 linea3port=$lineaport
