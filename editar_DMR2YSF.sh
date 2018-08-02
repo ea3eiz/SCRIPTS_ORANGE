@@ -12,7 +12,7 @@ echo "${VERDE}"
 echo "   **************************************************************************"
 echo "   *       Script para Modificar MMDVMDMR2YSF.ini     \33[1;31m by EA4AOJ & EA3EIZ\33[1;32m   *"
 echo "   **************************************************************************"
-echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
+echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - ${VERDE}"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 ind1=`expr substr $ind 3 30`
 echo "$ind1"
