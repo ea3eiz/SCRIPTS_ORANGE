@@ -17,12 +17,12 @@ ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 ind1=`expr substr $ind 3 30`
 echo "$ind1"
 
-echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - \33[1;33m"
+echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - ${VERDE}"
 rxf=`grep -n "RXFrequency" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 rxf1=`expr substr $rxf 4 30`
 echo "$rxf1"
 
-echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - \33[1;33m"
+echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - ${VERDE}"
 txf=`grep -n "TXFrequency" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 txf1=`expr substr $txf 4 30`
 echo "$txf1"
@@ -52,12 +52,12 @@ letra=p
 linea2=$linea$letra
 var99= sed -n $linea2  ~/MMDVMHost/MMDVMDMR2YSF.ini;
 
-echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
+echo -n "\33[1;36m  10)\33[0m Modificar ID          - ${VERDE}"
 idd=`grep -n "Id=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
-echo -n "\33[1;36m  11)\33[0m Modificar Address     - \33[1;33m"
+echo -n "\33[1;36m  11)\33[0m Modificar Address     - ${VERDE}"
 master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo=`expr index $master $buscar`
@@ -69,7 +69,7 @@ letra=c
 linea=$largo$letra
 echo "$master1"
 
-echo -n "\33[1;36m  12)\33[0m Modificar Puerto      - \33[1;33m"
+echo -n "\33[1;36m  12)\33[0m Modificar Puerto      - ${VERDE}"
 lineaport=`expr substr $master 1 $largo1`
 lineaport=`expr $lineaport + 1`
 linea3port=$lineaport
@@ -558,7 +558,7 @@ while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
                           var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDMR2YSF.ini;
-                      read -p 'Puerto para Brandmeister=62031 puerto para DMR+=55555 : ' miid
+                      read -p 'Introducir el Puerto: 62031' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
