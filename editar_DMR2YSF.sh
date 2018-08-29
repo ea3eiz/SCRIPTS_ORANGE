@@ -292,8 +292,8 @@ echo "  PARAMETROS DMR2YSF.ini ${BLANCO}"
 echo "  ${VERDE}======================"
 echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd"
-
-echo -n "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList.txt - \33[1;33m"
+echo ""
+echo -n "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList.txt \33[1;33m"
 
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
