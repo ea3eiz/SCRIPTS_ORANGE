@@ -1173,7 +1173,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          pluma ~/DMR2YSF/TG-YSFList.txt &
+                          sudo pluma ~/DMR2YSF/TG-YSFList.txt &
                           mate-terminal --geometry=120x30 -x less ~/YSFClients/YSFGateway/YSFHosts.txt
                           
                           break;;
