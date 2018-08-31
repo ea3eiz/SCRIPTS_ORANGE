@@ -1173,7 +1173,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          less ~/YSFClients/YSFGateway/YSFHosts.txt
+                          less ~/YSFClients/YSFGateway/YSFHosts.txt &
                           pluma ~/DMR2YSF/TG-YSFList.txt
                           break;;
                           [nN]* ) echo ""
