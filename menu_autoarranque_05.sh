@@ -197,6 +197,52 @@ var2=`grep "dstarrepeater" ~/autoarranque.ini`
 #=================================================================================
 
 
+
+
+
+#==================================================================================
+echo -n "\33[1;36m   116)\33[1;37m  Quitar DMR2YSF del  autoarranque      - \33[1;32m"
+var1=`grep "DMR2YSF" ~/autoarranque.ini`
+var1=`expr substr $var1 9 3`
+if [ $var1 = "ON" ]
+then
+echo "\33[1;32m$var1"
+else
+echo "\33[1;31m"
+fi
+var2=`grep "DMR2YSF" ~/autoarranque.ini`
+#=================================================================================
+
+
+#==================================================================================
+echo -n "\33[1;36m   117)\33[1;37m  Quitar DMR2NXDN del  autoarranque     - \33[1;32m"
+var1=`grep "NXDN" ~/autoarranque.ini`
+var1=`expr substr $var1 6 3`
+if [ $var1 = "ON" ]
+then
+echo "\33[1;32m$var1"
+else
+echo "\33[1;31m"
+fi
+var2=`grep "NXDN" ~/autoarranque.ini`
+#=================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "\33[1;33m"
 
 echo -n "\33[1;36m   201)\33[1;33m  Poner ircDDB en el autoarranque       - "
@@ -382,6 +428,32 @@ echo "\33[1;31m"
 fi
 trans=`grep "dstarrepeater" ~/autoarranque.ini`
 #==================================================================================
+
+#==================================================================================
+echo -n "\33[1;36m   216)\33[1;33m  Poner DMR2YSF en el autoarranque      - "
+var1=`grep "DMR2YSF" ~/autoarranque.ini`
+var1=`expr substr $var1 9 3`
+if [ $var1 = "OFF" ]
+then
+echo "\33[1;31m$var1"
+else
+echo "\33[1;31m"
+fi
+trans=`grep "DMR2YSF" ~/autoarranque.ini`
+#==================================================================================
+
+#==================================================================================
+echo -n "\33[1;36m   217)\33[1;33m  Poner DMR2NXDN en el autoarranque     - "
+var1=`grep "NXDN" ~/autoarranque.ini`
+var1=`expr substr $var1 6 3`
+if [ $var1 = "OFF" ]
+then
+echo "\33[1;31m$var1"
+else
+echo "\33[1;31m"
+fi
+trans=`grep "NXDN" ~/autoarranque.ini`
+#==================================================================================
 echo "\33[0m "
 echo "\33[1;36m  27)\33[1;32m ***  REESTABLECER AUTOARRANQUES  ***"
 echo ""
@@ -497,9 +569,6 @@ clear
                         break;;
                         [nN]* ) echo ""
                         break;;
-
-
-
 esac
 done;;
 107) echo ""
@@ -650,6 +719,40 @@ clear
                                             cd ~/.config/autostart
                                             mv AMBE_SERVER.desktop ~/AUTOSTART
                                             sed -i "14c AMBE_SERVER=OFF" ~/autoarranque.ini
+                                            break;; 
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+116) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando DMR2YSF del autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/.config/autostart
+                                            mv DMR2YSF.desktop ~/AUTOSTART
+                                            sed -i "16c DMR2YSF=OFF" ~/autoarranque.ini
+                                            break;; 
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+117) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando DMR2NXDN del autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/.config/autostart
+                                            mv DMR2NXDN.desktop ~/AUTOSTART
+                                            sed -i "17c NXDN=OFF" ~/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
                                             break;;
@@ -924,6 +1027,40 @@ clear
                                             cd ~/AUTOSTART
                                             mv AMBE_SERVER.desktop ~/.config/autostart/
                                             sed -i "14c AMBE_SERVER=ON" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+216) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo DMR2YSF en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv DMR2YSF.desktop ~/.config/autostart
+                                            sed -i "16c DMR2YSF=ON" ~/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
+217) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo DMR2NXDN en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd ~/AUTOSTART
+                                            mv DMR2NXDN.desktop ~/.config/autostart
+                                            sed -i "17c NXDN=ON" ~/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
