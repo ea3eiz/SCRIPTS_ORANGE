@@ -32,7 +32,7 @@ fi
 bluedv=`grep "BlueDV" ~/autoarranque.ini`
 
 echo -n "\33[1;36m   103)\33[1;37m  Quitar YSF del autoarranque           - "
-YSF=`grep "YSF" ~/autoarranque.ini`
+YSF=`grep "C4F" ~/autoarranque.ini`
 YSF=`expr substr $YSF 5 3`
 if [ $YSF = "ON" ]
 then
@@ -268,7 +268,7 @@ fi
 bluedv=`grep "BlueDV" ~/autoarranque.ini`
 
 echo -n "\33[1;36m   203)\33[1;33m  Poner YSF en el autoarranque          - "
-YSF=`grep "YSF" ~/autoarranque.ini`
+YSF=`grep "C4F" ~/autoarranque.ini`
 YSF=`expr substr $YSF 5 3`
 if [ $YSF = "OFF" ]
 then
