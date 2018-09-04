@@ -509,7 +509,7 @@ clear
                         rm ~/autoarranque.ini
                         cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
 			echo ">>>>>>>>> GIT CLONE AUTOSTART >>>>>"
-			rm ~/AUTOSTART
+			rm -R ~/AUTOSTART
                         cd ~/
                         git clone http://github.com/ea3eiz/AUTOSTART
 			break;;
