@@ -514,7 +514,7 @@ clear
                        sleep 2
                        cd ~/.config/autostart
                        mv YSF.desktop ~/AUTOSTART
-                       sed -i "3c YSF=OFF" ~/autoarranque.ini
+                       sed -i "3c C4F=OFF" ~/autoarranque.ini
                        break;;
                        [nN]* ) echo ""
                        break;;
@@ -812,7 +812,7 @@ clear
                         sleep 2
                         cd ~/AUTOSTART
                         mv YSF.desktop ~/.config/autostart/
-                        sed -i "3c YSF=ON" ~/autoarranque.ini
+                        sed -i "3c C4F=ON" ~/autoarranque.ini
                         clear
                         echo "\33[1;32m**********************************************************"
                         echo "*                                                        *"
