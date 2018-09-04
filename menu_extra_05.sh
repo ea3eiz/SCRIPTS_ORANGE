@@ -494,38 +494,26 @@ done;;
 while true
 do
 clear
-	        			ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> GIT PULL AUTOSTART RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS >>>>>"
-			            cd ~/AUTOSTART
-			            git pull
-                        exit;
-						break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-
-4000) echo ""
-while true
-do
-clear
-	                echo "\33[1;31m" #color rojo
+	        	
+                        echo "\33[1;31m" #color rojo
                         echo " *****************************************************"
                         echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
                         echo " *****************************************************"
                         echo "\33[1;37m" #color
                         read -p 'Quieres Actualizar? Si/No: ' ejecutar1
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
-			            cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
-                        exit;
-		                break;;
-		                [nN]* ) echo ""
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
+                        cd ~/SCRIPTS_ORANGE
+                        git pull
+                        rm ~/autoarranque.ini
+                        cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+			echo ">>>>>>>>> GIT CLONE AUTOSTART >>>>>"
+			rm ~/AUTOSTART
+                        cd ~/
+                        git clone http://github.com/ea3eiz/AUTOSTART
+			break;;
+			[nN]* ) echo ""
 clear
 exit;
 break;;
@@ -591,8 +579,6 @@ clear
                         echo ""
                         echo "\33[1;36m       1000\33[1;33m ESTO RESTAURA TODOS LOS GITHUB"
                         echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
-                        #echo "\33[1;36m       3000\33[1;33m RESTAURA ICONOS ESCRITORIO"
-                        echo "\33[1;36m       4000\33[1;33m COPIAR autoarranque.ini"
                         echo "\33[1;36m       5000\33[1;33m ARREGLAR LA FECHA Y HORA"
                         echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
                         echo "\33[1;36m       8000\33[1;33m INSTALA YSF2DMR"
