@@ -287,11 +287,18 @@ presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta
 echo ""
 
 indicativo=$(awk "NR==2" ~/DMR2YSF/DMR2YSF.ini)
-idd=$(awk "NR==10" ~/DMR2YSF/DMR2YSF.ini)
+
+idd1=`grep -n -m 1 "^Id=" ~/DMR2YSF/DMR2YSF.ini`
+buscar=":"
+caracteres=`expr index $idd1 $buscar`
+caracteres_linea=`expr $caracteres - 1`
+numero_linea_idd=`expr substr $idd1 1 $caracteres_linea`
+idd1=$(awk "NR==$numero_linea_idd" ~/DMR2YSF/DMR2YSF.ini)
+
 echo "  PARAMETROS DMR2YSF.ini ${BLANCO}"
 echo "  ${VERDE}======================"
 echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
-echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd"
+echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 echo ""
 echo "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList \33[1;33m"
 
@@ -517,8 +524,11 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
+
+                          numero_linea_idd=$numero_linea_idd$letra
+
                           sed -i "3c Id=$miid" ~/MMDVMHost/MMDVMDMR2YSF.ini
-                          sed -i "10c Id=$miid" ~/DMR2YSF/DMR2YSF.ini
+                          sed -i "$numero_linea_idd Id=$miid" ~/DMR2YSF/DMR2YSF.ini
 
 ide=$(awk "NR==3" ~/MMDVMHost/MMDVMDMR2YSF.ini)
 sed -i "2c $ide" ~/info_panel_control.ini
