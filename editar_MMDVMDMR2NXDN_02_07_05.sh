@@ -1204,7 +1204,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              pluma ~/MMDVMHost/MMDVMDMR2NXDN.ini
+                              sudo pluma ~/MMDVMHost/MMDVMDMR2NXDN.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
