@@ -17,7 +17,6 @@ clear
             else
             echo ""
             fi
-
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -25,9 +24,7 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 echo "\33[1;32m   *${ROJO} V.02.06.03 ${VERDE}*************************************************************"
-#echo "   *                                                                        *"
 echo "   *           Script para Modificar MMDVMBM.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
-#echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMBM.ini`
@@ -60,18 +57,6 @@ echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
-#mode=`grep -n -m 1 '\<TXInvert\>' ~/MMDVMHost/MMDVMBM.ini`
-#mode1=`expr substr $mode 4 30`
-#linea=`expr substr $mode 1 2`
-#linea=`expr $linea - 1`
-#linea33=$linea
-#letra=p
-#linea2=$linea$letra
-#var99= sed -n $linea2  ~/MMDVMHost/MMDVMBM.ini;
-
-
-
-
 mode=`grep -n -m 1 "^Port=" ~/MMDVMHost/MMDVMBM.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -79,15 +64,6 @@ caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" ~/MMDVMHost/MMDVMBM.ini)
 echo "$mode"
-
-
-
-
-
-
-
-
-
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
 idd=`grep -n "Id=" ~/MMDVMHost/MMDVMBM.ini`
