@@ -43,14 +43,13 @@ echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 '\<TXInvert\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
-mode1=`expr substr $mode 4 30`
-linea=`expr substr $mode 1 2`
-linea=`expr $linea - 1`
-linea33=$linea
-letra=p
-linea2=$linea$letra
-var99= sed -n $linea2  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+mode=`grep -n -m 1 "^Port=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+buscar=":"
+caracteres=`expr index $mode $buscar`
+caracteres_linea=`expr $caracteres - 1`
+numero_linea_port=`expr substr $mode 1 $caracteres_linea`
+mode=$(awk "NR==$numero_linea_port" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+echo "$mode"
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - ${VERDE}"
 idd=`grep -n "Id=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -58,7 +57,7 @@ idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Modificar Address     - ${VERDE}"
-master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo=`expr index $master $buscar`
 largo=`expr $largo + 1`
@@ -66,7 +65,7 @@ largo1=`expr $largo - 2`
 master1=`expr substr $master $largo 40`
 largo=`expr substr $master 1 $largo1`
 letra=c            
-linea=$largo$letra
+linea_master=$largo$letra
 echo "$master1"
 
 echo -n "\33[1;36m  12)\33[0m Modificar Puerto      - ${VERDE}"
@@ -243,8 +242,20 @@ echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
 Brightness=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
 Brightness1=`expr substr $Brightness 5 30`
-echo "$Brightness1"
+echo -n "$Brightness1"
 fi
+
+# j) POCSAG Enable=
+var=`grep -n -m 1 "\[POCSAG\]" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
+POCSAG=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+letra=c
+linea_sed_POCSAG=$numero_linea$letra
+echo "  ${CIAN} j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -282,7 +293,7 @@ numero_linea=`expr substr $var2 1 $largo_linea` # recoge el numero de linea (138
 numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
 letra=p
 numero_linea_p=$numero_linea$letra #crea 143p
-echo -n "\33[1;36m  29)${BLANCO} Local port            - ${VERDE}"
+echo -n "\33[1;36m  29)\33[0m Local port            - ${VERDE}"
 presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 echo ""
 
@@ -299,6 +310,7 @@ echo "  PARAMETROS DMR2YSF.ini ${BLANCO}"
 echo "  ${VERDE}======================"
 echo "  ${CIAN} 1) \33[0mModificar indicativo  - ${VERDE}$indicativo"
 echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
+
 echo ""
 echo "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList \33[1;33m"
 
@@ -307,7 +319,6 @@ echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
-
 case $escoger_menu in
 1) echo ""
 while true
@@ -454,9 +465,9 @@ do
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyS0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          letrac=c
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -468,9 +479,9 @@ do
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          letrac=c
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -482,9 +493,9 @@ do
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          letrac=c
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -492,20 +503,18 @@ esac
 done;;
 9) echo ""
 while true
-do
-                     
+do                   
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
                           letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
 esac
 done;;
-
 10) echo ""
 while true
 do
@@ -530,12 +539,12 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           sed -i "3c Id=$miid" ~/MMDVMHost/MMDVMDMR2YSF.ini
                           sed -i "$numero_linea_idd Id=$miid" ~/DMR2YSF/DMR2YSF.ini
 
-ide=$(awk "NR==3" ~/MMDVMHost/MMDVMDMR2YSF.ini)
-sed -i "2c $ide" ~/info_panel_control.ini
+                          ide=$(awk "NR==3" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+                          sed -i "2c $ide" ~/info_panel_control.ini
                         
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
+			                    break;;
+			                    [nN]* ) echo ""
+			                    break;;
 esac
 done;;
 11) echo ""
@@ -554,7 +563,7 @@ echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
 #Convierte mayusculas en minúsculas
 master1=`echo "$master1" | tr [:upper:] [:lower:]`
 
-                          sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_master Address=$master1" ~/MMDVMHost/MMDVMDMR2YSF.ini
 
 master=$(awk "NR==139" ~/MMDVMHost/MMDVMDMR2YSF.ini)
 sed -i "4c $master" ~/info_panel_control.ini
@@ -569,7 +578,7 @@ while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
                           var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDMR2YSF.ini;
-                      read -p 'Introducir el Puerto: 62031' miid
+                      read -p 'Introducir el Puerto: 62031 ' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
@@ -1075,6 +1084,20 @@ echo "Valor actual NXDN: \33[1;33m$NXDN"
                           break;;
 esac
 done;;
+j) echo ""
+while true
+do
+                          echo "Valor actual POCSAG: \33[1;33m$POCSAG"
+                          read -p 'Desactivado=0 Activado=1: '   POCSAG1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_POCSAG Enable=$POCSAG1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 24) echo ""
 while true
 do
@@ -1150,7 +1173,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              sudo pluma ~/MMDVMHost/MMDVMDMR2YSF.ini
+                              geany ~/MMDVMHost/MMDVMDMR2YSF.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
@@ -1175,30 +1198,20 @@ do
                           break;;
                           [nN]* ) echo ""
                           break;;
-esac
+esac  
 done;;
 30) echo ""
 while true
 do
                           actualizar=S 
                           case $actualizar in
-                          [sS]* ) echo ""
-                          sudo pluma ~/DMR2YSF/TG-YSFList.txt &
-                          mate-terminal --geometry=120x30 -x less ~/YSFClients/YSFGateway/YSFHosts.txt
-                          
+                          [sS]* ) echo ""         
+                          lxterminal --geometry=125x30 -e less ~/YSFClients/YSFGateway/YSFHosts.txt & sudo geany ~/DMR2YSF/TG-YSFList.txt
                           break;;
                           [nN]* ) echo ""
                           break;;
 esac
 done;;
-
-
-
-
-
-
-
-
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
