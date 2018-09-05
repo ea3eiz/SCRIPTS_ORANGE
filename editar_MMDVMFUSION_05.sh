@@ -9,7 +9,7 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 echo "${VERDE}"
-echo "\33[1;32m   *${ROJO} V.02.06.03 ${VERDE}*************************************************************"
+echo "\33[1;32m   *${ROJO} V.02.07.05 ${VERDE}*************************************************************"
 echo "   *       Script para Modificar MMDVMFUSION.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
@@ -41,7 +41,7 @@ echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS0)\33[1;33m"
 echo "\33[1;36m   7)\33[0m Utilizar puerto USB (ttyACM0)\33[1;33m"
 echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
-echo -n "                            - "
+echo -n "                            - 
 
 mode=`grep -n -m 1 "^Port=" ~/MMDVMHost/MMDVMFUSION.ini`
 buscar=":"
