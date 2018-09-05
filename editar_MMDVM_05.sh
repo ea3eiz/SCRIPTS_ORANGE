@@ -60,14 +60,13 @@ echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 '\<TXInvert\>' ~/MMDVMHost/MMDVM.ini`
-mode1=`expr substr $mode 4 30`
-linea=`expr substr $mode 1 2`
-linea=`expr $linea - 1`
-linea33=$linea
-letra=p
-linea2=$linea$letra
-var99= sed -n $linea2  ~/MMDVMHost/MMDVM.ini;
+mode=`grep -n -m 1 "^Port=" ~/MMDVMHost/MMDVM.ini`
+buscar=":"
+caracteres=`expr index $mode $buscar`
+caracteres_linea=`expr $caracteres - 1`
+numero_linea_port=`expr substr $mode 1 $caracteres_linea`
+mode=$(awk "NR==$numero_linea_port" ~/MMDVMHost/MMDVM.ini)
+echo "$mode"
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - \33[1;33m"
 idd=`grep -n "Id=" ~/MMDVMHost/MMDVM.ini`
@@ -451,10 +450,10 @@ while true
 do
                           actualizar=S 
                           case $actualizar in
-        [sS]* ) echo ""
+                          [sS]* ) echo ""
                           letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyS0" ~/MMDVMHost/MMDVM.ini
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVM.ini
         break;;
         [nN]* ) echo ""
         break;;
