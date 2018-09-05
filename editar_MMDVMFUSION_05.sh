@@ -441,7 +441,7 @@ do
 			                    [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyAMA0" ~/MMDVMHost/MMDVMFUSION.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVMFUSION.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
