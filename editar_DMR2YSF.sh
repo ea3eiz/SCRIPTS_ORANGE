@@ -1205,8 +1205,10 @@ while true
 do
                           actualizar=S 
                           case $actualizar in
-                          [sS]* ) echo ""         
-                          lxterminal --geometry=125x30 -e less ~/YSFClients/YSFGateway/YSFHosts.txt & sudo geany ~/DMR2YSF/TG-YSFList.txt
+                          [sS]* ) echo ""
+                          sudo pluma ~/DMR2YSF/TG-YSFList.txt &
+                          mate-terminal --geometry=120x30 -x less ~/YSFClients/YSFGateway/YSFHosts.txt
+                          
                           break;;
                           [nN]* ) echo ""
                           break;;
