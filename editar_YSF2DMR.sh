@@ -62,18 +62,38 @@ letra=c
 linea_sed_9=$numero_linea$letra
 echo "$var1"
 
+#echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
+#var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+#var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+#buscar=":"
+#largo_linea=`expr index $var $buscar`
+#largo_linea=`expr $largo_linea - 1`
+#numero_linea=`expr substr $var 1 $largo_linea`
+#numero_linea=`expr $numero_linea - 1`
+#Id=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+#letra=c
+#linea_sed_10=$numero_linea$letra
+#echo "$Id"
+
 echo -n "\33[1;36m  10)\33[0m Id                    - \33[1;33m"
-var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
-var1=`grep -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
+idd1=`grep -n -m 1 "^Id=" ~/YSF2DMR/YSF2DMR.ini`
 buscar=":"
-largo_linea=`expr index $var $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea - 1`
-Id=$(awk "NR==$numero_linea" ~/YSF2DMR/YSF2DMR.ini)
+caracteres=`expr index $idd1 $buscar`
+caracteres_linea=`expr $caracteres - 1`
+numero_linea_idd=`expr substr $idd1 1 $caracteres_linea`
+idd1=$(awk "NR==$numero_linea_idd" ~/YSF2DMR/YSF2DMR.ini)
 letra=c
-linea_sed_10=$numero_linea$letra
-echo "$Id"
+linea_sed_10=$numero_linea_idd$letra
+echo "$idd1"
+
+
+
+
+
+
+
+
+
 
 echo -n "\33[1;36m  11)\33[0m StartupDstId          - \33[1;33m"
 var=`grep -n -m 1 '\<StartupDstId\>' ~/YSF2DMR/YSF2DMR.ini`
