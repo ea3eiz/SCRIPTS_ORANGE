@@ -2,21 +2,23 @@
 while true
 do
 clear
-            #comprueba si el fichero existe
-            if [ -f ~/info_panel_control.ini ];
-            then
                   # Datos para el panel de control
                   indi=$(awk "NR==2" ~/MMDVMHost/MMDVM.ini)
-                  sed -i "6c $indi" ~/info_panel_control.ini
+                  sed -i "1c $indi" ~/info_panel_control.ini
                   ide=$(awk "NR==3" ~/MMDVMHost/MMDVM.ini)
-                  sed -i "7c $ide" ~/info_panel_control.ini
+                  sed -i "2c $ide" ~/info_panel_control.ini
                   frec=$(awk "NR==13" ~/MMDVMHost/MMDVM.ini)
-                  sed -i "8c $frec" ~/info_panel_control.ini
-                  master=$(awk "NR==140" ~/MMDVMHost/MMDVM.ini)
-                  sed -i "9c $master" ~/info_panel_control.ini
-            else
-            echo ""
-            fi
+                  sed -i "3c $frec" ~/info_panel_control.ini
+master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVM.ini`
+buscar=":"
+largo=`expr index $master $buscar`
+largo=`expr $largo + 1`
+largo1=`expr $largo - 2`
+largo=`expr substr $master 1 $largo1`
+letra=c            
+linea_master=$largo$letra
+master=$(awk "NR==$linea_master" ~/MMDVMHost/MMDVM.ini)
+                  sed -i "4c $master" ~/info_panel_control.ini
 
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -24,10 +26,9 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-echo "\33[1;32m   *${ROJO} V.02.06.03 ${VERDE}*************************************************************"
-#echo "   *                                                                        *"
+echo "${VERDE}"
+echo "\33[1;32m   *${ROJO} V.02.07.05 ${VERDE}*************************************************************"
 echo "   *           Script para Modificar MMDVM.ini      \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
-#echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVM.ini`
@@ -241,6 +242,7 @@ ScreenLayout1=`expr substr $ScreenLayout 5 30`
 echo -n "$ScreenLayout1"
 fi
 
+# i) NXDN Enable=
 var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVM.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
@@ -252,22 +254,37 @@ letra=c
 linea_sed_NXDN=$numero_linea$letra
 echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
+# 23) Brightness=
+var=`grep -n -m 1 "\[Nextion\]" ~/MMDVMHost/MMDVM.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 3` # Se le suma 3 al número de linea
+Brightness=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini)
+letra=c
+linea_sed_Brightness=$numero_linea$letra
+echo -n "  ${CIAN}23) ${GRIS}Brillo Display Nextion- ${AMARILLO}$Brightness"
 
-echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
-Brightness=`grep -n -m 1 -c '\<Brightness\>' ~/MMDVMHost/MMDVM.ini`
-if [ $Brightness = 0 ]; then
-echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
-else
-Brightness=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVM.ini`
-Brightness1=`expr substr $Brightness 5 30`
-echo "$Brightness1"
-fi
+# j) POCSAG Enable=
+var=`grep -n -m 1 "\[POCSAG\]" ~/MMDVMHost/MMDVM.ini`
+buscar=":"
+largo_linea=`expr index $var $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var 1 $largo_linea`
+numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
+POCSAG=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini)
+letra=c
+linea_sed_POCSAG=$numero_linea$letra
+echo "  ${CIAN} j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
+# 24) Latitude=
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
 lat=`grep -n "Latitude" ~/MMDVMHost/MMDVM.ini`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
+# 25) Longitude=
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
 long=`grep -n "Longitude" ~/MMDVMHost/MMDVM.ini`
 long1=`expr substr $long 4 30`
@@ -288,24 +305,32 @@ var300port= sed -n $linea22port  ~/MMDVMHost/MMDVM.ini;
 
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero MMDVM.ini para hacer cualquier cambio\33[1;33m"
-
 echo "\33[1;36m  29)\33[1;37m Guardar  fichero de Configuración en M1 \33[1;36m"
 echo -n "\33[1;36m  30)\33[1;32m Utilizar fichero de Configuración de M1: \33[1;36m"
-pluscopia=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVM.ini_copia`
-pluscopia=`expr substr $pluscopia 13 40`
-echo "$pluscopia"
+master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVM.ini_copia`
+buscar=":"
+largo=`expr index $master $buscar`
+largo=`expr $largo + 9`
+copia1=`expr substr $master $largo 40`
+echo "$copia1"
 
 echo "\33[1;36m  31)\33[1;37m Guardar  fichero de Configuración en M2: \33[1;36m"
 echo -n "\33[1;36m  32)\33[1;32m Utilizar fichero de Configuración en M2: \33[1;36m"
-pluscopia2=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVM.ini_copia2`
-pluscopia2=`expr substr $pluscopia2 13 40`
-echo "$pluscopia2"
+master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVM.ini_copia2`
+buscar=":"
+largo=`expr index $master $buscar`
+largo=`expr $largo + 9`
+copia2=`expr substr $master $largo 40`
+echo "$copia2"
 
 echo "\33[1;36m  33)\33[1;37m Guardar  fichero de Configuración en M3: \33[1;36m"
 echo -n "\33[1;36m  34)\33[1;32m Utilizar fichero de Configuración en M3: \33[1;36m"
-pluscopia3=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVM.ini_copia3`
-pluscopia3=`expr substr $pluscopia3 13 40`
-echo "$pluscopia3"
+master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVM.ini_copia3`
+buscar=":"
+largo=`expr index $master $buscar`
+largo=`expr $largo + 9`
+copia3=`expr substr $master $largo 40`
+echo "$copia3"
 
 echo ""
 echo "\33[1;36m  35)\33[1;31m Recuperar el fichero original MMDVM.ini\33[1;33m"
@@ -340,6 +365,10 @@ indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 
                     indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
                           sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/MMDVM.ini
+
+indi=$(awk "NR==2" ~/MMDVMHost/MMDVM.ini)
+sed -i "1c $indi" ~/info_panel_control.ini
+
         break;;
         [nN]* ) echo ""
         break;;
@@ -365,6 +394,11 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           case $actualizar in
         [sS]* ) echo ""
                               sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/MMDVM.ini
+
+frec=$(awk "NR==13" ~/MMDVMHost/MMDVM.ini)
+sed -i "3c $frec" ~/info_panel_control.ini
+
+
       break;;
       [nN]* ) echo ""
       break;;
@@ -451,7 +485,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          letra1=c
+                          letrac=c
                           numero_linea_port=$numero_linea_port$letrac
                           sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVM.ini
         break;;
@@ -464,10 +498,10 @@ while true
 do
                           actualizar=S 
                           case $actualizar in
-        [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVM.ini
+                          [sS]* ) echo ""
+                          letrac=c
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyACM0" ~/MMDVMHost/MMDVM.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -478,10 +512,10 @@ while true
 do
                           actualizar=S 
                           case $actualizar in
-        [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVM.ini
+                          [sS]* ) echo ""
+                          letrac=c
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyACM1" ~/MMDVMHost/MMDVM.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -493,16 +527,15 @@ do
                      
                           actualizar=S 
                           case $actualizar in
-        [sS]* ) echo ""
-                          letra1=c
-                          linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVM.ini
+                          [sS]* ) echo ""
+                          letrac=c
+                          numero_linea_port=$numero_linea_port$letrac
+                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVM.ini
         break;;
         [nN]* ) echo ""
         break;;
 esac
 done;;
-
 10) echo ""
 while true
 do
@@ -522,7 +555,11 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
                           case $actualizar in
         [sS]* ) echo ""
                           sed -i "$linea Id=$miid" ~/MMDVMHost/MMDVM.ini
-                       
+
+
+ide=$(awk "NR==3" ~/MMDVMHost/MMDVM.ini)
+sed -i "2c $ide" ~/info_panel_control.ini
+                        
         break;;
         [nN]* ) echo ""
         break;;
@@ -532,22 +569,24 @@ done;;
 while true
 do
 echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
-                          read -p 'Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
+                      read -p 'Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
                           actualizar=S 
                           case $actualizar in
-                          [sS]* ) echo ""
-                          master1=`echo "$master1" | tr -d '[[:space:]]'`
+                    [sS]* ) echo ""
+                    master1=`echo "$master1" | tr -d '[[:space:]]'`
 
-                          #Convierte mayusculas en minúsculas
-                          master1=`echo "$master1" | tr [:upper:] [:lower:]`
+
+#Convierte mayusculas en minúsculas
+master1=`echo "$master1" | tr [:upper:] [:lower:]`
+
                           sed -i "$linea_master Address=$master1" ~/MMDVMHost/MMDVM.ini
 
 master=$(awk "NR==139" ~/MMDVMHost/MMDVM.ini)
 sed -i "4c $master" ~/info_panel_control.ini
 
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
+        break;;
+        [nN]* ) echo ""
+        break;;
 esac
 done;;
 12) echo ""
@@ -838,31 +877,13 @@ done;;
 23) echo ""
 while true
 do
-Brightness=`grep -n -m 1 -c '\<Brightness\>' ~/MMDVMHost/MMDVM.ini`
-if [ $Brightness = 0 ]; then
-echo "no existe este comando"
-else
-Brightness=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVM.ini`
-Brightness1=`expr substr $Brightness 5 30`
-#echo "$Brightness1"
-fi
-buscar=":"
-largo=`expr index $Brightness $buscar`
-echo "Valor  actual  del Brightness : \33[1;33m${Brightness1#*=}\33[1;37m"
-                      read -p 'Este parametro puede ser 1 ó 2: ' V
-                          letra=c
-                          if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $Brightness 1 2`
-                          else
-                          linea=`expr substr $Brightness 1 3`
-                          fi
-                          linea=$linea$letra
+
+                          read -p 'Introduce el brillo Brightness: ' V
                           actualizar=S 
                           case $actualizar in                                            
-                    [sS]* ) echo ""
-                    V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Brightness=$V" ~/MMDVMHost/MMDVM.ini             
+                          [sS]* ) echo ""
+                          V=`echo "$V" | tr -d '[[:space:]]'`      
+                          sed -i "$linea_sed_Brightness Brightness=$V" ~/MMDVMHost/MMDVM.ini             
         break;;
         [nN]* ) echo ""
         break;;
@@ -1061,6 +1082,20 @@ echo "Valor actual NXDN: \33[1;33m$NXDN"
                           break;;
 esac
 done;;
+j) echo ""
+while true
+do
+                          echo "Valor actual POCSAG: \33[1;33m$POCSAG"
+                          read -p 'Desactivado=0 Activado=1: '   POCSAG1
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          sed -i "$linea_sed_POCSAG Enable=$POCSAG1" ~/MMDVMHost/MMDVM.ini
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 24) echo ""
 while true
 do
@@ -1160,7 +1195,7 @@ do
                               actualizar=S 
                               case $actualizar in
                               [sS]* ) echo ""
-                              sudo pluma ~/MMDVMHost/MMDVM.ini
+                              geany ~/MMDVMHost/MMDVM.ini
                               break;;
                               [nN]* ) echo ""
                               break;;
@@ -1258,7 +1293,8 @@ esac
 done;;
 35) echo ""
 while true
-do                    
+do
+                    
                     read -p 'Quieres restaurar el fichero original MMDVM.ini? S/N ' restaurar1   
                         case $restaurar1 in
       [sS]* ) echo ""
@@ -1283,5 +1319,4 @@ clear
 exit;;  
 esac
 done
-
 
