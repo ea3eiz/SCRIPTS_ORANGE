@@ -95,7 +95,7 @@ idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Modificar Address     - \33[1;33m"
-master=`grep -n -m 1 '\<Address\>' ~/MMDVMHost/MMDVMBM.ini`
+master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVMBM.ini`
 buscar=":"
 largo=`expr index $master $buscar`
 largo=`expr $largo + 1`
@@ -103,7 +103,7 @@ largo1=`expr $largo - 2`
 master1=`expr substr $master $largo 40`
 largo=`expr substr $master 1 $largo1`
 letra=c            
-linea=$largo$letra
+linea_master=$largo$letra
 echo "$master1"
 
 echo -n "\33[1;36m  12)\33[0m Modificar Puerto      - \33[1;33m"
@@ -552,22 +552,22 @@ done;;
 while true
 do
 echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
-                      read -p 'Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
+                          read -p 'Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
                           actualizar=S 
                           case $actualizar in
-                    [sS]* ) echo ""
-                    master1=`echo "$master1" | tr -d '[[:space:]]'`
-                    letra=c            
-                    linea=$largo$letra
+                          [sS]* ) echo ""
+                          master1=`echo "$master1" | tr -d '[[:space:]]'`
 
+                          #Convierte mayusculas en minúsculas
+                          master1=`echo "$master1" | tr [:upper:] [:lower:]`
+                          sed -i "$linea_master Address=$master1" ~/MMDVMHost/MMDVMBM.ini
 
-#Convierte mayusculas en minúsculas
-master1=`echo "$master1" | tr [:upper:] [:lower:]`
+master=$(awk "NR==139" ~/MMDVMHost/MMDVMBM.ini)
+sed -i "4c $master" ~/info_panel_control.ini
 
-                          sed -i "$linea Address=$master1" ~/MMDVMHost/MMDVMBM.ini
-        break;;
-        [nN]* ) echo ""
-        break;;
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 12) echo ""
