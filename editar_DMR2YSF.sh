@@ -37,10 +37,10 @@ url=`grep -n "URL" ~/MMDVMHost/MMDVMDMR2YSF.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "\33[1;36m   6)\33[0m Puerto para DVMEGA pinchado en GPIO (ttyAMA0)\33[1;33m"
-echo "\33[1;36m   7)\33[0m Puerto para Pincho Low Cost y DMO (ttyACM0)\33[1;33m"
-echo "\33[1;36m   8)\33[0m Puerto para Pincho Low Cost y DMO (ttyACM1)\33[1;33m"
-echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)\33[1;33m"
+echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS0)\33[1;33m"
+echo "\33[1;36m   7)\33[0m Utilizar puerto USB (ttyACM0)\33[1;33m"
+echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
+echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
 mode=`grep -n -m 1 '\<TXInvert\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -456,7 +456,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyAMA0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea4 Port=/dev/ttyS0" ~/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
