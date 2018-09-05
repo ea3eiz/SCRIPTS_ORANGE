@@ -10,7 +10,7 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 echo "${VERDE}"
 echo "   **************************************************************************"
-echo "   *       Script para Modificar MMDVMDMR2NXDN.ini     \33[1;31m by EA4AOJ & EA3EIZ\33[1;32m   *"
+echo "   *       Script para Modificar MMDVMDMR2NXDN.ini     \33[1;31m by EA4AOJ & EA3EIZ\33[1;32m  *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMDMR2NXDN.ini`
@@ -346,7 +346,6 @@ echo ""
 
 echo "\33[1;36m  33)${AMARILLO} Actualizar listado NXDNHosts.txt"
 
-echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
@@ -1205,7 +1204,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany ~/MMDVMHost/MMDVMDMR2NXDN.ini
+                              pluma ~/MMDVMHost/MMDVMDMR2NXDN.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
