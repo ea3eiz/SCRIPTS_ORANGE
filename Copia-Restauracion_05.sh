@@ -25,8 +25,11 @@ clear
 		ejecutar1=S
 		case $ejecutar1 in
 		[sS]* ) echo ""
-		echo "Haciendo copias editores BM, DMR+, LIBRE, RADIO"
-            echo "Solo D-STAR, solo FUSION, YSF2DMR, YSF, DMR2YSFF, DMR2NXDN, BlueDV y SVXLINK"
+		echo "*******************************************************"
+            echo "*  Haciendo copias de seguridad de los editores:      *"
+            echo "*  BM, DMR+, LIBRE, RADIO, Solo D-STAR, solo FUSION   *"
+            echo "*  YSF, YSF2DMR, DMR2YSF, DMR2NXDN, BlueDV y SVXLINK  *"
+            echo "*******************************************************"
 		sleep 3
 		sudo chmod -R 777 ~/Downloads        
 
@@ -107,16 +110,18 @@ clear
 		ejecutar1=S
 		case $ejecutar1 in
 		[sS]* ) echo ""
-echo "\33[1;36m" #color cian
-read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
-  case $sino in
-      s|S) 
-clear
-echo "\33[1;32m" #color verde
-echo "*********************************************"
-echo "*     SE ESTÁ REALIZANDO LA RESTAURACIÓN    *"
-echo "*********************************************"
-sleep 3
+            echo "\33[1;36m" #color cian
+            read -p 'QUIERES SEGUIR ADELANTE S/N ? ' sino
+            case $sino in
+            s|S) 
+            clear
+            echo "\33[1;32m" #color verde
+            echo "*******************************************************"
+            echo "*  Restaurando copias de seguridad de los editores:   *"
+            echo "*  BM, DMR+, LIBRE, RADIO, Solo D-STAR, solo FUSION   *"
+            echo "*  YSF, YSF2DMR, DMR2YSF, DMR2NXDN, BlueDV y SVXLINK  *"
+            echo "*******************************************************"
+            sleep 3
 
 		sudo chmod -R 777 ~/Downloads
             cd ~/Downloads
