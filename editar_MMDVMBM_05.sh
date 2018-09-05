@@ -27,8 +27,8 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "   *          Script para Modificar MMDVMBM.ini               \33[1;31m by EA3EIZ\33[1;32m   *"
+echo "\33[1;32m   *${ROJO} V.02.07.05 ${VERDE}*************************************************************"
+echo "   *           Script para Modificar MMDVMBM.ini    \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m     *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMBM.ini`
@@ -487,7 +487,7 @@ do
 			                    [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyAMA0" ~/MMDVMHost/MMDVMBM.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVMBM.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
