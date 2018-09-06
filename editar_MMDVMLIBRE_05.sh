@@ -315,7 +315,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMLIBRE.ini
+                          sed -i "$linea4 Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMLIBRE.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
