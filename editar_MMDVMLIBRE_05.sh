@@ -35,8 +35,8 @@ echo "$url1"
 
 echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS0)\33[1;33m"
 echo "\33[1;36m   7)\33[0m Utilizar puerto USB (ttyACM0)\33[1;33m"
-echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
-echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
+echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
+echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB1)\33[1;33m"
 echo -n "                            - "
 
 mode=`grep -n -m 1 '\<Modem\>' ~/MMDVMHost/MMDVMLIBRE.ini`
