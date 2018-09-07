@@ -8,7 +8,7 @@ echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\
 echo "   *                                                                   *"
 echo "   *********************************************************************"
 #echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE *** \33[1;33m"
-echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
+#echo  "\33[1;36m   1)\33[1;33m Actualizar MMDVMHost \33[1;33m"
 
 #echo  "\33[1;36m   3)\33[1;33m Instalación limpia de MMDVMHost \33[1;31m*** BLOQUEADO TEMPORALMENTE ***\33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Instalación limpia de MMDVMHost\33[1;33m"
@@ -21,7 +21,7 @@ read escoger_menu
 
 case $escoger_menu in
 
-1) echo ""
+1bloqueado) echo ""
 while true
 do
 clear
