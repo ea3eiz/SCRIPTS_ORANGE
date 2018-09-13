@@ -45,6 +45,8 @@ clear
                         cd MMDVM_HS/
                         git submodule init
                         git submodule update
+                        make clean
+                        make bl
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -76,8 +78,6 @@ clear
                         [sS]* ) echo ""
                         echo ""
                         cd ~/MMDVM_HS/
-                        make clean
-                        make bl
                         cp ~/SCRIPTS_ORANGE/install_fw_librekit.sh ~/MMDVM_HS/bin/
                         cd ~/MMDVM_HS/bin
                         sleep 2
@@ -98,8 +98,6 @@ clear
                         [sS]* ) echo ""
                         echo ""
                         cd ~/MMDVM_HS/
-                        make clean
-                        make bl
                         sudo make serial-bl devser=/dev/ttyUSB0
                         break;;
                         [nN]* ) echo ""
