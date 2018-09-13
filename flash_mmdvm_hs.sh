@@ -16,8 +16,9 @@ echo "   *                           \33[1;31mby EA4AOJ & EA3EIZ\33[1;32m       
 echo "   ************************************************************************"
 echo "\33[1;36m   1)\33[1;32m Descargar firmware MMDVM_HS actualizado"
 echo "\33[1;36m   2)\33[1;33m Editar parámetros Config.h"
-echo "\33[1;36m   3)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
-echo "\33[1;36m   4)\33[1;37m Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
+echo "\33[1;36m   3)\33[1;32m Compilar MMDVM_HS con tus parámetro del Config.h"
+echo "\33[1;36m   4)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
+echo "\33[1;36m   5)\33[1;37m Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
 echo ""
 echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
@@ -45,8 +46,6 @@ clear
                         cd MMDVM_HS/
                         git submodule init
                         git submodule update
-                        make clean
-                        make bl
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -73,6 +72,23 @@ done;;
 while true
 do
 clear
+                        read -p 'Quieres compilar MMDVN_HS con los parámetros de tu Config.h ? S/N: ' continuar
+                        case $continuar in
+                        [sS]* ) echo ""
+                        echo ""
+                        cd ~/MMDVM_HS/
+                        make
+                        make bl
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        break;;
+esac
+done;;
+4) echo ""
+while true
+do
+clear
                         read -p 'Quieres grabar el firmware en tu dispositivo S/N: ' continuar
                         case $continuar in
                         [sS]* ) echo ""
@@ -89,7 +105,7 @@ clear
                         break;;
 esac
 done;;
-4) echo ""
+5) echo ""
 while true
 do
 clear
