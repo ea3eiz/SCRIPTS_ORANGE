@@ -39,6 +39,7 @@ clear
                         case $continuar in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> DESCARGANDO FIRMWARE "
+                        echo "${CIAN}"
                         cd ~
                         sudo rm -R MMDVM_HS 
                         git clone https://github.com/juribeparada/MMDVM_HS
