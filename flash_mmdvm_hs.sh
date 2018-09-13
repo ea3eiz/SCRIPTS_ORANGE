@@ -32,6 +32,52 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
+a) echo ""
+while true
+do
+clear
+                        read -p 'Quieres descargar el firmware S/N: ' continuar
+                        case $continuar in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> DESCARGANDO FIRMWARE "
+                        cd ~
+                        sudo rm -R MMDVM_HS 
+                        git clone https://github.com/juribeparada/MMDVM_HS
+                        cd MMDVM_HS/
+                        git submodule init
+                        git submodule update
+
+
+
+                        read -p 'Quieres editar el fichero de configuración Config.h ? S/N: ' siguiente
+                        if siguiente=S
+                        then
+                        pluma ~/MMDVM_HS/Config.h
+                        make clean
+                        make bl
+                        else
+                        make clean
+                        make bl
+                        fi
+
+
+
+
+
+
+
+
+
+
+
+
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;        
 1) echo ""
 while true
 do
