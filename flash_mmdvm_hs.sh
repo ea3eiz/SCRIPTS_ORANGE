@@ -47,10 +47,12 @@ clear
                         git submodule init
                         git submodule update
 
-
-
+                        clear
+                        echo "echo "${VERDE}""
                         read -p 'Quieres editar el fichero de configuración Config.h ? S/N: ' siguiente
-                        if siguiente=S
+                        if siguiente="S"
+                                read a
+                                echo "pausa $siguiente"
                         then
                         pluma ~/MMDVM_HS/Config.h
                         make clean
