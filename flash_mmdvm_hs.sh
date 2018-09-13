@@ -51,7 +51,8 @@ clear
                         echo "${VERDE}"
                         echo "Quieres editar el fichero de configuración Config.h ? S/N:"
                         read siguiente
-                        if [ "$siguiente" = [sS]* ]
+                        if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
+
                         then
                         pluma ~/MMDVM_HS/Config.h
                         make clean
