@@ -15,10 +15,8 @@ echo "   *          Script para actualizar MMVDM_HS (Pincho Low Cost) \33[1;33m 
 echo "   *                           \33[1;31mby EA4AOJ & EA3EIZ\33[1;32m                         *"
 echo "   ************************************************************************"
 echo "\33[1;36m   1)\33[1;32m Descargar y compilar el último firmware MMDVM_HS disponible"
-echo "\33[1;36m   2)\33[1;33m Editar parámetros Config.h"
-echo "\33[1;36m   3)\33[1;32m Compilar MMDVM_HS con tus parámetro del Config.h"
-echo "\33[1;36m   4)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
-echo "\33[1;36m   5)\33[1;37m Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
+echo "${VERDE}   2)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
+echo "${VERDE}   3)\33[1;37m Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
 echo ""
 echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
@@ -32,7 +30,7 @@ echo -n "\33[1;36m   Elige una opción: "
 read escoger_menu
 echo ""
 case $escoger_menu in
-a) echo ""
+1) echo ""
 while true
 do
 clear
@@ -55,8 +53,7 @@ clear
                         if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
                         then
                         echo "${AMARILLO}"
-                        echo "Haga los cambios necesarios"
-                        echo "Grabe y cierre el editor para continuar"
+                        echo "Haga los cambios necesarios y cierre el editor para continuar"
                         pluma ~/MMDVM_HS/Config.h
 echo "${ROJO}"
 echo "   ******************************"
@@ -80,16 +77,6 @@ echo "   *     PROCESO TERMINADO      *"
 echo "   *                            *"
 echo "   ******************************"
 sleep 3
-
-
-
-
-
-
-
-
-
-
                         break;;
                         [nN]* ) echo ""
                         clear
@@ -97,60 +84,7 @@ sleep 3
                         break;;
 esac
 done;;        
-1) echo ""
-while true
-do
-clear
-                        read -p 'Quieres descargar el firmware S/N: ' continuar
-                        case $continuar in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> DESCARGANDO FIRMWARE "
-                        cd ~
-                        sudo rm -R MMDVM_HS 
-                        git clone https://github.com/juribeparada/MMDVM_HS
-                        cd MMDVM_HS/
-                        git submodule init
-                        git submodule update
-                        break;;
-                        [nN]* ) echo ""
-                        clear
-                        exit;
-                        break;;
-esac
-done;;
 2) echo ""
-while true
-do
-clear
-                        read -p 'Quieres editar el fichero de configuración S/N: ' continuar
-                        case $continuar in
-                        [sS]* ) echo ""
-                        echo ""
-                        pluma ~/MMDVM_HS/Config.h
-                        break;;
-                        [nN]* ) echo ""
-                        clear
-                        break;;
-esac
-done;;
-3) echo ""
-while true
-do
-clear
-                        read -p 'Quieres compilar MMDVN_HS con los parámetros de tu Config.h ? S/N: ' continuar
-                        case $continuar in
-                        [sS]* ) echo ""
-                        echo ""
-                        cd ~/MMDVM_HS/
-                        make
-                        make bl
-                        break;;
-                        [nN]* ) echo ""
-                        clear
-                        break;;
-esac
-done;;
-4) echo ""
 while true
 do
 clear
@@ -170,7 +104,7 @@ clear
                         break;;
 esac
 done;;
-5) echo ""
+3) echo ""
 while true
 do
 clear
