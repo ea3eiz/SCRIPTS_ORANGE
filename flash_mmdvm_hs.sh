@@ -68,6 +68,7 @@ echo "${CIAN}"
                         make clean
                         make bl
                         else
+echo "${CIAN}"
                         make clean
                         make bl
                         fi
