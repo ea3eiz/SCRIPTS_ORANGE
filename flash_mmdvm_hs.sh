@@ -16,7 +16,7 @@ echo "   *                           \33[1;31mby EA4AOJ & EA3EIZ\33[1;32m       
 echo "   ************************************************************************"
 echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS disponible"
 echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS por el USB (host del STM)"
-echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
+echo "${CIAN}   3)${BLANCO} Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
 echo ""
 echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
