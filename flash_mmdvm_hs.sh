@@ -48,8 +48,9 @@ clear
                         git submodule update
 
                         clear
-                        echo "echo "${VERDE}""
-                        read -p 'Quieres editar el fichero de configuración Config.h ? S/N: ' siguiente
+                        echo "${VERDE}"
+                        echo "Quieres editar el fichero de configuración Config.h ? S/N:"
+                        read siguiente
                         if [ "$siguiente" = "S" ];
                                 read a
                                 echo "pausa $siguiente"
