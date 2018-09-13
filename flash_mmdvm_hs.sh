@@ -14,9 +14,9 @@ echo "   ***********************************************************************
 echo "   *          Script para actualizar MMVDM_HS (Pincho Low Cost) \33[1;33m      \33[1;32m    *"
 echo "   *                           \33[1;31mby EA4AOJ & EA3EIZ\33[1;32m                         *"
 echo "   ************************************************************************"
-echo "\33[1;36m   1)\33[1;32m Descargar y compilar el último firmware MMDVM_HS disponible"
-echo "${VERDE}   2)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
-echo "${VERDE}   3)\33[1;37m Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
+echo "${CIAN}   1)${VERDE} Descargar y compilar el último firmware MMDVM_HS disponible"
+echo "${CIAN}   2)${AMARILLO} Grabar firmware MMDVM_HS por el USB (host del STM)"
+echo "${CIAN}   3)${AMARILLO} Grabar firmware MMDVM_HS por el USART_1 (adaptador usb-ttl)"
 echo ""
 echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
@@ -34,6 +34,7 @@ case $escoger_menu in
 while true
 do
 clear
+                        echo "${VERDE}"
                         read -p 'Quieres continuar con el proceso S/N: ' continuar
                         case $continuar in
                         [sS]* ) echo ""
