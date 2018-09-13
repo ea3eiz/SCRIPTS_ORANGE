@@ -56,7 +56,7 @@ clear
                         then
                         echo "${AMARILLO}"
                         echo "Haga los cambios necesarios y cierre el editor para continuar"
-                        pluma ~/MMDVM_HS/Config.h
+                        sudo pluma ~/MMDVM_HS/Config.h
 echo "${ROJO}"
 echo "   ******************************"
 echo "   *                            *"
