@@ -14,7 +14,7 @@ echo "   ***********************************************************************
 echo "   *          Script para actualizar MMVDM_HS (Pincho Low Cost) \33[1;33m      \33[1;32m    *"
 echo "   *                           \33[1;31mby EA4AOJ & EA3EIZ\33[1;32m                         *"
 echo "   ************************************************************************"
-echo "\33[1;36m   1)\33[1;32m Descargar firmware MMDVM_HS actualizado"
+echo "\33[1;36m   1)\33[1;32m Descargar y compilar el último firmware MMDVM_HS disponible"
 echo "\33[1;36m   2)\33[1;33m Editar parámetros Config.h"
 echo "\33[1;36m   3)\33[1;32m Compilar MMDVM_HS con tus parámetro del Config.h"
 echo "\33[1;36m   4)\33[1;32m Grabar firmware MMDVM_HS por el USB (host del STM)"
@@ -36,7 +36,7 @@ a) echo ""
 while true
 do
 clear
-                        read -p 'Quieres descargar el firmware S/N: ' continuar
+                        read -p 'Quieres continuar con el proceso S/N: ' continuar
                         case $continuar in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> DESCARGANDO FIRMWARE "
@@ -52,17 +52,28 @@ clear
                         echo "Quieres editar el fichero de configuración Config.h ? S/N:"
                         read siguiente
                         if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
-
                         then
                         pluma ~/MMDVM_HS/Config.h
+echo "${ROJO}"
+echo "   ******************************"
+echo "   *                            *"
+echo "   *        COMPILANDO          *"
+echo "   *                            *"
+echo "   ******************************"
+                        sleep 3
                         make clean
                         make bl
                         else
                         make clean
                         make bl
                         fi
-
-
+echo "${VERDE}"
+echo "   ******************************"
+echo "   *                            *"
+echo "   *     PROCESO TERMINADO      *"
+echo "   *                            *"
+echo "   ******************************"
+sleep 3
 
 
 
