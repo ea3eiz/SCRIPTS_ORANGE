@@ -50,9 +50,13 @@ clear
                         clear
                         echo "${VERDE}"
                         echo "Quieres editar el fichero de configuración Config.h ? S/N:"
+                        
                         read siguiente
                         if [ "$siguiente" = "S" -o "$siguiente" = "s" ]
                         then
+                        echo "${AMARILLO}"
+                        echo "Haga los cambios necesarios"
+                        echo "Grabe y cierre el editor para continuar"
                         pluma ~/MMDVM_HS/Config.h
 echo "${ROJO}"
 echo "   ******************************"
@@ -61,12 +65,14 @@ echo "   *        COMPILANDO          *"
 echo "   *                            *"
 echo "   ******************************"
                         sleep 3
+echo "${CIAN}"
                         make clean
                         make bl
                         else
                         make clean
                         make bl
                         fi
+clear
 echo "${VERDE}"
 echo "   ******************************"
 echo "   *                            *"
