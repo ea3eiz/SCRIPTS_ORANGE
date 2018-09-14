@@ -11,8 +11,8 @@ echo "\33[1;36m   2)\33[1;37m Grabar pantalla Nextion 2.8 Pulgadas MMDVM"
 echo "\33[1;36m   3)\33[1;37m Grabar pantalla Nextion 3.2 Pulgadas MMDVM"
 echo "\33[1;36m   4)\33[1;37m Grabar pantalla Nextion 4.3 Pulgadas MMDVM"
 echo ""
-echo '\33[1;36m   5)\33[1;32m Grabar pantalla Nextion 2.4" con Logo'
-echo '\33[1;36m   6)\33[1;32m Grabar pantalla Nextion 2.4 Banderas'
+echo '\33[1;36m   5)\33[1;32m Grabar pantalla Nextion 2.4" con el logo de REM'
+echo '\33[1;36m   6)\33[1;32m Grabar pantalla Nextion 2.4" con Banderas'
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
