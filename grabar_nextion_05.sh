@@ -12,6 +12,7 @@ echo "\33[1;36m   3)\33[1;37m Grabar pantalla Nextion 3.2 Pulgadas MMDVM"
 echo "\33[1;36m   4)\33[1;37m Grabar pantalla Nextion 4.3 Pulgadas MMDVM"
 echo ""
 echo '\33[1;36m   5)\33[1;32m Grabar pantalla Nextion 2.4" con Logo'
+echo '\33[1;36m   6)\33[1;32m Grabar pantalla Nextion 2.4 Banderas'
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -109,6 +110,28 @@ clear
 			            sudo rm SIN_FRECUENCIA*.*
 			            wget http://associacioader.com/SIN_FRECUENCIA_REM_24.tft
                         sudo python nextion.py SIN_FRECUENCIA_REM_24.tft /dev/ttyUSB0
+                        sleep 10
+		                break;;
+		                [nN]* ) echo ""
+						clear
+						exit;
+						break;;
+esac
+done;;
+6) echo ""
+while true
+do
+clear
+	                    ejecutar1=S
+		                case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> SIN_FRECUENCIA_REM_24.tft >>>>>>>>"
+			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
+			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
+			            cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo rm REM_Model7.tft
+			            wget http://associacioader.com/REM_Model7.tft
+                        sudo python nextion.py REM_Model7.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
