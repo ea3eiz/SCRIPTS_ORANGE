@@ -569,7 +569,7 @@ done;;
 while true
 do
 echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
-                      read -p 'Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
+                      read -p 'Brandmeister=master.spain-dmr.es / DMR+=212.237.3.141: ' master1
                           actualizar=S 
                           case $actualizar in
                     [sS]* ) echo ""
@@ -1153,7 +1153,7 @@ do
                           
                           case $actualizar in
         [sS]* ) echo ""
-         read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+         read -p 'Intruduce reflector DMR+ al que se conectara (ej:4374) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
                           sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVM.ini

@@ -1153,7 +1153,7 @@ do
                           
                           case $actualizar in
         [sS]* ) echo ""
-         read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
+         read -p 'Intruduce reflector DMR+ al que se conectara (ej:4374) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
                           sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMPLUS.ini
