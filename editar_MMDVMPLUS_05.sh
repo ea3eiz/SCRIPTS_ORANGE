@@ -569,7 +569,7 @@ done;;
 while true
 do
 echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
-                      read -p 'Brandmeister=master.spain-dmr.es / DMR+=eaglobalmaster.xreflector.es: ' master1
+                      read -p 'Brandmeister=master.spain-dmr.es / DMR+=212.237.3.141: ' master1
                           actualizar=S 
                           case $actualizar in
                     [sS]* ) echo ""
