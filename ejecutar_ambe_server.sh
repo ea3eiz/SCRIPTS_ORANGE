@@ -8,10 +8,11 @@ sed -i "11c AMBE_SERVER=ON" ~/status.ini
 
 puerto_router=$(awk "NR==1" /home/orangepi/ambe_server.ini) 
 puerto_modem=$(awk "NR==2" /home/orangepi/ambe_server.ini) 
+baut_rate=$(awk "NR==3" /home/orangepi/ambe_server.ini)
 cd ~/AMBEServer
 sudo killall AMBEserver
 sleep 5
-./AMBEserver -p $puerto_router -i $puerto_modem
+./AMBEserver -p $puerto_router -i $puerto_modem -s $baut_rate
 
 sed -i "6cExec=mate-terminal -x sh ejecutar_ambe_server.sh" ~/Desktop/Abrir_ambe_server.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/AMBE_SERVER.png" ~/Desktop/Abrir_ambe_server.desktop
