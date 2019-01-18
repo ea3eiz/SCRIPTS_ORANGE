@@ -7395,6 +7395,8 @@ clear
                     cp MMDVMHost MMDVMPLUS
                     cp MMDVMHost MMDVMDSTAR
                     cp MMDVMHost MMDVMFUSION
+                    cp MMDVMHost DMR2NXDN
+                    cp MMDVMHost DMR2YSF
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
