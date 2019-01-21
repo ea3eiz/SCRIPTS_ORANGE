@@ -604,6 +604,7 @@ clear
                         echo ""
                         echo "\33[1;36m       1000\33[1;33m ESTO RESTAURA TODOS LOS GITHUB"
                         echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
+                        echo "\33[1;36m       3000\33[1;33m ACTUALIZAR SERVIDORES D-STAR"
                         echo "\33[1;36m       5000\33[1;33m ARREGLAR LA FECHA Y HORA"
                         echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
                         echo "\33[1;36m       8000\33[1;33m INSTALA YSF2DMR"
