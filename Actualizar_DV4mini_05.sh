@@ -19,7 +19,7 @@ case $escoger_menu in
 
 
 
-1b) echo ""
+1) echo ""
 while true
 do
 clear
@@ -28,19 +28,21 @@ clear
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        cd ~/SCRIPTS_ORANGE
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
-                        sudo cp dv_serial /usr/bin/
-                        cd /usr/bin/
-                        sudo chmod 777 dv_serial
-                        clear
-                        echo "***********************************"
-                        echo "*** SE HA ACTUALIZADO CON EXITO ***"
-                        echo "***********************************"
-                        sleep 3
-                        
+                        cd ~/Downloads
+wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/dv_serial
+sudo cp -v ~/Downloads/dv_serial ~/dv4mini 
+cd ~/dv4mini/
+sudo chmod 777 dv_serial
+cd ~/Downloads
+sudo rm -v ~/Downloads/dv_serial
+
+sudo cp -v ~/dv4mini/dv4mini.exe ~/dv4mini/dv4mini.exe.old
+wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/dv4mini.exe
+sudo cp -v ~/Downloads/dv4mini.exe ~/dv4mini/dv4mini.exe
+cd ~/dv4mini/
+sudo chmod 777 dv4mini.exe
+cd ~/Downloads
+sudo rm -v ~/Downloads/dv4mini.exe
 clear
 		break;;
 		[nN]* ) echo ""
