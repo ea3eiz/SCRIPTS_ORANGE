@@ -24,16 +24,16 @@ while true
 do
 clear
 
-	                	ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo cd ~/SCRIPTS_ORANGE
-                        sudo cp dv_serial ~/dv4mini
-                        sudo cp dv4mini.exe ~/dv4mini
-                        sudo cp xref.ip ~/dv4mini
+	                ejecutar1=S
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+                        cd ~/SCRIPTS_ORANGE
+                        cp dv_serial ~/dv4mini
+                        cp dv4mini.exe ~/dv4mini
+                        cp xref.ip ~/dv4mini
                         sudo cp dv_serial /usr/bin/
-                        sudo cd /usr/bin/
+                        cd /usr/bin/
                         sudo chmod 777 dv_serial
                         clear
                         echo "***********************************"
