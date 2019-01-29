@@ -19,7 +19,7 @@ case $escoger_menu in
 
 
 
-1) echo ""
+1b) echo ""
 while true
 do
 clear
