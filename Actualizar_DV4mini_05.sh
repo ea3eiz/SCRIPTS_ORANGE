@@ -19,7 +19,8 @@ case $escoger_menu in
 
 
 
-1anterior a fecha 28-01-2019) echo ""
+1anteriorafecha28012019) 
+echo ""
 while true
 do
 clear
