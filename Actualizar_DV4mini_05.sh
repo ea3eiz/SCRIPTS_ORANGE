@@ -19,7 +19,7 @@ case $escoger_menu in
 
 
 
-1) echo ""
+1anterior a fecha 28-01-2019) echo ""
 while true
 do
 clear
@@ -52,7 +52,7 @@ esac
 done;;
 
 
-1b) echo ""
+1) echo ""
 while true
 do
 clear
