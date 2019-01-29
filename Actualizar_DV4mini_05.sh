@@ -51,6 +51,37 @@ clear
 esac
 done;;
 
+
+1b) echo ""
+while true
+do
+clear
+
+	                	ejecutar1=S
+		    			case $ejecutar1 in
+						[sS]* ) echo ""
+						echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+                        cd ~/SCRIPTS_ORANGE
+                        cp dv_serial ~/dv4mini
+                        cp dv4mini.exe ~/dv4mini
+                        cp xref.ip ~/dv4mini
+                        sudo cp dv_serial /usr/bin/
+                        cd /usr/bin/
+                        sudo chmod 777 dv_serial
+                        clear
+                        echo "***********************************"
+                        echo "*** SE HA ACTUALIZADO CON EXITO ***"
+                        echo "***********************************"
+                        sleep 3
+                        
+clear
+		break;;
+		[nN]* ) echo ""
+
+			break;;
+esac
+done;;
+
 2) echo ""
 while true
 do
