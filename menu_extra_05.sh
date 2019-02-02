@@ -22,6 +22,7 @@ echo "\33[1;36m   8)${VERDE} MENÚ ACTUALIZAR MMDVM_HS (Pincho Low Cost)"
 echo "\33[1;36m   9)${AMARILLO} INSTALAR AMBE SERVER"
 echo "\33[1;36m  10)${AMARILLO} INSTALAR DMR2YSF"
 echo "\33[1;36m  11)${AMARILLO} INSTALAR DMR2NXDN"
+echo "\33[1;36m  12)${AMARILLO} ACTUALIZAR LISTA DE REFLECTORES D-STAR (DV4MINI-IRCDDB)"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -522,7 +523,7 @@ exit;
 break;;
 esac
 done;;
-3000) echo ""
+12) echo ""
 while true
 do
 clear
@@ -535,6 +536,10 @@ clear
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         
+                        cd /usr/local/share/opendv/
+                        curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
+                        mv DExtra_Hosts.txt xref.ip
+
 
                         exit;
                         break;;
