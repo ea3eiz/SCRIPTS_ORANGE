@@ -70,7 +70,6 @@ clear
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
                         sudo chmod -R 777 ~/.config/dv4mini/dv4mini/1.0.0.0
-                        read a
                         clear
                         echo "***********************************"
                         echo "*** SE HA ACTUALIZADO CON EXITO ***"
