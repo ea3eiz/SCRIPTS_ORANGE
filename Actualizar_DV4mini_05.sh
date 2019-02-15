@@ -19,7 +19,7 @@ case $escoger_menu in
 
 
 
-1anteriorafecha28012019) 
+1) 
 echo ""
 while true
 do
@@ -44,6 +44,11 @@ cd ~/dv4mini/
 sudo chmod 777 dv4mini.exe
 cd ~/Downloads
 sudo rm -v ~/Downloads/dv4mini.exe
+
+sudo chmod -R 777 ~/.config/dv4mini/
+
+sudo rm /usr/bin/dv_serial #este lo copio al que daba error                       
+
 clear
 		break;;
 		[nN]* ) echo ""
@@ -53,7 +58,7 @@ esac
 done;;
 
 
-1) echo ""
+1ultimoquedabaerror) echo ""
 while true
 do
 clear
