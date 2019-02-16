@@ -46,7 +46,7 @@ txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
 echo -n "${CIAN}   4)${GRIS} Modificar Location    - ${AMARILLO}"
-loc=`grep -n "^Location=" ~/MMDVMHost/MMDVM.ini.ini`
+loc=`grep -n "^Location=" ~/MMDVMHost/MMDVM.ini`
 loc1=`echo "$loc" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $loc1 $buscar`
@@ -54,7 +54,7 @@ largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $loc1 1 $largo_linea`
 letrac=c
 numero_linea_letrac=$numero_linea$letrac
-contenido_location=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini.ini)
+contenido_location=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini)
 echo "$contenido_location"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
