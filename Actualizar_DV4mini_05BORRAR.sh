@@ -60,6 +60,7 @@ clear
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
                         sudo rm -r /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
+                        read a
                         cd /home/orangepi/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r /home/orangepi/dv4mini
