@@ -4,7 +4,7 @@ do
 clear
 echo "\33[1;32m   *********************************************************************"
 echo "   *                                                                   *"
-echo "   *           Script para Actualizar \33[1;33mDV4MINI20190317   \33[1;31m by EA3EIZ\33[1;32m     *"
+echo "   *           Script para Actualizar \33[1;33mDV4MINI20190307   \33[1;31m by EA3EIZ\33[1;32m     *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
 echo  "\33[1;36m   1)\33[1;33m Actualizar \33[1;32mDV4MINI20190307   \33[1;33m"
