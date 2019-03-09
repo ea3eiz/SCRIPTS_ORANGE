@@ -17,8 +17,6 @@ read escoger_menu
 
 case $escoger_menu in
 
-~/
-
 1) echo ""
 while true
 do
@@ -32,39 +30,6 @@ clear
                         git clone http://github.com/ea3eiz/DV4MINI/20190307
                         rm ~/dv4mini/*.*
                         cd ~/SCRIPTS_ORANGE/DV4MINI/20190307
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
-                        sudo cp dv_serial /usr/bin/
-                        cd /usr/bin/
-                        sudo chmod 777 dv_serial
-                        cd ~/dv4mini
-                        sudo chmod 777 dv_serial
-                        clear
-                        echo "***********************************"
-                        echo "*** SE HA ACTUALIZADO CON EXITO ***"
-                        echo "***********************************"
-                        sleep 3                        
-                        clear
-                        break;;
-                        [nN]* ) echo ""
-                        break;;
-esac
-done;;
-2) echo ""
-while true
-do
-clear
-
-	                ejecutar1=S
-                        case $ejecutar1 in
-                        [sS]* ) echo ""
-                        echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        rm ~/V7/DV4MINI20190127
-                        cd ~/V7
-                        git clone http://github.com/ea3eiz/DV4MINI20190127
-                        rm ~/dv4mini/*.*
-                        cd ~/V7/DV4MINI20190127
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
