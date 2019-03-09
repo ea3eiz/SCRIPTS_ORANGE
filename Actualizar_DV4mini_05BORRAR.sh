@@ -63,7 +63,7 @@ clear
                         cd /home/orangepi/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r /home/orangepi/dv4mini
-                        
+                        read a
                         mkdir /home/orangepi/dv4mini
                         read a
                         cd /home/orangepi/SCRIPTS_ORANGE/DV4MINI/20170517
