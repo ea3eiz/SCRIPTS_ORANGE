@@ -62,8 +62,7 @@ clear
                         sudo rm -r /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
                         cd /home/orangepi/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI
-                        sudo rm -r /home/orangepi/dv4mini
-                        sudo mkdir /home/orangepi/dv4mini
+                        sudo rm /home/orangepi/dv4mini/*.*
                         cd /home/orangepi/SCRIPTS_ORANGE/DV4MINI/20170517
                         cp dv_serial /home/orangepi/dv4mini
                         cp dv4mini.exe /home/orangepi/dv4mini
