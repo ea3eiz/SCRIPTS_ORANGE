@@ -37,8 +37,7 @@ clear
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
-                        cd /home/orangepi/dv4mini
-                        sudo chmod 777 dv_serial
+                        sudo chmod 777 -R /home/orangepi/dv4mini
                         clear
                         echo "************************************"
                         echo "*** SE HA ACTUALIZADO CON EXITO  ***"
