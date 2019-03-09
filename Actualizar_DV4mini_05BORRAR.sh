@@ -26,18 +26,18 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm ~/SCRIPTS_ORANGE/DV4MINI/
-                        cd ~/SCRIPTS_ORANGE
+                        sudo rm /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
+                        cd /home/orangepi/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI
-                        sudo rm ~/dv4mini/*.*
-                        cd ~/SCRIPTS_ORANGE/DV4MINI/20190307
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
+                        sudo rm /home/orangepi/dv4mini/*.*
+                        cd /home/orangepi/SCRIPTS_ORANGE/DV4MINI/20190307
+                        cp dv_serial /home/orangepi/dv4mini
+                        cp dv4mini.exe /home/orangepi/dv4mini
+                        cp xref.ip /home/orangepi/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
-                        cd ~/dv4mini
+                        cd /home/orangepi/dv4mini
                         sudo chmod 777 dv_serial
                         clear
                         echo "************************************"
