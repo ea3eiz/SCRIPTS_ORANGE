@@ -27,11 +27,11 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        rm ~/V7/DV4MINI/20190307
-                        cd ~/V7
+                        rm ~/SCRIPTS_ORANGE/DV4MINI/20190307
+                        cd ~/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI/20190307
                         rm ~/dv4mini/*.*
-                        cd ~/V7/DV4MINI/20190307
+                        cd ~/SCRIPTS_ORANGE/DV4MINI/20190307
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
