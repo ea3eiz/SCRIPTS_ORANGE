@@ -22,7 +22,7 @@ while true
 do
 clear
                         ejecutar1=S
-                        
+
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
@@ -40,9 +40,9 @@ clear
                         cd ~/dv4mini
                         sudo chmod 777 dv_serial
                         clear
-                        echo "***********************************"
-                        echo "*** SE HA ACTUALIZADO CON EXITO ***"
-                        echo "***********************************"
+                        echo "************************************"
+                        echo "*** SE HA ACTUALIZADO CON EXITO  ***"
+                        echo "************************************"
                         sleep 3                        
                         clear
                         break;;
