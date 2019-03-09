@@ -26,7 +26,7 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
+                        sudo rm -r /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
                         cd /home/orangepi/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm /home/orangepi/dv4mini/*.*
@@ -59,7 +59,7 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
+                        sudo rm -r /home/orangepi/SCRIPTS_ORANGE/DV4MINI/
                         cd /home/orangepi/SCRIPTS_ORANGE
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm /home/orangepi/dv4mini/*.*
