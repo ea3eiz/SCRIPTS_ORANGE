@@ -40,8 +40,7 @@ sudo rm -v ~/Downloads/dv_serial
 sudo cp -v ~/dv4mini/dv4mini.exe ~/dv4mini/dv4mini.exe.old
 wget http://112.xreflector.es/Soft_DV4MINI/Linux/Raspberry_/dv4mini.exe
 sudo cp -v ~/Downloads/dv4mini.exe ~/dv4mini/dv4mini.exe
-cd ~/dv4mini/
-sudo chmod 777 dv4mini.exe
+sudo chmod -R 777 ~/dv4mini/
 cd ~/Downloads
 sudo rm -v ~/Downloads/dv4mini.exe
 
