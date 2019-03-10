@@ -33,6 +33,7 @@ clear
                         cd /home/orangepi/SCRIPTS_ORANGE/DV4MINI/20190307
                         cp dv_serial /home/orangepi/dv4mini
                         cp dv4mini.exe /home/orangepi/dv4mini
+                        cp dv4k.png /home/orangepi/dv4mini
                         cp xref.ip /home/orangepi/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
@@ -65,6 +66,7 @@ clear
                         cd /home/orangepi/SCRIPTS_ORANGE/DV4MINI/20170517
                         cp dv_serial /home/orangepi/dv4mini
                         cp dv4mini.exe /home/orangepi/dv4mini
+                        cp dv4k.png /home/orangepi/dv4mini
                         cp xref.ip /home/orangepi/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
