@@ -10,7 +10,7 @@ echo "${VERDE}   ***************************************************************
 echo "   *              Script para actualizar YSFClients                   *"
 echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                               *"
 echo "   ********************************************************************"
-#echo "\33[1;36m   1)\33[1;37m Actualizar YSFClients (YSFGateway, YSFReflector)"
+echo "\33[1;36m   1)\33[1;37m Actualizar YSFClients (YSFGateway, YSFReflector)"
 echo "\33[1;36m   2)\33[1;37m Actualizar YSFHosts.txt (listado de servidores)"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -19,7 +19,7 @@ echo -n "\33[1;36m   Elige una opción del 0 al 3: "
 read escoger_menu
 echo ""
 case $escoger_menu in
-1bloqueado) echo ""
+1) echo ""
 while true
 do
 clear
