@@ -12,7 +12,7 @@ echo "\33[1;36m   3)\33[1;37m Grabar pantalla Nextion 3.2 Pulgadas MMDVM"
 echo "\33[1;36m   4)\33[1;37m Grabar pantalla Nextion 4.3 Pulgadas MMDVM"
 echo ""
 echo '\33[1;36m   5)\33[1;32m Grabar pantalla Nextion 2.4" con el logo de REM'
-echo '\33[1;36m   6)\33[1;32m Grabar pantalla Nextion 2.4" con Banderas'
+echo '\33[1;36m   6)\33[1;32m Grabar pantalla Nextion 2.4" NextionDriver con Banderas'
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -125,13 +125,13 @@ clear
 	                    ejecutar1=S
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
-			            echo ">>>>>>>>> SIN_FRECUENCIA_REM_24.tft >>>>>>>>"
+			            echo ">>>>>>>>> NextionDriver Banderas >>>>>>>>"
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
 			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
 			            cd ~/MMDVMHost/Nextion_DB2OE
-			            sudo rm REM_Model7.tft
-			            wget http://associacioader.com/REM_Model7.tft
-                        sudo python nextion.py REM_Model7.tft /dev/ttyUSB0
+			            sudo rm ADER_07.tft
+			            wget http://associacioader.com/ADER_07.tft
+                        sudo python nextion.py ADER_07.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
 		                [nN]* ) echo ""
@@ -152,4 +152,5 @@ clear
 exit;;	
 esac
 done
+
 

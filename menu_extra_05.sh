@@ -69,7 +69,7 @@ clear
 	                    ejecutar1=S
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
-			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
+			            echo ">>>>>>>>> GRABAR NEXTION >>>>>>>>"
 			            #sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
                         #cd ~/MMDVMHost/Nextion_DB2OE
                         #sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
