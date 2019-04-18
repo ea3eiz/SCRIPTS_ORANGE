@@ -47,7 +47,7 @@
             sudo cp /usr/local/etc/opendv/dstarrepeater /home/orangepi/Downloads
 
             cd /home/pi
-            sudo cp info_panel_control.ini /home/pi/Downloads
+            sudo cp info_panel_control.ini /home/orangepi/Downloads
 
 #cd /var/www/html/upload/files
 cd /home/orangepi/
