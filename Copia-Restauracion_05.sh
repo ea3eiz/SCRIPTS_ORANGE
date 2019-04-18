@@ -2,7 +2,6 @@
 while true
 do
 clear
-SCRIPTS_version=$(awk "NR==1" /home/orangepi/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -44,7 +43,7 @@ clear
             then
             echo ""
             else
-            sudo cp /home/orangepi/$SCRIPTS_version/info.ini /home/orangepi
+            sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/orangepi
             fi
             #===============================================
 
