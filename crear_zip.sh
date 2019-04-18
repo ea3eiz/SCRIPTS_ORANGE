@@ -1,6 +1,7 @@
 ﻿#!/bin/bash
 
-cd /home/orangepi/MMDVMHost
+            cd /home/orangepi/MMDVMHost
+            sudo cp -f TODOS_LOS_INIS.ini /home/orangepi/Downloads
             sudo cp -f MMDVM.ini /home/orangepi/Downloads
             sudo cp -f MMDVM.ini_copia /home/orangepi/Downloads
             sudo cp -f MMDVM.ini_copia2 /home/orangepi/Downloads
