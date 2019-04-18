@@ -9,7 +9,7 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 echo "${VERDE}"
 echo "\33[1;32m   ***********************************************************************"
-echo "   *     Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.07.04\33[1;32m       *"
+echo "   *      Script para Copiar y Restaurar Configuraciones \33[1;33mV.02.07\33[1;32m         *"
 echo "   *                       \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                            *"
 echo "   ***********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Hacer Copia de seguridad de BM, DMR+, LIBRE, RADIO, solo D-STAR,"
@@ -44,7 +44,7 @@ clear
             then
             echo ""
             else
-            sudo cp /home/orangepi/$SCRIPTS_version/info.ini /home/pi
+            sudo cp /home/orangepi/$SCRIPTS_version/info.ini /home/orangepi
             fi
             #===============================================
 
@@ -107,7 +107,7 @@ sed -i "1c $match1" /home/orangepi/info.ini
             sudo cp /usr/local/etc/opendv/ircddbgateway /home/orangepi/Downloads
             sudo cp /usr/local/etc/opendv/dstarrepeater /home/orangepi/Downloads
 
-            cd /home/pi
+            cd /home/orangepi
             sudo cp info_panel_control.ini /home/orangepi/Downloads
 
                   echo ""
