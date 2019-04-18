@@ -43,6 +43,12 @@
             cd /usr/local/etc/svxlink/svxlink.d/
             sudo cp -f ModuleEchoLink.conf /home/orangepi/Downloads
 
+            sudo cp /usr/local/etc/opendv/ircddbgateway /home/orangepi/Downloads
+            sudo cp /usr/local/etc/opendv/dstarrepeater /home/orangepi/Downloads
+
+            cd /home/pi
+            sudo cp info_panel_control.ini /home/pi/Downloads
+
 #cd /var/www/html/upload/files
 cd /home/orangepi/
 tar -zcvf copia.tar.gz Downloads
