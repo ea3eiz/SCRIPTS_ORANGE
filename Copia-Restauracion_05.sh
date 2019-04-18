@@ -52,6 +52,7 @@ match1=$(awk "NR==2" /home/orangepi/info.ini)
 sed -i "1c $match1" /home/orangepi/info.ini
             sudo chmod +x -R /home/orangepi/Downloads
             cd /home/orangepi/MMDVMHost
+            sudo cp -f TODOS_LOS_INIS.ini /home/orangepi/Downloads
             sudo cp -f MMDVM.ini /home/orangepi/Downloads
             sudo cp -f MMDVM.ini_copia /home/orangepi/Downloads
             sudo cp -f MMDVM.ini_copia2 /home/orangepi/Downloads
@@ -137,6 +138,7 @@ sleep 3
 
             sudo chmod -R 777 /home/orangepi/Downloads
             cd /home/orangepi/Downloads
+            sudo cp -f TODOS_LOS_INIS.ini /home/orangepi/MMDVMHost
             sudo cp -f MMDVM.ini /home/orangepi/MMDVMHost
             sudo cp -f MMDVM.ini_copia /home/orangepi/MMDVMHost
             sudo cp -f MMDVM.ini_copia2 /home/orangepi/MMDVMHost
