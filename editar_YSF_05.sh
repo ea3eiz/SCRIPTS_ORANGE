@@ -11,7 +11,9 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   **************************************************************************"
 echo "                  Script para Modificar YSFGateway.ini"
-echo "         \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m"
+echo "${ROJO}"
+echo "                           by EA3EIZ & EA4AOJ"
+echo "${VERDE}"
 echo "   **************************************************************************"
 var=`grep -n -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
 var1=`grep -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
