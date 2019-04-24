@@ -344,8 +344,8 @@ done;;
 while true
 do
 buscar=":"
-largo=`expr index $contenido_location $buscar`
-echo "Valor de la Ciudad: \33[1;33m${contenido_location#*=}\33[1;37m"
+largo=`expr index $loc $buscar`
+echo "Valor de la Ciudad: \33[1;33m${loc#*=}\33[1;37m"
            	          read -p 'Introduce tu Ciudad ' tu_ciudad
                           letra=c
                           if [ $largo = 3 ]
