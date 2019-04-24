@@ -2,6 +2,11 @@
 while true
 do
 clear
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+
                         #comprueba si el ficgero existe
                         if [ -f ~/MMDVMHost/TODOS_LOS_INIS.ini ];
                         then
@@ -11,12 +16,11 @@ clear
                         echo ">>>>>>>>> COPIANDO FICHERO TODOS_LOS_INIS.ini >>>>>>>>"
                         cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
                         fi
-
-echo "\33[1;32m   *******************************************************************************"
-#echo "   *                                                                        *"
-echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN TODOS LOS EDITORES: *"
-echo "   *                            \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                                *"
-echo "   *******************************************************************************"
+echo "${VERDE}"
+echo "****************************************************************************"
+echo "* CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN TODOS LOS EDITORES *"
+echo "*                            \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m          *"
+echo "****************************************************************************"
 echo""
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/TODOS_LOS_INIS.ini`
