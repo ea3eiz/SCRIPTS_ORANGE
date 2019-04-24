@@ -12,13 +12,11 @@ clear
                         cp ~/SCRIPTS_ORANGE/TODOS_LOS_INIS.ini ~/MMDVMHost
                         fi
 
-echo "\33[1;32m   **************************************************************************"
+echo "\33[1;32m   *******************************************************************************"
 #echo "   *                                                                        *"
-echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN LOS EDITORES: *"
-echo "   *    Editar BM , Editar DMR+ Editar LIBRE, Editar Radio Editar YSFS      *"
-echo "   *    Editar solo D-STAR, Editar solo FUSION y Editar YSF2DMR             *"
-echo "   *                         \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                             *"
-echo "   **************************************************************************"
+echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ EN TODOS LOS EDITORES: *"
+echo "   *                            \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                                *"
+echo "   *******************************************************************************"
 echo""
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/TODOS_LOS_INIS.ini`
@@ -36,9 +34,17 @@ txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
 echo -n "\33[1;36m   4)\33[0m Modificar Location    - \33[1;33m"
-loca=`grep -n "Locatio" ~/MMDVMHost/TODOS_LOS_INIS.ini`
-loca1=`expr substr $loca 4 30`
-echo "$loca1"
+loc=`grep -n "^Location=" ~/MMDVMHost/TODOS_LOS_INIS.ini`
+loc1=`echo "$loc" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+numero_linea_location=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+contenido_location=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMPLUS.ini)
+echo "$contenido_location"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
 url=`grep -n "URL" ~/MMDVMHost/TODOS_LOS_INIS.ini`
@@ -156,8 +162,17 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_uno
                         sed -i "2c Callsign=$tu_indicativo" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-                        #iNDICATIVO YSF
-                        sed -i "2c Callsign=$tu_indicativo" ~/YSFClients/YSFGateway/YSFGateway.ini
+
+#Indicativo YSF
+loc1=`grep -n "^Callsign=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac Callsign=$tu_indicativo" ~/YSFClients/YSFGateway/YSFGateway.ini
+
                         #iNDICATIVO YSF2DMR
                         sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
                         sed -i "13c Callsign=$tu_indicativo" ~/YSF2DMR/YSF2DMR.ini
@@ -220,8 +235,17 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
             sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "12c RXFrequency=$frecuenciarx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #YSF
-            sed -i "13c RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
+
+#RXFrequency YSF
+loc1=`grep -n "^RXFrequency=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac RXFrequency=$frecuenciarx" ~/YSFClients/YSFGateway/YSFGateway.ini
+
             #YSF2DMR
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini
             sed -i "2c RXFrequency=$frecuenciarx" ~/YSF2DMR/YSF2DMR.ini            
@@ -283,8 +307,17 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
             sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "13c TXFrequency=$frecuenciatx" ~/MMDVMHost/MMDVMLIBRE.ini_dos
-            #YSF
-            sed -i "14c TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
+
+#TXFrequency YSF
+loc1=`grep -n "^TXFrequency=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" ~/YSFClients/YSFGateway/YSFGateway.ini
+
             #YSF2DMR
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini      
             sed -i "3c TXFrequency=$frecuenciatx" ~/YSF2DMR/YSF2DMR.ini            
@@ -347,6 +380,18 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
             sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "18c Location=$tu_ciudad" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            
+#Name YSF
+loc=`grep -n "^Name=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+loc1=`echo "$loc" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac Name=$tu_ciudad" ~/YSFClients/YSFGateway/YSFGateway.ini
+
             #YSF2DMR
             sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
             sed -i "8c Location=$tu_ciudad" ~/YSF2DMR/YSF2DMR.ini
@@ -470,6 +515,17 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
             sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "54c Id=$tu_id" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+
+#Id YSF
+loc1=`grep -n "^Id=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac Id=$tu_id" ~/YSFClients/YSFGateway/YSFGateway.ini            
+
             #YSF2DMR
             sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
             sed -i "21c Id=$tu_id" ~/YSF2DMR/YSF2DMR.ini
@@ -535,9 +591,6 @@ do
                       break;;
 esac
 done;;
-
-
-
 8) echo ""
 while true
 do
@@ -580,7 +633,6 @@ echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia2
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVM.ini_copia3  
-
 
             #MMDVMDMR2YSF
             sed -i "7c RFModeHang=$rfmodehang" ~/MMDVMHost/MMDVMDMR2YSF.ini 
@@ -753,6 +805,17 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
             sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "15c Latitude=$tu_latitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            
+#Latitude YSF
+loc1=`grep -n "^Latitude=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac Latitude=$tu_latitud" ~/YSFClients/YSFGateway/YSFGateway.ini
+
             #YSF2DMR
             sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
             sed -i "5c Latitude=$tu_latitud" ~/YSF2DMR/YSF2DMR.ini
@@ -814,6 +877,17 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
             sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini
             sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_uno
             sed -i "16c Longitude=$tu_longitud" ~/MMDVMHost/MMDVMLIBRE.ini_dos
+            
+#Longitude YSF
+loc1=`grep -n "^Longitude=" ~/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+sed -i "$numero_linea_letrac Longitude=$tu_longitud" ~/YSFClients/YSFGateway/YSFGateway.ini
+
             #YSF2DMR
             sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
             sed -i "6c Longitude=$tu_longitud" ~/YSF2DMR/YSF2DMR.ini
