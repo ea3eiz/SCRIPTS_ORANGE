@@ -43,7 +43,7 @@ numero_linea=`expr substr $loc1 1 $largo_linea`
 numero_linea_location=`expr substr $loc1 1 $largo_linea`
 letrac=c
 numero_linea_letrac=$numero_linea$letrac
-contenido_location=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMPLUS.ini)
+contenido_location=$(awk "NR==$numero_linea" ~/MMDVMHost/TODOS_LOS_INIS.ini)
 echo "$contenido_location"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
@@ -98,13 +98,13 @@ long1=`expr substr $long 4 30`
 echo "$long1"
 
 echo -n "\33[1;36m  13)\33[0m Modulo D-STAR         - \33[1;33m"
-var=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVM.ini`
-var1=`grep -m 1 '\<Module\>' ~/MMDVMHost/MMDVM.ini`
+var=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
+var1=`grep -m 1 '\<Module\>' ~/MMDVMHost/TODOS_LOS_INIS.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-MODULE=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVM.ini)
+MODULE=$(awk "NR==$numero_linea" ~/MMDVMHost/TODOS_LOS_INIS.ini)
 letra=c
 linea_sed_MODULE=$numero_linea$letra
 echo "$MODULE"
