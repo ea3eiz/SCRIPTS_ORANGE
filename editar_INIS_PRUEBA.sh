@@ -350,9 +350,9 @@ echo "Valor de la Ciudad: \33[1;33m${loc#*=}\33[1;37m"
                           letra=c
                           if [ $largo = 3 ]
                           then
-                          linea=`expr substr $loca 1 2`
+                          linea=`expr substr $loc 1 2`
                           else
-                          linea=`expr substr $loca 1 3`
+                          linea=`expr substr $loc 1 3`
                           fi
                           linea=$linea$letra
                           actualizar=S 
