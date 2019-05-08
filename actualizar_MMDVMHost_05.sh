@@ -147,6 +147,112 @@ clear
                     break;;
 esac
 done;;
+1000) echo ""
+while true
+do
+clear
+                    echo " *******************************************************************************"
+                    echo " \33[1;31m* Si instalas MMDVMhost desde esta opción, perderás todas las configuraciones *"
+                    echo " * Tendrás que volver a configurar todos los MMDVM                             *"
+                    echo " \33[1;32m*******************************************************************************"
+                    echo "\33[1;33m"
+                    read -p '  Quieres hacer una instalación limpia de MMDVMHost? S/N: ' ejecutar1
+                    case $ejecutar1 in
+                    [sS]* ) echo ""
+                    echo "ok >>>>>"
+                    cd ~/  
+                    sudo rm -r ~/MMDVMHost
+                    git clone https://github.com/g4klx/MMDVMHost
+                    cd ~/MMDVMHost
+
+                    HOY=$(date +%Y%m%d)
+                    FIJA="const char* VERSION = "\"
+                    PI=":Opi"\"
+                    HOY1=$HOY$PI
+                    PUNTO=";"
+                    
+                    sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
+                    #sed -i "145c val \/\= 1.0;" ~/MMDVMHost/Nextion.cpp
+                   
+                    #Comprueba si existe el fichero info.ini
+                    if [ -f /home/orangepi/Downloads/info.ini ];
+                    then
+                    echo ""
+                    else
+                    sudo cp /home/orangepi/SCRIPTS_ORANGE/info.ini /home/orangepi/Downloads
+                    fi
+                    #===============================================
+
+                   
+
+                    # Pone la fecha de la versión MMDVMHost en la linea 2 del fichero info.ini
+                    sed -i "2c $HOY" /home/orangepi/Downloads/info.ini
+                    make clean
+                    make
+
+                    cp MMDVM.ini MMDVMDMR2YSF.ini
+                    cp MMDVM.ini MMDVMDMR2NXDN.ini
+
+                    # Crea los ejecutables para estas 4 aplicaciones 
+                    cp MMDVMHost MMDVMRADIO 
+                    cp MMDVMHost MMDVMBM
+                    cp MMDVMHost MMDVMPLUS
+                    cp MMDVMHost MMDVMDSTAR
+                    cp MMDVMHost MMDVMFUSION
+                    cp MMDVMHost DMR2NXDN
+                    cp MMDVMHost DMR2YSF
+                    #=================================================
+
+                    # Rutina solo para el LIBRE ======================
+                    cd ~/SCRIPTS_ORANGE
+                    cp MMDVMHostLIBRE ~/MMDVMHost
+                    cp MMDVMLIBRE.ini ~/MMDVMHost
+                    cd ~/MMDVMHost
+                    sudo chmod +x MMDVMHostLIBRE
+                    #=================================================
+
+                    # Crea los ficheros de Memorias ==================
+                    cp MMDVM.ini MMDVM.ini_original
+                    cp MMDVM.ini MMDVM.ini_copia
+                    cp MMDVM.ini MMDVM.ini_copia2
+                    cp MMDVM.ini MMDVM.ini_copia3
+
+                    cp MMDVM.ini MMDVMBM.ini
+                    cp MMDVM.ini MMDVMBM.ini_copia
+                    cp MMDVM.ini MMDVMBM.ini_copia2
+                    cp MMDVM.ini MMDVMBM.ini_copia3
+
+                    cp MMDVM.ini MMDVMPLUS.ini
+                    cp MMDVM.ini MMDVMPLUS.ini_copia
+                    cp MMDVM.ini MMDVMPLUS.ini_copia2
+                    cp MMDVM.ini MMDVMPLUS.ini_copia3
+
+                    cp MMDVM.ini MMDVMDSTAR.ini
+                    cp MMDVM.ini MMDVMFUSION.ini
+
+                    cp MMDVMLIBRE.ini MMDVMLIBRE.ini_uno
+                    cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
+
+                    cp MMDVM.ini TODOS_LOS_INIS.ini
+                    
+                    #=================================================
+
+                    sudo chmod +x -R ~/MMDVMHost
+                    
+                    echo""
+                    clear
+                    exit;
+                    echo ""
+                    echo "Ok, se ha ejecutado correctamente"
+                    echo ""
+                    break;;
+                    [nN]* ) echo ""
+                    sleep 1
+                    clear
+                    exit;
+                    break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
