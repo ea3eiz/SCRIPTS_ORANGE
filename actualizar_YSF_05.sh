@@ -69,11 +69,16 @@ done;;
 while true
 do
 clear
-	        read -p ' Quieres ver el listado de reflectores YSF S/N ?' ejecutar1
+	        ejecutar1=S
 		    case $ejecutar1 in
 			[sS]* ) echo ""
 			echo "ok >>>>>"
-			cd ~/YSFClients/YSFGateway
+            mate-terminal --geometry=120x30 -x less ~/YSFClients/YSFGateway/YSFHosts.txt
+
+
+
+
+			#cd ~/YSFClients/YSFGateway
 			sudo pluma YSFHosts.txt
 			echo "Ok"
 			break;;
