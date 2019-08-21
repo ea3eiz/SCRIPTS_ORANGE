@@ -79,7 +79,7 @@ clear
 
 
 			#cd ~/YSFClients/YSFGateway
-			sudo pluma YSFHosts.txt
+			#sudo pluma YSFHosts.txt
 			echo "Ok"
 			break;;
 			[nN]* ) echo ""
