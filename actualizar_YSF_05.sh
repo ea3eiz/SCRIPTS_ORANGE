@@ -12,6 +12,7 @@ echo "   *                 \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                 
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar YSFClients (YSFGateway, YSFReflector)"
 echo "\33[1;36m   2)\33[1;37m Actualizar YSFHosts.txt (listado de servidores)"
+echo "\33[1;36m   3)\33[1;37m Ver el listado de reflectores YSF"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
@@ -56,10 +57,25 @@ clear
 			sudo rm YSFHosts.txt
 			sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php
 			sleep 3
-			sudo pluma YSFHosts.txt
 		    echo ""
 			echo "Ok, se ha ejecutado correctamente"
 			echo ""
+			break;;
+			[nN]* ) echo ""
+			break;;
+esac
+done;;
+3) echo ""
+while true
+do
+clear
+	        read -p ' Quieres ver el listado de reflectores YSF S/N ?' ejecutar1
+		    case $ejecutar1 in
+			[sS]* ) echo ""
+			echo "ok >>>>>"
+			cd ~/YSFClients/YSFGateway
+			sudo pluma YSFHosts.txt
+			echo "Ok"
 			break;;
 			[nN]* ) echo ""
 			break;;
