@@ -7,7 +7,7 @@ echo "   *                                                                   *"
 echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m       *"
 echo "   *                                                                   *"
 echo "   *********************************************************************"
-echo  "\33[1;36m   1)\33[1;33m Instalación limpia de MMDVMHost\33[1;33m"
+echo  "\33[1;36m   1)\33[1;33m Instalación limpia de MMDVMHost (Incluye System Fusion II)\33[1;33m"
 echo  "\33[1;36m   2)\33[1;33m Volver a la versión anterior de MMDVMHost \33[1;33m"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -31,7 +31,7 @@ clear
                     echo "ok >>>>>"
                     cd ~/  
                     sudo rm -r ~/MMDVMHost
-                    git clone https://github.com/g4klx/MMDVMHost
+                    git clone https://github.com/ea3eiz/MMDVMHost
                     cd ~/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
