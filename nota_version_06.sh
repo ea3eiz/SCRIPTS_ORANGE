@@ -21,8 +21,8 @@ echo ""
 echo -n "${AMARILLO}"
 echo "   Agradecer la colaboración a: EA4GEY, EA7CCQ y EA3EG."
 echo ""
-echo "\33[1;31m   Prohibido modificar total o parcialmente el contenido de esta imagen."
-echo " "					
+echo "\33[1;31m   Recomendación de no modificar total o parcialmente el contenido de esta imagen."
+echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento de la misma."				
 						
 
 						mmdvm=$(awk "NR==22" /home/orangepi/MMDVMHost/Version.h)
