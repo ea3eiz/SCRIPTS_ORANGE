@@ -15,11 +15,18 @@ echo""
 echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
 echo "\33[1;33m   - Para salir de cualquier editor es necesario cerrar por el item 0)."
 echo "\33[1;32m"
-echo "   Imagen Linux basada en Armbian, creada por: EA3EIZ & EA4AOJ."
+echo -n "${VERDE}"
+echo "   Esta imagen utiliza programas de terceros de:" 
+echo "   Jonathan Naylor G4KLX, David Palm PA7LIM, José Uribe (Andy) CA6JAU, ON7LDS,"
+echo "   Torsten Schultze DG1HT, Estefan Reiman DG8FAC, Manuel EA7EE y Kurt Moraw DJ0ABR." 
+echo ""
+echo -n "${AMARILLO}"
+echo "   Agradecer la colaboración a: EA4GEY, EA7CCQ y EA3EG."
 echo ""
 echo "\33[1;31m   Prohibido modificar total o parcialmente el contenido de esta imagen."
 echo " "					
 						
+
 						mmdvm=$(awk "NR==22" /home/orangepi/MMDVMHost/Version.h)
 						var10=`echo "$mmdvm" | tr -d '[[:space:]]'`
 						var10=`expr substr $var10 20 12`
