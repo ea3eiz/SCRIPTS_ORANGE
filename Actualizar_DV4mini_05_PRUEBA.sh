@@ -40,10 +40,10 @@ clear
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
                         cd ~/$SCRIPTS_version/DV4MINI/20190307
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
-                        cp dv4k.png ~/dv4mini
+                        sudo cp dv_serial ~/dv4mini
+                        sudo cp dv4mini.exe ~/dv4mini
+                        sudo cp xref.ip ~/dv4mini
+                        sudo cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
@@ -75,10 +75,10 @@ clear
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
                         cd ~/$SCRIPTS_version/DV4MINI/20190127
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
-                        cp dv4k.png ~/dv4mini
+                        sudo cp dv_serial ~/dv4mini
+                        sudo cp dv4mini.exe ~/dv4mini
+                        sudo cp xref.ip ~/dv4mini
+                        sudo cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
@@ -110,10 +110,10 @@ clear
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
                         cd ~/$SCRIPTS_version/DV4MINI/20170517
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
-                        cp dv4k.png ~/dv4mini
+                        sudo cp dv_serial ~/dv4mini
+                        sudo cp dv4mini.exe ~/dv4mini
+                        sudo cp xref.ip ~/dv4mini
+                        sudo cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
@@ -145,10 +145,10 @@ clear
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
                         cd ~/$SCRIPTS_version/DV4MINI/20190307new
-                        cp dv_serial ~/dv4mini
-                        cp dv4mini.exe ~/dv4mini
-                        cp xref.ip ~/dv4mini
-                        cp dv4k.png ~/dv4mini
+                        sudo cp dv_serial ~/dv4mini
+                        sudo cp dv4mini.exe ~/dv4mini
+                        sudo cp xref.ip ~/dv4mini
+                        sudo cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
