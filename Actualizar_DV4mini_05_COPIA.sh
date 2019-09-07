@@ -1,8 +1,15 @@
-﻿z#!/bin/bash
+﻿#!/bin/bash
 clear
 while true
 do
-	SCRIPTS_version="SCRIPTS_ORANGE"
+SCRIPTS_version="SCRIPTS_ORANGE"
+#Colores
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
 clear
 echo "\33[1;32m   *********************************************************************"
 echo "   *                                                                   *"
