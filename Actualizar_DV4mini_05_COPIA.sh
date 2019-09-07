@@ -36,6 +36,7 @@ clear
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
+                        cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
@@ -71,6 +72,7 @@ clear
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
+                        cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
@@ -106,6 +108,7 @@ clear
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
+                        cp dv4k.png ~/dv4mini
                         sudo cp dv_serial /usr/bin/
                         cd /usr/bin/
                         sudo chmod 777 dv_serial
