@@ -2,7 +2,7 @@
 clear
 while true
 do
-	CRIPTS_version="SCRIPTS_ORANGE"
+	SCRIPTS_version="SCRIPTS_ORANGE"
 clear
 echo "\33[1;32m   *********************************************************************"
 echo "   *                                                                   *"
