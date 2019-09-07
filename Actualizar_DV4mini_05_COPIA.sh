@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+﻿z#!/bin/bash
 clear
 while true
 do
@@ -41,6 +41,7 @@ clear
                         sudo chmod 777 dv_serial
                         cd ~/dv4mini
                         sudo chmod 777 dv_serial
+                        sudo cp ~/CRIPTS_version/dv4k.png ~/dv4mini/
                         clear
                         echo "************************************"
                         echo "*** SE HA ACTUALIZADO CON EXITO  ***"
@@ -75,6 +76,7 @@ clear
                         sudo chmod 777 dv_serial
                         cd ~/dv4mini
                         sudo chmod 777 dv_serial
+                        sudo cp ~/CRIPTS_version/dv4k.png ~/dv4mini/
                         clear
                         echo "************************************"
                         echo "*** SE HA ACTUALIZADO CON EXITO  ***"
@@ -109,6 +111,7 @@ clear
                         sudo chmod 777 dv_serial
                         cd ~/dv4mini
                         sudo chmod 777 dv_serial
+                        sudo cp ~/CRIPTS_version/dv4k.png ~/dv4mini/
                         clear
                         echo "************************************"
                         echo "*** SE HA ACTUALIZADO CON EXITO  ***"
@@ -143,6 +146,7 @@ clear
                         sudo chmod 777 dv_serial
                         cd ~/dv4mini
                         sudo chmod 777 dv_serial
+                        sudo cp ~/CRIPTS_version/dv4k.png ~/dv4mini/
                         clear
                         echo "************************************"
                         echo "*** SE HA ACTUALIZADO CON EXITO  ***"
