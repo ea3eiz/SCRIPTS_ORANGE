@@ -26,13 +26,13 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm -r ~/$CRIPTS_version/DV4MINI/
-                        cd ~/$CRIPTS_version
+                        sudo rm -r ~/$SCRIPTS_version/DV4MINI/
+                        cd ~/$SCRIPTS_version
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r ~/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
-                        cd ~/$CRIPTS_version/DV4MINI/20190307
+                        cd ~/$SCRIPTS_version/DV4MINI/20190307
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
@@ -61,13 +61,13 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm -r ~/$CRIPTS_version/DV4MINI/
-                        cd ~/$CRIPTS_version
+                        sudo rm -r ~/$SCRIPTS_version/DV4MINI/
+                        cd ~/$SCRIPTS_version
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r ~/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
-                        cd ~/$CRIPTS_version/DV4MINI/20190127
+                        cd ~/$SCRIPTS_version/DV4MINI/20190127
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
@@ -96,13 +96,13 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm -r ~/$CRIPTS_version/DV4MINI/
-                        cd ~/$CRIPTS_version
+                        sudo rm -r ~/$SCRIPTS_version/DV4MINI/
+                        cd ~/$SCRIPTS_version
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r ~/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
-                        cd ~/$CRIPTS_version/DV4MINI/20170517
+                        cd ~/$SCRIPTS_version/DV4MINI/20170517
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
@@ -131,13 +131,13 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
-                        sudo rm -r ~/$CRIPTS_version/DV4MINI/
-                        cd ~/$CRIPTS_version
+                        sudo rm -r ~/$SCRIPTS_version/DV4MINI/
+                        cd ~/$SCRIPTS_version
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r ~/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir ~/dv4mini
-                        cd ~/$CRIPTS_version/DV4MINI/20190307new
+                        cd ~/$SCRIPTS_version/DV4MINI/20190307new
                         cp dv_serial ~/dv4mini
                         cp dv4mini.exe ~/dv4mini
                         cp xref.ip ~/dv4mini
