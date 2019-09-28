@@ -33,7 +33,7 @@ url=`grep -n "URL" ~/MMDVMHost/MMDVMLIBRE.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS0)\33[1;33m"
+echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS3)\33[1;33m"
 echo "\33[1;36m   7)\33[0m Utilizar puerto USB (ttyACM0)\33[1;33m"
 echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB1)\33[1;33m"
@@ -301,7 +301,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           linea4=$linea33$letra1
-                          sed -i "$linea4 Port=/dev/ttyS0" ~/MMDVMHost/MMDVMLIBRE.ini
+                          sed -i "$linea4 Port=/dev/ttyS3" ~/MMDVMHost/MMDVMLIBRE.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
