@@ -43,7 +43,7 @@ url=`grep -n "URL" ~/MMDVMHost/MMDVMDSTAR.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS0)\33[1;33m"
+echo "\33[1;36m   6)\33[0m Utilizar puerto interno (ttyS3)\33[1;33m"
 echo "\33[1;36m   7)\33[0m Utilizar puerto USB (ttyACM0)\33[1;33m"
 echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
@@ -434,7 +434,7 @@ do
 			                    [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVMDSTAR.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyS3" ~/MMDVMHost/MMDVMDSTAR.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
