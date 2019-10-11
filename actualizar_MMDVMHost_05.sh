@@ -31,7 +31,8 @@ clear
                     echo "ok >>>>>"
                     cd ~/  
                     sudo rm -r ~/MMDVMHost
-                    git clone https://github.com/ea3eiz/MMDVMHost
+                    git clone https://github.com/g4klx/MMDVMHost
+                    #git clone https://github.com/ea3eiz/MMDVMHost
                     cd ~/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
