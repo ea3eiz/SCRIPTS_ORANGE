@@ -42,7 +42,7 @@ clear
                     PUNTO=";"
                     
                     sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
-                    sed -i "145c val \/\= 1.0;" ~/MMDVMHost/Nextion.cpp
+                    #sed -i "145c val \/\= 1.0;" ~/MMDVMHost/Nextion.cpp
                    
                     #Comprueba si existe el fichero info.ini
                     if [ -f /home/orangepi/Downloads/info.ini ];
