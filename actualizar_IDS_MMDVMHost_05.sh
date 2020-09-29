@@ -22,3 +22,6 @@ linea_sed=$numero_linea$letrac
 sed -i "$linea_sed DATABASEURL='https://ham-digital.org/status/users.csv'" ~/MMDVMHost/linux/DMRIDUpdate.sh
 
 sudo sh ~/MMDVMHost/linux/DMRIDUpdate.sh
+
+cp /home/pi/MMDVMHost/DMRIds.dat /home/pi/DMR2YSF
+cp /home/pi/MMDVMHost/DMRIds.dat /home/pi/YSF2DMR
