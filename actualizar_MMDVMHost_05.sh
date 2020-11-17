@@ -2,6 +2,28 @@
 while true
 do
 clear
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+echo "${VERDE}"
+
+echo "${VERDE}\v\v"
+echo "   *********************************************************************"
+echo ""
+echo "${AMARILLO}                           Actualizar MMDVMHost "
+echo " "
+echo "${BLANCO}                       DESHABILITADO TEMPORALMENTE "
+echo "${VERDE}"
+echo "   *********************************************************************"
+echo ""
+echo -n "${CIAN}  Pulsa enter para cerrar esta ventana: "
+read a
+exit;
+
+
 echo "\33[1;32m   *********************************************************************"
 echo "   *                                                                   *"
 echo "   *       Script para Actualizar MMDVMHost  \33[1;31m by EA3EIZ & EA4AOJ\33[1;32m       *"
