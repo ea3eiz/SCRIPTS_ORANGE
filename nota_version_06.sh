@@ -19,7 +19,7 @@ echo "   Jonathan Naylor G4KLX, David Palm PA7LIM, José Uribe (Andy) CA6JAU, ON
 echo "   Torsten Schultze DG1HT, Estefan Reiman DG8FAC, Manuel EA7EE y Kurt Moraw DJ0ABR." 
 echo ""
 echo -n "${AMARILLO}"
-echo "   Agradecer la colaboración a: EA4GEY, EA7CCQ y EA3EG."
+#echo "   Agradecer la colaboración a: EA4GEY, EA7CCQ y EA3EG."
 echo ""
 echo "\33[1;31m   Recomendación de no modificar total o parcialmente el contenido de esta imagen."
 echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento de la misma."				
