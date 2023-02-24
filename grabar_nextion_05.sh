@@ -28,8 +28,8 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+                        cd /home/orangepi/MMDVMHost/Nextion_DB2OE
                         sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
@@ -47,8 +47,8 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+                        cd /home/orangepi/MMDVMHost/Nextion_DB2OE
                         sudo python nextion.py NX3224T028.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
@@ -66,8 +66,8 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+                        cd /home/orangepi/MMDVMHost/Nextion_DB2OE
                         sudo python nextion.py NX3224T032.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
@@ -85,8 +85,8 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+                        cd /home/orangepi/MMDVMHost/Nextion_DB2OE
                         sudo python nextion.py NX3224T043.tft /dev/ttyUSB0
                         sleep 10
 		                break;;
@@ -105,8 +105,8 @@ clear
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> SIN_FRECUENCIA_REM_24.tft >>>>>>>>"
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-			            cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+			            cd /home/orangepi/MMDVMHost/Nextion_DB2OE
 			            sudo rm SIN_FRECUENCIA*.*
 			            wget http://associacioader.com/SIN_FRECUENCIA_REM_24.tft
                         sudo python nextion.py SIN_FRECUENCIA_REM_24.tft /dev/ttyUSB0
@@ -127,8 +127,8 @@ clear
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> NextionDriver Banderas >>>>>>>>"
 			            #pasa el fichero nextion.py del Ingles G4KLX al Aleman DB20E
-			            sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-			            cd ~/MMDVMHost/Nextion_DB2OE
+			            sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+			            cd /home/orangepi/MMDVMHost/Nextion_DB2OE
 			            sudo rm ADER_07.tft
 			            wget http://associacioader.com/ADER_07.tft
                         sudo python nextion.py ADER_07.tft /dev/ttyUSB0

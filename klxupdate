@@ -5,24 +5,24 @@ SWITCH2=$3
 REBOOT=false
 DATALOC="/usr/local/etc"
 BINLOC="/usr/local/bin"
-FILEDUMP=~/tuxfilestmp
+FILEDUMP=/home/orangepi/tuxfilestmp
 function install_package(){
    echo ""
    sudo wget -q -O "$PACKAGE".tar.gz "www.westerndstar.co.uk/klxstuff/"$1"/"$dtvariable".tar.gz"
    echo ""
    echo "  ** Please wait while unpacking **" 
-   sudo tar -zxf ~/$1.tar.gz
+   sudo tar -zxf /home/orangepi/$1.tar.gz
    echo ""
    echo "  Removing $1.tar.gz"
    echo ""
-   sudo rm ~/$1.tar.gz
+   sudo rm /home/orangepi/$1.tar.gz
    echo "  ** Please be patient while installing $1 applications **"
    echo "             ** Installing to  ""$BINLOC **"
    while [ "$TX" != "END" ]	
    do
       i=`expr $i + 1`
       TX=$(sed -n "$i"p /usr/local/etc/"$1"_list.txt)
-	  if [ -f ~/$1/"$TX" ]; then
+	  if [ -f /home/orangepi/$1/"$TX" ]; then
 				#Test if application is already running
          	PIDS=`ps cax | grep $TX | grep -o '^[ ]*[0-9]*'`
          	if [ -z "$PIDS" ]; then
@@ -36,7 +36,7 @@ function install_package(){
          	fi
          	if [ "$TX" != "END" ]; then
             		echo "  Installing $TX"	
-            		sudo install -g bin -o root -m 0775 ~/$1/"$TX"  $BINLOC
+            		sudo install -g bin -o root -m 0775 /home/orangepi/$1/"$TX"  $BINLOC
          	fi
 	  fi
    done
@@ -59,7 +59,7 @@ function install_package(){
    else
  	
    	echo "** Please be patient while installing data files **"
-   	sudo install -g bin -o root -m 0664 ~/$PACKAGE/etc/*.* $DATALOC
+   	sudo install -g bin -o root -m 0664 /home/orangepi/$PACKAGE/etc/*.* $DATALOC
    	echo ""
    	echo ""
    	echo "----------------------------------------------------------"
@@ -85,9 +85,9 @@ fi
 echo ""
 
 echo "** Tidying-up by deleting $PACKAGE directory **"
-sudo rm -r ~/$PACKAGE
-sudo rm ~/version_list.txt
-sudo rm ~/""$PACKAGE"_list.txt"
+sudo rm -r /home/orangepi/$PACKAGE
+sudo rm /home/orangepi/version_list.txt
+sudo rm /home/orangepi/""$PACKAGE"_list.txt"
 echo ""
 echo "----------------------------------------------------------"
 echo "                        ** DONE **"
@@ -181,11 +181,11 @@ if [ "$PACKAGE" != "repeater" -a  "$PACKAGE" != "gateway" -a  "$PACKAGE" != "ext
 else
    i=0
 
-   cd ~/
-   sudo wget -q -O ~/"version_list.txt" www.westerndstar.co.uk/klxstuff/"$PACKAGE"/"version_list.txt" 	# Get list of versions available
-   sudo wget -q -O ~/""$PACKAGE"_list.txt" www.westerndstar.co.uk/klxstuff/"$PACKAGE""_list.txt"		# Get list of applications within the package
-   sudo install -g bin -o root -m 0664 ~/"$PACKAGE"_list.txt "/usr/local/etc"					# Install the list of applications
-   dumpfile=~/"version_list.txt"
+   cd /home/orangepi/
+   sudo wget -q -O /home/orangepi/"version_list.txt" www.westerndstar.co.uk/klxstuff/"$PACKAGE"/"version_list.txt" 	# Get list of versions available
+   sudo wget -q -O /home/orangepi/""$PACKAGE"_list.txt" www.westerndstar.co.uk/klxstuff/"$PACKAGE""_list.txt"		# Get list of applications within the package
+   sudo install -g bin -o root -m 0664 /home/orangepi/"$PACKAGE"_list.txt "/usr/local/etc"					# Install the list of applications
+   dumpfile=/home/orangepi/"version_list.txt"
 
    if [ "$SWITCH" != "-np" -a "$SWITCH" != "-npr" -a "$SWITCH2" != "-np" -a "$SWITCH2" != "-npr" ]; then
       cat -n "$dumpfile"

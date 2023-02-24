@@ -14,13 +14,13 @@ echo "   *     Script para Editor AMBE SERVER\33[1;33m       \33[1;31m by EA3EIZ
 #echo "   *                                                                        *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar puerto ROUTER  - \33[1;33m"
-var1= sed -n '1p'  ~/ambe_server.ini
+var1= sed -n '1p'  /home/orangepi/ambe_server.ini
 
 echo -n "\33[1;36m   2)\33[0m Modificar puerto MODEM   - \33[1;33m"
-var1= sed -n '2p'  ~/ambe_server.ini
+var1= sed -n '2p'  /home/orangepi/ambe_server.ini
 
 echo -n "\33[1;36m   3)\33[0m Modificar Baut rate      - \33[1;33m"
-var1= sed -n '3p'  ~/ambe_server.ini
+var1= sed -n '3p'  /home/orangepi/ambe_server.ini
 
 echo ""
 
@@ -34,12 +34,12 @@ case $escoger_menu in
 while true
 do
                     echo -n "Valor actual del puerto ROUTER: \33[1;33m"
-                    var1= sed -n '1p'  ~/ambe_server.ini
+                    var1= sed -n '1p'  /home/orangepi/ambe_server.ini
                     actualizar=S
                     case $actualizar in
                     [sS]* )
            	     read -p 'Introduce puerto ROUTER:        ' pruter
-                    sed -i "1c $pruter" ~/ambe_server.ini
+                    sed -i "1c $pruter" /home/orangepi/ambe_server.ini
 			     break;;
 			     [nN]* ) echo ""
 			     break;;
@@ -49,14 +49,14 @@ done;;
 while true
 do
                     echo -n "Valor actual del puerto MODEM: \33[1;33m"
-                    var1= sed -n '2p'  ~/ambe_server.ini
+                    var1= sed -n '2p'  /home/orangepi/ambe_server.ini
                     echo "${VERDE}ejp. /dev/ttyUSB0"
                     actualizar=S
                     case $actualizar in
                     [sS]* )
                     echo "${CIAN}"
                     read -p 'Introduce puerto MODEM:        ' pruter
-                    sed -i "2c $pruter" ~/ambe_server.ini
+                    sed -i "2c $pruter" /home/orangepi/ambe_server.ini
                     break;;
                     [nN]* ) echo ""
                     break;;
@@ -66,14 +66,14 @@ done;;
 while true
 do
                     echo -n "Valor actual del puerto MODEM: \33[1;33m"
-                    var1= sed -n '3p'  ~/ambe_server.ini
+                    var1= sed -n '3p'  /home/orangepi/ambe_server.ini
                     echo "${VERDE}ejp. Ambe 3000= 230400  dv stick 30 = 460800"
                     actualizar=S
                     case $actualizar in
                     [sS]* )
                     echo "${CIAN}"
                     read -p 'Introduce puerto MODEM:        ' pruter
-                    sed -i "3c $pruter" ~/ambe_server.ini
+                    sed -i "3c $pruter" /home/orangepi/ambe_server.ini
                     break;;
                     [nN]* ) echo ""
                     break;;

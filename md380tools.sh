@@ -79,7 +79,7 @@ clear
                                     sleep 1
                                     sudo apt-get install git
                                     sleep 1
-                                    cd ~/
+                                    cd /home/orangepi/
                                     sudo rm -r md380tools
                                     git clone https://github.com/travisgoodspeed/md380tools.git
                                     
@@ -109,7 +109,7 @@ clear
             [sS]* ) echo ""
                                     clear
             echo "Introduciendo firmware experimental"
-                                    cd ~/md380tools
+                                    cd /home/orangepi/md380tools
                                     sudo git pull
                                     sudo make clean
                                     sudo make flash
@@ -139,7 +139,7 @@ clear
                         [sS]* ) echo ""
                         clear
                         echo "Introduciendo firmware experimental"
-                        cd ~/md380tools
+                        cd /home/orangepi/md380tools
                         sudo gitpull
                         sudo make clean
                         sudo make flash_S13
@@ -167,7 +167,7 @@ clear
                         case $installvar5 in
                         [sS]* ) echo ""
                         clear
-                        cd ~/md380tools
+                        cd /home/orangepi/md380tools
                         sudo rm user.bin
                         echo "Introduciendo USER.BIN"
                         #sudo wget http://42561.noip.us/user.bin
@@ -204,7 +204,7 @@ clear
                         [sS]* ) echo ""
                         clear
                         echo "Introduciendo USER.CSV"
-                        cd ~/md380tools
+                        cd /home/orangepi/md380tools
                         sudo make clean
                         sudo make updatedb_eur flashdb
                         break;;
@@ -230,7 +230,7 @@ clear
             [sS]* ) echo ""
                                     clear
             echo "Actualizando una nueva versión del md380tools"
-                                    cd ~/
+                                    cd /home/orangepi/
                                     sudo rm -r md380tools
                                     git clone https://github.com/travisgoodspeed/md380tools.git
                                    

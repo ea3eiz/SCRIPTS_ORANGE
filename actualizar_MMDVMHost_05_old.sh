@@ -34,14 +34,14 @@ clear
                     echo "ok >>>>>"
             
                 
-                    mkdir ~/.copias
-                    sudo rm -R ~/Downloads/MMDVM*.*
-                    cd ~/
+                    mkdir /home/orangepi/.copias
+                    sudo rm -R /home/orangepi/Downloads/MMDVM*.*
+                    cd /home/orangepi/
                     mkdir MMDVMHost_anterior
                     cp MMDVMHost/*.* MMDVMHost_anterior/
                     sudo rm -r MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
-                    cd ~/MMDVMHost
+                    cd /home/orangepi/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
@@ -49,7 +49,7 @@ clear
                     HOY1=$HOY$PI
                     PUNTO=";"
                     
-                    sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
+                    sed -i "22c $FIJA$HOY1$PUNTO" /home/orangepi/MMDVMHost/Version.h
                   
                     #Comprueba si existe el fichero info.ini
                     if [ -f /home/orangepi/Downloads/info.ini ];
@@ -73,10 +73,10 @@ clear
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
-                    cd ~/SCRIPTS_ORANGE
-                    cp MMDVMHostLIBRE ~/MMDVMHost
-                    cp MMDVMLIBRE.ini ~/MMDVMHost
-                    cd ~/MMDVMHost
+                    cd /home/orangepi/SCRIPTS_ORANGE
+                    cp MMDVMHostLIBRE /home/orangepi/MMDVMHost
+                    cp MMDVMLIBRE.ini /home/orangepi/MMDVMHost
+                    cd /home/orangepi/MMDVMHost
                     sudo chmod +x MMDVMHostLIBRE
                     #=================================================
 
@@ -103,7 +103,7 @@ clear
                     cp MMDVMLIBRE.ini MMDVMLIBRE.ini_dos
                     #=================================================
 
-                    sudo chmod +x -R ~/MMDVMHost
+                    sudo chmod +x -R /home/orangepi/MMDVMHost
                     
                     echo""
                     clear
@@ -127,7 +127,7 @@ clear
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                    cd ~/
+                    cd /home/orangepi/
                     sudo rm -r MMDVMHost
                     sudo mv MMDVMHost_anterior MMDVMHost
                     echo""
@@ -153,27 +153,27 @@ clear
             [sS]* ) echo ""
             echo "Restaurando todos los .INI de la version anterior"
             sleep 3
-            cd ~/MMDVMHost_anterior
-            cp -f MMDVM.ini ~/MMDVMHost
-            cp -f MMDVM.ini_copia ~/MMDVMHost
-            cp -f MMDVM.ini_copia2 ~/MMDVMHost
-            cp -f MMDVM.ini_copia3 ~/MMDVMHost
-            cp -f MMDVM.ini_original ~/MMDVMHost
-            cp -f MMDVMBM.ini ~/MMDVMHost
-            cp -f MMDVMBM.ini_copia ~/MMDVMHost
-            cp -f MMDVMBM.ini_copia2 ~/MMDVMHost
-            cp -f MMDVMBM.ini_copia3 ~/MMDVMHost
-            cp -f MMDVMLIBRE.ini ~/MMDVMHost
-            cp -f MMDVMLIBRE.ini_uno ~/MMDVMHost
-            cp -f MMDVMLIBRE.ini_dos ~/DoMMDVMHost     
-            cp -f MMDVMPLUS.ini ~/MMDVMHost
-            cp -f MMDVMPLUS.ini_copia ~/MMDVMHost
-            cp -f MMDVMPLUS.ini_copia2 ~/MMDVMHost
-            cp -f MMDVMPLUS.ini_copia3 ~/MMDVMHost
+            cd /home/orangepi/MMDVMHost_anterior
+            cp -f MMDVM.ini /home/orangepi/MMDVMHost
+            cp -f MMDVM.ini_copia /home/orangepi/MMDVMHost
+            cp -f MMDVM.ini_copia2 /home/orangepi/MMDVMHost
+            cp -f MMDVM.ini_copia3 /home/orangepi/MMDVMHost
+            cp -f MMDVM.ini_original /home/orangepi/MMDVMHost
+            cp -f MMDVMBM.ini /home/orangepi/MMDVMHost
+            cp -f MMDVMBM.ini_copia /home/orangepi/MMDVMHost
+            cp -f MMDVMBM.ini_copia2 /home/orangepi/MMDVMHost
+            cp -f MMDVMBM.ini_copia3 /home/orangepi/MMDVMHost
+            cp -f MMDVMLIBRE.ini /home/orangepi/MMDVMHost
+            cp -f MMDVMLIBRE.ini_uno /home/orangepi/MMDVMHost
+            cp -f MMDVMLIBRE.ini_dos /home/orangepi/DoMMDVMHost     
+            cp -f MMDVMPLUS.ini /home/orangepi/MMDVMHost
+            cp -f MMDVMPLUS.ini_copia /home/orangepi/MMDVMHost
+            cp -f MMDVMPLUS.ini_copia2 /home/orangepi/MMDVMHost
+            cp -f MMDVMPLUS.ini_copia3 /home/orangepi/MMDVMHost
 
             #solo Dstar y solo Fusion
-            cp -f MMDVMDSTAR.ini ~/MMDVMHost
-            cp -f MMDVMFUSION.ini ~/MMDVMHost
+            cp -f MMDVMDSTAR.ini /home/orangepi/MMDVMHost
+            cp -f MMDVMFUSION.ini /home/orangepi/MMDVMHost
             #fin  Dstar y solo Fusion
 
             echo ""

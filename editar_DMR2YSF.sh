@@ -13,27 +13,27 @@ echo "   ***********************************************************************
 echo "   *       Script para Modificar MMDVMDMR2YSF.ini     \33[1;31m by EA4AOJ & EA3EIZ\33[1;32m   *"
 echo "   **************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - ${VERDE}"
-ind=`grep -n -m 1 "Callsign" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+ind=`grep -n -m 1 "Callsign" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 ind1=`expr substr $ind 3 30`
 echo "$ind1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - ${VERDE}"
-rxf=`grep -n "RXFrequency" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+rxf=`grep -n "RXFrequency" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 rxf1=`expr substr $rxf 4 30`
 echo "$rxf1"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - ${VERDE}"
-txf=`grep -n "TXFrequency" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+txf=`grep -n "TXFrequency" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
 echo -n "\33[1;36m   4)\33[0m Modificar Location    - \33[1;33m"
-loca=`grep -n "Locatio" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+loca=`grep -n "Locatio" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 loca1=`expr substr $loca 4 30`
 echo "$loca1"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
-url=`grep -n "URL" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+url=`grep -n "URL" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
@@ -43,21 +43,21 @@ echo "\33[1;36m   8)\33[0m Utilizar puerto USB (ttyACM1)\33[1;33m"
 echo "\33[1;36m   9)\33[0m Utilizar puerto USB (ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 "^Port=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+mode=`grep -n -m 1 "^Port=" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
 caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
-mode=$(awk "NR==$numero_linea_port" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+mode=$(awk "NR==$numero_linea_port" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
 echo "$mode"
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - ${VERDE}"
-idd=`grep -n "Id=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+idd=`grep -n "Id=" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Modificar Address     - ${VERDE}"
-master=`grep -n -m 1 "^Address=" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+master=`grep -n -m 1 "^Address=" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo=`expr index $master $buscar`
 largo=`expr $largo + 1`
@@ -74,20 +74,20 @@ lineaport=`expr $lineaport + 1`
 linea3port=$lineaport
 letra=p
 linea2port=$lineaport$letra
-var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+var100port= sed -n $linea2port  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
 
 echo -n "\33[1;36m  13)\33[0m Modificar Password    - \33[1;33m"
-pas=`grep -n '\<Password\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+pas=`grep -n '\<Password\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 pas1=`expr substr $pas 5 30`
 echo "$pas1"
 
 echo -n "\33[1;36m  14)\33[0m Modificar TXInvert    - \33[1;33m"
-txinv=`grep -n '\<TXInvert\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+txinv=`grep -n '\<TXInvert\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
 echo -n "\33[1;36m      a)\33[0m D-STAR      - \33[1;33m"
-dstar=`grep -n "\[D-Star\]" ~/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+dstar=`grep -n "\[D-Star\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dstar $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -97,15 +97,15 @@ letra=p
 numero_linea_dstar_letrap=$numero_linea_dstar$letra #crea 74p
 letrac=c
 numero_linea_dstar_letrac=$numero_linea_dstar$letrac #crea 74c
-presentar_valo= sed -n $numero_linea_dstar_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valo= sed -n $numero_linea_dstar_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  15)\33[0m Modificar RXLevel     - \33[1;33m"
-rx=`grep -n '\<RXLevel\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+rx=`grep -n '\<RXLevel\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 rx1=`expr substr $rx 4 30`
 echo -n "$rx1"
 
 echo -n "\33[1;36m      b)\33[0m DMR         - \33[1;33m"
-dmr=`grep -n "\[DMR\]" ~/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+dmr=`grep -n "\[DMR\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dmr $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -115,15 +115,15 @@ letra=p
 numero_linea_dmr_letrap=$numero_linea_dmr$letra #crea 74p
 letrac=c
 numero_linea_dmr_letrac=$numero_linea_dmr$letrac #crea 74c
-presentar_valor= sed -n $numero_linea_dmr_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_dmr_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  16)\33[0m Modificar TXLevel     - \33[1;33m"
-tx=`grep -n -m 1 '\<TXLevel\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+tx=`grep -n -m 1 '\<TXLevel\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
 echo -n "\33[1;36m      c)\33[0m FUSION      - \33[1;33m"
-fusion=`grep -n "LowDeviation" ~/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+fusion=`grep -n "LowDeviation" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $fusion $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -133,16 +133,16 @@ letra=p
 numero_linea_fusion_letrap=$numero_linea_fusion$letra #crea 74p
 letrac=c
 numero_linea_fusion_letrac=$numero_linea_fusion$letrac #crea 74c
-presentar_valor= sed -n $numero_linea_fusion_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_fusion_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  17)\33[0m Modificar Duplex      - \33[1;33m"
-dup=`grep -n -m 1 '\<Duplex\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+dup=`grep -n -m 1 '\<Duplex\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
 
 echo -n "\33[1;36m        d)\33[0m P25         - \33[1;33m"
-p25=`grep -n "\[P25\]" ~/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+p25=`grep -n "\[P25\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $p25 $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -152,123 +152,123 @@ letra=p
 numero_linea_p25_letrap=$numero_linea_p25$letra #crea 74p
 letrac=c
 numero_linea_p25_letrac=$numero_linea_p25$letrac #crea 74c
-presentar_valor= sed -n $numero_linea_p25_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_p25_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  18)\33[0m Modificar TXHang      - \33[1;33m"
-txh=`grep -n -m 1 '\<TXHang\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+txh=`grep -n -m 1 '\<TXHang\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
 echo -n "\33[1;36m        e)\33[0m Baliza      - \33[1;33m"
-cw= sed -n "31p"  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+cw= sed -n "31p"  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  19)\33[0m Modificar Tramas      - \33[1;33m"
-lg=`grep -n -m 1 '\<DisplayLevel\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+lg=`grep -n -m 1 '\<DisplayLevel\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 lg1=`expr substr $lg 4 30`
 echo -n "$lg1"
 
 echo -n "\33[1;36m  f)\33[0m RFModeHang  - \33[1;33m"
-modehang=`grep -n -m 1 -c '\<RFModeHang\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 -c '\<RFModeHang\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $modehang = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-modehang=`grep -n -m 1 '\<RFModeHang\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 '\<RFModeHang\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 modehang1=`expr substr $modehang 3 30`
 echo "$modehang1"
 fi
 
 echo -n "\33[1;36m  20)\33[0m Modificar Slot1       - \33[1;33m"
-sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+sl=`grep -n -m 1 '\<Slot1\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
 echo -n "\33[1;36m         g)\33[0m Timeout     - \33[1;33m"
-timeo=`grep -n -m 1 -c '\<Timeout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 -c '\<Timeout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-timeo=`grep -n -m 1 '\<Timeout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 fi
 
 echo -n "\33[1;36m  21)\33[0m Tipo Pantalla Display - \33[1;33m"
-Display=`grep -n -m 1 -c '\<Display\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 -c '\<Display\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $Display = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-Display=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 '\<Display\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 Display1=`expr substr $Display 3 30`
 echo -n "$Display1"
 fi
 
-var=`grep -n -m 1 "\[Nextion\]" ~/MMDVMHost/MMDVMDMR2YSF.ini`
-#var1=`grep -m 1 "\[Nextion\]" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[Nextion\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
+#var1=`grep -m 1 "\[Nextion\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
-MODEMNEXTION=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+MODEMNEXTION=$(awk "NR==$numero_linea" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
 letra=c
 linea_sed_MN=$numero_linea$letra
 echo " ${CIAN}h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "\33[1;36m  22)\33[0m Version Display       - \33[1;33m"
-ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $ScreenLayout = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 ScreenLayout1=`expr substr $ScreenLayout 5 30`
 echo -n "$ScreenLayout1"
 fi
 
-var=`grep -n -m 1 "\[NXDN\]" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[NXDN\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
-NXDN=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+NXDN=$(awk "NR==$numero_linea" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
 echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
-Brightness=`grep -n -m 1 -c '\<Brightness\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 -c '\<Brightness\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $Brightness = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-Brightness=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 '\<Brightness\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 Brightness1=`expr substr $Brightness 5 30`
 echo -n "$Brightness1"
 fi
 
 # j) POCSAG Enable=
-var=`grep -n -m 1 "\[POCSAG\]" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[POCSAG\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
-POCSAG=$(awk "NR==$numero_linea" ~/MMDVMHost/MMDVMDMR2YSF.ini)
+POCSAG=$(awk "NR==$numero_linea" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
 letra=c
 linea_sed_POCSAG=$numero_linea$letra
 echo "  ${CIAN} j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
-lat=`grep -n "Latitude" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+lat=`grep -n "Latitude" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
-long=`grep -n "Longitude" ~/MMDVMHost/MMDVMDMR2YSF.ini`
+long=`grep -n "Longitude" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 long1=`expr substr $long 4 30`
 echo "$long1"
 
 echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+modu=`grep -n -m 1 '\<Module\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
@@ -278,13 +278,13 @@ OPCION=`expr $OPCION + 1`
 linea33port=$OPCION
 letra=p
 linea22port=$OPCION$letra
-var300port= sed -n $linea22port  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+var300port= sed -n $linea22port  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
 
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero MMDVMDMR2YSF.ini para hacer cualquier cambio\33[1;33m"
 
 echo ""
-var1=`grep -n "\[DMR Network\]" ~/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 138:Enable=1
+var1=`grep -n "\[DMR Network\]" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 138:Enable=1
 var2=`echo "$var1" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $var2 $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -294,17 +294,17 @@ numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
 letra=p
 numero_linea_p=$numero_linea$letra #crea 143p
 echo -n "\33[1;36m  29)\33[0m Local port            - ${VERDE}"
-presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_p  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
 echo ""
 
-indicativo=$(awk "NR==2" ~/DMR2YSF/DMR2YSF.ini)
+indicativo=$(awk "NR==2" /home/orangepi/DMR2YSF/DMR2YSF.ini)
 
-idd1=`grep -n -m 1 "^Id=" ~/DMR2YSF/DMR2YSF.ini`
+idd1=`grep -n -m 1 "^Id=" /home/orangepi/DMR2YSF/DMR2YSF.ini`
 buscar=":"
 caracteres=`expr index $idd1 $buscar`
 caracteres_linea=`expr $caracteres - 1`
 numero_linea_idd=`expr substr $idd1 1 $caracteres_linea`
-idd1=$(awk "NR==$numero_linea_idd" ~/DMR2YSF/DMR2YSF.ini)
+idd1=$(awk "NR==$numero_linea_idd" /home/orangepi/DMR2YSF/DMR2YSF.ini)
 
 echo "  PARAMETROS DMR2YSF.ini ${BLANCO}"
 echo "  ${VERDE}======================"
@@ -342,12 +342,12 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
 indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 
 			              indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                    sed -i "$linea Callsign=$indicativo" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                    sed -i "$linea Callsign=$indicativo" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 
-                    sed -i "$linea Callsign=$indicativo" ~/DMR2YSF/DMR2YSF.ini
+                    sed -i "$linea Callsign=$indicativo" /home/orangepi/DMR2YSF/DMR2YSF.ini
 
-indi=$(awk "NR==2" ~/MMDVMHost/MMDVMDMR2YSF.ini)
-sed -i "1c $indi" ~/info_panel_control.ini
+indi=$(awk "NR==2" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
+sed -i "1c $indi" /home/orangepi/info_panel_control.ini
 
 			  break;;
 			  [nN]* ) echo ""
@@ -373,10 +373,10 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                              sed -i "$linea RXFrequency=$var2" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                              sed -i "$linea RXFrequency=$var2" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 
-frec=$(awk "NR==13" ~/MMDVMHost/MMDVMDMR2YSF.ini)
-sed -i "3c $frec" ~/info_panel_control.ini
+frec=$(awk "NR==13" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
+sed -i "3c $frec" /home/orangepi/info_panel_control.ini
 
 
 			break;;
@@ -403,7 +403,7 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXFrequency=$var2" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXFrequency=$var2" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -428,7 +428,7 @@ echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  loc1=`echo "$loc1" | tr -d '[[:space:]]'`
-              sed -i "$linea Location=$loc1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+              sed -i "$linea Location=$loc1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -453,7 +453,7 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  ur1=`echo "$ur1" | tr -d '[[:space:]]'`
-                          sed -i "$linea URL=$ur1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea URL=$ur1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -467,7 +467,7 @@ do
 			  [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyS0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyS0" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -481,7 +481,7 @@ do
 			  [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyACM0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyACM0" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -495,7 +495,7 @@ do
 			  [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyACM1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyACM1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -509,7 +509,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -536,11 +536,11 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
 
                           numero_linea_idd=$numero_linea_idd$letra
 
-                          sed -i "3c Id=$miid" ~/MMDVMHost/MMDVMDMR2YSF.ini
-                          sed -i "$numero_linea_idd Id=$miid" ~/DMR2YSF/DMR2YSF.ini
+                          sed -i "3c Id=$miid" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_idd Id=$miid" /home/orangepi/DMR2YSF/DMR2YSF.ini
 
-                          ide=$(awk "NR==3" ~/MMDVMHost/MMDVMDMR2YSF.ini)
-                          sed -i "2c $ide" ~/info_panel_control.ini
+                          ide=$(awk "NR==3" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
+                          sed -i "2c $ide" /home/orangepi/info_panel_control.ini
                         
 			                    break;;
 			                    [nN]* ) echo ""
@@ -563,10 +563,10 @@ echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
 #Convierte mayusculas en minúsculas
 master1=`echo "$master1" | tr [:upper:] [:lower:]`
 
-                          sed -i "$linea_master Address=$master1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_master Address=$master1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 
-master=$(awk "NR==139" ~/MMDVMHost/MMDVMDMR2YSF.ini)
-sed -i "4c $master" ~/info_panel_control.ini
+master=$(awk "NR==139" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini)
+sed -i "4c $master" /home/orangepi/info_panel_control.ini
 
         break;;
         [nN]* ) echo ""
@@ -577,14 +577,14 @@ done;;
 while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
-                          var100port= sed -n $linea2port  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+                          var100port= sed -n $linea2port  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
                       read -p 'Introducir el Puerto: 62031 ' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
                           letra1=c
                           linea4=$linea3port$letra1
-                          sed -i "$linea4 Port=$miid" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea4 Port=$miid" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
         break;;
         [nN]* ) echo ""
         break;;
@@ -609,7 +609,7 @@ echo "   Valor actual del Password: \33[1;33m${pas#*=}\33[1;37m"
                           case $actualizar in
 			              [sS]* ) echo ""
 			              pas1=`echo "$pas1" | tr -d '[[:space:]]'`
-                          sed -i "$linea Password=$pas1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Password=$pas1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -633,7 +633,7 @@ echo "Valor  actual del  TXInvert: \33[1;33m${txinv#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXInvert=$txinv1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXInvert=$txinv1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -657,7 +657,7 @@ echo "Valor  actual  del  RXLevel : \33[1;33m${rx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea RXLevel=$var2" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea RXLevel=$var2" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -681,7 +681,7 @@ echo "Valor  actual  del  TXLevel : \33[1;33m${tx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXLevel=$var2" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXLevel=$var2" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -705,7 +705,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$dup1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Duplex=$dup1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -729,7 +729,7 @@ echo "Valor actual del TXHang: \33[1;33m${txh#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXHang=$txh1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXHang=$txh1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -753,7 +753,7 @@ echo "Valor actual del DisplayLevel: \33[1;33m${lg#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea DisplayLevel=$lg1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea DisplayLevel=$lg1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -762,11 +762,11 @@ done;;
 20) echo ""
 while true
 do
-sl=`grep -n -m 1 -c '\<Slot1\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+sl=`grep -n -m 1 -c '\<Slot1\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $sl = 0 ]; then
 echo "no existe este comando"
 else
-sl=`grep -n -m 1 '\<Slot1\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+sl=`grep -n -m 1 '\<Slot1\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 fi
@@ -786,7 +786,7 @@ echo "Valor actual del Slot1=: \33[1;33m${sl#*=}\33[1;37m"
                           case $actualizar in                                            
 			              [sS]* ) echo ""
 			              V=`echo "$V" | tr -d '[[:space:]]'`			  
-                          sed -i "$linea Slot1=$V" ~/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Slot1=$V" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini             
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -795,11 +795,11 @@ done;;
 21) echo ""
 while true
 do
-Display=`grep -n -m 1 -c '\<Display\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 -c '\<Display\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $Display = 0 ]; then
 echo "no existe este comando"
 else
-Display=`grep -n -m 1 '\<Display\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 '\<Display\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 Display1=`expr substr $Display 5 30`
 #echo "$Display1"
 fi
@@ -819,7 +819,7 @@ echo "Valor actual del Display=: \33[1;33m${Display1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Display=$V" ~/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Display=$V" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini             
         break;;
         [nN]* ) echo ""
         break;;
@@ -828,11 +828,11 @@ done;;
 22) echo ""
 while true
 do
-ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $ScreenLayout = 0 ]; then
 echo "no existe este comando"
 else
-ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 ScreenLayout1=`expr substr $ScreenLayout 5 30`
 #echo "$ScreenLayout1"
 fi
@@ -852,7 +852,7 @@ echo "Valor actual del ScreenLayout=: \33[1;33m${ScreenLayout1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea ScreenLayout=$V" ~/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea ScreenLayout=$V" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini             
         break;;
         [nN]* ) echo ""
         break;;
@@ -861,11 +861,11 @@ done;;
 23) echo ""
 while true
 do
-Brightness=`grep -n -m 1 -c '\<Brightness\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 -c '\<Brightness\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $Brightness = 0 ]; then
 echo "no existe este comando"
 else
-Brightness=`grep -n -m 1 '\<Brightness\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 '\<Brightness\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 Brightness1=`expr substr $Brightness 5 30`
 #echo "$Brightness1"
 fi
@@ -885,7 +885,7 @@ echo "Valor  actual  del Brightness : \33[1;33m${Brightness1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Brightness=$V" ~/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Brightness=$V" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini             
         break;;
         [nN]* ) echo ""
         break;;
@@ -913,7 +913,7 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
 #Convierte indicativo si se introduce en minúsculas a Mayúsculas
 modu1=`echo "$modu1" | tr [:lower:] [:upper:]`
 
-                          sed -i "$linea Module=$modu1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Module=$modu1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -923,12 +923,12 @@ a) echo ""
 while true
 do
                           echo -n "Valor actual D-STAR \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_dstar_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_dstar_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
                           read -p 'Desactivado=0 Activado=1:  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_dstar_letrac Enable=$dmrac1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_dstar_letrac Enable=$dmrac1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -938,12 +938,12 @@ b) echo ""
 while true
 do
                           echo -n "Valor  actual  DMR \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_dmr_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_dmr_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
            	              read -p 'Desactivado=0 Activado=1: '   dmrac1
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sed -i "$numero_linea_dmr_letrac Enable=$dmrac1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_dmr_letrac Enable=$dmrac1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -953,12 +953,12 @@ c) echo ""
 while true
 do
                           echo -n "Valor actual FUSION \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_fusion_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_fusion_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
                           read -p 'Desactivado=0 Activado=1:  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_fusion_letrac Enable=$dmrac1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_fusion_letrac Enable=$dmrac1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -968,12 +968,12 @@ d) echo ""
 while true
 do
                           echo -n "Valor  actual  P25 \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_p25_letrap  ~/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_p25_letrap  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini;
                           read -p 'Desactivado=0 Activado=1: '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_p25_letrac Enable=$dmrac1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_p25_letrac Enable=$dmrac1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -986,7 +986,7 @@ do
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
-                      sed -i "31c Enable=$baliza" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                      sed -i "31c Enable=$baliza" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                       break;;
                       [nN]* ) echo ""
                       break;;
@@ -995,11 +995,11 @@ done;;
 f) echo ""
 while true
 do
-modehang=`grep -n -m 1 -c '\<RFModeHang\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 -c '\<RFModeHang\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $modehang = 0 ]; then
 echo "no existe este comando"
 else
-modehang=`grep -n -m 1 '\<RFModeHang\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 '\<RFModeHang\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 modehang1=`expr substr $modehang 5 30`
 fi
 buscar=":"
@@ -1018,7 +1018,7 @@ echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea RFModeHang=$V" ~/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea RFModeHang=$V" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini             
         break;;
         [nN]* ) echo ""
         break;;
@@ -1027,11 +1027,11 @@ done;;
 g) echo ""
 while true
 do
-timeo=`grep -n -m 1 -c '\<Timeout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 -c '\<Timeout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 if [ $timeo = 0 ]; then
 echo "no existe este comando"
 else
-timeo=`grep -n -m 1 '\<Timeout\>' ~/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini`
 timeo1=`expr substr $timeo 5 30`
 fi
 buscar=":"
@@ -1050,7 +1050,7 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Timeout=$V" ~/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Timeout=$V" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini             
         break;;
         [nN]* ) echo ""
         break;;
@@ -1064,7 +1064,7 @@ echo "Valor del Port: \33[1;33m$MODEMNEXTION"
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_MN Port=$lat1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_sed_MN Port=$lat1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1078,7 +1078,7 @@ echo "Valor actual NXDN: \33[1;33m$NXDN"
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_NXDN Enable=$NXDN1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_sed_NXDN Enable=$NXDN1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1092,7 +1092,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_POCSAG Enable=$POCSAG1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_sed_POCSAG Enable=$POCSAG1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1116,7 +1116,7 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Latitude=$lat1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Latitude=$lat1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -1141,7 +1141,7 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Longitude=$long1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Longitude=$long1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -1158,12 +1158,12 @@ do
 			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 			  [nN]* ) echo ""
 			  letra1=c
                           linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" ~/MMDVMHost/MMDVMDMR2YSF.ini
+			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			  break;;
 esac
 done;;
@@ -1173,7 +1173,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              sudo pluma ~/MMDVMHost/MMDVMDMR2YSF.ini
+                              sudo pluma /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
@@ -1186,14 +1186,14 @@ done;;
 while true
 do
                           echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presentar_valor= sed -n $numero_linea_p  ~/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+                          presentar_valor= sed -n $numero_linea_p  /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
                           read -p 'Introducir el puerto: 62032  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
                           letrac=c
                           linea=$numero_linea$letrac
-                          sed -i "$linea Local=$dmrac1" ~/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Local=$dmrac1" /home/orangepi/MMDVMHost/MMDVMDMR2YSF.ini
 
                           break;;
                           [nN]* ) echo ""
@@ -1206,8 +1206,8 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sudo pluma ~/DMR2YSF/TG-YSFList.txt &
-                          mate-terminal --geometry=120x30 -x less ~/YSFClients/YSFGateway/YSFHosts.txt
+                          sudo pluma /home/orangepi/DMR2YSF/TG-YSFList.txt &
+                          mate-terminal --geometry=120x30 -x less /home/orangepi/YSFClients/YSFGateway/YSFHosts.txt
                           
                           break;;
                           [nN]* ) echo ""

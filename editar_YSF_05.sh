@@ -15,107 +15,107 @@ echo -n "${ROJO}"
 echo "                           by EA3EIZ & EA4AOJ"
 echo -n "${VERDE}"
 echo "   **************************************************************************"
-var=`grep -n -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
-var1=`grep -m 1 '\<Callsign\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
+var=`grep -n -m 1 '\<Callsign\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
+var1=`grep -m 1 '\<Callsign\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
 buscar=":"
 largo_linea=`expr index $var $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
 numero_linea=`expr substr $var 1 $largo_linea` # recoge numero linea (en este caso 2
-INDICATIVO=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+INDICATIVO=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_INDICATIVO=$numero_linea$letra
 
 
-var=`grep -n -m 1 '\<Id\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
-var1=`grep -m 1 '\<Id\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
+var=`grep -n -m 1 '\<Id\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
+var1=`grep -m 1 '\<Id\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
 buscar=":"
 largo_linea=`expr index $var $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
 numero_linea=`expr substr $var 1 $largo_linea` # recoge numero linea (en este caso 2)
-ID=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+ID=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_ID=$numero_linea$letra
 
-var=`grep -n -m 1 '\<RXFrequency\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
-var1=`grep -m 1 '\<RXFrequency\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
+var=`grep -n -m 1 '\<RXFrequency\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
+var1=`grep -m 1 '\<RXFrequency\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
 buscar=":"
 largo_linea=`expr index $var $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
 numero_linea=`expr substr $var 1 $largo_linea` # recoge numero linea (en este caso 2)
-RXF=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+RXF=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_RXF=$numero_linea$letra
 
-var=`grep -n -m 1 '\<TXFrequency\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
-var1=`grep -m 1 '\<TXFrequency\>' ~/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
+var=`grep -n -m 1 '\<TXFrequency\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ
+var1=`grep -m 1 '\<TXFrequency\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
 buscar=":"
 largo_linea=`expr index $var $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
 numero_linea=`expr substr $var 1 $largo_linea` # recoge numero linea (en este caso 2)
-TXF=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+TXF=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_TXF=$numero_linea$letra
 
-var=`grep -n -m 1 '\<Latitude\>' ~/YSFClients/YSFGateway/YSFGateway.ini`
-var1=`grep -m 1 '\<Latitude\>' ~/YSFClients/YSFGateway/YSFGateway.ini`
+var=`grep -n -m 1 '\<Latitude\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
+var1=`grep -m 1 '\<Latitude\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-LATITUD=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+LATITUD=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_LA=$numero_linea$letra
 
-var=`grep -n -m 1 '\<Longitude\>' ~/YSFClients/YSFGateway/YSFGateway.ini`
-var1=`grep -m 1 '\<Longitude\>' ~/YSFClients/YSFGateway/YSFGateway.ini`
+var=`grep -n -m 1 '\<Longitude\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
+var1=`grep -m 1 '\<Longitude\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-LONGITUD=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+LONGITUD=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_LO=$numero_linea$letra
 
-var=`grep -n -m 1 '\<Name\>' ~/YSFClients/YSFGateway/YSFGateway.ini`
-var1=`grep -m 1 '\<Name\>' ~/YSFClients/YSFGateway/YSFGateway.ini`
+var=`grep -n -m 1 '\<Name\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
+var1=`grep -m 1 '\<Name\>' /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-NAME=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+NAME=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_NAME=$numero_linea$letra
 
-var=`grep -n -m 1 "\[Network\]" ~/YSFClients/YSFGateway/YSFGateway.ini`
-var1=`grep -m 1 "\[Network\]" ~/YSFClients/YSFGateway/YSFGateway.ini`
+var=`grep -n -m 1 "\[Network\]" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
+var1=`grep -m 1 "\[Network\]" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # y le suma uno qudando coomo: (75)
-STARTUP=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+STARTUP=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_ST=$numero_linea$letra
 
-var1=`grep -n -m 1 "\[YSF Network\]" ~/YSFClients/YSFGateway/YSFGateway.ini`
+var1=`grep -n -m 1 "\[YSF Network\]" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
 var2=`echo "$var1" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $var2 $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var2 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # y le suma uno qudando coomo: (75)
-YSF=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+YSF=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_YSF=$numero_linea$letra
 
-var1=`grep -n -m 1 "\[FCS Network\]" ~/YSFClients/YSFGateway/YSFGateway.ini`
+var1=`grep -n -m 1 "\[FCS Network\]" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini`
 var2=`echo "$var1" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $var2 $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var2 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # y le suma uno qudando coomo: (75)
-FCS=$(awk "NR==$numero_linea" ~/YSFClients/YSFGateway/YSFGateway.ini)
+FCS=$(awk "NR==$numero_linea" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_FCS=$numero_linea$letra
 
@@ -188,7 +188,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_INDICATIVO Callsign=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
 			                     break;;
 			                     [nN]* ) echo ""
 			                     break;;
@@ -206,7 +206,7 @@ echo "Valor actual: \33[1;33m$ID"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_ID Id=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_ID Id=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -224,7 +224,7 @@ echo "Valor actual: \33[1;33m$RXF"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_RXF RXFrequency=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_RXF RXFrequency=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -242,7 +242,7 @@ echo "Valor actual: \33[1;33m$TXF"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_TXF TXFrequency=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_TXF TXFrequency=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -260,7 +260,7 @@ echo "Valor actual: \33[1;33m$LATITUD"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_LA Latitude=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_LA Latitude=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -278,7 +278,7 @@ echo "Valor actual: \33[1;33m$LONGITUD"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_LO Longitude=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_LO Longitude=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -294,7 +294,7 @@ echo "Valor actual: \33[1;33m$NAME"
                            [sS]* ) echo ""
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_NAME Name=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_NAME Name=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -308,9 +308,9 @@ echo "Valor actual: \33[1;33m$STARTUP"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_ST Startup=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_ST Startup=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
 
-sed -i "21c Startup=$Valor" ~/info_panel_control.ini
+sed -i "21c Startup=$Valor" /home/orangepi/info_panel_control.ini
 
                            
                            break;;
@@ -326,7 +326,7 @@ echo "Valor actual:   \33[1;33m$YSF"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_YSF Enable=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_YSF Enable=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -340,7 +340,7 @@ echo "Valor actual:   \33[1;33m$FCS"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_FCS Enable=$Valor" ~/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_FCS Enable=$Valor" /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -366,7 +366,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                     [sS]* ) echo ""
-                              sudo pluma ~/YSFClients/YSFGateway/YSFGateway.ini
+                              sudo pluma /home/orangepi/YSFClients/YSFGateway/YSFGateway.ini
 			                     break;;
 			                     [nN]* ) echo ""
 			                     break;;

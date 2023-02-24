@@ -45,10 +45,10 @@ clear
                         #sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         git pull 
                         sleep 3
-                        cd ~/
+                        cd /home/orangepi/
                         sudo chmod 777 SCRIPTS_ORANGE
                         clear
-                        cd ~/AUTOSTART
+                        cd /home/orangepi/AUTOSTART
                         git pull
 
                         sudo usermod -a -G dialout orangepi
@@ -70,11 +70,11 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> GRABAR NEXTION >>>>>>>>"
-			            #sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        #cd ~/MMDVMHost/Nextion_DB2OE
+			            #sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+                        #cd /home/orangepi/MMDVMHost/Nextion_DB2OE
                         #sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
                         #sleep 5
-                        cd ~/SCRIPTS_ORANGE/
+                        cd /home/orangepi/SCRIPTS_ORANGE/
                         sudo sh grabar_nextion_05.sh
                         exit;
 		                break;;
@@ -127,11 +127,11 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> GRABAR NEXTION ORIGINAL >>>>>>>>"
-                        #sudo cp -f ~/MMDVMHost/Nextion_G4KLX/nextion.py ~/MMDVMHost/Nextion_DB2OE
-                        #cd ~/MMDVMHost/Nextion_DB2OE
+                        #sudo cp -f /home/orangepi/MMDVMHost/Nextion_G4KLX/nextion.py /home/orangepi/MMDVMHost/Nextion_DB2OE
+                        #cd /home/orangepi/MMDVMHost/Nextion_DB2OE
                         #sudo python nextion.py NX3224T024.tft /dev/ttyUSB0
                         #sleep 5
-                        cd ~/SCRIPTS_ORANGE/
+                        cd /home/orangepi/SCRIPTS_ORANGE/
                         sudo sh menu_dcs018_06.sh
                         exit;
                         break;;
@@ -149,8 +149,8 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
-                        sudo rm -R ~/.anydesk
-                        cd ~/Downloads
+                        sudo rm -R /home/orangepi/.anydesk
+                        cd /home/orangepi/Downloads
                         wget http://download.anydesk.com/rpi/anydesk_2.9.4-1_armhf.deb
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
                         sudo apt-get -f install
@@ -175,8 +175,8 @@ clear
                                 [sS]* ) echo ""
 
                                 #Coloca icono Abrir AMBE SERVER en el escritorio
-                                cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                sudo chmod +x -R ~/Desktop
+                                cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/orangepi/
+                                sudo chmod +x -R /home/orangepi/Desktop
                       
                                 echo ">>>>>>>>> RESTAURANDO ICONOS ESCRITORIO <<<<<<<<<"
                                 sleep 3
@@ -216,10 +216,10 @@ clear
                                                 case $ejecutar1 in
                                                 [sS]* ) echo ""
                                                 echo ">>>>>>>>> INSTALANDO YSF2DMR >>>>>>>>"
-                                                cd ~/
+                                                cd /home/orangepi/
                                                 sudo rm -R YSF2DMR
                                                 git clone http://github.com/juribeparada/YSF2DMR
-                                                cd ~/YSF2DMR
+                                                cd /home/orangepi/YSF2DMR
                                                 make clean
                                                 make
                                                 clear
@@ -229,21 +229,21 @@ clear
                                                 cp YSF2DMR.ini YSF2DMR.ini_copia_03
                                                 cp YSF2DMR.ini YSF2DMR.ini_copia_04
 
-                                                cd ~/SCRIPTS_ORANGE
+                                                cd /home/orangepi/SCRIPTS_ORANGE
                                                 git pull
                                                 sleep 3
 
                                                 #Restaura los 2 iconos Abrir YSF2DMR y Editar YSF2DMR y aparecen en el escritorio
-                                                cd ~/SCRIPTS_ORANGE
-                                                cp ~/SCRIPTS_ORANGE/Desktop/Abrir_YSF2DMR.desktop ~/Desktop
-                                                cp ~/SCRIPTS_ORANGE/Desktop/Editar_YSF2DMR.desktop ~/Desktop
-                                                sudo chmod +x -R ~/Desktop
+                                                cd /home/orangepi/SCRIPTS_ORANGE
+                                                cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Abrir_YSF2DMR.desktop /home/orangepi/Desktop
+                                                cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Editar_YSF2DMR.desktop /home/orangepi/Desktop
+                                                sudo chmod +x -R /home/orangepi/Desktop
 
 
 
                                                 ##Coloca icono Abrir AMBE SERVER en el escritorio
-                                                #cp -R ~/SCRIPTS_ORANGE/Desktop ~/
-                                                #sudo chmod +x -R ~/Desktop
+                                                #cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/orangepi/
+                                                #sudo chmod +x -R /home/orangepi/Desktop
                       
                                                 exit;
                                                 break;;
@@ -264,41 +264,41 @@ clear
 
 
                         # RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS
-                        cd ~/AUTOSTART
+                        cd /home/orangepi/AUTOSTART
                         git pull
 
                         #Restaura los 2 iconos Abrir AMBE SERVER y Editar AMBE SERVER y aparecen en el escritorio
-                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_ambe_server.desktop ~/Desktop
-                        cp ~/SCRIPTS_ORANGE/Desktop/Editar_ambe_server.desktop ~/Desktop
+                        cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Abrir_ambe_server.desktop /home/orangepi/Desktop
+                        cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Editar_ambe_server.desktop /home/orangepi/Desktop
 
-                        cp ~/SCRIPTS_ORANGE/ambe_server.ini ~/
+                        cp /home/orangepi/SCRIPTS_ORANGE/ambe_server.ini /home/orangepi/
 
-                        sudo chmod +x -R ~/Desktop
+                        sudo chmod +x -R /home/orangepi/Desktop
 
                         #comprueba si el ficgero existe
-                        if [ -f ~/status.ini ];
+                        if [ -f /home/orangepi/status.ini ];
                         then
                         echo ""
                         else
-                        cp ~/SCRIPTS_ORANGE/status.ini ~/
+                        cp /home/orangepi/SCRIPTS_ORANGE/status.ini /home/orangepi/
                         fi
                         #================================
 
                         #comprueba si el ficgero existe
-                        if [ -d ~/AMBEServer ];
+                        if [ -d /home/orangepi/AMBEServer ];
                         then
-                        sudo rm -R ~/AMBEServer
+                        sudo rm -R /home/orangepi/AMBEServer
                         else
                         echo ""
                         fi
                         #================================
-                        cd ~/
+                        cd /home/orangepi/
                         git clone http://github.com/ea4aoj/AMBEServer
-                        cd ~/AMBEServer
+                        cd /home/orangepi/AMBEServer
                         make 
 
                         #Pone en el fichero autoarranque.ini el AMBE_SERVER a OFF
-                        sed -i "14c AMBE_SERVER=OFF" ~/autoarranque.ini
+                        sed -i "14c AMBE_SERVER=OFF" /home/orangepi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
 clear
@@ -312,7 +312,7 @@ do
 clear
 
                         #comprueba si el fichero existe
-                        if [ -d ~/DMR2YSF ];
+                        if [ -d /home/orangepi/DMR2YSF ];
                         then
                         clear
                         echo "${BLANCO}"
@@ -347,26 +347,26 @@ clear
                         echo "*******************************************"
                         sleep 2
                         echo "${CIAN}"
-                        cd ~/MMDVMHost
+                        cd /home/orangepi/MMDVMHost
                         cp MMDVM.ini MMDVMDMR2YSF.ini
 
-                        cd ~/
-                        sudo rm -R ~/MMDVM_CM
-                        sudo rm -R ~/DMR2YSF
+                        cd /home/orangepi/
+                        sudo rm -R /home/orangepi/MMDVM_CM
+                        sudo rm -R /home/orangepi/DMR2YSF
                         git clone http://github.com/juribeparada/MMDVM_CM
                         mkdir DMR2YSF
-                        cp ~/MMDVM_CM/DMR2YSF/* ~/DMR2YSF/
-                        cd ~/DMR2YSF/    
+                        cp /home/orangepi/MMDVM_CM/DMR2YSF/* /home/orangepi/DMR2YSF/
+                        cd /home/orangepi/DMR2YSF/    
                         make clean
                         make
                         clear
 
                         #Restaura los 2 iconos Abrir Abrir_DMR2YSF y Editar Editar_DMR2YSF y aparecen en el escritorio
-                        cd ~/SCRIPTS_ORANGE
-                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_DMR2YSF.desktop ~/Desktop
-                        cp ~/SCRIPTS_ORANGE/Desktop/Editar_MMDVMDMR2YSF.desktop ~/Desktop
+                        cd /home/orangepi/SCRIPTS_ORANGE
+                        cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Abrir_DMR2YSF.desktop /home/orangepi/Desktop
+                        cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Editar_MMDVMDMR2YSF.desktop /home/orangepi/Desktop
                         
-                        sudo chmod +x -R ~/Desktop
+                        sudo chmod +x -R /home/orangepi/Desktop
                      
                                 break;;
                                 [nN]* ) echo ""
@@ -380,12 +380,12 @@ while true
 do
 clear
 # Comprueba si tienes la versión con la linea HostsFile2=./private/NXDNHosts.txt
-var=`grep -n -m 1 '\<HostsFile2\>' ~/NXDNClients/NXDNGateway/NXDNGateway.ini`
+var=`grep -n -m 1 '\<HostsFile2\>' /home/orangepi/NXDNClients/NXDNGateway/NXDNGateway.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-HostsFile2=$(awk "NR==$numero_linea" ~/NXDNClients/NXDNGateway/NXDNGateway.ini)
+HostsFile2=$(awk "NR==$numero_linea" /home/orangepi/NXDNClients/NXDNGateway/NXDNGateway.ini)
 comprueba="HostsFile2=./private/NXDNHosts.txt"
 if [ $HostsFile2 = $comprueba ]
                   
@@ -426,28 +426,28 @@ if [ $HostsFile2 = $comprueba ]
                         sleep 2
                                 echo "${CIAN}"
 
-                                cd ~/MMDVMHost
+                                cd /home/orangepi/MMDVMHost
                         cp MMDVM.ini MMDVMDMR2NXDN.ini
 
-                        cd ~/
-                        sudo rm -R ~/MMDVM_CM
-                        sudo rm -R ~/DMR2NXDN
+                        cd /home/orangepi/
+                        sudo rm -R /home/orangepi/MMDVM_CM
+                        sudo rm -R /home/orangepi/DMR2NXDN
                         git clone http://github.com/juribeparada/MMDVM_CM
                         mkdir DMR2NXDN
-                        cp ~/MMDVM_CM/DMR2NXDN/* ~/DMR2NXDN/
-                        cd ~/DMR2NXDN/    
+                        cp /home/orangepi/MMDVM_CM/DMR2NXDN/* /home/orangepi/DMR2NXDN/
+                        cd /home/orangepi/DMR2NXDN/    
                         make clean
                         make
                         clear
-                        sudo chmod 777 -R ~/NXDNClients/NXDNGateway
+                        sudo chmod 777 -R /home/orangepi/NXDNClients/NXDNGateway
                         clear
 
                         #Restaura los 2 iconos Abrir Abrir_DMR2NXDN y Editar Editar_DMR2NXDN y aparecen en el escritorio
-                        cd ~/SCRIPTS_ORANGE
-                        cp ~/SCRIPTS_ORANGE/Desktop/Abrir_DMR2NXDN.desktop ~/Desktop
-                        cp ~/SCRIPTS_ORANGE/Desktop/Editar_MMDVMDMR2NXDN.desktop ~/Desktop
+                        cd /home/orangepi/SCRIPTS_ORANGE
+                        cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Abrir_DMR2NXDN.desktop /home/orangepi/Desktop
+                        cp /home/orangepi/SCRIPTS_ORANGE/Desktop/Editar_MMDVMDMR2NXDN.desktop /home/orangepi/Desktop
                         
-                        sudo chmod +x -R ~/Desktop
+                        sudo chmod +x -R /home/orangepi/Desktop
                      
                                 break;;
                                 [nN]* ) echo ""
@@ -470,14 +470,14 @@ clear
                         case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
-			            sudo rm -R ~/SCRIPTS_ORANGE
+			            sudo rm -R /home/orangepi/SCRIPTS_ORANGE
 			            sleep 5
                         cd ~
                         git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
-                        cp -R ~/SCRIPTS_ORANGE/Desktop ~/
+                        cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/orangepi/
 
 
-                        sudo rm -R ~/AUTOSTART
+                        sudo rm -R /home/orangepi/AUTOSTART
 			            sleep 5
                         cd ~
                         git clone https://github.com/ea3eiz/AUTOSTART
@@ -507,14 +507,14 @@ clear
                         read -p 'Quieres Actualizar? Si/No: ' ejecutar1
                         case $ejecutar1 in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en ~/   >>>>>"
-                        cd ~/SCRIPTS_ORANGE
+                        echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en /home/orangepi/   >>>>>"
+                        cd /home/orangepi/SCRIPTS_ORANGE
                         git pull
-                        rm ~/autoarranque.ini
-                        cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+                        rm /home/orangepi/autoarranque.ini
+                        cp -f /home/orangepi/SCRIPTS_ORANGE/autoarranque.ini /home/orangepi/
 			echo ">>>>>>>>> GIT CLONE AUTOSTART >>>>>"
-			sudo rm -R ~/AUTOSTART
-                        cd ~/
+			sudo rm -R /home/orangepi/AUTOSTART
+                        cd /home/orangepi/
                         git clone http://github.com/ea3eiz/AUTOSTART
 			break;;
 			[nN]* ) echo ""
@@ -573,7 +573,7 @@ clear
 		    			case $ejecutar1 in
 						[sS]* ) echo ""
 						echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
-			            cd ~/SCRIPTS_ORANGE/
+			            cd /home/orangepi/SCRIPTS_ORANGE/
                         sleep 3
                         #sudo chmod 777 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
                         #sleep 3
@@ -600,7 +600,7 @@ clear
 		                case $ejecutar1 in
 			            [sS]* ) echo ""
 			            #echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
-			            #cp -f ~/SCRIPTS_ORANGE/autoarranque.ini ~/
+			            #cp -f /home/orangepi/SCRIPTS_ORANGE/autoarranque.ini /home/orangepi/
                         #clear
                         echo "\33[1;32m       ***********************************************************"
                         echo "       *             MENU AYUDAS COMANDOS OCULTOS                *"

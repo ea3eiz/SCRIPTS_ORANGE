@@ -73,8 +73,8 @@ read sociedad
 echo "Cambiar texto by EA3EIZ"
 echo "\33[1;31m Ojo!!! Solo se permiten caracteres de la A-Z y el espacio"
 read by
-sed -i "11c print trim(\$\1) T trim(\$\2) T trim(\$\3) T trim(\$\7) T trim(\"\ $sociedad\"\) T trim(\$\1) T trim(\"\ $by\"\)" ~/md380tools/db/strip.awk
-cd ~/md380tools/
+sed -i "11c print trim(\$\1) T trim(\$\2) T trim(\$\3) T trim(\$\7) T trim(\"\ $sociedad\"\) T trim(\$\1) T trim(\"\ $by\"\)" /home/orangepi/md380tools/db/strip.awk
+cd /home/orangepi/md380tools/
 sudo make clean
 sudo make updatedb flashdb
 break;;
@@ -113,8 +113,8 @@ echo "\33[1;33m"
 echo "Cambiar texto by EA3EIZ"
 echo "\33[1;31m Ojo!!! Solo se permiten caracteres de la A-Z y el espacio"
 read by
-sed -i "11c print trim(\$\1) T trim(\$\2) T trim(\$\3) T trim(\$\7) T trim(\$\8) T trim(\$\1) T trim(\"\ $by\"\)" ~/md380tools/db/strip.awk
-cd ~/md380tools/
+sed -i "11c print trim(\$\1) T trim(\$\2) T trim(\$\3) T trim(\$\7) T trim(\$\8) T trim(\$\1) T trim(\"\ $by\"\)" /home/orangepi/md380tools/db/strip.awk
+cd /home/orangepi/md380tools/
 sudo make clean
 sudo make updatedb flashdb
 break;;

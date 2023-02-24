@@ -51,11 +51,11 @@ clear
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                    cd ~/  
-                    sudo rm -r ~/MMDVMHost
+                    cd /home/orangepi/  
+                    sudo rm -r /home/orangepi/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
                     #git clone https://github.com/ea3eiz/MMDVMHost
-                    cd ~/MMDVMHost
+                    cd /home/orangepi/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
@@ -63,8 +63,8 @@ clear
                     HOY1=$HOY$PI
                     PUNTO=";"
                     
-                    sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
-                    sed -i "171c val \/\= 1.0;" ~/MMDVMHost/Nextion.cpp
+                    sed -i "22c $FIJA$HOY1$PUNTO" /home/orangepi/MMDVMHost/Version.h
+                    sed -i "171c val \/\= 1.0;" /home/orangepi/MMDVMHost/Nextion.cpp
                    
                     #Comprueba si existe el fichero info.ini
                     if [ -f /home/orangepi/Downloads/info.ini ];
@@ -96,10 +96,10 @@ clear
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
-                    cd ~/SCRIPTS_ORANGE
-                    cp MMDVMHostLIBRE ~/MMDVMHost
-                    cp MMDVMLIBRE.ini ~/MMDVMHost
-                    cd ~/MMDVMHost
+                    cd /home/orangepi/SCRIPTS_ORANGE
+                    cp MMDVMHostLIBRE /home/orangepi/MMDVMHost
+                    cp MMDVMLIBRE.ini /home/orangepi/MMDVMHost
+                    cd /home/orangepi/MMDVMHost
                     sudo chmod +x MMDVMHostLIBRE
                     #=================================================
 
@@ -129,7 +129,7 @@ clear
                     
                     #=================================================
 
-                    sudo chmod +x -R ~/MMDVMHost
+                    sudo chmod +x -R /home/orangepi/MMDVMHost
                     
                     echo""
                     clear
@@ -153,7 +153,7 @@ clear
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                    cd ~/
+                    cd /home/orangepi/
                     sudo rm -r MMDVMHost
                     sudo mv MMDVMHost_anterior MMDVMHost
                     echo""
@@ -183,10 +183,10 @@ clear
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
-                    cd ~/  
-                    sudo rm -r ~/MMDVMHost
+                    cd /home/orangepi/  
+                    sudo rm -r /home/orangepi/MMDVMHost
                     git clone https://github.com/g4klx/MMDVMHost
-                    cd ~/MMDVMHost
+                    cd /home/orangepi/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
@@ -194,8 +194,8 @@ clear
                     HOY1=$HOY$PI
                     PUNTO=";"
                     
-                    sed -i "22c $FIJA$HOY1$PUNTO" ~/MMDVMHost/Version.h
-                    #sed -i "145c val \/\= 1.0;" ~/MMDVMHost/Nextion.cpp
+                    sed -i "22c $FIJA$HOY1$PUNTO" /home/orangepi/MMDVMHost/Version.h
+                    #sed -i "145c val \/\= 1.0;" /home/orangepi/MMDVMHost/Nextion.cpp
                    
                     #Comprueba si existe el fichero info.ini
                     if [ -f /home/orangepi/Downloads/info.ini ];
@@ -227,10 +227,10 @@ clear
                     #=================================================
 
                     # Rutina solo para el LIBRE ======================
-                    cd ~/SCRIPTS_ORANGE
-                    cp MMDVMHostLIBRE ~/MMDVMHost
-                    cp MMDVMLIBRE.ini ~/MMDVMHost
-                    cd ~/MMDVMHost
+                    cd /home/orangepi/SCRIPTS_ORANGE
+                    cp MMDVMHostLIBRE /home/orangepi/MMDVMHost
+                    cp MMDVMLIBRE.ini /home/orangepi/MMDVMHost
+                    cd /home/orangepi/MMDVMHost
                     sudo chmod +x MMDVMHostLIBRE
                     #=================================================
 
@@ -260,7 +260,7 @@ clear
                     
                     #=================================================
 
-                    sudo chmod +x -R ~/MMDVMHost
+                    sudo chmod +x -R /home/orangepi/MMDVMHost
                     
                     echo""
                     clear

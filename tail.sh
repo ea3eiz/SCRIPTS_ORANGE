@@ -11,17 +11,17 @@ echo "$mes"
 echo "$dia"
 fecha="MMDVM-"$ano"-"$mes"-"$dia".log"
 echo "$fecha"
-cd ~/MMDVMHost
+cd /home/orangepi/MMDVMHost
 c=`tail -n 1 -c 2 $fecha`
 echo "$c"
 if [ "$c" = "%" ];
 then
 echo "esta el signo de %"
-sed -i "30c Call" ~/info_panel_control.ini
+sed -i "30c Call" /home/orangepi/info_panel_control.ini
 else
 echo "$a"
 a=`tail -n 1 -c 15 $fecha`
-sed -i "30c $a" ~/info_panel_control.ini
+sed -i "30c $a" /home/orangepi/info_panel_control.ini
 fi
 
 

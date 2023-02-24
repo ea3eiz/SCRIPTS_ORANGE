@@ -2,7 +2,7 @@
 while true
 do
 clear
-#SCRIPTS_version=$(awk "NR==1" ~/.config/autostart/version)
+#SCRIPTS_version=$(awk "NR==1" /home/orangepi/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -21,7 +21,7 @@ echo ""
 echo "   ${CIAN}Versión actual del firmware:"
 #echo "\33[1;36m   2)\33[1;37m Actualizar ZUMSpot por GPIO"
 echo -n "${BLANCO}   "
-tac $(ls -1rt ~/MMDVMHost/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
+tac $(ls -1rt /home/orangepi/MMDVMHost/MMDVM-*.log | tail -n1 ) | grep "protocol" -m 1 | sed -n 's/description: /&\n/;s/.*\n//p'
 echo "   La versión se actualiza al abrir de nuevo MMMDVMHost"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -56,7 +56,7 @@ clear
                         then
                         echo "${AMARILLO}"
                         echo "Haga los cambios necesarios y cierre el editor para continuar"
-                        sudo pluma ~/MMDVM_HS/Config.h
+                        sudo pluma /home/orangepi/MMDVM_HS/Config.h
 echo "${ROJO}"
 echo "   ******************************"
 echo "   *                            *"
@@ -95,9 +95,9 @@ clear
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
-                        cd ~/MMDVM_HS/
-                        cp ~/SCRIPTS_ORANGE/install_fw_librekit.sh ~/MMDVM_HS/bin/
-                        cd ~/MMDVM_HS/bin
+                        cd /home/orangepi/MMDVM_HS/
+                        cp /home/orangepi/SCRIPTS_ORANGE/install_fw_librekit.sh /home/orangepi/MMDVM_HS/bin/
+                        cd /home/orangepi/MMDVM_HS/bin
                         sleep 2
                         sudo chmod 777 install_fw_librekit.sh
                         ./install_fw_librekit.sh
@@ -115,7 +115,7 @@ clear
                         case $continuar in
                         [sS]* ) echo ""
                         echo ""
-                        cd ~/MMDVM_HS/
+                        cd /home/orangepi/MMDVM_HS/
                         sudo make serial-bl devser=/dev/ttyUSB0
                         break;;
                         [nN]* ) echo ""
