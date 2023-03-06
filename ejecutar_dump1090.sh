@@ -23,8 +23,7 @@ fi
 #sudo cp BlueDV.desktop /home/pi
 #sed -i "4c Exec=sh -c 'cd /home/orangepi/$SCRIPTS_version; sh ejecutar_dump1090.sh'" /home/orangepi/BlueDV.desktop
 #sed -i "5c Icon=/home/orangepi/$SCRIPTS_version/ICONO_AVION_OFF.png" /home/orangepi/BlueDV.desktop
-#sed -i "10c Name[es_ES]=Abrir Dump1090" /home/orangepi/BlueDV.desktop
-##sed -i "7c MMDVMBM=OFF" /home/orangepi/status.ini
+#sed -i "10c Name[es_ES]=Abrir Dump1090" /home/orangepi/BlueDV.desktop##sed -i "7c MMDVMBM=OFF" /home/orangepi/status.ini
 #cd /home/pi
 #sudo cp BlueDV.desktop /home/orangepi/Desktop
 #sleep 1
