@@ -2,10 +2,10 @@
 
 cd /home/orangepi/Desktop
 sudo cp BlueDV.desktop /home/orangepi
-sed -i "6c Exec=sh cerrar_dump1090.sh"
-sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_AVION_ON.png"
-sed -i "8c Path=/home/orangepi/SCRIPTS_ORANGE"
-sed -i "11c Name[es_ES]=Cerrar Dump1090"
+sudo sed -i "6c Exec=sh cerrar_dump1090.sh"
+sudo sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_AVION_ON.png"
+sudo sed -i "8c Path=/home/orangepi/SCRIPTS_ORANGE"
+sudo sed -i "11c Name[es_ES]=Cerrar Dump1090"
 
 cd /home/orangepi
 sudo cp BlueDV.desktop /home/orangepi/Desktop
