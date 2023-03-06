@@ -9,7 +9,7 @@ sudo sed -i "11c Name[es_ES]=Cerrar Dump1090"
 
 cd /home/orangepi
 sudo cp BlueDV.desktop /home/orangepi/Desktop
-sudo rm /home/orangepi/BlueDV.desktop  
+#sudo rm /home/orangepi/BlueDV.desktop  
 
 #stick=$(awk "NR==40" /home/orangepi/status.ini)
 #raw=$(awk "NR==42" /home/orangepi/status.ini)
