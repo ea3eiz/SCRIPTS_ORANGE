@@ -3,7 +3,7 @@ Version=1.0
 Type=Application
 Name=EditarBlueDV
 Comment=
-Exec=mate-terminal --geometry=80x47 -x sh editar_bluedv_05.sh
+Exec=./qt_editor_dump1090
 Icon=/home/orangepi/SCRIPTS_ORANGE/EDITAR_BLUEDV.png
 Path=/home/orangepi/SCRIPTS_ORANGE
 Terminal=false
