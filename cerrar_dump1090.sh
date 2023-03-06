@@ -12,3 +12,5 @@ sudo cp Abrir_BlueDV.desktop /home/orangepi/Desktop
 #
 sudo rm /home/orangepi/Abrir_BlueDV.desktop
 #
+cd /home/orangepi/SCRIPTS_ORANGE/
+sh ejecutar_dump1090.sh
