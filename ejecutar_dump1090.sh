@@ -1,7 +1,7 @@
 #!/bin/bash
-sed -i "6c Exec=sh -c 'cd /home/orangepi/SCRIPTS_ORANGE;sh cerrar_dump1090' /home/orangepi/Desktop/BlueDV.desktop"
+sed -i "6c Exec=sh -c 'cd /home/orangepi/SCRIPTS_ORANGE;sh cerrar_dump1090.sh' /home/orangepi/Desktop/BlueDV.desktop"
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_AVION_ON.png" /home/orangepi/Desktop/BlueDV.desktop
-sed -i "10c Name[es_ES]=Cerrar Dumo1090" /home/orangepi/Desktop/BlueDV.desktop
+sed -i "10c Name[es_ES]=Cerrar Dump1090" /home/orangepi/Desktop/BlueDV.desktop
 
 stick=$(awk "NR==40" /home/orangepi/status.ini)
 raw=$(awk "NR==42" /home/orangepi/status.ini)
