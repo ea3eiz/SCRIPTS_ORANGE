@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/orangepi/Desktop
-sudo sed -1 "6c Exec=sh -c 'cd /home/orangepi/SCRIPTS_ORANGE;sh cerrar_dump1090.sh'"
+sudo sed -i "6c Exec=sh -c 'cd /home/orangepi/SCRIPTS_ORANGE;sh cerrar_dump1090.sh'"
 sudo sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_AVION_ON.png"
 sudo sed -i "10c Name[es_ES]=Cerrar Dump1090"  
 
