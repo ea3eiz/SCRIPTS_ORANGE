@@ -23,7 +23,7 @@ if [ "$stick" = 'RSP1' ];then
 #--dev-sdrplay #--net-ro-port $raw --net-bo-port $beast --ppm $ppm --net-http-port $http
 
 
-xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/orangepi/dump1090_sdrplay/dump1090 --net --interactive --dev-sdrplay --gain -10
+xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e sudo /home/orangepi/dump1090_sdrplay/dump1090 --net --interactive --dev-sdrplay --gain -10
 
 
 
