@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo sed -i "6c 'Exec=sh cerrar_dump1090.sh' /home/orangepi/Desktop/BlueDV.desktop"
+sed -i "6c Exec=sh cerrar_dump1090.sh" /home/orangepi/Desktop/BlueDV.desktop
 sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_AVION_ON.png" /home/orangepi/Desktop/BlueDV.desktop
 sed -i "10c Name[es_ES]=Cerrar Dump1090" /home/orangepi/Desktop/BlueDV.desktop
 
