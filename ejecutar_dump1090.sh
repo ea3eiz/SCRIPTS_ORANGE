@@ -19,3 +19,6 @@ else
 xterm -geometry 88x51+22+0 -bg black -fg green -fa ‘verdana’ -fs 9x -T DUMP1090 -e /home/orangepi/dump1090/dump1090 --net --interactive --net-ro-port $raw --net-bo-port $beast --ppm $ppm --net-http-port $http
 fi
 
+sed -i "6c Exec=sh ejecutar_dump1090.sh" /home/orangepi/Desktop/BlueDV.desktop
+sed -i "7c Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_AVION_OFF.png" /home/orangepi/Desktop/BlueDV.desktop
+sed -i "10c Name[es_ES]=Ejecutar Dump1090" /home/orangepi/Desktop/BlueDV.desktop
