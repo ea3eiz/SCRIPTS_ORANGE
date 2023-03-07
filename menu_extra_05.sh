@@ -11,13 +11,13 @@ echo "\33[1;32m   **************************************************************
 echo "   *      SCript para hacer actualizaciones y varios \33[1;33mV.02.07\33[1;32m          *"
 echo "   *                      \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                          *"
 echo "   ********************************************************************"
-#echo "\33[1;36m   1)\33[1;32m Actualizar imagen"
+echo "\33[1;36m   1)\33[1;32m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;36m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;36m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;33m INSTALAR ANYDESK (Aplicación escritorio remoto)"
-#echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
+echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
 echo "\33[1;36m   8)${VERDE} MENÚ ACTUALIZAR MMDVM_HS (Pincho Low Cost)"
 echo "\33[1;36m   9)${AMARILLO} INSTALAR AMBE SERVER"
 echo "\33[1;36m  10)${AMARILLO} INSTALAR DMR2YSF"
@@ -31,7 +31,7 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 
-1bloqueado) echo ""
+1) echo ""
 while true
 do
 clear
@@ -166,7 +166,7 @@ esac
 done;;
 
 
-7bloqueado) echo ""
+7) echo ""
 while true
 do
 clear
