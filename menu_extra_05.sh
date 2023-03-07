@@ -498,24 +498,31 @@ done;;
 while true
 do
 clear
-	        	
-                        echo "\33[1;31m" #color rojo
-                        echo " *****************************************************"
-                        echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
-                        echo " *****************************************************"
-                        echo "\33[1;37m" #color
+
                         read -p 'Quieres Actualizar? Si/No: ' ejecutar1
                         case $ejecutar1 in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en /home/orangepi/   >>>>>"
-                        cd /home/orangepi/SCRIPTS_ORANGE
-                        git pull
-                        rm /home/orangepi/autoarranque.ini
-                        cp -f /home/orangepi/SCRIPTS_ORANGE/autoarranque.ini /home/orangepi/
-			echo ">>>>>>>>> GIT CLONE AUTOSTART >>>>>"
-			sudo rm -R /home/orangepi/AUTOSTART
+                        git pull 
+                        sleep 3
                         cd /home/orangepi/
-                        git clone http://github.com/ea3eiz/AUTOSTART
+                        sudo chmod 777 SCRIPTS_ORANGE
+                        clear
+                        cd /home/orangepi/AUTOSTART
+                        git pull
+
+                        sudo usermod -a -G dialout orangepi
+                        sudo usermod -a -G uucp orangepi
+                        cd /home/orangepi/
+                        
+                        sudo rm -R qt
+                        
+                        mkdir /home/orangepi/qt
+                        
+                        cd /home/orangepi/SCRIPTS_ORANGE
+                        
+                        cp qt* /home/orangepi/qt
+
+                        chmod 777 -R /home/orangepi/qt
 			break;;
 			[nN]* ) echo ""
 clear
