@@ -11,8 +11,11 @@
                         sudo usermod -a -G uucp orangepi
 
                         sudo rm /home/orangepi/qt
-
+                        
+                        mkdir /home/orangepi/qt
+                        
                         cd /home/orangepi/SCRIPTS_ORANGE
+                        
                         cp qt* /home/orangepi/qt
 
                         chmod 777 -R /home/orangepi/qt
