@@ -11,13 +11,13 @@ echo "\33[1;32m   **************************************************************
 echo "   *      SCript para hacer actualizaciones y varios \33[1;33mV.02.07\33[1;32m          *"
 echo "   *                      \33[1;31mby EA3EIZ & EA4AOJ\33[1;32m                          *"
 echo "   ********************************************************************"
-echo "\33[1;36m   1)\33[1;32m Actualizar imagen"
+#echo "\33[1;36m   1)\33[1;32m Actualizar imagen"
 echo "\33[1;36m   2)\33[1;37m Grabar Nextion"
 echo "\33[1;36m   3)\33[1;36m Copiar Tarjeta SD a la memoria interna EMMC"
 echo "\33[1;36m   4)\33[1;36m Cambiar clave VNC"
 echo "\33[1;36m   5)\33[1;37m CONEXIONES DVRPTR DCS018"
 echo "\33[1;36m   6)\33[1;33m INSTALAR ANYDESK (Aplicación escritorio remoto)"
-echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
+#echo "\33[1;36m   7)\33[1;37m RESTAURAR ICONOS DEL ESCRITORIO"
 echo "\33[1;36m   8)${VERDE} MENÚ ACTUALIZAR MMDVM_HS (Pincho Low Cost)"
 echo "\33[1;36m   9)${AMARILLO} INSTALAR AMBE SERVER"
 echo "\33[1;36m  10)${AMARILLO} INSTALAR DMR2YSF"
@@ -31,7 +31,7 @@ read escoger_menu
 echo ""
 case $escoger_menu in
 
-1) echo ""
+1bloqueado) echo ""
 while true
 do
 clear
@@ -166,7 +166,7 @@ esac
 done;;
 
 
-7) echo ""
+7bloqueado) echo ""
 while true
 do
 clear
@@ -456,66 +456,35 @@ if [ $HostsFile2 = $comprueba ]
                                 break;;
 esac
 done;;
-
-1000) echo ""
-while true
-do
-clear
-                        echo "\33[1;31m" #color rojo
-                        echo " *****************************************************"
-                        echo " ******   OJO!!! ESTO RESTAURA TODOS LOS GITHUB ******"
-                        echo " *****************************************************"
-                        echo "\33[1;37m" #color
-                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
-                        case $ejecutar1 in
-			            [sS]* ) echo ""
-			            echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
-			            sudo rm -R /home/orangepi/SCRIPTS_ORANGE
-			            sleep 5
-                        cd ~
-                        git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
-                        cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/orangepi/
-
-
-                        sudo rm -R /home/orangepi/AUTOSTART
-			            sleep 5
-                        cd ~
-                        git clone https://github.com/ea3eiz/AUTOSTART
-                      
-
-
-
-                        clear
-                        exit;
-						break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
 2000) echo ""
 while true
 do
 clear
-	        	
-                        echo "\33[1;31m" #color rojo
-                        echo " *****************************************************"
-                        echo " ** OJO!! ESTO PONDRÁ TODOS LOS AUTOARRANQUES EN OFF *"
-                        echo " *****************************************************"
-                        echo "\33[1;37m" #color
-                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
+
+                        ejecutar1=S
                         case $ejecutar1 in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> COPIAR FICHERO autoarranque.ini en /home/orangepi/   >>>>>"
-                        cd /home/orangepi/SCRIPTS_ORANGE
-                        git pull
-                        rm /home/orangepi/autoarranque.ini
-                        cp -f /home/orangepi/SCRIPTS_ORANGE/autoarranque.ini /home/orangepi/
-			echo ">>>>>>>>> GIT CLONE AUTOSTART >>>>>"
-			sudo rm -R /home/orangepi/AUTOSTART
+                        git pull 
+                        sleep 3
                         cd /home/orangepi/
-                        git clone http://github.com/ea3eiz/AUTOSTART
+                        sudo chmod 777 SCRIPTS_ORANGE
+                        clear
+                        cd /home/orangepi/AUTOSTART
+                        git pull
+
+                        sudo usermod -a -G dialout orangepi
+                        sudo usermod -a -G uucp orangepi
+                        cd /home/orangepi/
+                        
+                        sudo rm -R qt
+                        
+                        mkdir /home/orangepi/qt
+                        
+                        cd /home/orangepi/SCRIPTS_ORANGE
+                        
+                        cp qt* /home/orangepi/qt
+
+                        chmod 777 -R /home/orangepi/qt
 			break;;
 			[nN]* ) echo ""
 clear
@@ -548,81 +517,6 @@ clear
 break;;
 esac
 done;;
-5000) echo ""
-while true
-do
-clear
-	        			ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> Arregla la fecha y hora >>>>>"
-			            sudo apt-get install ntpdate
-			            sudo ntpdate -u hora.roa.es
-						break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-6000) echo ""
-while true
-do
-clear
-	        			ejecutar1=S
-		    			case $ejecutar1 in
-						[sS]* ) echo ""
-						echo ">>>>>>>>> coloca dcs_default.cfg en /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0 >>>>>"
-			            cd /home/orangepi/SCRIPTS_ORANGE/
-                        sleep 3
-                        #sudo chmod 777 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
-                        #sleep 3
-			            sudo rm /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
-                        sleep 3
-                        sudo cp -f dcs_default.cfg /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/
-                        sleep 3
-                        sudo chmod 640 /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dcs_default.cfg
-                        #sudo sed -i "20c DCS018" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-                        #sudo sed -i "21c D" /home/orangepi/.config/Microsoft/dvrptr/1.0.0.0/dvrptr_X2a.cfg
-			            break;;
-						[nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-
-9000) echo ""
-while true
-do
-clear
-	                    ejecutar1=S
-		                case $ejecutar1 in
-			            [sS]* ) echo ""
-			            #echo ">>>>>>>>> copiar el autoarranque.ini >>>>>>>"
-			            #cp -f /home/orangepi/SCRIPTS_ORANGE/autoarranque.ini /home/orangepi/
-                        #clear
-                        echo "\33[1;32m       ***********************************************************"
-                        echo "       *             MENU AYUDAS COMANDOS OCULTOS                *"
-                        echo "       ***********************************************************"
-                        echo ""
-                        echo "\33[1;36m       1000\33[1;33m ESTO RESTAURA TODOS LOS GITHUB"
-                        echo "\33[1;36m       2000\33[1;33m RECOGE LAS APLICACIONES AL INICIO QUE SE HAGAN NUEVAS"
-                        echo "\33[1;36m       3000\33[1;33m ACTUALIZAR SERVIDORES D-STAR"
-                        echo "\33[1;36m       5000\33[1;33m ARREGLAR LA FECHA Y HORA"
-                        echo "\33[1;36m       6000\33[1;33m COPIA DCS_DEFAULT.CFG PARA EDITAR DCS, XRF y REF"
-                        echo "\33[1;36m       8000\33[1;33m INSTALA YSF2DMR"
-                        echo ""
-                        echo -n "\33[1;37m       Pulsa la tecla ENTER para salir"
-                        read A
-		                break;;
-		                [nN]* ) echo ""
-clear
-exit;
-break;;
-esac
-done;;
-
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
