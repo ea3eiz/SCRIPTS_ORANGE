@@ -3,9 +3,9 @@ Version=1.0
 Type=Application
 Name=Display
 Comment=
-Exec=mate-terminal --geometry=80x47 -x sh editar_display.sh
-Icon=/home/orangepi/SCRIPTS_ORANGE/ICONO_DISPLAY.png
-Path=/home/orangepi/SCRIPTS_ORANGE
+Exec=./qt_actualizar_imagen
+Icon=/home/orangepi/SCRIPTS_ORANGE/ACTUALIZAR.png
+Path=/home/orangepi/qt
 Terminal=false
 StartupNotify=false
-Name[es_ES]=Editar Display
+Name[es_ES]=Actualizar IMAGEN
