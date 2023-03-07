@@ -460,27 +460,27 @@ done;;
 1000) echo ""
 while true
 do
-                        git pull 
-                        sleep 3
-                        cd /home/orangepi/
-                        sudo chmod 777 SCRIPTS_ORANGE
-                        clear
-                        cd /home/orangepi/AUTOSTART
-                        git pull
+clear
+                        echo "\33[1;31m" #color rojo
+                        echo " *****************************************************"
+                        echo " ******   OJO!!! ESTO RESTAURA TODOS LOS GITHUB ******"
+                        echo " *****************************************************"
+                        echo "\33[1;37m" #color
+                        read -p 'Quieres Actualizar? Si/No: ' ejecutar1
+                        case $ejecutar1 in
+			            [sS]* ) echo ""
+			            echo ">>>>>>>>> RESTAURANDO SISTEMA >>>>>>>>"
+			            sudo rm -R /home/orangepi/SCRIPTS_ORANGE
+			            sleep 5
+                        cd ~
+                        git clone https://github.com/ea3eiz/SCRIPTS_ORANGE
+                        cp -R /home/orangepi/SCRIPTS_ORANGE/Desktop /home/orangepi/
 
-                        sudo usermod -a -G dialout orangepi
-                        sudo usermod -a -G uucp orangepi
-                        cd /home/orangepi/
-                        
-                        sudo rm -R qt
-                        
-                        mkdir /home/orangepi/qt
-                        
-                        cd /home/orangepi/SCRIPTS_ORANGE
-                        
-                        cp qt* /home/orangepi/qt
 
-                        chmod 777 -R /home/orangepi/qt
+                        sudo rm -R /home/orangepi/AUTOSTART
+			            sleep 5
+                        cd ~
+                        git clone https://github.com/ea3eiz/AUTOSTART
                       
 
 
