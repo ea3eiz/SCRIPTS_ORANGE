@@ -9,8 +9,9 @@
 
                         sudo usermod -a -G dialout orangepi
                         sudo usermod -a -G uucp orangepi
-
-                        sudo rm /home/orangepi/qt
+                        cd /home/orangepi/
+                        
+                        sudo rm -R qt
                         
                         mkdir /home/orangepi/qt
                         
